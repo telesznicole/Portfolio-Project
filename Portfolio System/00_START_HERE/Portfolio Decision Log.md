@@ -310,3 +310,231 @@ Today's biggest realization was that the goal is not to create increasingly comp
 The goal is to build a system where original research, inspiration, and design decisions remain accessible throughout the project.
 
 AI should help me retrieve, organize, compare, and challenge ideas—not replace my judgment or design taste.
+
+## 2026-07-31
+
+### Decision
+
+Use an iterative AI collaboration workflow where Nicole remains the decision-maker.
+
+**Process**
+
+Nicole provides inputs
+↓
+AI proposes artifact
+↓
+Nicole critiques it
+↓
+AI revises
+↓
+Done
+
+**Why**
+A strong portfolio requires both speed and judgment. AI is most valuable when it accelerates exploration, drafting, and synthesis while Nicole remains responsible for direction, taste, and final decisions.
+
+This creates a workflow where AI expands possibilities without replacing the designer's role.
+
+**Status**
+🔒 Locked
+
+---
+
+### Decision
+
+Prioritize artifact creation over passive AI discussion.
+
+**Why**
+The purpose of using AI is not simply to generate advice or ideas. Each interaction should move the portfolio forward by producing tangible artifacts:
+
+* strategy documents
+* research findings
+* frameworks
+* portfolio requirements
+* content drafts
+* design decisions
+* implementation plans
+
+Artifacts create momentum and become part of the portfolio knowledge base.
+
+**Status**
+🔒 Locked
+
+---
+
+### Decision
+
+Use critique loops as the primary method for improving AI-generated work.
+
+**Why**
+First-pass AI outputs are starting points, not finished solutions.
+
+The strongest results come from:
+
+1. generating an initial artifact,
+2. evaluating it against goals and constraints,
+3. identifying weaknesses,
+4. refining through iteration.
+
+This mirrors the design process itself: explore, evaluate, and improve.
+
+**Status**
+🔒 Locked
+
+---
+
+### Decision
+
+Capture decisions, not just deliverables.
+
+**Why**
+The reasoning behind portfolio choices is as valuable as the final output.
+
+The decision log exists to preserve:
+
+* why choices were made
+* what alternatives were considered
+* what principles guide future work
+
+This prevents the portfolio from becoming a collection of disconnected artifacts.
+
+**Status**
+🔒 Locked
+
+---
+
+### Decision
+
+Treat AI-generated outputs as drafts requiring human evaluation.
+
+**Why**
+AI can accelerate creation, but it cannot determine:
+
+* personal design philosophy
+* authentic storytelling
+* what feels aligned with Nicole's identity
+* what creates confidence for hiring teams
+
+Every artifact must be reviewed, challenged, and refined before becoming part of the portfolio system.
+
+**Status**
+🔒 Locked
+
+---
+
+### Decision
+
+Establish GitHub as the source of truth for the portfolio system.
+
+**Why**
+The portfolio process will involve many evolving artifacts, experiments, and decisions. Git provides a reliable history of changes while creating a structured foundation for future collaboration with AI tools.
+
+GitHub enables:
+
+* version tracking
+* rollback when needed
+* organized project history
+* easier collaboration with future tools and workflows
+
+**Status**
+🔒 Locked
+
+---
+
+### Decision
+
+Use SSH authentication for GitHub instead of HTTPS.
+
+**Why**
+SSH provides a more reliable long-term authentication workflow across development tools.
+
+This setup supports future integrations with:
+
+* VS Code
+* Claude Desktop
+* MCP workflows
+* additional developer tools
+
+The goal is to establish infrastructure once and avoid repeated authentication issues throughout the project.
+
+**Status**
+🔒 Locked
+
+---
+
+### Decision
+
+Keep the portfolio repository clean before connecting AI tools.
+
+**Why**
+AI tools are only as useful as the structure they are given. Before granting Claude access, the repository was cleaned by:
+
+* adding a `.gitignore`
+* removing tracked `.DS_Store` files
+* committing cleanup changes
+* verifying the repository state
+
+This creates a more reliable foundation for AI-assisted work and prevents unnecessary files from becoming part of the knowledge base.
+
+**Status**
+🔒 Locked
+
+---
+
+### Decision
+
+Use Claude Desktop with Filesystem MCP as an AI workspace connected to the portfolio repository.
+
+**Why**
+Claude should have access to the portfolio system as a living knowledge base rather than relying on manually uploaded files.
+
+The MCP setup allows Claude to:
+
+* reference existing documentation
+* understand project structure
+* assist with artifacts directly from the repository
+
+Access is intentionally limited to the `Portfolio Project` directory to maintain focus and privacy.
+
+**Status**
+🔒 Locked
+
+---
+
+### Decision
+
+Design the portfolio system to support AI collaboration without depending on a single AI tool.
+
+**Why**
+The goal is not to create a Claude-specific workflow. The system should remain portable across tools.
+
+Using:
+
+* Markdown documentation
+* Git version control
+* structured folders
+* clear decision logs
+
+allows future AI tools to understand and contribute to the project.
+
+**Status**
+🔒 Locked
+
+---
+
+## Reflection
+
+The biggest realization from this phase was that creating a strong portfolio is not just about designing the final website. It is about building a system that supports better decisions throughout the entire process.
+
+The past two days shifted the project from an idea into an actual working environment. I moved from researching how portfolios succeed to establishing the infrastructure that will allow me to design, document, and iterate more intentionally.
+
+This included:
+
+* creating a structured knowledge base rather than isolated documents
+* establishing GitHub as the source of truth for portfolio artifacts
+* setting up version control and clean repository practices
+* connecting Claude Desktop through MCP so AI can work alongside the project files
+* defining an AI collaboration workflow where I remain responsible for vision, critique, and final decisions
+
+The goal is not to automate the design process or outsource judgment. The goal is to create a system where AI can accelerate exploration, organization, and artifact creation while human perspective drives meaning, taste, and direction.
+
+Moving forward, this portfolio is not only a website I am building. It is a documented design process supported by research, structured thinking, iterative critique, and intentional collaboration between human and AI.
