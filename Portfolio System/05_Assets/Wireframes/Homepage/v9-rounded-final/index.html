@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe — Homepage v9 — Rounded Final</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#work">Skip to content</a>
+
+<!-- Nav: logo now leads (fixed the centering/spacing problem — a
+     fit-content pill with logo-first + one nav-links group hugs its own
+     content naturally instead of fighting to balance two uneven groups
+     around a center point). -->
+<div class="site-header-wrap">
+  <nav class="floating-nav" aria-label="Primary">
+    <a href="#hero" class="nav-logo">[Name]</a>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#" class="nav-resume">Resume</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav-panel">
+      Menu
+    </button>
+  </nav>
+  <div class="mobile-nav-panel" id="mobile-nav-panel">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#" class="nav-resume">Resume</a>
+  </div>
+</div>
+
+<main>
+
+  <section id="hero" class="hero content-shell">
+    <div class="hero-anchor">
+      <p class="hero-intro">Hi, I'm [Nicole] — UX &amp; Product Designer</p>
+      <h1>[Positioning statement — Product Designer bridging systems thinking, engineering fluency, and research rigor]</h1>
+      <p class="trusted-sentence">
+        Trusted by <span class="inline-logo">Meta</span>,
+        <span class="inline-logo">BMW</span>,
+        <span class="inline-logo">Deloitte</span>,
+        <span class="inline-logo">FINRA</span>, and
+        <span class="inline-logo">Hyundai MOBIS</span>.
+      </p>
+    </div>
+  </section>
+
+  <section id="work" class="work content-shell">
+    <p class="section-title">Work</p>
+    <p class="section-lead">Three projects, chosen for range — not volume.</p>
+
+    <div class="work-grid">
+      <article class="grid-item">
+        <div class="placeholder-img">Meta</div>
+        <div class="case-title-row">
+          <div class="case-title-left">
+            <div class="logo-mark"><span>Meta</span></div>
+            <h3>Interaction Design Lead</h3>
+          </div>
+          <span class="engagement-tag">Sponsored Engagement</span>
+        </div>
+        <p class="proof">Shipped interaction patterns for a cross-functional wearable social experience team.</p>
+      </article>
+
+      <article class="grid-item">
+        <div class="placeholder-img">Feminist UX</div>
+        <div class="case-title-row">
+          <div class="case-title-left">
+            <div class="logo-mark"><span>Ind.</span></div>
+            <h3>Independent Thesis</h3>
+          </div>
+          <span class="engagement-tag">Independent Research</span>
+        </div>
+        <p class="proof">Validated a feminist UX framework across ten practitioner sessions.</p>
+      </article>
+
+      <article class="grid-item">
+        <div class="placeholder-img">Terra Dotta</div>
+        <div class="case-title-row">
+          <div class="case-title-left">
+            <div class="logo-mark"><span>TD</span></div>
+            <h3>UX Lead</h3>
+          </div>
+          <span class="engagement-tag">Client Engagement</span>
+        </div>
+        <p class="proof">Delivered a full website redesign under a fixed sponsor timeline.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="about" class="about content-shell">
+    <p class="section-title">About</p>
+
+    <div class="about-layout">
+      <div class="about-aside">
+        <div class="player-card">
+          <div class="player-photo">[Photo]</div>
+          <div class="player-info">
+            <p class="player-name">[Name]</p>
+            <p class="player-title">Product Designer</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-main">
+        <p class="about-intro">[A short lead statement — one to two sentences on how you approach design work. This is the headline of the About section, not buried in a paragraph.]</p>
+
+        <div class="method-chunks">
+          <div class="chunk">
+            <h4>Systems Thinking</h4>
+            <p>[One line on how this shows up in your work.]</p>
+          </div>
+          <div class="chunk">
+            <h4>Engineering Fluency</h4>
+            <p>[One line on how this shows up in your work.]</p>
+          </div>
+          <div class="chunk">
+            <h4>Research Rigor</h4>
+            <p>[One line on how this shows up in your work.]</p>
+          </div>
+        </div>
+
+        <ul class="quick-facts">
+          <li>MFA Interactive &amp; Experience Design, SCAD</li>
+          <li>Computer Science background</li>
+          <li>Based in [Location]</li>
+        </ul>
+
+        <div class="about-links">
+          <a href="#">How I Work →</a>
+          <a href="#">Feminist UX (external) →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="credibility content-shell">
+    <div class="stats-banner" aria-label="Quick facts">
+      <div class="stat"><span class="stat-num">7</span><span class="stat-label">Sponsored engagements</span></div>
+      <div class="stat"><span class="stat-num">1</span><span class="stat-label">Independent research thesis</span></div>
+      <div class="stat"><span class="stat-num">CS</span><span class="stat-label">Engineering background</span></div>
+    </div>
+
+    <div class="quotes-row">
+      <blockquote class="quote-card">
+        <p class="quote-mark" aria-hidden="true">”</p>
+        <p class="quote-text">[A brief, genuine line from a collaborator — trust-building, not promotional.]</p>
+        <cite>— [Name], [Role/Company]</cite>
+      </blockquote>
+      <blockquote class="quote-card">
+        <p class="quote-mark" aria-hidden="true">”</p>
+        <p class="quote-text">[A second quote, if you have one — this layout is built to hold more than one.]</p>
+        <cite>— [Name], [Role/Company]</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="collaborations content-shell">
+    <p class="section-title">Collaborations</p>
+    <div class="logo-wall">
+      <div class="wall-item"><div class="logo-placeholder large"><span>BMW</span></div><p>UX Designer, Writing Lead</p></div>
+      <div class="wall-item"><div class="logo-placeholder large"><span>FINRA</span></div><p>UX Designer</p></div>
+      <div class="wall-item"><div class="logo-placeholder large"><span>Deloitte</span></div><p>Project Lead, UX Designer</p></div>
+      <div class="wall-item"><div class="logo-placeholder large"><span>Hyundai MOBIS</span></div><p>UX Designer</p></div>
+      <div class="wall-item"><div class="logo-placeholder large"><span>Hack iX</span></div><p>Founding Project Manager</p></div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="contact" class="site-footer-expanded content-shell">
+  <p class="footer-cta">[Big closing statement — e.g. a call to action]</p>
+  <div class="footer-bottom">
+    <div class="footer-primary">
+      <p class="eyebrow">Contact</p>
+      <a href="mailto:hello@example.com" class="footer-email">hello@example.com</a>
+    </div>
+    <div class="footer-links">
+      <a href="#">Resume</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="#">Feminist UX</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var toggle = document.getElementById('nav-toggle');
+  var panel = document.getElementById('mobile-nav-panel');
+  toggle.addEventListener('click', function () {
+    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    panel.classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>

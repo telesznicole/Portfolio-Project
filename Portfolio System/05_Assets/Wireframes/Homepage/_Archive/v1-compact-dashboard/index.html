@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe — Homepage v1 — Compact Dashboard</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#work">Skip to content</a>
+
+<header class="site-header">
+  <div class="logo">[Name]</div>
+  <nav class="primary-nav" id="primary-nav">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#" class="nav-resume">Resume</a>
+  </nav>
+  <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+    Menu
+  </button>
+</header>
+
+<main>
+
+  <section id="hero" class="hero">
+    <p class="eyebrow">Hero</p>
+    <h1>[Positioning statement — Product Designer bridging systems thinking, engineering fluency, and research rigor]</h1>
+  </section>
+
+  <!-- Bento-style grid: Work, About, and Contact treated as one unified
+       at-a-glance module rather than three sequential sections. -->
+  <section id="work" class="dashboard">
+    <div class="grid">
+
+      <article class="cell case-card span-2">
+        <p class="eyebrow">Work</p>
+        <div class="placeholder-img">Meta</div>
+        <h3>Meta — Interaction Design Lead</h3>
+        <p class="proof">Led interaction design for a next-generation wearable social experience.</p>
+      </article>
+
+      <article class="cell case-card">
+        <div class="placeholder-img">Feminist UX</div>
+        <h3>Feminist UX — Independent Thesis</h3>
+        <p class="proof">Research-backed framework, validated across 10 practitioner sessions.</p>
+      </article>
+
+      <article class="cell case-card">
+        <div class="placeholder-img">Terra Dotta</div>
+        <h3>Terra Dotta — UX Lead</h3>
+        <p class="proof">Client redesign delivered on a fixed sponsor timeline.</p>
+      </article>
+
+      <div class="cell collaborations-cell" id="about">
+        <p class="eyebrow">About</p>
+        <p class="about-copy-compact">[Brief bio — method-led, two sentences max in this dense layout.]</p>
+        <div class="about-links">
+          <a href="#">How I Work →</a>
+          <a href="#">Feminist UX →</a>
+        </div>
+      </div>
+
+      <div class="cell collaborations-cell span-2">
+        <p class="eyebrow small">Selected Collaborations</p>
+        <ul class="collab-expand-list">
+          <li>
+            <button class="collab-toggle" aria-expanded="false">
+              <span>BMW</span><span class="toggle-icon" aria-hidden="true">+</span>
+            </button>
+            <p class="collab-detail">UX Designer, Writing Lead — SCADpro sponsored engagement.</p>
+          </li>
+          <li>
+            <button class="collab-toggle" aria-expanded="false">
+              <span>FINRA</span><span class="toggle-icon" aria-hidden="true">+</span>
+            </button>
+            <p class="collab-detail">UX Designer — SCADpro sponsored engagement.</p>
+          </li>
+          <li>
+            <button class="collab-toggle" aria-expanded="false">
+              <span>Deloitte</span><span class="toggle-icon" aria-hidden="true">+</span>
+            </button>
+            <p class="collab-detail">Project Lead, UX Designer — SCADpro sponsored engagement.</p>
+          </li>
+          <li>
+            <button class="collab-toggle" aria-expanded="false">
+              <span>Hyundai MOBIS</span><span class="toggle-icon" aria-hidden="true">+</span>
+            </button>
+            <p class="collab-detail">UX Designer — SCADpro sponsored engagement.</p>
+          </li>
+          <li>
+            <button class="collab-toggle" aria-expanded="false">
+              <span>Hack iX</span><span class="toggle-icon" aria-hidden="true">+</span>
+            </button>
+            <p class="collab-detail">Founding Project Manager — student hackathon leadership.</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="cell contact-cell" id="contact">
+        <p class="eyebrow">Contact</p>
+        <div class="contact-links">
+          <a href="mailto:hello@example.com">hello@example.com</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">GitHub</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <a href="#">Resume</a>
+  <a href="mailto:hello@example.com">Email</a>
+  <a href="#">LinkedIn</a>
+  <a href="#">GitHub</a>
+  <a href="#">Feminist UX</a>
+</footer>
+
+<script>
+  var toggle = document.getElementById('nav-toggle');
+  var nav = document.getElementById('primary-nav');
+  toggle.addEventListener('click', function () {
+    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    nav.classList.toggle('open');
+  });
+
+  // Click-to-expand Selected Collaborations — never hover-gated, always
+  // keyboard-operable, and the collapsed state still shows the company
+  // name (essential info), so nothing required is hidden by default.
+  var collabButtons = document.querySelectorAll('.collab-toggle');
+  collabButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      btn.closest('li').classList.toggle('open');
+    });
+  });
+</script>
+
+</body>
+</html>

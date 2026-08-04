@@ -1,0 +1,163 @@
+/* ================================
+   Wireframe — Progressive Reveal
+   Low-fidelity structural prototype
+   No color, no branding, no type system —
+   grayscale only, for layout/hierarchy/pacing testing
+   ================================ */
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #111;
+  background: #fff;
+  line-height: 1.5;
+}
+
+.skip-link {
+  position: absolute; left: -999px; top: 0;
+  background: #000; color: #fff; padding: 8px 12px; z-index: 100;
+}
+.skip-link:focus { left: 8px; top: 8px; }
+
+.site-header {
+  position: sticky; top: 0;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 32px;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+  z-index: 50;
+}
+.logo { font-weight: 700; }
+.primary-nav { display: flex; gap: 24px; }
+.primary-nav a { color: #111; text-decoration: none; border-bottom: 1px solid transparent; }
+.primary-nav a:hover, .primary-nav a:focus { border-bottom: 1px solid #111; }
+.nav-resume { border: 1px solid #111; padding: 5px 12px !important; }
+.nav-toggle { display: none; background: none; border: 1px solid #111; padding: 6px 12px; }
+
+/* ---- Progress indicator: fixed side rail, functional wayfinding ---- */
+.progress-indicator {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 40;
+}
+.progress-dot {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #999;
+  border-radius: 50%;
+  display: block;
+}
+.progress-dot.active {
+  background: #111;
+  border-color: #111;
+}
+.progress-dot:focus {
+  outline: 2px solid #111;
+  outline-offset: 3px;
+}
+
+.eyebrow {
+  text-transform: uppercase; letter-spacing: 0.08em;
+  font-size: 12px; color: #666; margin: 0 0 12px 0;
+}
+.eyebrow.small { font-size: 11px; margin-top: 36px; }
+
+/* ---- Hero: sparse, single CTA ---- */
+.hero {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px 32px 32px 32px;
+  padding-right: 80px; /* clear the progress rail */
+}
+.hero h1 {
+  font-size: clamp(28px, 5vw, 42px);
+  line-height: 1.3;
+  max-width: 720px;
+  margin: 0 0 24px 0;
+}
+.hero-cta {
+  font-size: 14px;
+  color: #111;
+  border-bottom: 1px solid #111;
+  width: fit-content;
+}
+
+.work { padding: 32px 80px 32px 32px; border-top: 1px solid #eee; }
+.flagship-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 28px;
+}
+.case-card { border: 1px solid #ccc; padding: 12px; }
+.placeholder-img {
+  height: 120px; margin-bottom: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; color: #999;
+  background-image: repeating-linear-gradient(45deg, #eee, #eee 6px, #f7f7f7 6px, #f7f7f7 12px);
+  border: 1px dashed #ccc;
+}
+.case-card h3 { font-size: 15px; margin: 0 0 6px 0; }
+.proof { font-size: 13px; color: #444; margin: 0; }
+.collab-list {
+  list-style: none; padding: 0; margin: 8px 0 0 0;
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 6px 24px; font-size: 13px; color: #333;
+}
+
+.about, .contact {
+  padding: 28px 80px 28px 32px;
+  border-top: 1px solid #eee;
+}
+.about-copy { max-width: 640px; font-size: 14px; color: #333; }
+.about-links { display: flex; gap: 20px; font-size: 13px; margin-top: 12px; }
+.about-links a, .contact-links a { color: #111; }
+.contact { padding-bottom: 56px; }
+.contact-links { display: flex; gap: 20px; font-size: 14px; }
+
+.site-footer {
+  display: flex; flex-wrap: wrap; gap: 16px;
+  padding: 20px 32px 40px; font-size: 13px; border-top: 1px solid #eee;
+}
+.site-footer a { color: #333; }
+
+@media (max-width: 720px) {
+  .primary-nav {
+    display: none; flex-direction: column;
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: #fff; border-bottom: 1px solid #ccc; padding: 14px 24px;
+  }
+  .primary-nav.open { display: flex; }
+  .nav-toggle { display: block; }
+  /* Progress indicator moves to a horizontal top strip on mobile — a fixed
+     side rail has no room on a narrow viewport, and is a genuine open
+     question flagged in this concept's notes for whichever direction wins. */
+  .progress-indicator {
+    position: sticky;
+    top: 57px;
+    flex-direction: row;
+    justify-content: center;
+    left: 0; right: 0; transform: none;
+    padding: 10px 0;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+  }
+  .hero, .work, .about, .contact { padding-right: 24px; padding-left: 24px; }
+  .flagship-grid { grid-template-columns: 1fr; }
+  .collab-list { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe — Homepage v1 — Everything Up Front</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#work">Skip to content</a>
+
+<header class="site-header">
+  <div class="logo">[Name]</div>
+  <nav class="primary-nav" id="primary-nav">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#" class="nav-resume">Resume</a>
+  </nav>
+  <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+    Menu
+  </button>
+</header>
+
+<main>
+
+  <section id="hero" class="hero">
+    <p class="eyebrow">Hero — Layer 0</p>
+    <h1>[Positioning statement — Product Designer bridging systems thinking, engineering fluency, and research rigor]</h1>
+
+    <div class="credibility-bar">
+      <span class="cred-label">Collaborated with</span>
+      <div class="logo-row">
+        <div class="logo-placeholder">Meta</div>
+        <div class="logo-placeholder">BMW</div>
+        <div class="logo-placeholder">Deloitte</div>
+        <div class="logo-placeholder">FINRA</div>
+        <div class="logo-placeholder">Hyundai MOBIS</div>
+      </div>
+    </div>
+
+    <div class="quick-status">
+      <span>Based in [Location]</span>
+      <span aria-hidden="true">·</span>
+      <span>Open to full-time roles</span>
+      <span aria-hidden="true">·</span>
+      <a href="#contact">Get in touch</a>
+    </div>
+  </section>
+
+  <section id="work" class="work">
+    <p class="eyebrow">Work</p>
+
+    <div class="flagship-grid">
+      <article class="case-card">
+        <div class="placeholder-img">Meta</div>
+        <h3>Meta — Interaction Design Lead</h3>
+        <p class="proof">Led interaction design for a next-generation wearable social experience</p>
+      </article>
+      <article class="case-card">
+        <div class="placeholder-img">Feminist UX</div>
+        <h3>Feminist UX — Independent Thesis</h3>
+        <p class="proof">A research-backed framework translating feminist theory into practical UX method</p>
+      </article>
+      <article class="case-card">
+        <div class="placeholder-img">Terra Dotta</div>
+        <h3>Terra Dotta — UX Lead</h3>
+        <p class="proof">Led a client-facing redesign under a fixed sponsor timeline</p>
+      </article>
+    </div>
+
+    <div class="collaborations">
+      <p class="eyebrow small">Selected Collaborations</p>
+      <ul class="collab-list">
+        <li><strong>BMW</strong> — UX Designer, Writing Lead</li>
+        <li><strong>FINRA</strong> — UX Designer</li>
+        <li><strong>Deloitte</strong> — Project Lead, UX Designer</li>
+        <li><strong>Hyundai MOBIS</strong> — UX Designer</li>
+        <li><strong>Hack iX</strong> — Founding Project Manager</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <p class="eyebrow">About</p>
+    <p class="about-copy">[Brief bio — two to three sentences, method-led: systems thinking, engineering background, research rigor. Not sector-specific.]</p>
+    <div class="about-links">
+      <a href="#">How I Work →</a>
+      <a href="#">Feminist UX (external) →</a>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <p class="eyebrow">Contact</p>
+    <div class="contact-links">
+      <a href="mailto:hello@example.com">hello@example.com</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <a href="#">Resume</a>
+  <a href="mailto:hello@example.com">Email</a>
+  <a href="#">LinkedIn</a>
+  <a href="#">GitHub</a>
+  <a href="#">Feminist UX</a>
+</footer>
+
+<script>
+  var toggle = document.getElementById('nav-toggle');
+  var nav = document.getElementById('primary-nav');
+  toggle.addEventListener('click', function () {
+    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    nav.classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>

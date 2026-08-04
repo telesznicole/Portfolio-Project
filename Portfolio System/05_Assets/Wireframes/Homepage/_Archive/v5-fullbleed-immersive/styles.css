@@ -1,0 +1,195 @@
+/* ================================
+   Wireframe — Full-Bleed Immersive (v5)
+   Low-fidelity structural prototype — grayscale only
+   No section divider lines — separation comes from spacing/contrast alone.
+   ================================ */
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #111;
+  background: #fff;
+  line-height: 1.6;
+}
+
+.skip-link {
+  position: absolute; left: -999px; top: 0;
+  background: #000; color: #fff; padding: 8px 12px; z-index: 100;
+}
+.skip-link:focus { left: 8px; top: 8px; }
+
+.site-header {
+  position: sticky; top: 0;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 48px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  z-index: 50;
+}
+.logo { font-weight: 700; }
+.primary-nav { display: flex; gap: 28px; }
+.primary-nav a { color: #111; text-decoration: none; border-bottom: 1px solid transparent; }
+.primary-nav a:hover, .primary-nav a:focus { border-bottom: 1px solid #111; }
+.nav-resume { border: 1px solid #111; padding: 5px 12px !important; }
+.nav-toggle { display: none; background: none; border: 1px solid #111; padding: 6px 12px; }
+
+.content-shell { max-width: 1200px; margin: 0 auto; padding-left: 64px; padding-right: 64px; }
+
+.section-title {
+  font-size: clamp(32px, 5vw, 60px);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+  margin: 0 0 16px 0;
+}
+
+.hero {
+  min-height: 88vh;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 64px;
+}
+.hero-anchor { max-width: 1050px; }
+.hero h1 {
+  font-size: clamp(32px, 5.5vw, 56px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 0 0 24px 0;
+}
+.trusted-sentence { font-size: 15px; color: #555; margin: 0; }
+.inline-logo {
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 1px 10px;
+  font-size: 13px;
+  color: #444;
+  border-radius: 3px;
+  background: #f7f7f7;
+}
+
+.work-intro { padding-top: 140px; padding-bottom: 48px; }
+.section-lead { font-size: 15px; color: #444; margin: 0; }
+
+/* ---- Immersive Work: each project is its own near-full-viewport moment,
+       image full-bleed, text overlaid with a scrim for legibility ---- */
+.work-immersive {
+  position: relative;
+  min-height: 88vh;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+.work-immersive:last-of-type { margin-bottom: 0; }
+
+.immersive-img {
+  position: absolute;
+  inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; color: #999;
+  background-image: repeating-linear-gradient(45deg, #e5e5e5, #e5e5e5 8px, #f2f2f2 8px, #f2f2f2 16px);
+}
+
+.immersive-overlay {
+  position: relative;
+  z-index: 2;
+  padding-top: 32px;
+  padding-bottom: 56px;
+  background: linear-gradient(to top, rgba(255,255,255,0.94) 0%, rgba(255,255,255,0.75) 60%, rgba(255,255,255,0) 100%);
+}
+.case-title-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.logo-mark {
+  display: flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; flex-shrink: 0;
+  border: 1px solid #999; font-size: 10px; color: #333; background: #fff;
+}
+.work-immersive h3 { font-size: 26px; font-weight: 800; margin: 0; color: #111; }
+.work-immersive .proof { font-size: 15px; color: #333; max-width: 56ch; margin: 0; }
+
+.stats-banner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding: 64px 64px 140px;
+}
+.stat { display: flex; flex-direction: column; }
+.stat-num { font-size: 32px; font-weight: 800; }
+.stat-label { font-size: 13px; color: #666; }
+
+.about { padding-bottom: 140px; }
+.about-layout { display: grid; grid-template-columns: 300px 1fr; gap: 64px; align-items: start; margin-top: 24px; }
+
+.player-card { border: 1px solid #ccc; padding: 24px; }
+.player-photo {
+  width: 100%; aspect-ratio: 1 / 1;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; color: #999; margin-bottom: 18px;
+  background-image: repeating-linear-gradient(45deg, #eee, #eee 6px, #f9f9f9 6px, #f9f9f9 12px);
+  border: 1px dashed #ccc;
+}
+.player-name { font-size: 19px; font-weight: 700; margin: 0 0 4px 0; }
+.player-title { font-size: 14px; color: #666; margin: 0; }
+
+.pull-quote {
+  font-size: 19px; font-style: italic; color: #222;
+  border-left: 3px solid #ccc; padding-left: 20px;
+  margin: 0 0 28px 0; max-width: 620px; line-height: 1.5;
+}
+.pull-quote cite { display: block; font-style: normal; font-size: 13px; color: #666; margin-top: 10px; }
+.about-copy { font-size: 16px; color: #222; max-width: 620px; margin-bottom: 24px; }
+.quick-facts { list-style: none; padding: 0; margin: 0 0 24px 0; display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 13px; color: #555; }
+.quick-facts li { position: relative; padding-left: 14px; }
+.quick-facts li::before { content: ""; position: absolute; left: 0; top: 8px; width: 5px; height: 5px; background: #999; border-radius: 50%; }
+.about-links { display: flex; gap: 24px; font-size: 14px; }
+.about-links a { color: #111; }
+
+.collaborations { padding-bottom: 140px; }
+.logo-wall { margin-top: 24px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+.wall-item p { font-size: 12px; color: #555; margin: 10px 0 0; text-align: center; }
+.logo-placeholder.large { height: 64px; width: 100%; font-size: 12px; display: flex; align-items: center; justify-content: center; border: 1px solid #ddd; background-image: repeating-linear-gradient(45deg, #f7f7f7, #f7f7f7 5px, #fff 5px, #fff 10px); }
+
+.eyebrow { text-transform: uppercase; letter-spacing: 0.1em; font-size: 12px; color: #666; margin: 0 0 12px 0; }
+.site-footer-expanded { padding-top: 100px; padding-bottom: 48px; }
+.footer-cta {
+  font-size: clamp(28px, 4.5vw, 48px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin: 0 0 48px 0;
+  max-width: 900px;
+}
+.footer-bottom { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 24px; }
+.footer-email { font-size: 15px; color: #111; display: block; margin-top: 8px; }
+.footer-links { display: flex; gap: 20px; font-size: 13px; }
+.footer-links a { color: #333; }
+
+@media (max-width: 900px) {
+  .about-layout { grid-template-columns: 1fr; }
+  .player-card { max-width: 300px; }
+  .logo-wall { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 720px) {
+  .primary-nav {
+    display: none; flex-direction: column;
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: #fff; border-bottom: 1px solid #ccc; padding: 16px 24px;
+  }
+  .primary-nav.open { display: flex; }
+  .nav-toggle { display: block; }
+  .site-header { padding: 16px 20px; }
+  .content-shell { padding-left: 24px; padding-right: 24px; }
+  .stats-banner { padding-left: 24px; padding-right: 24px; }
+  .work-intro, .stats-banner, .about, .collaborations { padding-top: 80px; padding-bottom: 80px; }
+  .work-immersive { min-height: 70vh; }
+  .logo-wall { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}

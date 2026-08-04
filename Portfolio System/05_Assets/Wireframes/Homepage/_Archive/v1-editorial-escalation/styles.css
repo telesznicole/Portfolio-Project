@@ -1,0 +1,188 @@
+/* ================================
+   Wireframe — Editorial Escalation
+   Low-fidelity structural prototype
+   No color, no branding, no type system —
+   grayscale only, for layout/hierarchy/pacing testing
+   ================================ */
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #111;
+  background: #fff;
+  line-height: 1.6;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px 12px;
+  z-index: 100;
+}
+.skip-link:focus { left: 8px; top: 8px; }
+
+/* ---- Header ---- */
+.site-header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  z-index: 50;
+}
+.logo { font-weight: 700; }
+.primary-nav { display: flex; gap: 28px; }
+.primary-nav a {
+  color: #111;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.primary-nav a:hover, .primary-nav a:focus { border-bottom: 1px solid #111; }
+.nav-resume { border: 1px solid #111; padding: 5px 12px !important; }
+.nav-toggle { display: none; background: none; border: 1px solid #111; padding: 6px 12px; }
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 12px;
+  color: #666;
+  margin: 0 0 12px 0;
+}
+.eyebrow.small { font-size: 11px; margin-top: 48px; }
+
+/* ---- Generous section breaks: the core hypothesis of this concept ---- */
+.section-break {
+  height: 96px;
+}
+
+/* ---- Hero: one idea, lots of room ---- */
+.hero {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 96px 40px 40px;
+  text-align: left;
+}
+.hero h1 {
+  font-size: clamp(28px, 5vw, 44px);
+  line-height: 1.3;
+  margin: 0 0 20px 0;
+}
+.hero-sub {
+  font-size: 15px;
+  color: #666;
+  margin: 0;
+}
+
+/* ---- Work: single-column escalating features ---- */
+.work { max-width: 900px; margin: 0 auto; padding: 0 40px; }
+.section-intro { margin-bottom: 48px; }
+.section-lead { font-size: 15px; color: #444; margin: 0; }
+
+.case-feature {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+.case-feature.reverse { direction: rtl; }
+.case-feature.reverse .case-copy,
+.case-feature.reverse .placeholder-img { direction: ltr; }
+
+.placeholder-img.large {
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: #999;
+  background-image: repeating-linear-gradient(45deg, #eee, #eee 6px, #f9f9f9 6px, #f9f9f9 12px);
+  border: 1px dashed #ccc;
+}
+.case-copy h3 { font-size: 20px; margin: 0 0 12px 0; }
+.proof { font-size: 15px; color: #333; max-width: 46ch; }
+
+.collaborations { margin-top: 32px; padding-top: 32px; border-top: 1px solid #eee; }
+.collab-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 32px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* ---- About: narrow reading column ---- */
+.about {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.about-copy { font-size: 16px; color: #222; }
+.about-links { display: flex; gap: 24px; font-size: 14px; margin-top: 16px; }
+.about-links a { color: #111; }
+
+/* ---- Contact ---- */
+.contact {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 0 40px 96px;
+}
+.contact-lead { font-size: 15px; color: #444; margin: 0 0 16px 0; }
+.contact-links { display: flex; gap: 24px; font-size: 15px; }
+.contact-links a { color: #111; }
+
+/* ---- Footer ---- */
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 24px 40px 48px;
+  font-size: 13px;
+  border-top: 1px solid #eee;
+}
+.site-footer a { color: #333; }
+
+/* ---- Mobile ---- */
+@media (max-width: 720px) {
+  .primary-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    padding: 16px 24px;
+  }
+  .primary-nav.open { display: flex; }
+  .nav-toggle { display: block; }
+  .site-header { padding: 16px 20px; }
+  .hero, .work, .about, .contact { padding-left: 20px; padding-right: 20px; }
+  .case-feature, .case-feature.reverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+  .collab-list { grid-template-columns: 1fr; }
+  .section-break { height: 56px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}

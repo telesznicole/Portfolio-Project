@@ -1,0 +1,139 @@
+/* ================================
+   Wireframe — Narrative Column (v3)
+   Low-fidelity structural prototype — grayscale only
+   ================================ */
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #111;
+  background: #fff;
+  line-height: 1.7;
+}
+
+.skip-link {
+  position: absolute; left: -999px; top: 0;
+  background: #000; color: #fff; padding: 8px 12px; z-index: 100;
+}
+.skip-link:focus { left: 8px; top: 8px; }
+
+.site-header {
+  position: sticky; top: 0;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 48px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  z-index: 50;
+}
+.logo { font-weight: 700; }
+.primary-nav { display: flex; gap: 28px; }
+.primary-nav a { color: #111; text-decoration: none; border-bottom: 1px solid transparent; }
+.primary-nav a:hover, .primary-nav a:focus { border-bottom: 1px solid #111; }
+.nav-resume { border: 1px solid #111; padding: 5px 12px !important; }
+.nav-toggle { display: none; background: none; border: 1px solid #111; padding: 6px 12px; }
+
+.eyebrow {
+  text-transform: uppercase; letter-spacing: 0.1em;
+  font-size: 12px; color: #666; margin: 0 0 12px 0;
+}
+.eyebrow.small { font-size: 11px; }
+
+/* ---- ONE narrow column for the entire page — a deliberate, stated
+       contrast to the wide-canvas concepts, not an accident. ---- */
+.column {
+  max-width: 680px;
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.hero { padding-top: 96px; padding-bottom: 64px; }
+.hero h1 {
+  font-size: clamp(28px, 4.5vw, 40px);
+  line-height: 1.35;
+  margin: 0 0 24px 0;
+}
+.hero-sub { font-size: 15px; color: #555; margin: 0; }
+
+/* ---- Inline logo marks — small, text-integrated, not a separate boxed
+       row. A genuinely different treatment of the same "logos for
+       recognition" requirement carried over from round 2. ---- */
+.inline-logo {
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 1px 8px;
+  font-size: 12px;
+  color: #444;
+  border-radius: 3px;
+  background: #f7f7f7;
+}
+
+.work { padding: 56px 0; border-top: 1px solid #eee; }
+.work-entry { margin-bottom: 48px; }
+.work-entry:last-child { margin-bottom: 0; }
+.entry-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+.entry-head h3 { font-size: 18px; margin: 0; }
+.placeholder-img.small {
+  width: 56px; height: 56px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 9px; color: #999;
+  background-image: repeating-linear-gradient(45deg, #eee, #eee 4px, #f9f9f9 4px, #f9f9f9 8px);
+  border: 1px dashed #ccc;
+}
+.proof { font-size: 15px; color: #333; margin: 0; }
+
+.about { padding: 56px 0; border-top: 1px solid #eee; }
+.pull-quote {
+  font-size: 18px; font-style: italic; color: #222;
+  border-left: 3px solid #ccc; padding-left: 18px;
+  margin: 0 0 24px 0; line-height: 1.5;
+}
+.pull-quote cite { display: block; font-style: normal; font-size: 12px; color: #666; margin-top: 8px; }
+.about-copy { font-size: 15px; color: #222; margin: 0 0 20px 0; }
+.about-links { font-size: 13px; }
+.about-links a { color: #111; }
+
+.collaborations { padding: 56px 0; border-top: 1px solid #eee; }
+.collab-lead { font-size: 14px; color: #555; margin: 0 0 20px 0; }
+.collab-list {
+  list-style: none; padding: 0; margin: 0;
+  font-size: 14px; color: #333;
+  display: flex; flex-direction: column; gap: 12px;
+}
+
+.site-footer-expanded {
+  padding-top: 48px;
+  padding-bottom: 64px;
+  border-top: 1px solid #ccc;
+}
+.footer-headline { font-size: 18px; color: #222; margin: 8px 0 12px 0; }
+.footer-email { font-size: 15px; color: #111; display: block; margin-bottom: 24px; }
+.footer-links { display: flex; gap: 20px; font-size: 13px; }
+.footer-links a { color: #333; }
+
+@media (max-width: 720px) {
+  .primary-nav {
+    display: none; flex-direction: column;
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: #fff; border-bottom: 1px solid #ccc; padding: 16px 24px;
+  }
+  .primary-nav.open { display: flex; }
+  .nav-toggle { display: block; }
+  .site-header { padding: 16px 20px; }
+  .column { padding-left: 20px; padding-right: 20px; }
+  .entry-head { flex-direction: column; align-items: flex-start; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe — Homepage v3 — Narrative Column</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#work">Skip to content</a>
+
+<header class="site-header">
+  <div class="logo">[Name]</div>
+  <nav class="primary-nav" id="primary-nav">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#" class="nav-resume">Resume</a>
+  </nav>
+  <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+</header>
+
+<!-- The entire page is one narrow column, treated like a long-form essay
+     rather than a series of visually distinct sections. Text is the
+     primary artifact; imagery is secondary and small. Genuinely different
+     value proposition from the wide/visual concepts. -->
+<main class="column">
+
+  <section id="hero" class="hero">
+    <h1>[Positioning statement — Product Designer bridging systems thinking, engineering fluency, and research rigor.]</h1>
+    <p class="hero-sub">Collaborated with
+      <span class="inline-logo">Meta</span>,
+      <span class="inline-logo">BMW</span>,
+      <span class="inline-logo">Deloitte</span>,
+      <span class="inline-logo">FINRA</span>, and
+      <span class="inline-logo">Hyundai MOBIS</span>.
+    </p>
+  </section>
+
+  <section id="work" class="work">
+    <p class="eyebrow">Work</p>
+
+    <article class="work-entry">
+      <div class="entry-head">
+        <h3>Meta — Interaction Design Lead</h3>
+        <div class="placeholder-img small">Meta</div>
+      </div>
+      <p class="proof">Led interaction design for a next-generation wearable social experience, working across a cross-functional research and engineering team. The work centered on making an unfamiliar interaction model feel immediately legible to first-time users.</p>
+    </article>
+
+    <article class="work-entry">
+      <div class="entry-head">
+        <h3>Feminist UX — Independent Thesis</h3>
+        <div class="placeholder-img small">Feminist UX</div>
+      </div>
+      <p class="proof">A self-directed research framework translating feminist theory into a practical UX methodology, validated across ten practitioner sessions. The project began as a question about whose needs get designed for by default.</p>
+    </article>
+
+    <article class="work-entry">
+      <div class="entry-head">
+        <h3>Terra Dotta — UX Lead</h3>
+        <div class="placeholder-img small">Terra Dotta</div>
+      </div>
+      <p class="proof">Led a client-facing website redesign under a fixed sponsor timeline and real stakeholder constraints, balancing institutional requirements against a genuinely usable outcome.</p>
+    </article>
+  </section>
+
+  <section id="about" class="about">
+    <p class="eyebrow">About</p>
+
+    <blockquote class="pull-quote">
+      "[A brief, genuine line from a collaborator — trust-building, not promotional.]"
+      <cite>— [Name], [Role/Company]</cite>
+    </blockquote>
+
+    <p class="about-copy">[A fuller bio paragraph — three to four sentences on how you think: systems thinking, engineering fluency, research rigor. Written in the same voice as the rest of this column, not as a separated "about me" block.] MFA Interactive &amp; Experience Design at SCAD, a Computer Science background, currently based in [Location].</p>
+
+    <p class="about-links">
+      <a href="#">How I Work →</a> &nbsp;&nbsp;
+      <a href="#">Feminist UX (external) →</a>
+    </p>
+  </section>
+
+  <section class="collaborations">
+    <p class="eyebrow small">Selected Collaborations</p>
+    <p class="collab-lead">Additional sponsored engagements and leadership work, in brief:</p>
+
+    <ul class="collab-list">
+      <li><span class="inline-logo">BMW</span> — UX Designer, Writing Lead</li>
+      <li><span class="inline-logo">FINRA</span> — UX Designer</li>
+      <li><span class="inline-logo">Deloitte</span> — Project Lead, UX Designer</li>
+      <li><span class="inline-logo">Hyundai MOBIS</span> — UX Designer</li>
+      <li><span class="inline-logo">Hack iX</span> — Founding Project Manager</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer id="contact" class="site-footer-expanded column">
+  <div class="footer-primary">
+    <p class="eyebrow">Contact</p>
+    <p class="footer-headline">Open to full-time roles.</p>
+    <a href="mailto:hello@example.com" class="footer-email">hello@example.com</a>
+  </div>
+  <div class="footer-links">
+    <a href="#">Resume</a>
+    <a href="#">LinkedIn</a>
+    <a href="#">GitHub</a>
+    <a href="#">Feminist UX</a>
+  </div>
+</footer>
+
+<script>
+  var toggle = document.getElementById('nav-toggle');
+  var nav = document.getElementById('primary-nav');
+  toggle.addEventListener('click', function () {
+    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    nav.classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>

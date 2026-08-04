@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe — Homepage v5 — Grid Refined</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#work">Skip to content</a>
+
+<header class="site-header">
+  <div class="logo">[Name]</div>
+  <nav class="primary-nav" id="primary-nav">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#" class="nav-resume">Resume</a>
+  </nav>
+  <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+</header>
+
+<main>
+
+  <!-- Hero: headline + trusted-by BOTH now anchored bottom-left as one
+       unit, opening whitespace at the TOP of the hero instead of the
+       middle. Trusted-by is now an inline sentence with logos embedded
+       in the running text. -->
+  <section id="hero" class="hero content-shell">
+    <div class="hero-anchor">
+      <h1>[Positioning statement — Product Designer bridging systems thinking, engineering fluency, and research rigor]</h1>
+      <p class="trusted-sentence">
+        Trusted by <span class="inline-logo">Meta</span>,
+        <span class="inline-logo">BMW</span>,
+        <span class="inline-logo">Deloitte</span>,
+        <span class="inline-logo">FINRA</span>, and
+        <span class="inline-logo">Hyundai MOBIS</span>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Work: 2-wide grid, text beneath each project — the first of two
+       new layout variations requested this round. -->
+  <section id="work" class="work content-shell">
+    <p class="section-title">Work</p>
+    <p class="section-lead">Three projects, chosen for range — not volume.</p>
+
+    <div class="work-grid">
+      <article class="grid-item">
+        <div class="placeholder-img">Meta</div>
+        <div class="case-title-row">
+          <div class="logo-mark"><span>Meta</span></div>
+          <h3>Interaction Design Lead</h3>
+        </div>
+        <p class="proof">Led interaction design for a next-generation wearable social experience, working across a cross-functional research and engineering team.</p>
+      </article>
+
+      <article class="grid-item">
+        <div class="placeholder-img">Feminist UX</div>
+        <div class="case-title-row">
+          <div class="logo-mark"><span>Ind.</span></div>
+          <h3>Independent Thesis</h3>
+        </div>
+        <p class="proof">A self-directed research framework translating feminist theory into a practical UX methodology, validated across ten practitioner sessions.</p>
+      </article>
+
+      <article class="grid-item">
+        <div class="placeholder-img">Terra Dotta</div>
+        <div class="case-title-row">
+          <div class="logo-mark"><span>TD</span></div>
+          <h3>UX Lead</h3>
+        </div>
+        <p class="proof">Led a client-facing website redesign under a fixed sponsor timeline and real stakeholder constraints.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Stats banner: spread full-width, generous breathing room after -->
+  <section class="stats-banner content-shell" aria-label="Quick facts">
+    <div class="stat"><span class="stat-num">7</span><span class="stat-label">Sponsored engagements</span></div>
+    <div class="stat"><span class="stat-num">1</span><span class="stat-label">Independent research thesis</span></div>
+    <div class="stat"><span class="stat-num">CS</span><span class="stat-label">Engineering background</span></div>
+  </section>
+
+  <!-- About: simple pairing (asymmetric split discarded), player card
+       enlarged -->
+  <section id="about" class="about content-shell">
+    <p class="section-title">About</p>
+
+    <div class="about-layout">
+      <div class="player-card">
+        <div class="player-photo">[Photo]</div>
+        <div class="player-info">
+          <p class="player-name">[Name]</p>
+          <p class="player-title">Product Designer</p>
+        </div>
+      </div>
+
+      <div class="about-text">
+        <blockquote class="pull-quote">
+          "[A brief, genuine line from a collaborator — trust-building, not promotional.]"
+          <cite>— [Name], [Role/Company]</cite>
+        </blockquote>
+        <p class="about-copy">[A fuller bio paragraph — three to four sentences on how you think: systems thinking, engineering fluency, research rigor. Method-led, not sector-specific.]</p>
+        <ul class="quick-facts">
+          <li>MFA Interactive &amp; Experience Design, SCAD</li>
+          <li>Computer Science background</li>
+          <li>Based in [Location]</li>
+        </ul>
+        <div class="about-links">
+          <a href="#">How I Work →</a>
+          <a href="#">Feminist UX (external) →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selected Collaborations: logo-wall, now confirmed as the locked
+       treatment -->
+  <section class="collaborations content-shell">
+    <p class="section-title">Collaborations</p>
+    <div class="logo-wall">
+      <div class="wall-item"><div class="logo-placeholder large"><span>BMW</span></div><p>UX Designer, Writing Lead</p></div>
+      <div class="wall-item"><div class="logo-placeholder large"><span>FINRA</span></div><p>UX Designer</p></div>
+      <div class="wall-item"><div class="logo-placeholder large"><span>Deloitte</span></div><p>Project Lead, UX Designer</p></div>
+      <div class="wall-item"><div class="logo-placeholder large"><span>Hyundai MOBIS</span></div><p>UX Designer</p></div>
+      <div class="wall-item"><div class="logo-placeholder large"><span>Hack iX</span></div><p>Founding Project Manager</p></div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer: no divider line, CTA reined to roughly headline scale -->
+<footer id="contact" class="site-footer-expanded content-shell">
+  <p class="footer-cta">[Big closing statement — e.g. a call to action]</p>
+  <div class="footer-bottom">
+    <div class="footer-primary">
+      <p class="eyebrow">Contact</p>
+      <a href="mailto:hello@example.com" class="footer-email">hello@example.com</a>
+    </div>
+    <div class="footer-links">
+      <a href="#">Resume</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="#">Feminist UX</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var toggle = document.getElementById('nav-toggle');
+  var nav = document.getElementById('primary-nav');
+  toggle.addEventListener('click', function () {
+    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    nav.classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>

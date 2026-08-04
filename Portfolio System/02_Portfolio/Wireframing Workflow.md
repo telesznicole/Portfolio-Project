@@ -24,15 +24,14 @@ This choice follows directly from decisions already locked elsewhere in this rep
 ## 2. Folder Structure
 
 ```
-02_Portfolio/
+05_Assets/
 └── Wireframes/
     ├── Homepage/
-    │   ├── v1-baseline/
-    │   ├── v2-[descriptor]/
+    │   ├── v1-[descriptor]/
+    │   ├── v1-[descriptor]/          (parallel concepts share the v1 prefix — see Section 3)
     │   └── _Archive/
     ├── Case Study/
     │   ├── v1-baseline/
-    │   ├── v2-[descriptor]/
     │   └── _Archive/
     ├── How I Work/
     │   ├── v1-baseline/
@@ -40,11 +39,16 @@ This choice follows directly from decisions already locked elsewhere in this rep
     ├── Resume/
     │   ├── v1-baseline/
     │   └── _Archive/
+    ├── Shared Components/
+    │   └── (reference-only markup/CSS patterns — see note below)
     └── _Promoted/
-        └── (references to the winning iteration per section, see Section 7)
+        └── [Section Name]/     (e.g. Homepage/ — a full, self-contained copy
+                                 of the winning iteration; see Section 7)
 ```
 
-**Section folders map directly to the Information Architecture, not to individual pages within it.** `Homepage` covers the full continuous-scroll experience (Hero, Work, About, Contact) as one prototype, since anchor-jump behavior between these sections can only be meaningfully tested together. `Case-Study-Template` is wireframed once as a shared structure — per the IA's template stability requirement — rather than once per flagship case study, unless a specific case study (Feminist UX, given its research/thesis weight) requires testing a structural deviation, in which case it gets its own clearly labeled sub-iteration within that folder.
+**Section folders map directly to the Information Architecture, not to individual pages within it.** `Homepage` covers the full continuous-scroll experience (Hero, Work, About, Contact) as one prototype, since anchor-jump behavior between these sections can only be meaningfully tested together. `Case Study` is wireframed once as a shared structure — per the IA's template stability requirement — rather than once per flagship case study, unless a specific case study (Feminist UX, given its research/thesis weight) requires testing a structural deviation, in which case it gets its own clearly labeled sub-iteration within that folder.
+
+**`Shared Components` holds reference patterns, not live dependencies.** Elements that repeat across sections — the primary nav, the footer — can be drafted once here as a reference pattern. Individual wireframe iterations *copy* the relevant markup/CSS into their own self-contained files rather than linking out to this folder at runtime. This keeps every iteration self-contained per Section 9's reproducibility rules, while still giving future iterations a consistent starting point to copy from instead of reinventing the same nav each time.
 
 **`_Archive` lives inside each section, not centrally.** Discarded concepts stay adjacent to the section they belong to, so the reasoning trail for any given page stays local and doesn't require cross-referencing a separate graveyard folder.
 
@@ -52,8 +56,8 @@ This choice follows directly from decisions already locked elsewhere in this rep
 
 ## 3. Naming Conventions
 
-- **Section folders:** `PascalCase`, matching IA terminology exactly (`Homepage`, `Case Study`, `How I Work`, `Resume`).
-- **Iteration folders:** `v{n}-{short-descriptor}` — e.g., `v1-baseline`, `v2-reduced-density`, `v3-progress-indicator`. The descriptor should describe *what changed or what's being tested*, not a vague label. A folder name should be legible on its own, without needing to open it, per the repository's standing principle of optimizing for AI and human retrieval without extra explanation.
+- **Section folders:** Title Case with spaces, matching the folder names already established in the repository (`Homepage`, `Case Study`, `How I Work`, `Resume`, `Shared Components`).
+- **Iteration folders:** `v{n}-{short-descriptor}` — e.g., `v1-baseline`, `v2-reduced-density`, `v3-progress-indicator`. The descriptor should describe *what changed or what's being tested*, not a vague label. A folder name should be legible on its own, without needing to open it, per the repository's standing principle of optimizing for AI and human retrieval without extra explanation. Parallel, independently-conceived concepts (rather than sequential revisions of one idea) share the `v1-` prefix with distinct descriptors — the descriptor, not the number, is what disambiguates them.
 - **Files within an iteration folder:**
   - `index.html`
   - `styles.css`
@@ -138,10 +142,11 @@ A concept is ready for promotion when **all** of the following are true:
 - The only remaining open questions are visual (typography, color, imagery treatment, branding) — meaning the section has graduated from a structural problem to a Design System problem.
 
 **Promotion process:**
-1. Reference (do not move) the winning iteration folder from `_Promoted/`, pointing back to its location in the section folder — the working prototype stays where it was built.
-2. Mark the iteration's `notes.md` with a `Promoted` status and the date.
-3. Log the decision in the Decision Log (Section 8).
-4. The promoted HTML/CSS prototype becomes the structural reference for Figma work — Figma should preserve the validated structure and behavior, not silently redesign it. Visual design has full authority over how it looks; it does not have authority to re-litigate structure that's already been promoted.
+1. Copy the winning iteration's files (`index.html`, `styles.css`) into `_Promoted/[Section Name]/`, named for the section rather than the iteration (e.g. `_Promoted/Homepage/`, regardless of whether the winning source was `v5` or `v9`). This is a full, self-contained copy, not a pointer — it should be openable and usable on its own without cross-referencing the source iteration.
+2. Leave the winning iteration in place at its original location in the section folder (do not move or delete it) — it remains the version-history record of how the promoted design was reached.
+3. Mark **both** the promoted copy's `notes.md` and the source iteration's `notes.md` with a `🔒 Promoted` status and the date. The promoted copy's notes should also state which source iteration it was copied from, and the source iteration's notes should note where the promoted copy lives — each should point to the other.
+4. Log the decision in the Decision Log (Section 8).
+5. The promoted HTML/CSS prototype becomes the structural reference for Figma work — Figma should preserve the validated structure and behavior, not silently redesign it. Visual design has full authority over how it looks; it does not have authority to re-litigate structure that's already been promoted.
 
 ---
 
@@ -174,7 +179,7 @@ These rules apply to every AI-generated wireframe iteration, without exception.
 1. **Every iteration's `notes.md` records the prompt/context that produced it**, including which Experience Blueprint or IA sections were provided as context. This is the "Top Layer" of the Sandwich Method already established in your research — human-defined context must be documented, not just the output.
 2. **Never overwrite an iteration in place.** A new idea, even a small one, gets a new version folder. History is never mutated, only extended.
 3. **Every `notes.md` documents what human curation was applied after generation** — the "Bottom Layer" of the Sandwich Method. If Nicole edited the AI's output directly, that edit should be noted, even briefly, so the record reflects the actual authorship split.
-4. **Each iteration is self-contained.** No iteration should depend on an external, undocumented dependency that could silently change its behavior later (an unpinned CDN script, an assumed but unlisted library version). If an iteration uses something in Section 2's file list, that dependency should be named explicitly in `notes.md`.
+4. **Each iteration is self-contained.** No iteration should depend on an external, undocumented dependency that could silently change its behavior later (an unpinned CDN script, an assumed but unlisted library version, or a live link to `Shared Components`). If an iteration's markup originated from a pattern in `Shared Components`, that lineage should be named in `notes.md` — but the code itself must be copied in, not referenced.
 5. **Avoid non-deterministic elements in generated code** (randomized values, time-based variation) unless the randomness itself is the thing being tested — reproducibility requires that opening an iteration folder later produces the same result it did when it was evaluated.
 6. **Note the date and tool used to generate each iteration** in its `notes.md`. A reproducibility record is only useful if it's clear what produced the artifact and when.
 

@@ -1,0 +1,169 @@
+/* ================================
+   Wireframe — Asymmetric Editorial (v3)
+   Low-fidelity structural prototype — grayscale only
+   ================================ */
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #111;
+  background: #fff;
+  line-height: 1.6;
+}
+
+.skip-link {
+  position: absolute; left: -999px; top: 0;
+  background: #000; color: #fff; padding: 8px 12px; z-index: 100;
+}
+.skip-link:focus { left: 8px; top: 8px; }
+
+.site-header {
+  position: sticky; top: 0;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 48px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  z-index: 50;
+}
+.logo { font-weight: 700; }
+.primary-nav { display: flex; gap: 28px; }
+.primary-nav a { color: #111; text-decoration: none; border-bottom: 1px solid transparent; }
+.primary-nav a:hover, .primary-nav a:focus { border-bottom: 1px solid #111; }
+.nav-resume { border: 1px solid #111; padding: 5px 12px !important; }
+.nav-toggle { display: none; background: none; border: 1px solid #111; padding: 6px 12px; }
+
+.eyebrow {
+  text-transform: uppercase; letter-spacing: 0.1em;
+  font-size: 12px; color: #666; margin: 0 0 12px 0;
+}
+.eyebrow.small { font-size: 11px; }
+
+/* ---- Asymmetric hero: 60/40 split, headline left, quiet credibility
+       occupying the negative space at right rather than centered ---- */
+.hero {
+  min-height: 82vh;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 40px;
+  align-items: center;
+  padding: 40px 56px;
+}
+.hero-text h1 {
+  font-size: clamp(30px, 5vw, 52px);
+  line-height: 1.22;
+  margin: 0;
+}
+.hero-aside { justify-self: end; max-width: 260px; }
+.cred-label {
+  font-size: 11px; color: #888; margin: 0 0 14px 0;
+  text-transform: uppercase; letter-spacing: 0.1em;
+}
+.logo-stack { display: flex; flex-direction: column; gap: 8px; }
+.logo-placeholder {
+  display: flex; align-items: center; justify-content: center;
+  height: 36px; padding: 0 12px;
+  border: 1px solid #ddd; font-size: 11px; color: #777;
+  background-image: repeating-linear-gradient(45deg, #f7f7f7, #f7f7f7 5px, #fff 5px, #fff 10px);
+}
+.logo-placeholder.large { height: 64px; font-size: 12px; }
+
+/* ---- Work: masonry-style asymmetric grid, not uniform stacked blocks ---- */
+.work { padding: 80px 56px; max-width: 1400px; margin: 0 auto; }
+.masonry { display: grid; grid-template-columns: 1.4fr 1fr; gap: 32px; margin-top: 48px; }
+
+.tile-lead .placeholder-img { height: 420px; }
+.tile-pair { display: flex; flex-direction: column; gap: 32px; }
+.tile-pair .placeholder-img { height: 190px; }
+
+.placeholder-img {
+  margin-bottom: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; color: #999;
+  background-image: repeating-linear-gradient(45deg, #eee, #eee 6px, #f9f9f9 6px, #f9f9f9 12px);
+  border: 1px dashed #ccc;
+}
+.tile h3 { font-size: 18px; margin: 0 0 8px 0; }
+.tile-lead h3 { font-size: 24px; }
+.proof { font-size: 14px; color: #444; max-width: 44ch; margin: 0; }
+
+/* ---- About: asymmetric two-column split, quote vs. bio ---- */
+.about { padding: 72px 56px; border-top: 1px solid #eee; max-width: 1400px; margin: 0 auto; }
+.about-split { display: grid; grid-template-columns: 1fr 1.3fr; gap: 64px; margin-top: 32px; }
+.pull-quote {
+  font-size: 19px; font-style: italic; color: #222;
+  border-left: 3px solid #ccc; padding-left: 20px;
+  margin: 0; line-height: 1.5;
+}
+.pull-quote cite { display: block; font-style: normal; font-size: 13px; color: #666; margin-top: 10px; }
+.about-copy { font-size: 15px; color: #222; margin: 0 0 20px 0; }
+.quick-facts {
+  list-style: none; padding: 0; margin: 0 0 20px 0;
+  display: flex; flex-wrap: wrap; gap: 8px 20px;
+  font-size: 13px; color: #555;
+}
+.quick-facts li { position: relative; padding-left: 14px; }
+.quick-facts li::before {
+  content: ""; position: absolute; left: 0; top: 8px;
+  width: 5px; height: 5px; background: #999; border-radius: 50%;
+}
+.about-links { display: flex; gap: 20px; font-size: 13px; }
+.about-links a { color: #111; }
+
+/* ---- Selected Collaborations: logo wall, denser grid than a row list ---- */
+.collaborations { padding: 72px 56px; border-top: 1px solid #eee; max-width: 1400px; margin: 0 auto; }
+.logo-wall {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+.wall-item p { font-size: 12px; color: #555; margin: 10px 0 0; text-align: center; }
+.wall-item .logo-placeholder.large { width: 100%; }
+
+.site-footer-expanded {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 48px 56px 40px;
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.footer-headline { font-size: 20px; color: #222; margin: 0 0 12px 0; }
+.footer-email { font-size: 16px; color: #111; }
+.footer-links { display: flex; gap: 20px; font-size: 13px; }
+.footer-links a { color: #333; }
+
+@media (max-width: 960px) {
+  .hero { grid-template-columns: 1fr; gap: 32px; }
+  .hero-aside { justify-self: start; max-width: 100%; }
+  .logo-stack { flex-direction: row; flex-wrap: wrap; }
+  .masonry { grid-template-columns: 1fr; }
+  .tile-pair { flex-direction: row; }
+  .about-split { grid-template-columns: 1fr; gap: 32px; }
+  .logo-wall { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 720px) {
+  .primary-nav {
+    display: none; flex-direction: column;
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: #fff; border-bottom: 1px solid #ccc; padding: 16px 24px;
+  }
+  .primary-nav.open { display: flex; }
+  .nav-toggle { display: block; }
+  .site-header { padding: 16px 20px; }
+  .hero, .work, .about, .collaborations, .site-footer-expanded { padding-left: 24px; padding-right: 24px; }
+  .tile-pair { flex-direction: column; }
+  .logo-wall { grid-template-columns: repeat(2, 1fr); }
+  .site-footer-expanded { flex-direction: column; align-items: flex-start; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}

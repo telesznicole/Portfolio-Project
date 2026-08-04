@@ -1,0 +1,149 @@
+/* ================================
+   Wireframe — Compact Dashboard
+   Low-fidelity structural prototype
+   No color, no branding, no type system —
+   grayscale only, for layout/hierarchy/pacing testing
+   ================================ */
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #111;
+  background: #fff;
+  line-height: 1.4;
+}
+
+.skip-link {
+  position: absolute; left: -999px; top: 0;
+  background: #000; color: #fff; padding: 8px 12px; z-index: 100;
+}
+.skip-link:focus { left: 8px; top: 8px; }
+
+.site-header {
+  position: sticky; top: 0;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 24px;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+  z-index: 50;
+}
+.logo { font-weight: 700; }
+.primary-nav { display: flex; gap: 20px; }
+.primary-nav a { color: #111; text-decoration: none; border-bottom: 1px solid transparent; }
+.primary-nav a:hover, .primary-nav a:focus { border-bottom: 1px solid #111; }
+.nav-resume { border: 1px solid #111; padding: 4px 10px !important; }
+.nav-toggle { display: none; background: none; border: 1px solid #111; padding: 6px 12px; }
+
+.eyebrow {
+  text-transform: uppercase; letter-spacing: 0.08em;
+  font-size: 11px; color: #666; margin: 0 0 8px 0;
+}
+.eyebrow.small { font-size: 11px; }
+
+.hero { padding: 32px 24px 20px; }
+.hero h1 {
+  font-size: clamp(24px, 4vw, 34px);
+  line-height: 1.25;
+  margin: 0;
+  max-width: 720px;
+}
+
+/* ---- Bento grid: Work + About + Collaborations + Contact as one module ---- */
+.dashboard { padding: 8px 24px 40px; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(140px, auto);
+  gap: 14px;
+}
+.cell {
+  border: 1px solid #ccc;
+  padding: 16px;
+}
+.span-2 { grid-column: span 2; }
+
+.case-card .placeholder-img {
+  height: 90px;
+  margin-bottom: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; color: #999;
+  background-image: repeating-linear-gradient(45deg, #eee, #eee 6px, #f7f7f7 6px, #f7f7f7 12px);
+  border: 1px dashed #ccc;
+}
+.case-card h3 { font-size: 14px; margin: 0 0 4px 0; }
+.case-card .proof { font-size: 12px; color: #444; margin: 0; }
+
+.about-copy-compact { font-size: 12px; color: #333; margin: 0 0 10px 0; }
+.about-links { display: flex; flex-direction: column; gap: 4px; font-size: 12px; }
+.about-links a { color: #111; }
+
+/* ---- Click-to-expand collaborations: collapsed shows name only,
+       essential info (the name itself) is never hidden ---- */
+.collab-expand-list { list-style: none; margin: 0; padding: 0; }
+.collab-expand-list li {
+  border-bottom: 1px solid #eee;
+}
+.collab-expand-list li:last-child { border-bottom: none; }
+.collab-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  font: inherit;
+  font-size: 13px;
+  padding: 8px 0;
+  cursor: pointer;
+  color: #111;
+  text-align: left;
+}
+.collab-toggle:focus {
+  outline: 2px solid #111;
+  outline-offset: 2px;
+}
+.toggle-icon { color: #666; }
+.collab-detail {
+  font-size: 12px;
+  color: #555;
+  margin: 0 0 8px 0;
+  display: none;
+}
+.collab-expand-list li.open .collab-detail { display: block; }
+.collab-expand-list li.open .toggle-icon::before { content: "–"; }
+
+.contact-cell .contact-links {
+  display: flex; flex-direction: column; gap: 6px; font-size: 13px;
+}
+.contact-cell .contact-links a { color: #111; }
+
+.site-footer {
+  display: flex; flex-wrap: wrap; gap: 16px;
+  padding: 16px 24px 40px; font-size: 13px; border-top: 1px solid #eee;
+}
+.site-footer a { color: #333; }
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .span-2 { grid-column: span 2; }
+}
+
+@media (max-width: 720px) {
+  .primary-nav {
+    display: none; flex-direction: column;
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: #fff; border-bottom: 1px solid #ccc; padding: 12px 24px;
+  }
+  .primary-nav.open { display: flex; }
+  .nav-toggle { display: block; }
+  .grid { grid-template-columns: 1fr; }
+  .span-2 { grid-column: span 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}

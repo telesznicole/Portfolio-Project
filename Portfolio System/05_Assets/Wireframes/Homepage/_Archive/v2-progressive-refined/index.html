@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe — Homepage v2 — Progressive Refined</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#work">Skip to content</a>
+
+<header class="site-header">
+  <div class="logo">[Name]</div>
+  <nav class="primary-nav" id="primary-nav">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#" class="nav-resume">Resume</a>
+  </nav>
+  <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+    Menu
+  </button>
+</header>
+
+<!-- Refined progress indicator: adds a text label on hover/focus, still
+     reflects scroll position only, never controls it. -->
+<nav class="progress-indicator" aria-label="Page section progress">
+  <a href="#hero" class="progress-dot" data-section="hero"><span class="progress-label">Top</span></a>
+  <a href="#work" class="progress-dot" data-section="work"><span class="progress-label">Work</span></a>
+  <a href="#about" class="progress-dot" data-section="about"><span class="progress-label">About</span></a>
+  <a href="#collaborations" class="progress-dot" data-section="collaborations"><span class="progress-label">Collaborations</span></a>
+  <a href="#contact" class="progress-dot" data-section="contact"><span class="progress-label">Contact</span></a>
+</nav>
+
+<main>
+
+  <section id="hero" class="hero">
+    <h1>[Positioning statement — Product Designer bridging systems thinking, engineering fluency, and research rigor]</h1>
+  </section>
+
+  <section class="credibility-band" aria-label="Collaborated with">
+    <p class="cred-label">Collaborated with</p>
+    <div class="logo-row">
+      <div class="logo-placeholder"><span>Meta</span></div>
+      <div class="logo-placeholder"><span>BMW</span></div>
+      <div class="logo-placeholder"><span>Deloitte</span></div>
+      <div class="logo-placeholder"><span>FINRA</span></div>
+      <div class="logo-placeholder"><span>Hyundai MOBIS</span></div>
+    </div>
+  </section>
+
+  <section id="work" class="work">
+    <div class="section-intro">
+      <p class="eyebrow">Work</p>
+      <p class="section-lead">Three projects, chosen for range — not volume.</p>
+    </div>
+
+    <article class="case-feature">
+      <div class="placeholder-img large">Meta</div>
+      <div class="case-copy">
+        <h3>Meta — Interaction Design Lead</h3>
+        <p class="proof">Led interaction design for a next-generation wearable social experience, working across a cross-functional research and engineering team.</p>
+      </div>
+    </article>
+
+    <article class="case-feature">
+      <div class="placeholder-img large">Feminist UX</div>
+      <div class="case-copy">
+        <h3>Feminist UX — Independent Thesis</h3>
+        <p class="proof">A self-directed research framework translating feminist theory into a practical UX methodology, validated across ten practitioner sessions.</p>
+      </div>
+    </article>
+
+    <article class="case-feature">
+      <div class="placeholder-img large">Terra Dotta</div>
+      <div class="case-copy">
+        <h3>Terra Dotta — UX Lead</h3>
+        <p class="proof">Led a client-facing website redesign under a fixed sponsor timeline and real stakeholder constraints.</p>
+      </div>
+    </article>
+  </section>
+
+  <section id="about" class="about">
+    <p class="eyebrow">About</p>
+
+    <blockquote class="pull-quote">
+      "[A brief, genuine line from a collaborator — trust-building, not promotional.]"
+      <cite>— [Name], [Role/Company]</cite>
+    </blockquote>
+
+    <p class="about-copy">[A fuller bio paragraph — three to four sentences on how you think: systems thinking, engineering fluency, research rigor. Method-led, not sector-specific.]</p>
+
+    <ul class="quick-facts">
+      <li>MFA Interactive &amp; Experience Design, SCAD</li>
+      <li>Computer Science background</li>
+      <li>Based in [Location]</li>
+    </ul>
+
+    <div class="about-links">
+      <a href="#">How I Work →</a>
+      <a href="#">Feminist UX (external) →</a>
+    </div>
+  </section>
+
+  <section id="collaborations" class="collaborations">
+    <p class="eyebrow small">Selected Collaborations</p>
+    <p class="collab-lead">Additional sponsored engagements and leadership work.</p>
+
+    <ul class="collab-rows">
+      <li class="collab-row">
+        <div class="logo-placeholder"><span>BMW</span></div>
+        <div class="collab-copy">
+          <h4>UX Designer, Writing Lead</h4>
+          <p>SCADpro sponsored engagement.</p>
+        </div>
+      </li>
+      <li class="collab-row">
+        <div class="logo-placeholder"><span>FINRA</span></div>
+        <div class="collab-copy">
+          <h4>UX Designer</h4>
+          <p>SCADpro sponsored engagement.</p>
+        </div>
+      </li>
+      <li class="collab-row">
+        <div class="logo-placeholder"><span>Deloitte</span></div>
+        <div class="collab-copy">
+          <h4>Project Lead, UX Designer</h4>
+          <p>SCADpro sponsored engagement.</p>
+        </div>
+      </li>
+      <li class="collab-row">
+        <div class="logo-placeholder"><span>Hyundai MOBIS</span></div>
+        <div class="collab-copy">
+          <h4>UX Designer</h4>
+          <p>SCADpro sponsored engagement.</p>
+        </div>
+      </li>
+      <li class="collab-row">
+        <div class="logo-placeholder"><span>Hack iX</span></div>
+        <div class="collab-copy">
+          <h4>Founding Project Manager</h4>
+          <p>Student hackathon leadership.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section id="contact" class="contact">
+    <p class="eyebrow">Contact</p>
+    <p class="contact-lead">Open to full-time roles.</p>
+    <div class="contact-links">
+      <a href="mailto:hello@example.com">hello@example.com</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <a href="#">Resume</a>
+  <a href="mailto:hello@example.com">Email</a>
+  <a href="#">LinkedIn</a>
+  <a href="#">GitHub</a>
+  <a href="#">Feminist UX</a>
+</footer>
+
+<script>
+  var toggle = document.getElementById('nav-toggle');
+  var nav = document.getElementById('primary-nav');
+  toggle.addEventListener('click', function () {
+    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    nav.classList.toggle('open');
+  });
+
+  var sections = document.querySelectorAll('main > section[id]');
+  var dots = document.querySelectorAll('.progress-dot');
+
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var dot = document.querySelector('.progress-dot[data-section="' + entry.target.id + '"]');
+        if (!dot) return;
+        if (entry.isIntersecting) {
+          dots.forEach(function (d) { d.classList.remove('active'); });
+          dot.classList.add('active');
+        }
+      });
+    }, { threshold: 0.4 });
+
+    sections.forEach(function (section) { observer.observe(section); });
+  }
+</script>
+
+</body>
+</html>

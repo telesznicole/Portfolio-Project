@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe — Homepage v3 — Asymmetric Editorial</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#work">Skip to content</a>
+
+<header class="site-header">
+  <div class="logo">[Name]</div>
+  <nav class="primary-nav" id="primary-nav">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#" class="nav-resume">Resume</a>
+  </nav>
+  <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+</header>
+
+<main>
+
+  <!-- Asymmetric hero: headline takes ~60% width, left-aligned, with
+       deliberate negative space at right holding a small, quiet
+       trusted-by lockup — a genuinely different composition than a
+       centered or full-width hero. -->
+  <section id="hero" class="hero">
+    <div class="hero-text">
+      <h1>[Positioning statement — Product Designer bridging systems thinking, engineering fluency, and research rigor]</h1>
+    </div>
+    <div class="hero-aside">
+      <p class="cred-label">Trusted by</p>
+      <div class="logo-stack">
+        <div class="logo-placeholder"><span>Meta</span></div>
+        <div class="logo-placeholder"><span>BMW</span></div>
+        <div class="logo-placeholder"><span>Deloitte</span></div>
+        <div class="logo-placeholder"><span>FINRA</span></div>
+        <div class="logo-placeholder"><span>Hyundai MOBIS</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work: asymmetric masonry — Meta gets a large lead tile (visual weight
+       signals it as the strongest credential), the other two share a row
+       below at smaller scale. Different grid logic, not just different
+       spacing, from every prior concept. -->
+  <section id="work" class="work">
+    <p class="eyebrow">Work</p>
+
+    <div class="masonry">
+      <article class="tile tile-lead">
+        <div class="placeholder-img">Meta</div>
+        <h3>Meta — Interaction Design Lead</h3>
+        <p class="proof">Led interaction design for a next-generation wearable social experience, working across a cross-functional research and engineering team.</p>
+      </article>
+
+      <div class="tile-pair">
+        <article class="tile">
+          <div class="placeholder-img">Feminist UX</div>
+          <h3>Feminist UX — Independent Thesis</h3>
+          <p class="proof">Research framework translating feminist theory into practical UX method, validated across 10 sessions.</p>
+        </article>
+        <article class="tile">
+          <div class="placeholder-img">Terra Dotta</div>
+          <h3>Terra Dotta — UX Lead</h3>
+          <p class="proof">Client-facing redesign delivered under a fixed sponsor timeline.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- About: two-column asymmetric split — quote on one side, bio/facts
+       on the other, rather than stacked. -->
+  <section id="about" class="about">
+    <p class="eyebrow">About</p>
+    <div class="about-split">
+      <blockquote class="pull-quote">
+        "[A brief, genuine line from a collaborator — trust-building, not promotional.]"
+        <cite>— [Name], [Role/Company]</cite>
+      </blockquote>
+      <div class="about-main">
+        <p class="about-copy">[A fuller bio paragraph — three to four sentences on how you think: systems thinking, engineering fluency, research rigor. Method-led, not sector-specific.]</p>
+        <ul class="quick-facts">
+          <li>MFA Interactive &amp; Experience Design, SCAD</li>
+          <li>Computer Science background</li>
+          <li>Based in [Location]</li>
+        </ul>
+        <div class="about-links">
+          <a href="#">How I Work →</a>
+          <a href="#">Feminist UX (external) →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selected Collaborations: a wall of logos rather than a row list —
+       role/contribution appears below each logo in small text, denser
+       and more grid-like than the row treatment used elsewhere. -->
+  <section class="collaborations">
+    <p class="eyebrow small">Selected Collaborations</p>
+    <div class="logo-wall">
+      <div class="wall-item">
+        <div class="logo-placeholder large"><span>BMW</span></div>
+        <p>UX Designer, Writing Lead</p>
+      </div>
+      <div class="wall-item">
+        <div class="logo-placeholder large"><span>FINRA</span></div>
+        <p>UX Designer</p>
+      </div>
+      <div class="wall-item">
+        <div class="logo-placeholder large"><span>Deloitte</span></div>
+        <p>Project Lead, UX Designer</p>
+      </div>
+      <div class="wall-item">
+        <div class="logo-placeholder large"><span>Hyundai MOBIS</span></div>
+        <p>UX Designer</p>
+      </div>
+      <div class="wall-item">
+        <div class="logo-placeholder large"><span>Hack iX</span></div>
+        <p>Founding Project Manager</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="contact" class="site-footer-expanded">
+  <div class="footer-primary">
+    <p class="eyebrow">Contact</p>
+    <p class="footer-headline">Open to full-time roles.</p>
+    <a href="mailto:hello@example.com" class="footer-email">hello@example.com</a>
+  </div>
+  <div class="footer-links">
+    <a href="#">Resume</a>
+    <a href="#">LinkedIn</a>
+    <a href="#">GitHub</a>
+    <a href="#">Feminist UX</a>
+  </div>
+</footer>
+
+<script>
+  var toggle = document.getElementById('nav-toggle');
+  var nav = document.getElementById('primary-nav');
+  toggle.addEventListener('click', function () {
+    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    nav.classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>

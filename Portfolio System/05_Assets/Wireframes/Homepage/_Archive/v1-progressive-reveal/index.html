@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe — Homepage v1 — Progressive Reveal</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#work">Skip to content</a>
+
+<header class="site-header">
+  <div class="logo">[Name]</div>
+  <nav class="primary-nav" id="primary-nav">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#" class="nav-resume">Resume</a>
+  </nav>
+  <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+    Menu
+  </button>
+</header>
+
+<!-- Functional wayfinding indicator — tracks scroll position across Hero/Work/About/Contact -->
+<nav class="progress-indicator" aria-label="Page section progress">
+  <a href="#hero" class="progress-dot" data-section="hero" aria-label="Hero section"></a>
+  <a href="#work" class="progress-dot" data-section="work" aria-label="Work section"></a>
+  <a href="#about" class="progress-dot" data-section="about" aria-label="About section"></a>
+  <a href="#contact" class="progress-dot" data-section="contact" aria-label="Contact section"></a>
+</nav>
+
+<main>
+
+  <section id="hero" class="hero">
+    <p class="eyebrow">Hero</p>
+    <h1>[Positioning statement — Product Designer bridging systems thinking, engineering fluency, and research rigor]</h1>
+    <a href="#work" class="hero-cta">See the work ↓</a>
+  </section>
+
+  <section id="work" class="work">
+    <p class="eyebrow">Work</p>
+
+    <div class="flagship-grid">
+      <article class="case-card">
+        <div class="placeholder-img">Meta</div>
+        <h3>Meta — Interaction Design Lead</h3>
+        <p class="proof">Led interaction design for a next-generation wearable social experience.</p>
+      </article>
+      <article class="case-card">
+        <div class="placeholder-img">Feminist UX</div>
+        <h3>Feminist UX — Independent Thesis</h3>
+        <p class="proof">A research-backed framework translating feminist theory into practical UX method.</p>
+      </article>
+      <article class="case-card">
+        <div class="placeholder-img">Terra Dotta</div>
+        <h3>Terra Dotta — UX Lead</h3>
+        <p class="proof">Led a client-facing website redesign under a fixed sponsor timeline.</p>
+      </article>
+    </div>
+
+    <div class="collaborations">
+      <p class="eyebrow small">Selected Collaborations</p>
+      <ul class="collab-list">
+        <li><strong>BMW</strong> — UX Designer, Writing Lead</li>
+        <li><strong>FINRA</strong> — UX Designer</li>
+        <li><strong>Deloitte</strong> — Project Lead, UX Designer</li>
+        <li><strong>Hyundai MOBIS</strong> — UX Designer</li>
+        <li><strong>Hack iX</strong> — Founding Project Manager</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <p class="eyebrow">About</p>
+    <p class="about-copy">[Brief bio — two to three sentences, method-led. Not sector-specific.]</p>
+    <div class="about-links">
+      <a href="#">How I Work →</a>
+      <a href="#">Feminist UX (external) →</a>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <p class="eyebrow">Contact</p>
+    <div class="contact-links">
+      <a href="mailto:hello@example.com">hello@example.com</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <a href="#">Resume</a>
+  <a href="mailto:hello@example.com">Email</a>
+  <a href="#">LinkedIn</a>
+  <a href="#">GitHub</a>
+  <a href="#">Feminist UX</a>
+</footer>
+
+<script>
+  var toggle = document.getElementById('nav-toggle');
+  var nav = document.getElementById('primary-nav');
+  toggle.addEventListener('click', function () {
+    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    nav.classList.toggle('open');
+  });
+
+  // Progress indicator: reflects scroll position, never controls it.
+  // Uses IntersectionObserver so it degrades gracefully (no JS = dots simply
+  // remain inactive; nav/anchor links still work via native browser behavior).
+  var sections = document.querySelectorAll('main > section[id]');
+  var dots = document.querySelectorAll('.progress-dot');
+
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var dot = document.querySelector('.progress-dot[data-section="' + entry.target.id + '"]');
+        if (!dot) return;
+        if (entry.isIntersecting) {
+          dots.forEach(function (d) { d.classList.remove('active'); });
+          dot.classList.add('active');
+        }
+      });
+    }, { threshold: 0.5 });
+
+    sections.forEach(function (section) { observer.observe(section); });
+  }
+</script>
+
+</body>
+</html>
