@@ -793,3 +793,136 @@ Nav restructured a second time: logo moved to lead the pill (left-aligned) inste
 
 **Status**
 🔒 Locked. The Homepage wireframing phase is complete. Next: Case Study Template wireframing, per the Wireframing Workflow's `Case Study/` folder (already scaffolded, currently empty) — to begin after a break, per Nicole.
+
+---
+
+### Decision
+
+Case Study Template wireframing begun. Three round-1 concepts generated: `v1-sidebar-context`, `v1-editorial-pill`, `v1-modular-cards`, all in `05_Assets/Wireframes/Case Study/`.
+
+**Why**
+- Per Nicole's brief: the case study template must evolve the promoted homepage's visual language (nav, typography scale, corner-radius system, spacing philosophy, card components), not invent a new one. All three concepts share identical nav (copied from `_Promoted/Homepage/`), identical `clamp(32px, 5.5vw, 56px)` title treatment, and the same 999px/16px corner-radius system.
+- Each concept extends a *different, specific* homepage component rather than varying a single interaction mechanism, learning from the homepage round-2 lesson that isolating one variable too early produces options that don't feel meaningfully different:
+  - `v1-sidebar-context` extends the idea tested (and declined) in the homepage's `v3-split-persistent`, with an explicit argument for why persistent context serves a long single-narrative differently than it served a four-section marketing page.
+  - `v1-editorial-pill` extends `.stats-banner` directly (repurposed as an Executive Summary strip) and gives the previously-shelved scroll-reveal technique its first real test.
+  - `v1-modular-cards` extends `.player-card` (as an Executive Summary identity card) and the click-to-expand pattern validated in the archived `v1-compact-dashboard` homepage concept.
+- The IA/Experience Blueprint's required section order (Context → Constraints → Decisions → Trade-offs → Outcome → mandatory Retrospective → Layer 3 Deep/Technical) is identical across all three — it is a locked structural requirement, not a variable being tested.
+- The dynamic progress indicator, explicitly reserved for this phase in an earlier Homepage decision, is tested in three different forms: a sticky sidebar nav with active-state tracking, a bottom-fixed progress-fill pill, and pill-styled section-jump chips.
+
+**Status**
+🟡 Revisit — pending Nicole's review.
+
+---
+
+### Decision
+
+Case Study round 1 reviewed. `v1-sidebar-context` confirmed as the leading direction ("I actually really like this a lot... might be a final contender"). `v1-editorial-pill` and `v1-modular-cards` archived as whole concepts, each with specific elements salvaged. Six round-2 variants generated, all built on `v1-sidebar-context`: `v2-consistency` (baseline fixes), `v2-bold-type`, `v2-breathing-room`, `v2-cards-sidebar`, `v2-cards-body`, `v2-cards-both`.
+
+**Why**
+- `v1-sidebar-context`: confirmed, with three corrections requested — progress-nav active-state timing, bolder narrative typography, and "More Work" cards that exactly match the homepage's own Work-card component.
+- `v1-editorial-pill`: whole concept archived ("I don't particularly like this one"), but its spacing/breathing-room quality is explicitly salvaged into `v2-breathing-room`. Its uneven column widths were flagged as the same category of issue seen earlier in a homepage iteration.
+- `v1-modular-cards`: whole concept archived ("maybe a little overdone and loses any sense of hierarchy"), but its card treatment and click-to-expand pattern are explicitly salvaged — Nicole asked to see the sidebar version with cards integrated into the sidebar, the body, or both.
+- `v2-consistency` isolates the two corrections (progress-nav timing fix via `rootMargin`, exact Work-card reuse) as a clean baseline every other v2 variant builds on, so later comparisons each test exactly one additional change against a known-good reference — avoiding the homepage's earlier lesson about over-isolating variables, applied correctly here since Nicole explicitly asked to see each dimension separately.
+- Cards are deliberately scoped narrowly in `v2-cards-body`: only Decisions gets card treatment, specifically because it's the one section with a natural two-tier structure (chosen decision / rejected alternative) that click-to-expand is suited to compress — not applied elsewhere as decoration.
+
+**Status**
+🔒 Locked
+
+---
+
+### Decision
+
+Case Study round 2 reviewed. `v2-consistency` confirmed as the corrected baseline every later variant builds on. `v2-breathing-room` discarded outright. `v2-bold-type` and `v2-cards-sidebar` confirmed with specific corrections requested. `v2-cards-body` and `v2-cards-both` both confirmed to carry forward as-is. Five round-3 variants generated: `v3-refined-baseline`, `v3-cards-both`, `v3-progress-stylized`, `v3-progress-tags`, `v3-sections-cards`.
+
+**Why**
+- `v2-consistency`: both fixes (progress-nav trigger timing, exact Work-card reuse for "More Work") confirmed working — "pretty locked in... a very safe bet and should continue to be a top contender."
+- `v2-bold-type`: the bold narrative type itself liked outright; the one correction requested was toning down the Retrospective heading specifically, since it read as competing with — not reinforcing — the section's existing bordered-box elevation.
+- `v2-breathing-room`: discarded — Nicole preferred `v2-consistency`'s spacing directly, no salvageable element identified.
+- `v2-cards-sidebar`: the exec-summary card liked ("more modern and fresh"), with two corrections requested — remove the sidebar divider line (feels dated once a card sits above it) and explore stylizing the progress-nav section titles, e.g. as tags — flagged as an open question needing its own comparison rather than a default addition.
+- `v2-cards-body`: the expandable Decisions-card pattern confirmed as reusable elsewhere; sparked a direct request to see full content sections themselves in cards.
+- `v2-cards-both`: no objections raised — confirmed as a base option worth continuing to forward.
+- Round 3 combined both confirmed corrections (`v2-cards-sidebar` + `v2-bold-type`) into a single corrected `v3-refined-baseline`, carried the same corrections into `v2-cards-both` to produce `v3-cards-both`, and generated three new structural tests: two progress-indicator stylizations (`v3-progress-stylized`, a dot/line stepper; `v3-progress-tags`, a pill/tag treatment) answering the open sidebar-styling question, and one testing full sections-as-cards (`v3-sections-cards`) per the direct request from `v2-cards-body`'s review.
+
+**Status**
+🔒 Locked
+
+---
+
+### Decision
+
+Case Study round 3 reviewed. `v3-cards-both` confirmed as the new standard baseline, superseding `v3-refined-baseline`. `v3-progress-stylized` preferred over `v3-progress-tags` for the progress-indicator direction, with an open consistency concern raised. `v3-sections-cards` discarded as too dense. `v2-consistency` retired as a comparison baseline.
+
+**Why**
+- `v3-refined-baseline`: superseded, not on its own merits — `v3-cards-both` already contained everything in this file (sidebar card, no divider, refined bold type, toned-down Retrospective heading) plus the expandable Decisions cards, and was confirmed with zero corrections, making the plainer version redundant to keep testing separately.
+- `v3-cards-both`: "Very solid baseline. Continue this forward as the new baseline." No corrections requested — this is now the base every round-4 variant starts from.
+- `v3-progress-stylized`: preferred over the tag treatment, but Nicole raised a specific, legitimate concern — the dot-and-connecting-line stepper is a genuinely new visual metaphor with no counterpart elsewhere in the locked visual language, unlike the sidebar card (extends `.player-card`) or the tag treatment (extends `.engagement-tag`). Kept in place as the round-4 comparison baseline while new stylizations are explored that extend existing components instead of inventing new ones.
+- `v3-progress-tags`: not preferred, though not explicitly discarded either — left in place pending confirmation. Worth noting this direction revisits the "pill-styled section-jump chips" idea already tested, and not chosen, in round 1's `v1-modular-cards`.
+- `v3-sections-cards`: discarded — "as I suspected this is just too much." Confirms the density risk flagged in this variant's own `notes.md`. The underlying instinct (cards can work well in more than one purposeful place) is not discarded — it carries into round 4's `v4-cards-tasteful`, which looks for a small number of structurally-justified spots instead of universal coverage.
+- `v2-consistency`: retired — "we can drop this now." Both original fixes it isolated (progress-nav timing, Work-card reuse) are already present in every downstream variant, so nothing is lost by retiring the plain comparison file itself.
+
+**Status**
+🔒 Locked — `v3-cards-both` promoted to standard baseline. 🟡 Revisit — progress-indicator direction and additional card placement pending round 4 review.
+
+---
+
+### Decision
+
+Case Study round 4 reviewed. Progress-indicator field narrowed to two finalists, `v3-progress-stylized` and `v4-progress-numbered`, with a decision deferred rather than forced. `v4-progress-pared` and `v4-progress-segmented` archived. `v4-cards-tasteful` confirmed in direction but sent back for hierarchy refinement. `v3-progress-tags` and `v2-cards-body` also archived on separate, earlier-flagged grounds. Three round-5 iterations generated: `v5-progress-numbered` (consistency fix), `v5-progress-chip` (new concept), `v5-cards-tasteful-refined`.
+
+**Why**
+- `v4-progress-pared`: not disliked ("I don't mind this"), but didn't make the final two — archived, spacing note preserved in case revisited.
+- `v4-progress-segmented`: archived, and worth recording plainly — the file's own description overstated what it delivered. It claimed to reuse the page's 999px pill radius, but at a 4px track width that rounding is imperceptible; Nicole correctly read it as "just a long line," not a pill. The *intent* (extend an existing shape) was right, the execution wasn't. Retried properly in `v5-progress-chip`, sized so the radius is actually visible.
+- `v4-progress-numbered`: confirmed as one of two finalists ("looks pretty clean"), with one correction — body section headings weren't numbered to match the sidebar tracker. Fixed in `v5-progress-numbered`.
+- `v3-progress-stylized`: confirmed as the other finalist. Nicole is genuinely undecided between the two and flagged this as a possible backlog item rather than something to force now — noted here so the decision isn't lost, not resolved.
+- `v3-progress-tags`: archived — "not my favorite stylistically."
+- `v2-cards-body`: archived — fully superseded structurally by `v3-cards-both`; its Decisions-card contribution lives on in every downstream variant.
+- `v4-cards-tasteful`: direction confirmed ("I think I like it") but flagged for a real hierarchy problem — Retrospective and Deep/Technical, sitting back-to-back with near-identical card styling, read as an accidental duplicate rather than two distinct sections. `v5-cards-tasteful-refined` gives Retrospective a filled/heavier treatment (matching its role as the page's credibility peak) and Deep/Technical a lighter outline-only treatment plus an explicit "Optional" tag, with more spacing between them.
+- A pre-existing gap was surfaced (not fixed) while building `v5-progress-numbered`: the Outcome section has never had an `id` or a progress-nav entry, in any iteration back to `v1-sidebar-context`. Flagged for a future decision, independent of which progress style wins.
+
+**Status**
+🔒 Locked — `v4-progress-pared`, `v4-progress-segmented`, `v3-progress-tags`, `v2-cards-body` archived. 🟡 Revisit — progress-indicator final choice (deferred, low-priority per Nicole), `v5-cards-tasteful-refined` hierarchy treatment, and the Outcome section's missing progress-nav entry.
+
+---
+
+### Decision
+
+Case Study round 5 reviewed. `v3-progress-stylized` confirmed outright as the winning progress indicator; `v4-progress-numbered`/`v5-progress-numbered` and `v5-progress-chip` archived. `v5-cards-tasteful-refined` discarded, and the whole cards-tasteful direction (`v4-cards-tasteful` included) abandoned in favor of reverting to plain Deep/Technical text. The Outcome section's missing `id`/progress-nav entry — surfaced in round 4 — confirmed as a required fix, applied globally rather than to one file. `v6-final-candidate` generated: `v3-progress-stylized` + `v3-cards-both`'s body, with the Outcome fix and all four Cohesion Audit findings applied. Pending Nicole's final approval before promotion.
+
+**Why**
+- `v3-progress-stylized`: "I think I'll have the v3-progress-stylized progress indicator but with the cards-both body." Confirmed over `v4-progress-numbered`/`v5-progress-numbered` — even after the numbering-consistency fix, the number badges "reads weird" paired with Retrospective's and Deep/Technical's own distinct box treatments, a problem the stepper's marker-and-line never had. Also confirmed over `v5-progress-chip` — "a very clean option... not opposed to," but the stepper was still preferred outright.
+- **Outcome id/tracking gap:** "you raise a bigger issue of Outcome not being id-ed. It should be, it's its own section. This should be fixed everywhere." Not scoped to one file — `v6-final-candidate` adds `id="outcome"` and a 7th tracked marker, and this is now the standing requirement for the section going forward.
+- `v5-cards-tasteful-refined`: discarded — "too many new styles and feels messy." A real process lesson, recorded plainly in its own `notes.md` and worth stating here too: the "Optional" tag added to Deep/Technical was a design mistake, not a stylistic quibble. The Experience Blueprint's Layer 3 language ("fully optional... a visitor who doesn't scroll this far shouldn't feel they missed something essential") describes how the *system* should pace content for an early-stopping visitor — it does not license labeling that content "optional" for every reader, including a Hiring Manager deciding whether to keep reading. Citing the right research and drawing the wrong conclusion from it is a distinct failure mode worth watching for going forward, separate from "don't overdesign." `v4-cards-tasteful` (the parent concept) archived alongside it — two attempts at differentiating a Deep/Technical card didn't land, and `v6-final-candidate` reverts to plain flowing text instead.
+- **Cohesion Audit fixes**, confirmed as "good catches" and applied to `v6-final-candidate`: Deep/Technical's divider line removed (violated the Homepage's own locked no-divider-lines rule); "More Work" card now matches the Homepage's Work card exactly (280px image height, 56px/48px grid gap); breakpoint aligned to the Homepage's 900px; nav `z-index` aligned to 50; `.engagement-tag` gets `flex-shrink: 0`.
+
+**Status**
+🔒 Locked — progress-indicator direction, cards-tasteful direction, and all four Cohesion Audit findings resolved. 🟡 Revisit — `v6-final-candidate` is pending Nicole's final visual confirmation before promotion, per her request for "one last look at the final product before I approve."
+
+---
+
+### Decision
+
+`v6-final-candidate` reviewed — three corrections requested, none structural. `v7-final-candidate` generated with all three fixed; `v6-final-candidate` archived.
+
+**Why**
+- **Retrospective heading hierarchy:** "If retrospective is on the same level hierarchically to be in the progress indicator then it should have the same text treatment hierarchically as the other section titles." This reverses the `v2-bold-type` correction that toned the heading down — that made sense when Retrospective's box was the only distinguishing signal on the page, but once it became a tracked, equal-level entry in the progress nav, a smaller heading contradicted the nav's own claim. Heading now matches the standard section scale; the box remains as a separate emphasis signal.
+- **Label consistency:** "the progress indicator says 'deeper look' but the body says 'a deeper look'... change it to match the progress indicator." Eyebrow text updated to "Deeper Look."
+- **Two scrollspy bugs**, flagged as worth fixing even at wireframe stage: clicking a progress-nav link mis-highlighted the *next* section rather than the one clicked (short sections don't reliably occupy the observer's detection band once jumped to and landed at the top of the viewport), and the jumped-to section's title landed directly behind the sticky nav (no `scroll-margin-top` was set). Both fixed — click now sets active state directly and suppresses the observer for 700ms during the scroll animation; `scroll-margin-top: 120px` added to every tracked section.
+
+**Status**
+🔒 Locked — all three fixes applied and verified. 🟡 Revisit — `v7-final-candidate` pending Nicole's final approval; per her own note, this may be the last round before promotion.
+
+---
+
+### Decision
+
+**Case Study Template low-fidelity wireframe formally promoted.** Nicole confirmed `v7-final-candidate` ("Gorgeous!") and copied it into `05_Assets/Wireframes/_Promoted/Case Study/` as the canonical promoted artifact, closing the Case Study Template wireframing effort.
+
+**Why**
+- Meets every condition in Wireframing Workflow §7: all Tier 1 criteria pass (including the case-study-specific requirement that Executive Summary content resolve within the first viewport), Nicole confirmed the structural and interaction direction, and no open structural questions remain — only visual decisions (typography, color, imagery, branding) are left, which belong to the Design System phase.
+- The two functionality bugs fixed in `v7-final-candidate` (scrollspy mis-highlighting, sticky-nav occlusion) were caught and resolved before promotion, consistent with Nicole's note that interaction correctness matters even at wireframe stage, not just visual polish.
+- Seven rounds of iteration (`v1` through `v7`), fully traceable through `05_Assets/Wireframes/Case Study/_Archive/` and this Decision Log, each with reasoning preserved rather than silently overwritten. Two open items were surfaced during the process and resolved before promotion rather than carried forward silently: the Outcome section's missing progress-nav entry (fixed in `v6-final-candidate`), and four Homepage/Case-Study cohesion gaps documented in `05_Assets/Wireframes/Case Study/Cohesion Audit.md` (all fixed in `v6-final-candidate`).
+
+**What's promoted, concretely:** the stepper progress nav (marker + connecting line, visited/active states, now tracking all 7 sections including Outcome) with corrected click behavior; the sidebar exec-summary card with no divider line; bold narrative heading scale applied uniformly across every tracked section, including Retrospective; expandable Decisions cards (click-to-expand, considered-and-rejected detail); Retrospective's bordered-box treatment; plain-text Deep/Technical layer with a "Deeper Look" label matching its nav entry, separated by spacing alone (no divider line); a "More Work" section using the Homepage's Work-card component exactly (matched image height and grid gap); and full alignment with the Homepage's responsive breakpoint, nav z-index, and tag component behavior.
+
+**Status**
+🔒 Locked. The Case Study Template wireframing phase is complete.

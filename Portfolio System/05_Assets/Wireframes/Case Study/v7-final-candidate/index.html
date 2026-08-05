@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe — Case Study v7 — Final Candidate (Refined)</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#context">Skip to content</a>
+
+<div class="site-header-wrap">
+  <nav class="floating-nav" aria-label="Primary">
+    <a href="/" class="nav-logo">[Name]</a>
+    <div class="nav-links">
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+      <a href="/resume" class="nav-resume">Resume</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav-panel">Menu</button>
+  </nav>
+  <div class="mobile-nav-panel" id="mobile-nav-panel">
+    <a href="/#work">Work</a>
+    <a href="/#about">About</a>
+    <a href="/#contact">Contact</a>
+    <a href="/resume" class="nav-resume">Resume</a>
+  </div>
+</div>
+
+<main>
+
+  <header class="cs-title content-shell">
+    <div class="cs-title-sponsor">
+      <div class="logo-mark large"><span>Meta</span></div>
+      <span class="engagement-tag">Sponsored Engagement</span>
+    </div>
+    <h1>Interaction Design Lead</h1>
+    <p class="cs-title-sub">Shipped interaction patterns for a cross-functional wearable social experience team.</p>
+  </header>
+
+  <div class="cs-layout content-shell">
+
+    <aside class="cs-sidebar">
+      <div class="exec-summary-card">
+        <p class="exec-label">At a glance</p>
+        <dl>
+          <div class="exec-row"><dt>Role</dt><dd>Interaction Design Lead</dd></div>
+          <div class="exec-row"><dt>Team</dt><dd>Cross-functional research + engineering</dd></div>
+          <div class="exec-row"><dt>Duration</dt><dd>12 weeks</dd></div>
+          <div class="exec-row"><dt>Problem</dt><dd>Existing interaction model didn't hold up for first-time wearable users.</dd></div>
+          <div class="exec-row"><dt>Proof</dt><dd>Adopted as the default interaction pattern across the team's next release.</dd></div>
+        </dl>
+      </div>
+
+      <!-- Progress nav: the winning direction — v3-progress-stylized's
+           stepper (marker + connecting line, visited/active states) —
+           now with 7 tracked sections instead of 6. Outcome previously
+           had no id and no nav entry in every prior iteration back to
+           v1; it's its own required section per the IA/Experience
+           Blueprint and gets tracked here like every other one. -->
+      <nav class="cs-progress-nav stepper" aria-label="Case study sections">
+        <a href="#context" class="progress-link" data-section="context">
+          <span class="progress-marker" aria-hidden="true"></span>
+          <span class="progress-label">Context</span>
+        </a>
+        <a href="#constraints" class="progress-link" data-section="constraints">
+          <span class="progress-marker" aria-hidden="true"></span>
+          <span class="progress-label">Constraints</span>
+        </a>
+        <a href="#decisions" class="progress-link" data-section="decisions">
+          <span class="progress-marker" aria-hidden="true"></span>
+          <span class="progress-label">Decisions</span>
+        </a>
+        <a href="#tradeoffs" class="progress-link" data-section="tradeoffs">
+          <span class="progress-marker" aria-hidden="true"></span>
+          <span class="progress-label">Trade-offs</span>
+        </a>
+        <a href="#outcome" class="progress-link" data-section="outcome">
+          <span class="progress-marker" aria-hidden="true"></span>
+          <span class="progress-label">Outcome</span>
+        </a>
+        <a href="#retrospective" class="progress-link" data-section="retrospective">
+          <span class="progress-marker" aria-hidden="true"></span>
+          <span class="progress-label">Retrospective</span>
+        </a>
+        <a href="#deeper" class="progress-link" data-section="deeper">
+          <span class="progress-marker" aria-hidden="true"></span>
+          <span class="progress-label">Deeper Look</span>
+        </a>
+      </nav>
+    </aside>
+
+    <div class="cs-narrative">
+
+      <section id="context" class="narrative-block">
+        <h2>Context</h2>
+        <p>[Scene-setting paragraph — what existed before this project, who it was for, and why it mattered.]</p>
+      </section>
+
+      <figure class="narrative-image">
+        <div class="placeholder-img wide">Full-width narrative image</div>
+        <figcaption>[Caption — what this image shows and why it's here.]</figcaption>
+      </figure>
+
+      <section id="constraints" class="narrative-block">
+        <h2>Constraints</h2>
+        <p>[Real constraints — timeline, technical limitations, stakeholder requirements.]</p>
+      </section>
+
+      <section id="decisions" class="narrative-block">
+        <h2>Decisions</h2>
+        <p>[One to two sentences framing the set of decisions below.]</p>
+
+        <div class="decision-list">
+          <div class="decision-item">
+            <button class="decision-toggle" aria-expanded="false">
+              <span>[Decision one — the choice made, stated plainly]</span>
+              <span class="toggle-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="decision-detail">
+              <p class="rejected-label">Considered and rejected</p>
+              <p>[The specific alternative considered, and why it didn't make the cut.]</p>
+            </div>
+          </div>
+          <div class="decision-item">
+            <button class="decision-toggle" aria-expanded="false">
+              <span>[Decision two — the choice made, stated plainly]</span>
+              <span class="toggle-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="decision-detail">
+              <p class="rejected-label">Considered and rejected</p>
+              <p>[The specific alternative considered, and why it didn't make the cut.]</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tradeoffs" class="narrative-block">
+        <h2>Trade-offs</h2>
+        <p>[What was given up to make the chosen decisions work.]</p>
+      </section>
+
+      <figure class="narrative-image">
+        <div class="placeholder-img wide">Full-width narrative image</div>
+        <figcaption>[Caption — what this image shows and why it's here.]</figcaption>
+      </figure>
+
+      <!-- Outcome: now id'd and tracked (see nav comment above) — the
+           only structural change to this section versus every prior
+           iteration. -->
+      <section id="outcome" class="narrative-block">
+        <h2>Outcome</h2>
+        <p>[What actually happened — shipped, adopted, measured, or validated.]</p>
+      </section>
+
+      <!-- Retrospective heading now matches the standard section-title
+           scale/weight (see styles.css) — it's a tracked, top-level
+           section in the progress nav like every other one, so it
+           shouldn't read as a subsection via a smaller heading. The
+           bordered box still gives it distinct emphasis. -->
+      <section id="retrospective" class="narrative-block retrospective">
+        <h2>Retrospective</h2>
+        <p>[What went wrong, what was cut, what you'd do differently — the credibility peak of the page.]</p>
+      </section>
+
+      <!-- Deep/Technical: plain text, no card, no "Optional" label —
+           reverted from the cards-tasteful exploration. The divider
+           line (border-top) that separated this from Retrospective in
+           every prior iteration is removed here per the cohesion audit
+           — it violated the Homepage's own locked "no divider lines
+           between sections" rule. Separation now comes from spacing
+           alone (an added margin-top on top of the standard block gap),
+           consistent with how the Homepage separates every section. -->
+      <!-- Eyebrow text changed from "A deeper look" to "Deeper Look" to
+           match the progress-nav label exactly, per Nicole's request. -->
+      <section id="deeper" class="narrative-block deep-layer">
+        <p class="eyebrow">Deeper Look</p>
+        <h2>Edge Cases &amp; System States</h2>
+        <p>[Error states, empty states, permission edge cases.]</p>
+        <h3>Engineering Collaboration</h3>
+        <p>[How this project involved real engineering handoff or collaboration.]</p>
+        <a href="/how-i-work" class="deep-link">See how AI-assisted workflow shaped this project →</a>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- More Work: card dimensions now match the Homepage's Work card
+       exactly (280px image height, 56px/48px grid gap) — previously
+       220px and a flat 48px gap, contradicting the stated goal of this
+       being "literally the same card component." See Cohesion Audit.md. -->
+  <section class="cs-crosslinks content-shell">
+    <p class="section-title">More Work</p>
+    <div class="work-grid">
+      <article class="grid-item">
+        <a href="/work/feminist-ux" class="grid-item-link">
+          <div class="placeholder-img">Feminist UX</div>
+          <div class="case-title-row">
+            <div class="case-title-left">
+              <div class="logo-mark"><span>Ind.</span></div>
+              <h3>Independent Thesis</h3>
+            </div>
+            <span class="engagement-tag">Independent Research</span>
+          </div>
+          <p class="proof">Validated a feminist UX framework across ten practitioner sessions.</p>
+        </a>
+      </article>
+      <article class="grid-item">
+        <a href="/work/terra-dotta" class="grid-item-link">
+          <div class="placeholder-img">Terra Dotta</div>
+          <div class="case-title-row">
+            <div class="case-title-left">
+              <div class="logo-mark"><span>TD</span></div>
+              <h3>UX Lead</h3>
+            </div>
+            <span class="engagement-tag">Client Engagement</span>
+          </div>
+          <p class="proof">Delivered a full website redesign under a fixed sponsor timeline.</p>
+        </a>
+      </article>
+    </div>
+    <a href="/#work" class="back-to-work">← Back to Work</a>
+  </section>
+
+</main>
+
+<footer class="site-footer-expanded content-shell">
+  <p class="footer-cta">[Big closing statement — e.g. a call to action]</p>
+  <div class="footer-bottom">
+    <div class="footer-primary">
+      <p class="eyebrow">Contact</p>
+      <a href="mailto:hello@example.com" class="footer-email">hello@example.com</a>
+    </div>
+    <div class="footer-links">
+      <a href="/resume">Resume</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="#">Feminist UX</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var toggle = document.getElementById('nav-toggle');
+  var panel = document.getElementById('mobile-nav-panel');
+  toggle.addEventListener('click', function () {
+    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    panel.classList.toggle('open');
+  });
+
+  document.querySelectorAll('.decision-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      btn.closest('.decision-item').classList.toggle('open');
+    });
+  });
+
+  var sections = document.querySelectorAll('.narrative-block[id]');
+  var links = Array.prototype.slice.call(document.querySelectorAll('.progress-link'));
+
+  function setActive(link) {
+    var idx = links.indexOf(link);
+    links.forEach(function (l, i) {
+      l.classList.remove('active', 'visited');
+      if (i < idx) l.classList.add('visited');
+    });
+    link.classList.add('active');
+  }
+
+  // Clicking a progress-nav link previously fought with the scroll
+  // observer below: short sections (Trade-offs, Outcome) don't reach
+  // the observer's detection band once scrolled to the top of the
+  // viewport, so the observer would end up marking the *next* section
+  // active instead of the one just clicked. Fix: treat a click as the
+  // source of truth immediately, and ignore the observer's updates
+  // until the smooth-scroll animation has had time to finish.
+  var suppressObserverUntil = 0;
+  links.forEach(function (link) {
+    link.addEventListener('click', function () {
+      setActive(link);
+      suppressObserverUntil = Date.now() + 700;
+    });
+  });
+
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      if (Date.now() < suppressObserverUntil) return;
+      entries.forEach(function (entry) {
+        var link = document.querySelector('.progress-link[data-section="' + entry.target.id + '"]');
+        if (!link) return;
+        if (entry.isIntersecting) {
+          setActive(link);
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+    sections.forEach(function (s) { observer.observe(s); });
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+/* ================================
+   Wireframe — Case Study v3: Sections in Cards
+   Base: v3-refined-baseline. Change: every narrative content section is
+   its own bordered card (not just Retrospective). Because each section
+   now carries its own elevation, all narrative headings are toned down
+   uniformly — the same fix applied to Retrospective's heading alone in
+   the baseline, generalized here since every section has a box now.
+   ================================ */
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #111;
+  background: #fff;
+  line-height: 1.6;
+}
+
+.skip-link { position: absolute; left: -999px; top: 0; background: #000; color: #fff; padding: 8px 12px; z-index: 100; border-radius: 6px; }
+.skip-link:focus { left: 8px; top: 8px; }
+
+.site-header-wrap { position: sticky; top: 20px; z-index: 60; display: flex; justify-content: center; padding: 0 24px; }
+.floating-nav { display: flex; align-items: center; gap: 44px; width: fit-content; max-width: 100%; background: #fff; border: 1px solid #ddd; border-radius: 999px; padding: 8px 8px 8px 28px; }
+.nav-logo { font-weight: 800; font-size: 15px; color: #111; text-decoration: none; white-space: nowrap; }
+.nav-links { display: flex; align-items: center; gap: 26px; }
+.nav-links a { color: #111; text-decoration: none; font-size: 14px; white-space: nowrap; border-bottom: 1px solid transparent; }
+.nav-links a:hover, .nav-links a:focus { border-bottom: 1px solid #111; }
+.nav-resume { border: 1px solid #111 !important; padding: 6px 16px; border-radius: 999px; }
+.nav-toggle { display: none; background: none; border: 1px solid #111; border-radius: 999px; padding: 6px 16px; font-size: 13px; }
+.mobile-nav-panel { display: none; flex-direction: column; gap: 4px; max-width: 480px; width: fit-content; margin: 8px auto 0; padding: 16px 24px; background: #fff; border: 1px solid #ddd; border-radius: 24px; }
+.mobile-nav-panel.open { display: flex; }
+.mobile-nav-panel a { color: #111; text-decoration: none; font-size: 15px; padding: 8px 0; }
+
+.content-shell { max-width: 1200px; margin: 0 auto; padding-left: 64px; padding-right: 64px; }
+.eyebrow { text-transform: uppercase; letter-spacing: 0.1em; font-size: 12px; color: #666; margin: 0 0 12px 0; }
+.section-title { font-size: clamp(32px, 5vw, 60px); font-weight: 800; letter-spacing: -0.01em; line-height: 1.05; margin: 0 0 32px 0; }
+
+.cs-title { padding-top: 64px; padding-bottom: 72px; max-width: 900px; }
+.cs-title-sponsor { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+.logo-mark.large { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; font-size: 10px; color: #777; background: #f5f5f5; border-radius: 999px; }
+.engagement-tag { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: #777; border: 1px solid #ddd; padding: 4px 12px; border-radius: 999px; }
+.cs-title h1 { font-size: clamp(32px, 5.5vw, 56px); font-weight: 800; line-height: 1.2; letter-spacing: -0.01em; margin: 0 0 16px 0; }
+.cs-title-sub { font-size: 16px; color: #444; margin: 0; max-width: 60ch; }
+
+.cs-layout { display: grid; grid-template-columns: 280px 1fr; gap: 64px; padding-top: 8px; padding-bottom: 120px; align-items: start; }
+
+.cs-sidebar { position: sticky; top: 96px; display: flex; flex-direction: column; gap: 32px; }
+.exec-summary-card { border: 1px solid #ccc; border-radius: 16px; padding: 24px; }
+.exec-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: #888; margin: 0 0 16px 0; }
+.exec-summary-card dl { margin: 0; }
+.exec-row { margin-bottom: 16px; }
+.exec-row:last-child { margin-bottom: 0; }
+.exec-row dt { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: #999; margin: 0 0 4px 0; }
+.exec-row dd { font-size: 13px; color: #222; margin: 0; line-height: 1.45; }
+
+.cs-progress-nav { display: flex; flex-direction: column; gap: 2px; padding-left: 4px; }
+.progress-link { font-size: 13px; color: #999; text-decoration: none; padding: 7px 0; border-left: 2px solid transparent; padding-left: 12px; margin-left: -13px; transition: color 0.15s ease, border-color 0.15s ease; }
+.progress-link.active { color: #111; font-weight: 600; border-left-color: #111; }
+
+.cs-narrative { max-width: 760px; }
+
+/* ---- Every section is its own card ---- */
+.cards-mode .narrative-block {
+  margin-bottom: 32px;
+  border: 1px solid #e4e4e4;
+  border-radius: 20px;
+  padding: 36px 40px;
+}
+.cards-mode .narrative-block:last-child { margin-bottom: 0; }
+
+/* Headings toned down uniformly — each section's card now provides the
+   elevation, so a large bold heading on top of it would compete rather
+   than reinforce, same reasoning as the baseline's Retrospective fix. */
+.cards-mode .narrative-block h2 {
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin: 0 0 16px 0;
+}
+.cards-mode .narrative-block p { font-size: 16px; color: #292929; margin: 0 0 16px 0; }
+.cards-mode .narrative-block p:last-child { margin-bottom: 0; }
+
+/* Considered-and-rejected: a filled panel instead of a border, so it
+   doesn't create a nested-border look inside the section's own card. */
+.cards-mode .rejected-alt { margin-top: 24px; padding: 20px 22px; background: #f6f6f6; border-radius: 14px; }
+.cards-mode .rejected-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin: 0 0 8px 0; }
+.cards-mode .rejected-alt p:last-child { margin: 0; font-size: 14px; color: #444; }
+
+.narrative-image { margin: 40px 0; }
+.placeholder-img.wide { height: 380px; display: flex; align-items: center; justify-content: center; font-size: 13px; color: #999; background-image: repeating-linear-gradient(45deg, #eee, #eee 6px, #f9f9f9 6px, #f9f9f9 12px); border: 1px dashed #ccc; border-radius: 16px; }
+figcaption { font-size: 12px; color: #888; margin-top: 10px; }
+
+/* Retrospective no longer needs its own special-case border — it's a
+   card like everything else now, differentiated only by content. */
+.cards-mode .retrospective { background: #fafafa; }
+
+.cards-mode .deep-layer { border-top: none; }
+.cards-mode .deep-layer h2 { font-size: 20px; }
+.deep-layer h3 { font-size: 15px; font-weight: 700; margin: 24px 0 10px 0; }
+.deep-link { display: inline-block; margin-top: 12px; font-size: 14px; color: #111; }
+
+.cs-crosslinks { padding-bottom: 100px; padding-top: 8px; }
+.work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px; margin: 0 0 32px 0; }
+.grid-item-link { text-decoration: none; color: inherit; display: block; }
+.grid-item .placeholder-img { height: 220px; margin-bottom: 18px; display: flex; align-items: center; justify-content: center; font-size: 13px; color: #999; background-image: repeating-linear-gradient(45deg, #eee, #eee 6px, #f9f9f9 6px, #f9f9f9 12px); border: 1px dashed #ccc; border-radius: 16px; }
+.case-title-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 12px; }
+.case-title-left { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.grid-item .logo-mark { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; font-size: 9px; color: #777; background: #f5f5f5; border-radius: 999px; flex-shrink: 0; }
+.case-title-left h3 { font-size: 19px; font-weight: 700; margin: 0; white-space: nowrap; }
+.grid-item .proof { font-size: 14px; color: #444; margin: 0; }
+.back-to-work { font-size: 14px; color: #111; }
+
+.site-footer-expanded { padding-top: 100px; padding-bottom: 48px; }
+.footer-cta { font-size: clamp(28px, 4.5vw, 48px); font-weight: 800; line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 48px 0; max-width: 900px; }
+.footer-bottom { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 24px; }
+.footer-email { font-size: 15px; color: #111; display: block; margin-top: 8px; }
+.footer-links { display: flex; gap: 20px; font-size: 13px; }
+.footer-links a { color: #333; }
+
+@media (max-width: 960px) {
+  .cs-layout { grid-template-columns: 1fr; }
+  .cs-sidebar { position: static; gap: 24px; padding-bottom: 40px; border-bottom: 1px solid #eee; margin-bottom: 40px; }
+  .cs-progress-nav { flex-direction: row; flex-wrap: wrap; padding-left: 0; gap: 16px; }
+  .progress-link { border-left: none; padding-left: 0; margin-left: 0; border-bottom: 2px solid transparent; }
+  .progress-link.active { border-left: none; border-bottom-color: #111; }
+  .work-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 720px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: block; }
+  .content-shell { padding-left: 24px; padding-right: 24px; }
+  .cs-title { padding-top: 40px; padding-bottom: 48px; }
+  .cs-layout { padding-bottom: 80px; }
+  .cards-mode .narrative-block { padding: 28px 24px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}

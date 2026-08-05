@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe — Case Study v1 — Editorial Pill</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#context">Skip to content</a>
+
+<div class="site-header-wrap">
+  <nav class="floating-nav" aria-label="Primary">
+    <a href="/" class="nav-logo">[Name]</a>
+    <div class="nav-links">
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+      <a href="/resume" class="nav-resume">Resume</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav-panel">Menu</button>
+  </nav>
+  <div class="mobile-nav-panel" id="mobile-nav-panel">
+    <a href="/#work">Work</a>
+    <a href="/#about">About</a>
+    <a href="/#contact">Contact</a>
+    <a href="/resume" class="nav-resume">Resume</a>
+  </div>
+</div>
+
+<!-- Floating progress pill: same visual family as the nav pill above it,
+     fixed at the bottom instead of the top. A direct visual echo, not a
+     new component invented from scratch. -->
+<div class="progress-pill-wrap" aria-hidden="false">
+  <div class="progress-pill" aria-label="Reading progress">
+    <div class="progress-fill" id="progress-fill"></div>
+  </div>
+</div>
+
+<main>
+
+  <header class="cs-title content-shell">
+    <div class="cs-title-sponsor">
+      <div class="logo-mark large"><span>Meta</span></div>
+      <span class="engagement-tag">Sponsored Engagement</span>
+    </div>
+    <h1>Interaction Design Lead</h1>
+    <p class="cs-title-sub">Shipped interaction patterns for a cross-functional wearable social experience team.</p>
+  </header>
+
+  <!-- Executive Summary as a spread metadata strip — a direct reuse of
+       the homepage's .stats-banner pattern, repurposed for role/duration/
+       problem/proof instead of quantitative stats. Same component,
+       different content. -->
+  <section class="exec-strip content-shell" aria-label="Project summary">
+    <div class="exec-item"><span class="exec-label">Role</span><span class="exec-value">Interaction Design Lead</span></div>
+    <div class="exec-item"><span class="exec-label">Team</span><span class="exec-value">Cross-functional</span></div>
+    <div class="exec-item"><span class="exec-label">Duration</span><span class="exec-value">12 weeks</span></div>
+    <div class="exec-item"><span class="exec-label">Proof</span><span class="exec-value">Adopted team-wide</span></div>
+  </section>
+
+  <div class="cs-narrative content-shell">
+
+    <section id="context" class="narrative-block reveal">
+      <h2>Context</h2>
+      <p>[Scene-setting paragraph — what existed before this project, who it was for, and why it mattered. Two to three sentences that a reader can move through quickly before the real narrative begins.]</p>
+    </section>
+
+    <figure class="narrative-image reveal">
+      <div class="placeholder-img full-bleed">Full-bleed narrative image</div>
+      <figcaption>[Caption — what this image shows and why it's here.]</figcaption>
+    </figure>
+
+    <section id="constraints" class="narrative-block reveal">
+      <h2>Constraints</h2>
+      <p>[Real constraints — timeline, technical limitations, stakeholder requirements. This is where the project stops sounding hypothetical and starts sounding like it happened inside actual limits.]</p>
+    </section>
+
+    <section id="decisions" class="narrative-block reveal">
+      <h2>Decisions</h2>
+      <p>[The core design decisions made, including what was considered and rejected. This is the "messy middle" — specific enough that a reader understands the actual thinking, not just the outcome.]</p>
+      <div class="rejected-alt">
+        <p class="rejected-label">Considered and rejected</p>
+        <p>[A specific alternative that was seriously considered, and why it didn't make the cut.]</p>
+      </div>
+    </section>
+
+    <section id="tradeoffs" class="narrative-block reveal">
+      <h2>Trade-offs</h2>
+      <p>[What was given up to make the chosen decisions work. Every real decision costs something.]</p>
+    </section>
+
+    <figure class="narrative-image reveal">
+      <div class="placeholder-img full-bleed">Full-bleed narrative image</div>
+      <figcaption>[Caption — what this image shows and why it's here.]</figcaption>
+    </figure>
+
+    <section class="narrative-block reveal">
+      <h2>Outcome</h2>
+      <p>[What actually happened — shipped, adopted, measured, or validated.]</p>
+    </section>
+
+    <section id="retrospective" class="narrative-block retrospective reveal">
+      <h2>Retrospective</h2>
+      <p>[What went wrong, what was cut, what you'd do differently — the credibility peak of the page, given real space here, not a compressed closing line.]</p>
+    </section>
+
+    <section id="deeper" class="narrative-block deep-layer reveal">
+      <p class="eyebrow">A deeper look</p>
+      <h2>Edge Cases &amp; System States</h2>
+      <p>[Error states, empty states, permission edge cases — the detail an Engineer or systems-minded reviewer is specifically looking for.]</p>
+      <h3>Engineering Collaboration</h3>
+      <p>[How this project involved real engineering handoff or collaboration — where applicable.]</p>
+      <a href="/how-i-work" class="deep-link">See how AI-assisted workflow shaped this project →</a>
+    </section>
+
+  </div>
+
+  <section class="cs-crosslinks content-shell">
+    <p class="eyebrow small">More Work</p>
+    <div class="crosslink-row">
+      <a href="/work/feminist-ux" class="crosslink-card">
+        <div class="placeholder-img">Feminist UX</div>
+        <span>Feminist UX — Independent Thesis</span>
+      </a>
+      <a href="/work/terra-dotta" class="crosslink-card">
+        <div class="placeholder-img">Terra Dotta</div>
+        <span>Terra Dotta — UX Lead</span>
+      </a>
+    </div>
+    <a href="/#work" class="back-to-work">← Back to Work</a>
+  </section>
+
+</main>
+
+<footer class="site-footer-expanded content-shell">
+  <p class="footer-cta">[Big closing statement — e.g. a call to action]</p>
+  <div class="footer-bottom">
+    <div class="footer-primary">
+      <p class="eyebrow">Contact</p>
+      <a href="mailto:hello@example.com" class="footer-email">hello@example.com</a>
+    </div>
+    <div class="footer-links">
+      <a href="/resume">Resume</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="#">Feminist UX</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var toggle = document.getElementById('nav-toggle');
+  var panel = document.getElementById('mobile-nav-panel');
+  toggle.addEventListener('click', function () {
+    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    panel.classList.toggle('open');
+  });
+
+  // Progress pill fill: reflects scroll depth as a percentage. Purely
+  // reflective — never intercepts or alters scroll behavior.
+  var fill = document.getElementById('progress-fill');
+  function updateProgress() {
+    var scrollTop = window.scrollY;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    fill.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  updateProgress();
+
+  // Scroll-reveal: same conservative implementation validated (and
+  // shelved for later use) during homepage exploration — content is
+  // fully present without JS, fully disabled under reduced-motion,
+  // reflection-only via IntersectionObserver.
+  var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+    var revealTargets = document.querySelectorAll('.reveal');
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealTargets.forEach(function (t) {
+      t.classList.add('reveal-ready');
+      revealObserver.observe(t);
+    });
+  }
+</script>
+
+</body>
+</html>

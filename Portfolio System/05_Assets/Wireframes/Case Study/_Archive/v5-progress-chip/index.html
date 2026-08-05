@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe — Case Study v5 — Progress Chip</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#context">Skip to content</a>
+
+<div class="site-header-wrap">
+  <nav class="floating-nav" aria-label="Primary">
+    <a href="/" class="nav-logo">[Name]</a>
+    <div class="nav-links">
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+      <a href="/resume" class="nav-resume">Resume</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav-panel">Menu</button>
+  </nav>
+  <div class="mobile-nav-panel" id="mobile-nav-panel">
+    <a href="/#work">Work</a>
+    <a href="/#about">About</a>
+    <a href="/#contact">Contact</a>
+    <a href="/resume" class="nav-resume">Resume</a>
+  </div>
+</div>
+
+<main>
+
+  <header class="cs-title content-shell">
+    <div class="cs-title-sponsor">
+      <div class="logo-mark large"><span>Meta</span></div>
+      <span class="engagement-tag">Sponsored Engagement</span>
+    </div>
+    <h1>Interaction Design Lead</h1>
+    <p class="cs-title-sub">Shipped interaction patterns for a cross-functional wearable social experience team.</p>
+  </header>
+
+  <div class="cs-layout content-shell">
+
+    <!-- Sidebar: exec-summary card, no divider before the progress nav —
+         corrected per Nicole's feedback on v2-cards-sidebar. -->
+    <aside class="cs-sidebar">
+      <div class="exec-summary-card">
+        <p class="exec-label">At a glance</p>
+        <dl>
+          <div class="exec-row"><dt>Role</dt><dd>Interaction Design Lead</dd></div>
+          <div class="exec-row"><dt>Team</dt><dd>Cross-functional research + engineering</dd></div>
+          <div class="exec-row"><dt>Duration</dt><dd>12 weeks</dd></div>
+          <div class="exec-row"><dt>Problem</dt><dd>Existing interaction model didn't hold up for first-time wearable users.</dd></div>
+          <div class="exec-row"><dt>Proof</dt><dd>Adopted as the default interaction pattern across the team's next release.</dd></div>
+        </dl>
+      </div>
+
+      <!-- Chip: plain text links, no border, no marker, no line — only
+           the current section gets a filled rounded-pill background,
+           reusing the real 999px pill radius at a size where it's
+           actually visible (unlike v4-progress-segmented's 4px track,
+           which was too thin to read as a pill). Upcoming/visited
+           sections stay untouched plain text — only one thing on the
+           page ever looks like a chip at a time. -->
+      <nav class="cs-progress-nav chip" aria-label="Case study sections">
+        <a href="#context" class="progress-link" data-section="context">Context</a>
+        <a href="#constraints" class="progress-link" data-section="constraints">Constraints</a>
+        <a href="#decisions" class="progress-link" data-section="decisions">Decisions</a>
+        <a href="#tradeoffs" class="progress-link" data-section="tradeoffs">Trade-offs</a>
+        <a href="#retrospective" class="progress-link" data-section="retrospective">Retrospective</a>
+        <a href="#deeper" class="progress-link" data-section="deeper">Deeper Look</a>
+      </nav>
+    </aside>
+
+    <div class="cs-narrative">
+
+      <section id="context" class="narrative-block">
+        <h2>Context</h2>
+        <p>[Scene-setting paragraph — what existed before this project, who it was for, and why it mattered.]</p>
+      </section>
+
+      <figure class="narrative-image">
+        <div class="placeholder-img wide">Full-width narrative image</div>
+        <figcaption>[Caption — what this image shows and why it's here.]</figcaption>
+      </figure>
+
+      <section id="constraints" class="narrative-block">
+        <h2>Constraints</h2>
+        <p>[Real constraints — timeline, technical limitations, stakeholder requirements.]</p>
+      </section>
+
+      <!-- Decisions: the same click-to-expand card pattern from v2-cards-body,
+           carried forward here alongside the sidebar card. -->
+      <section id="decisions" class="narrative-block">
+        <h2>Decisions</h2>
+        <p>[One to two sentences framing the set of decisions below.]</p>
+
+        <div class="decision-list">
+          <div class="decision-item">
+            <button class="decision-toggle" aria-expanded="false">
+              <span>[Decision one — the choice made, stated plainly]</span>
+              <span class="toggle-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="decision-detail">
+              <p class="rejected-label">Considered and rejected</p>
+              <p>[The specific alternative considered, and why it didn't make the cut.]</p>
+            </div>
+          </div>
+          <div class="decision-item">
+            <button class="decision-toggle" aria-expanded="false">
+              <span>[Decision two — the choice made, stated plainly]</span>
+              <span class="toggle-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="decision-detail">
+              <p class="rejected-label">Considered and rejected</p>
+              <p>[The specific alternative considered, and why it didn't make the cut.]</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tradeoffs" class="narrative-block">
+        <h2>Trade-offs</h2>
+        <p>[What was given up to make the chosen decisions work.]</p>
+      </section>
+
+      <figure class="narrative-image">
+        <div class="placeholder-img wide">Full-width narrative image</div>
+        <figcaption>[Caption — what this image shows and why it's here.]</figcaption>
+      </figure>
+
+      <section class="narrative-block">
+        <h2>Outcome</h2>
+        <p>[What actually happened — shipped, adopted, measured, or validated.]</p>
+      </section>
+
+      <!-- Retrospective: heading toned down, matching v3-refined-baseline. -->
+      <section id="retrospective" class="narrative-block retrospective">
+        <h2>Retrospective</h2>
+        <p>[What went wrong, what was cut, what you'd do differently — the credibility peak of the page.]</p>
+      </section>
+
+      <section id="deeper" class="narrative-block deep-layer">
+        <p class="eyebrow">A deeper look</p>
+        <h2>Edge Cases &amp; System States</h2>
+        <p>[Error states, empty states, permission edge cases.]</p>
+        <h3>Engineering Collaboration</h3>
+        <p>[How this project involved real engineering handoff or collaboration.]</p>
+        <a href="/how-i-work" class="deep-link">See how AI-assisted workflow shaped this project →</a>
+      </section>
+
+    </div>
+  </div>
+
+  <section class="cs-crosslinks content-shell">
+    <p class="section-title">More Work</p>
+    <div class="work-grid">
+      <article class="grid-item">
+        <a href="/work/feminist-ux" class="grid-item-link">
+          <div class="placeholder-img">Feminist UX</div>
+          <div class="case-title-row">
+            <div class="case-title-left">
+              <div class="logo-mark"><span>Ind.</span></div>
+              <h3>Independent Thesis</h3>
+            </div>
+            <span class="engagement-tag">Independent Research</span>
+          </div>
+          <p class="proof">Validated a feminist UX framework across ten practitioner sessions.</p>
+        </a>
+      </article>
+      <article class="grid-item">
+        <a href="/work/terra-dotta" class="grid-item-link">
+          <div class="placeholder-img">Terra Dotta</div>
+          <div class="case-title-row">
+            <div class="case-title-left">
+              <div class="logo-mark"><span>TD</span></div>
+              <h3>UX Lead</h3>
+            </div>
+            <span class="engagement-tag">Client Engagement</span>
+          </div>
+          <p class="proof">Delivered a full website redesign under a fixed sponsor timeline.</p>
+        </a>
+      </article>
+    </div>
+    <a href="/#work" class="back-to-work">← Back to Work</a>
+  </section>
+
+</main>
+
+<footer class="site-footer-expanded content-shell">
+  <p class="footer-cta">[Big closing statement — e.g. a call to action]</p>
+  <div class="footer-bottom">
+    <div class="footer-primary">
+      <p class="eyebrow">Contact</p>
+      <a href="mailto:hello@example.com" class="footer-email">hello@example.com</a>
+    </div>
+    <div class="footer-links">
+      <a href="/resume">Resume</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="#">Feminist UX</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var toggle = document.getElementById('nav-toggle');
+  var panel = document.getElementById('mobile-nav-panel');
+  toggle.addEventListener('click', function () {
+    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    panel.classList.toggle('open');
+  });
+
+  document.querySelectorAll('.decision-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      btn.closest('.decision-item').classList.toggle('open');
+    });
+  });
+
+  var sections = document.querySelectorAll('.narrative-block[id]');
+  var links = document.querySelectorAll('.progress-link');
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var link = document.querySelector('.progress-link[data-section="' + entry.target.id + '"]');
+        if (!link) return;
+        if (entry.isIntersecting) {
+          links.forEach(function (l) { l.classList.remove('active'); });
+          link.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+    sections.forEach(function (s) { observer.observe(s); });
+  }
+</script>
+
+</body>
+</html>

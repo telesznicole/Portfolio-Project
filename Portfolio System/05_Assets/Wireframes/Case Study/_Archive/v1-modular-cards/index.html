@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe — Case Study v1 — Modular Cards</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#context">Skip to content</a>
+
+<div class="site-header-wrap">
+  <nav class="floating-nav" aria-label="Primary">
+    <a href="/" class="nav-logo">[Name]</a>
+    <div class="nav-links">
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+      <a href="/resume" class="nav-resume">Resume</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav-panel">Menu</button>
+  </nav>
+  <div class="mobile-nav-panel" id="mobile-nav-panel">
+    <a href="/#work">Work</a>
+    <a href="/#about">About</a>
+    <a href="/#contact">Contact</a>
+    <a href="/resume" class="nav-resume">Resume</a>
+  </div>
+</div>
+
+<main>
+
+  <header class="cs-title content-shell">
+    <h1>Interaction Design Lead</h1>
+    <p class="cs-title-sub">Shipped interaction patterns for a cross-functional wearable social experience team.</p>
+  </header>
+
+  <!-- Executive Summary as its own identity card — direct reuse of the
+       homepage .player-card's bordered/rounded DNA, repurposed for
+       project identity instead of personal identity. -->
+  <section class="content-shell">
+    <div class="exec-card">
+      <div class="exec-card-photo">Meta</div>
+      <div class="exec-card-info">
+        <div class="exec-card-top">
+          <span class="engagement-tag">Sponsored Engagement</span>
+        </div>
+        <dl class="exec-card-facts">
+          <div><dt>Role</dt><dd>Interaction Design Lead</dd></div>
+          <div><dt>Team</dt><dd>Cross-functional research + engineering</dd></div>
+          <div><dt>Duration</dt><dd>12 weeks</dd></div>
+        </dl>
+        <p class="exec-card-proof">Adopted as the default interaction pattern across the team's next release.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chip-based quick-nav / progress indicator — reuses the
+       .engagement-tag pill styling for a new functional purpose:
+       section jump + active-state tracking. -->
+  <nav class="chip-nav content-shell" aria-label="Case study sections">
+    <a href="#context" class="chip active" data-section="context">Context</a>
+    <a href="#constraints" class="chip" data-section="constraints">Constraints</a>
+    <a href="#decisions" class="chip" data-section="decisions">Decisions</a>
+    <a href="#tradeoffs" class="chip" data-section="tradeoffs">Trade-offs</a>
+    <a href="#retrospective" class="chip" data-section="retrospective">Retrospective</a>
+    <a href="#deeper" class="chip" data-section="deeper">Deeper Look</a>
+  </nav>
+
+  <div class="cs-cards content-shell">
+
+    <section id="context" class="content-card">
+      <p class="card-eyebrow">Context</p>
+      <p>[Scene-setting paragraph — what existed before this project, who it was for, and why it mattered.]</p>
+    </section>
+
+    <section id="constraints" class="content-card">
+      <p class="card-eyebrow">Constraints</p>
+      <p>[Real constraints — timeline, technical limitations, stakeholder requirements.]</p>
+      <div class="card-image">
+        <div class="placeholder-img">Contained image</div>
+      </div>
+    </section>
+
+    <!-- Decisions: each rendered as its own expandable card. Collapsed
+         state still shows the decision itself (essential info never
+         hidden); expanding reveals the rejected alternative. Reuses the
+         click-to-expand pattern validated in the archived homepage
+         compact-dashboard concept. -->
+    <section id="decisions" class="content-card">
+      <p class="card-eyebrow">Decisions</p>
+      <p>[One to two sentences framing the set of decisions below.]</p>
+
+      <div class="decision-list">
+        <div class="decision-item">
+          <button class="decision-toggle" aria-expanded="false">
+            <span>[Decision one — the choice made, stated plainly]</span>
+            <span class="toggle-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="decision-detail">
+            <p class="rejected-label">Considered and rejected</p>
+            <p>[The specific alternative considered, and why it didn't make the cut.]</p>
+          </div>
+        </div>
+        <div class="decision-item">
+          <button class="decision-toggle" aria-expanded="false">
+            <span>[Decision two — the choice made, stated plainly]</span>
+            <span class="toggle-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="decision-detail">
+            <p class="rejected-label">Considered and rejected</p>
+            <p>[The specific alternative considered, and why it didn't make the cut.]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tradeoffs" class="content-card">
+      <p class="card-eyebrow">Trade-offs</p>
+      <p>[What was given up to make the chosen decisions work.]</p>
+      <div class="card-image">
+        <div class="placeholder-img">Contained image</div>
+      </div>
+    </section>
+
+    <section class="content-card">
+      <p class="card-eyebrow">Outcome</p>
+      <p>[What actually happened — shipped, adopted, measured, or validated.]</p>
+    </section>
+
+    <!-- Retrospective: same card family, but visually distinguished —
+         solid border vs. the others' hairline, giving it the elevated
+         weight the Experience Blueprint calls for without leaving the
+         card system. -->
+    <section id="retrospective" class="content-card retrospective">
+      <p class="card-eyebrow">Retrospective</p>
+      <p>[What went wrong, what was cut, what you'd do differently — the credibility peak of the page.]</p>
+    </section>
+
+    <section id="deeper" class="content-card deep-layer">
+      <p class="card-eyebrow">A Deeper Look</p>
+      <h3>Edge Cases &amp; System States</h3>
+      <p>[Error states, empty states, permission edge cases.]</p>
+      <h3>Engineering Collaboration</h3>
+      <p>[How this project involved real engineering handoff or collaboration.]</p>
+      <a href="/how-i-work" class="deep-link">See how AI-assisted workflow shaped this project →</a>
+    </section>
+
+  </div>
+
+  <section class="cs-crosslinks content-shell">
+    <p class="eyebrow small">More Work</p>
+    <div class="crosslink-row">
+      <a href="/work/feminist-ux" class="crosslink-card">
+        <div class="placeholder-img">Feminist UX</div>
+        <span>Feminist UX — Independent Thesis</span>
+      </a>
+      <a href="/work/terra-dotta" class="crosslink-card">
+        <div class="placeholder-img">Terra Dotta</div>
+        <span>Terra Dotta — UX Lead</span>
+      </a>
+    </div>
+    <a href="/#work" class="back-to-work">← Back to Work</a>
+  </section>
+
+</main>
+
+<footer class="site-footer-expanded content-shell">
+  <p class="footer-cta">[Big closing statement — e.g. a call to action]</p>
+  <div class="footer-bottom">
+    <div class="footer-primary">
+      <p class="eyebrow">Contact</p>
+      <a href="mailto:hello@example.com" class="footer-email">hello@example.com</a>
+    </div>
+    <div class="footer-links">
+      <a href="/resume">Resume</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="#">Feminist UX</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var toggle = document.getElementById('nav-toggle');
+  var panel = document.getElementById('mobile-nav-panel');
+  toggle.addEventListener('click', function () {
+    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    panel.classList.toggle('open');
+  });
+
+  // Decision cards: click-to-expand, same pattern validated in the
+  // archived homepage compact-dashboard concept — real <button>,
+  // aria-expanded, never hover-gated.
+  document.querySelectorAll('.decision-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      btn.closest('.decision-item').classList.toggle('open');
+    });
+  });
+
+  // Chip nav: reflects scroll position only, never controls it.
+  var sections = document.querySelectorAll('.content-card[id]');
+  var chips = document.querySelectorAll('.chip');
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var chip = document.querySelector('.chip[data-section="' + entry.target.id + '"]');
+        if (!chip) return;
+        if (entry.isIntersecting) {
+          chips.forEach(function (c) { c.classList.remove('active'); });
+          chip.classList.add('active');
+        }
+      });
+    }, { threshold: 0.4 });
+    sections.forEach(function (s) { observer.observe(s); });
+  }
+</script>
+
+</body>
+</html>

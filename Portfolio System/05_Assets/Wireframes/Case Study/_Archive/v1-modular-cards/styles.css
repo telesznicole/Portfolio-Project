@@ -1,0 +1,164 @@
+/* ================================
+   Wireframe — Case Study v1: Modular Cards
+   Low-fidelity structural prototype — grayscale only
+   Shares nav, typography scale, corner-radius system, and spacing
+   philosophy with the promoted homepage. No section divider lines
+   between major beats — cards provide their own internal boundaries,
+   which is a deliberate, stated exception (see notes.md).
+   ================================ */
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #111;
+  background: #fff;
+  line-height: 1.6;
+}
+
+.skip-link {
+  position: absolute; left: -999px; top: 0;
+  background: #000; color: #fff; padding: 8px 12px; z-index: 100; border-radius: 6px;
+}
+.skip-link:focus { left: 8px; top: 8px; }
+
+.site-header-wrap { position: sticky; top: 20px; z-index: 60; display: flex; justify-content: center; padding: 0 24px; }
+.floating-nav {
+  display: flex; align-items: center; gap: 44px;
+  width: fit-content; max-width: 100%;
+  background: #fff; border: 1px solid #ddd; border-radius: 999px;
+  padding: 8px 8px 8px 28px;
+}
+.nav-logo { font-weight: 800; font-size: 15px; color: #111; text-decoration: none; white-space: nowrap; }
+.nav-links { display: flex; align-items: center; gap: 26px; }
+.nav-links a { color: #111; text-decoration: none; font-size: 14px; white-space: nowrap; border-bottom: 1px solid transparent; }
+.nav-links a:hover, .nav-links a:focus { border-bottom: 1px solid #111; }
+.nav-resume { border: 1px solid #111 !important; padding: 6px 16px; border-radius: 999px; }
+.nav-toggle { display: none; background: none; border: 1px solid #111; border-radius: 999px; padding: 6px 16px; font-size: 13px; }
+.mobile-nav-panel { display: none; flex-direction: column; gap: 4px; max-width: 480px; width: fit-content; margin: 8px auto 0; padding: 16px 24px; background: #fff; border: 1px solid #ddd; border-radius: 24px; }
+.mobile-nav-panel.open { display: flex; }
+.mobile-nav-panel a { color: #111; text-decoration: none; font-size: 15px; padding: 8px 0; }
+
+.content-shell { max-width: 1200px; margin: 0 auto; padding-left: 64px; padding-right: 64px; }
+.eyebrow { text-transform: uppercase; letter-spacing: 0.1em; font-size: 12px; color: #666; margin: 0 0 12px 0; }
+.eyebrow.small { font-size: 11px; }
+
+.cs-title { padding-top: 64px; padding-bottom: 48px; max-width: 900px; }
+.cs-title h1 { font-size: clamp(32px, 5.5vw, 56px); font-weight: 800; line-height: 1.2; letter-spacing: -0.01em; margin: 0 0 16px 0; }
+.cs-title-sub { font-size: 16px; color: #444; margin: 0; max-width: 60ch; }
+
+/* ---- Exec Summary card: direct reuse of .player-card's DNA ---- */
+.exec-card {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 32px;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 40px;
+}
+.exec-card-photo {
+  height: 100%; min-height: 160px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; color: #999;
+  background-image: repeating-linear-gradient(45deg, #eee, #eee 6px, #f9f9f9 6px, #f9f9f9 12px);
+  border: 1px dashed #ccc; border-radius: 12px;
+}
+.exec-card-top { margin-bottom: 18px; }
+.engagement-tag {
+  font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;
+  color: #777; border: 1px solid #ddd; padding: 4px 12px; border-radius: 999px;
+}
+.exec-card-facts { display: flex; flex-wrap: wrap; gap: 16px 32px; margin: 0 0 18px 0; }
+.exec-card-facts dt { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: #999; margin: 0 0 4px 0; }
+.exec-card-facts dd { font-size: 14px; color: #222; margin: 0; }
+.exec-card-proof { font-size: 15px; color: #333; margin: 0; padding-top: 14px; border-top: 1px solid #eee; }
+
+/* ---- Chip nav: reuses .engagement-tag pill styling for a new
+       functional purpose (section jump + progress) ---- */
+.chip-nav { display: flex; flex-wrap: wrap; gap: 10px; padding-bottom: 56px; }
+.chip {
+  font-size: 13px; color: #666; text-decoration: none;
+  border: 1px solid #ddd; padding: 8px 18px; border-radius: 999px;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+.chip.active { color: #fff; background: #111; border-color: #111; font-weight: 600; }
+
+/* ---- Content cards: each narrative beat is its own bordered card ---- */
+.cs-cards { display: flex; flex-direction: column; gap: 28px; padding-bottom: 100px; }
+.content-card { border: 1px solid #eee; border-radius: 16px; padding: 40px; }
+.card-eyebrow { text-transform: uppercase; letter-spacing: 0.1em; font-size: 12px; color: #666; margin: 0 0 16px 0; font-weight: 600; }
+.content-card p { font-size: 16px; color: #292929; margin: 0 0 16px 0; max-width: 68ch; }
+.content-card p:last-child { margin-bottom: 0; }
+
+.card-image { margin-top: 24px; }
+.card-image .placeholder-img {
+  height: 260px; display: flex; align-items: center; justify-content: center;
+  font-size: 13px; color: #999;
+  background-image: repeating-linear-gradient(45deg, #eee, #eee 6px, #f9f9f9 6px, #f9f9f9 12px);
+  border: 1px dashed #ccc; border-radius: 12px;
+}
+
+/* ---- Decision items: click-to-expand, collapsed state keeps the
+       decision itself visible — never hover-gated ---- */
+.decision-list { display: flex; flex-direction: column; gap: 2px; margin-top: 20px; }
+.decision-item { border-top: 1px solid #eee; }
+.decision-item:last-child { border-bottom: 1px solid #eee; }
+.decision-toggle {
+  width: 100%; display: flex; justify-content: space-between; align-items: center;
+  background: none; border: none; font: inherit; font-size: 15px; font-weight: 600;
+  padding: 18px 0; cursor: pointer; color: #111; text-align: left;
+}
+.decision-toggle:focus { outline: 2px solid #111; outline-offset: 2px; }
+.toggle-icon { color: #999; font-weight: 400; }
+.decision-detail { display: none; padding: 0 0 20px 0; }
+.decision-item.open .decision-detail { display: block; }
+.decision-item.open .toggle-icon::before { content: "\2013"; }
+.rejected-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin: 0 0 8px 0; }
+.decision-detail p:last-child { font-size: 14px; color: #444; margin: 0; }
+
+/* ---- Retrospective: same card family, elevated via solid vs. hairline
+       border — stays in the card system rather than breaking from it ---- */
+.retrospective { border: 1px solid #999; }
+
+.deep-layer { background: #fafafa; }
+.deep-layer h3 { font-size: 16px; font-weight: 700; margin: 24px 0 12px 0; }
+.deep-layer h3:first-of-type { margin-top: 0; }
+.deep-link { display: inline-block; margin-top: 8px; font-size: 14px; color: #111; }
+
+.cs-crosslinks { padding-bottom: 100px; }
+.crosslink-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin: 24px 0 32px 0; }
+.crosslink-card { text-decoration: none; color: #111; display: block; }
+.crosslink-card .placeholder-img {
+  height: 180px; margin-bottom: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; color: #999;
+  background-image: repeating-linear-gradient(45deg, #eee, #eee 6px, #f9f9f9 6px, #f9f9f9 12px);
+  border: 1px dashed #ccc; border-radius: 16px;
+}
+.crosslink-card span { font-size: 15px; font-weight: 600; }
+.back-to-work { font-size: 14px; color: #111; }
+
+.site-footer-expanded { padding-top: 100px; padding-bottom: 48px; }
+.footer-cta { font-size: clamp(28px, 4.5vw, 48px); font-weight: 800; line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 48px 0; max-width: 900px; }
+.footer-bottom { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 24px; }
+.footer-email { font-size: 15px; color: #111; display: block; margin-top: 8px; }
+.footer-links { display: flex; gap: 20px; font-size: 13px; }
+.footer-links a { color: #333; }
+
+@media (max-width: 720px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: block; }
+  .content-shell { padding-left: 24px; padding-right: 24px; }
+  .cs-title { padding-top: 40px; padding-bottom: 32px; }
+  .exec-card { grid-template-columns: 1fr; }
+  .content-card { padding: 28px; }
+  .crosslink-row { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}

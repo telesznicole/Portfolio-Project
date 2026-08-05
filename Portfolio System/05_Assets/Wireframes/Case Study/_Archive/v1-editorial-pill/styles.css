@@ -1,0 +1,168 @@
+/* ================================
+   Wireframe — Case Study v1: Editorial Pill
+   Low-fidelity structural prototype — grayscale only
+   Shares nav, typography scale, corner-radius system, and spacing
+   philosophy with the promoted homepage. No section divider lines.
+   ================================ */
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #111;
+  background: #fff;
+  line-height: 1.6;
+}
+
+.skip-link {
+  position: absolute; left: -999px; top: 0;
+  background: #000; color: #fff; padding: 8px 12px; z-index: 100; border-radius: 6px;
+}
+.skip-link:focus { left: 8px; top: 8px; }
+
+.site-header-wrap { position: sticky; top: 20px; z-index: 60; display: flex; justify-content: center; padding: 0 24px; }
+.floating-nav {
+  display: flex; align-items: center; gap: 44px;
+  width: fit-content; max-width: 100%;
+  background: #fff; border: 1px solid #ddd; border-radius: 999px;
+  padding: 8px 8px 8px 28px;
+}
+.nav-logo { font-weight: 800; font-size: 15px; color: #111; text-decoration: none; white-space: nowrap; }
+.nav-links { display: flex; align-items: center; gap: 26px; }
+.nav-links a { color: #111; text-decoration: none; font-size: 14px; white-space: nowrap; border-bottom: 1px solid transparent; }
+.nav-links a:hover, .nav-links a:focus { border-bottom: 1px solid #111; }
+.nav-resume { border: 1px solid #111 !important; padding: 6px 16px; border-radius: 999px; }
+.nav-toggle { display: none; background: none; border: 1px solid #111; border-radius: 999px; padding: 6px 16px; font-size: 13px; }
+.mobile-nav-panel { display: none; flex-direction: column; gap: 4px; max-width: 480px; width: fit-content; margin: 8px auto 0; padding: 16px 24px; background: #fff; border: 1px solid #ddd; border-radius: 24px; }
+.mobile-nav-panel.open { display: flex; }
+.mobile-nav-panel a { color: #111; text-decoration: none; font-size: 15px; padding: 8px 0; }
+
+/* ---- Floating progress pill: bottom-fixed, same visual DNA as the nav
+       pill (border, radius, background) ---- */
+.progress-pill-wrap {
+  position: fixed;
+  bottom: 24px;
+  left: 0; right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 55;
+  pointer-events: none;
+}
+.progress-pill {
+  width: 220px;
+  height: 6px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: #111;
+  border-radius: 999px;
+}
+
+.content-shell { max-width: 1200px; margin: 0 auto; padding-left: 64px; padding-right: 64px; }
+.eyebrow { text-transform: uppercase; letter-spacing: 0.1em; font-size: 12px; color: #666; margin: 0 0 12px 0; }
+.eyebrow.small { font-size: 11px; }
+
+.cs-title { padding-top: 64px; padding-bottom: 56px; max-width: 900px; }
+.cs-title-sponsor { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+.logo-mark.large {
+  width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;
+  border: 1px solid #ccc; font-size: 10px; color: #777; background: #f5f5f5; border-radius: 999px;
+}
+.engagement-tag {
+  font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;
+  color: #777; border: 1px solid #ddd; padding: 4px 12px; border-radius: 999px;
+}
+.cs-title h1 { font-size: clamp(32px, 5.5vw, 56px); font-weight: 800; line-height: 1.2; letter-spacing: -0.01em; margin: 0 0 16px 0; }
+.cs-title-sub { font-size: 16px; color: #444; margin: 0; max-width: 60ch; }
+
+/* ---- Exec summary strip: direct reuse of homepage .stats-banner ---- */
+.exec-strip {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding-bottom: 88px;
+}
+.exec-item { display: flex; flex-direction: column; }
+.exec-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin-bottom: 6px; }
+.exec-value { font-size: 17px; font-weight: 700; }
+
+/* ---- Narrative: single generous column ---- */
+.cs-narrative { max-width: 720px; margin: 0 auto; padding-bottom: 64px; }
+.narrative-block { margin-bottom: 88px; }
+.narrative-block:last-child { margin-bottom: 0; }
+.narrative-block h2 { font-size: 30px; font-weight: 800; letter-spacing: -0.01em; margin: 0 0 20px 0; }
+.narrative-block p { font-size: 16px; color: #292929; margin: 0 0 16px 0; }
+.narrative-block p:last-child { margin-bottom: 0; }
+
+.rejected-alt { margin-top: 24px; padding: 22px 24px; border: 1px solid #eee; border-radius: 16px; }
+.rejected-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin: 0 0 8px 0; }
+.rejected-alt p:last-child { margin: 0; font-size: 14px; color: #444; }
+
+.narrative-image { margin: 72px 0; }
+.placeholder-img.full-bleed {
+  height: 460px; display: flex; align-items: center; justify-content: center;
+  font-size: 13px; color: #999;
+  background-image: repeating-linear-gradient(45deg, #eee, #eee 6px, #f9f9f9 6px, #f9f9f9 12px);
+  border: 1px dashed #ccc; border-radius: 16px;
+}
+figcaption { font-size: 12px; color: #888; margin-top: 10px; }
+
+.retrospective { padding: 44px; border: 1px solid #ddd; border-radius: 16px; }
+
+.deep-layer { padding-top: 40px; border-top: 1px solid #eee; }
+.deep-layer h2 { font-size: 24px; }
+.deep-layer h3 { font-size: 16px; font-weight: 700; margin: 32px 0 12px 0; }
+.deep-link { display: inline-block; margin-top: 16px; font-size: 14px; color: #111; }
+
+/* ---- Scroll-reveal: content fully present without JS; only adds a
+       restrained fade/lift once observed. Disabled entirely under
+       reduced-motion (see script — class never applied in that case). ---- */
+.reveal.reveal-ready {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.reveal.reveal-ready.revealed { opacity: 1; transform: translateY(0); }
+
+.cs-crosslinks { padding-bottom: 100px; padding-top: 40px; }
+.crosslink-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin: 24px 0 32px 0; }
+.crosslink-card { text-decoration: none; color: #111; display: block; }
+.crosslink-card .placeholder-img {
+  height: 180px; margin-bottom: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; color: #999;
+  background-image: repeating-linear-gradient(45deg, #eee, #eee 6px, #f9f9f9 6px, #f9f9f9 12px);
+  border: 1px dashed #ccc; border-radius: 16px;
+}
+.crosslink-card span { font-size: 15px; font-weight: 600; }
+.back-to-work { font-size: 14px; color: #111; }
+
+.site-footer-expanded { padding-top: 100px; padding-bottom: 90px; }
+.footer-cta { font-size: clamp(28px, 4.5vw, 48px); font-weight: 800; line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 48px 0; max-width: 900px; }
+.footer-bottom { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 24px; }
+.footer-email { font-size: 15px; color: #111; display: block; margin-top: 8px; }
+.footer-links { display: flex; gap: 20px; font-size: 13px; }
+.footer-links a { color: #333; }
+
+@media (max-width: 720px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: block; }
+  .content-shell { padding-left: 24px; padding-right: 24px; }
+  .cs-title { padding-top: 40px; padding-bottom: 40px; }
+  .exec-strip { padding-bottom: 56px; }
+  .narrative-block { margin-bottom: 64px; }
+  .progress-pill { width: 160px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}
