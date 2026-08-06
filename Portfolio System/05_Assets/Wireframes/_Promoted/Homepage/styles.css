@@ -29,6 +29,11 @@ body {
        Fixed the spacing problem by letting the pill hug its own
        content instead of forcing space-between across two uneven
        groups trying to center a logo between them. ---- */
+/* margin-bottom matches the sticky top offset (20px) — sticky elements
+   reserve only their natural, unstuck flow height, so without this the
+   nav's stuck position can overlap the very top of whatever follows it.
+   Most visible on pages with a light/short header; fixed universally
+   since the underlying cause is identical everywhere. */
 .site-header-wrap {
   position: sticky;
   top: 20px;
@@ -36,6 +41,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 0 24px;
+  margin-bottom: 20px;
 }
 .floating-nav {
   display: flex;
@@ -138,6 +144,11 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 56px 48px;
 }
+/* Cards are now clickable, linking to the Case Study template — Case
+   Study and How I Work already wrapped their grid cards in an <a>, this
+   page's never had one. See Decision Log, 2026-08-06 (cross-page linking
+   pass). */
+.grid-item-link { text-decoration: none; color: inherit; display: block; }
 .placeholder-img {
   height: 280px; margin-bottom: 18px;
   display: flex; align-items: center; justify-content: center;

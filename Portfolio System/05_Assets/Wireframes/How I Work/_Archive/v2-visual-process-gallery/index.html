@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe — How I Work v2 — Visual Process Gallery</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#gallery">Skip to content</a>
+
+<div class="site-header-wrap">
+  <nav class="floating-nav" aria-label="Primary">
+    <a href="/" class="nav-logo">[Name]</a>
+    <div class="nav-links">
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+      <a href="/resume" class="nav-resume">Resume</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav-panel">Menu</button>
+  </nav>
+  <div class="mobile-nav-panel" id="mobile-nav-panel">
+    <a href="/#work">Work</a>
+    <a href="/#about">About</a>
+    <a href="/#contact">Contact</a>
+    <a href="/resume" class="nav-resume">Resume</a>
+  </div>
+</div>
+
+<main>
+
+  <header class="hiw-title content-shell">
+    <a class="back-link" href="/#about">← Back to About</a>
+    <p class="eyebrow">Process</p>
+    <h1>How I Work</h1>
+    <p class="hiw-intro">See the actual evolution — not just the finished version.</p>
+  </header>
+
+  <section id="gallery" class="hiw-gallery content-shell">
+
+    <article class="gallery-item">
+      <div class="gallery-visual">
+        <div class="placeholder-img gallery-frame" data-before="[Homepage Hero — v1, Everything Up Front]" data-after="[Homepage Hero — v9, Integrated + Bottom-Anchored]">[Homepage Hero — v1, Everything Up Front]</div>
+        <button class="gallery-toggle" aria-pressed="false">Show after →</button>
+      </div>
+      <div class="gallery-caption">
+        <h3>Homepage Hero</h3>
+        <p class="gallery-rounds">9 rounds</p>
+        <p>Moved from a dense, front-loaded hero to a calmer one — headline anchored bottom-left instead of top.</p>
+      </div>
+    </article>
+
+    <article class="gallery-item">
+      <div class="gallery-visual">
+        <div class="placeholder-img gallery-frame" data-before="[Homepage Nav — Flush Full-Width Header]" data-after="[Homepage Nav — v9, Floating Pill, Logo-Led]">[Homepage Nav — Flush Full-Width Header]</div>
+        <button class="gallery-toggle" aria-pressed="false">Show after →</button>
+      </div>
+      <div class="gallery-caption">
+        <h3>Navigation</h3>
+        <p class="gallery-rounds">2 structural rewrites</p>
+        <p>Went from a flush full-width header to a floating pill — logo leading a single link group, sized to fit its own content.</p>
+      </div>
+    </article>
+
+    <article class="gallery-item">
+      <div class="gallery-visual">
+        <div class="placeholder-img gallery-frame" data-before="[Case Study Progress — Sticky Sidebar Nav, v1]" data-after="[Case Study Progress — Marker + Line Stepper, v7]">[Case Study Progress — Sticky Sidebar Nav, v1]</div>
+        <button class="gallery-toggle" aria-pressed="false">Show after →</button>
+      </div>
+      <div class="gallery-caption">
+        <h3>Case Study Progress Indicator</h3>
+        <p class="gallery-rounds">3 styles tested</p>
+        <p>Chosen over two alternatives for extending an existing visual shape rather than inventing a new one.</p>
+      </div>
+    </article>
+
+  </section>
+
+</main>
+
+<footer class="site-footer-expanded content-shell">
+  <p class="footer-cta">[Big closing statement — e.g. a call to action]</p>
+  <div class="footer-bottom">
+    <div class="footer-primary">
+      <p class="eyebrow">Contact</p>
+      <a href="mailto:hello@example.com" class="footer-email">hello@example.com</a>
+    </div>
+    <div class="footer-links">
+      <a href="/resume">Resume</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="#">Feminist UX</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var toggle = document.getElementById('nav-toggle');
+  var panel = document.getElementById('mobile-nav-panel');
+  toggle.addEventListener('click', function () {
+    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    panel.classList.toggle('open');
+  });
+
+  document.querySelectorAll('.gallery-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var frame = btn.closest('.gallery-visual').querySelector('.gallery-frame');
+      var pressed = btn.getAttribute('aria-pressed') === 'true';
+      var next = !pressed;
+      btn.setAttribute('aria-pressed', String(next));
+      frame.textContent = next ? frame.getAttribute('data-after') : frame.getAttribute('data-before');
+      frame.classList.toggle('is-after', next);
+      btn.textContent = next ? '← Show before' : 'Show after →';
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -28,7 +28,8 @@ body {
 .skip-link:focus { left: 8px; top: 8px; }
 
 /* z-index matched to the Homepage's 50 (was 60 here — unexplained drift). */
-.site-header-wrap { position: sticky; top: 20px; z-index: 50; display: flex; justify-content: center; padding: 0 24px; }
+/* margin-bottom matches the sticky top offset (20px) — see _Promoted copy. */
+.site-header-wrap { position: sticky; top: 20px; z-index: 50; display: flex; justify-content: center; padding: 0 24px; margin-bottom: 20px; }
 .floating-nav { display: flex; align-items: center; gap: 44px; width: fit-content; max-width: 100%; background: #fff; border: 1px solid #ddd; border-radius: 999px; padding: 8px 8px 8px 28px; }
 .nav-logo { font-weight: 800; font-size: 15px; color: #111; text-decoration: none; white-space: nowrap; }
 .nav-links { display: flex; align-items: center; gap: 26px; }
@@ -44,7 +45,15 @@ body {
 .eyebrow { text-transform: uppercase; letter-spacing: 0.1em; font-size: 12px; color: #666; margin: 0 0 12px 0; }
 .section-title { font-size: clamp(32px, 5vw, 60px); font-weight: 800; letter-spacing: -0.01em; line-height: 1.05; margin: 0 0 32px 0; }
 
-.cs-title { padding-top: 64px; padding-bottom: 72px; max-width: 900px; }
+/* No container-level max-width — matches Homepage's hero (effectively
+   full-width within content-shell), Resume's .resume-title, and How I
+   Work's .hiw-title. The previous 900px cap was the real source of this
+   page reading narrower than the others when navigating between pages —
+   see Consistency Audit (cross-page), 2026-08-06. */
+.cs-title { padding-top: 64px; padding-bottom: 72px; }
+/* .back-link — copied exactly from Resume/How I Work, was missing here. */
+.back-link { display: inline-block; font-size: 13px; color: #666; text-decoration: none; margin-bottom: 32px; }
+.back-link:hover, .back-link:focus { color: #111; }
 .cs-title-sponsor { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
 .logo-mark.large { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; font-size: 10px; color: #777; background: #f5f5f5; border-radius: 999px; }
 /* flex-shrink: 0 added to match the Homepage's .engagement-tag exactly. */
@@ -135,8 +144,13 @@ body {
   background: none; border: none; font: inherit; font-size: 15px; font-weight: 600;
   padding: 16px 0; cursor: pointer; color: #111; text-align: left;
 }
-.decision-toggle:focus { outline: 2px solid #111; outline-offset: 2px; }
+/* :focus-visible, not :focus — was showing the outline on every mouse
+   click, not just keyboard navigation. */
+.decision-toggle:focus-visible { outline: 2px solid #111; outline-offset: 2px; }
 .toggle-icon { color: #999; font-weight: 400; flex-shrink: 0; }
+/* Symbol now lives entirely in ::before, swapped by state — was
+   literal "+" text AND a "–" ::before when open, both rendering at once. */
+.toggle-icon::before { content: "+"; }
 .decision-detail { display: none; padding: 0 0 20px 0; }
 .decision-item.open .decision-detail { display: block; }
 .decision-item.open .toggle-icon::before { content: "\2013"; }

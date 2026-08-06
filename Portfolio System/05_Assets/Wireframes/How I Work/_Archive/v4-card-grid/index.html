@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe — How I Work v4 — Card Grid</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#principles">Skip to content</a>
+
+<div class="site-header-wrap">
+  <nav class="floating-nav" aria-label="Primary">
+    <a href="/" class="nav-logo">[Name]</a>
+    <div class="nav-links">
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+      <a href="/resume" class="nav-resume">Resume</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav-panel">Menu</button>
+  </nav>
+  <div class="mobile-nav-panel" id="mobile-nav-panel">
+    <a href="/#work">Work</a>
+    <a href="/#about">About</a>
+    <a href="/#contact">Contact</a>
+    <a href="/resume" class="nav-resume">Resume</a>
+  </div>
+</div>
+
+<main>
+
+  <header class="hiw-title content-shell">
+    <a class="back-link" href="/#about">← Back to About</a>
+    <p class="eyebrow">Philosophy</p>
+    <h1>How I Work</h1>
+    <p class="hiw-intro">What I actually believe about design, and where it's been tested.</p>
+  </header>
+
+  <section id="principles" class="hiw-grid content-shell">
+
+    <article class="principle-card">
+      <div class="card-top">
+        <div class="logo-mark"><span>Meta</span></div>
+      </div>
+      <h2>Design and engineering are the same conversation.</h2>
+      <p>I started in software engineering before design, and I don't treat feasibility as a limit on creativity. On the Meta engagement, that meant presenting interaction concepts fluent in both design rationale and implementation reality.</p>
+    </article>
+
+    <article class="principle-card">
+      <div class="card-top">
+        <div class="logo-mark"><span>TD</span></div>
+      </div>
+      <h2>Systems matter more than screens.</h2>
+      <p>I rarely evaluate a decision in isolation. Leading the Terra Dotta redesign meant mapping the full student journey before touching a single page — a coherent system beats a polished screen that doesn't fit into one.</p>
+    </article>
+
+    <article class="principle-card">
+      <div class="card-top">
+        <div class="logo-mark"><span>Ind.</span></div>
+      </div>
+      <h2>Design begins with people, not neutrality.</h2>
+      <p>My Feminist UX thesis exists because "usable" isn't the same as "equitable" — a framework for designing with power, access, and context in mind, validated with 10 UX practitioners.</p>
+    </article>
+
+    <article class="principle-card">
+      <div class="card-top">
+        <div class="logo-mark"><span>FINRA</span></div>
+      </div>
+      <h2>Research exists to challenge me, not confirm me.</h2>
+      <p>On the FINRA engagement, that meant conducting user research and iterating through usability testing before committing to a design — research as a way to be proven wrong early.</p>
+    </article>
+
+    <article class="principle-card">
+      <div class="card-top">
+        <div class="logo-mark"><span>Hack iX</span></div>
+      </div>
+      <h2>AI amplifies. It doesn't decide.</h2>
+      <p>I use AI to accelerate exploration, including on this site — but every layout, every cut idea, every word was mine to make and defend. At Hack iX, that meant AI-assisted development without letting the tool make the calls that were actually mine.</p>
+    </article>
+
+    <article class="principle-card principle-card-cta">
+      <h2>See these in practice</h2>
+      <p>Every principle here traces back to real, shipped work — not just a claim.</p>
+      <div class="cta-links">
+        <a href="#">Meta case study →</a>
+        <a href="#">Terra Dotta case study →</a>
+        <a href="/#work">All work →</a>
+      </div>
+    </article>
+
+  </section>
+
+</main>
+
+<footer class="site-footer-expanded content-shell">
+  <p class="footer-cta">[Big closing statement — e.g. a call to action]</p>
+  <div class="footer-bottom">
+    <div class="footer-primary">
+      <p class="eyebrow">Contact</p>
+      <a href="mailto:hello@example.com" class="footer-email">hello@example.com</a>
+    </div>
+    <div class="footer-links">
+      <a href="/resume">Resume</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="#">Feminist UX</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var toggle = document.getElementById('nav-toggle');
+  var panel = document.getElementById('mobile-nav-panel');
+  toggle.addEventListener('click', function () {
+    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    panel.classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>

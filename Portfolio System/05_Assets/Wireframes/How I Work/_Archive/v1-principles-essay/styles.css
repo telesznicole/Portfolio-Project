@@ -1,0 +1,83 @@
+/* ================================
+   Wireframe — How I Work v1: Principles Essay
+   Extends the locked Homepage/Case Study/Resume visual language directly:
+   nav, footer, content-shell, corner-radius system, typography scale, and
+   the no-divider-lines rule are copied verbatim, not reinvented.
+   This page has no dedicated visual reference (unlike Resume's Andrea
+   screenshots) — its brief comes entirely from Experience Blueprint §2.6:
+   dense, technical, and deliberately low on interaction/motion, since it
+   "earns trust through clarity of thinking, not craft." No expand/collapse,
+   no stepper nav, no cards — those mechanisms exist elsewhere in the
+   component library but weren't reused here on purpose (see notes.md).
+   Reference: Portfolio Manifesto ("AI Should Amplify Human Creativity");
+   Decision Log (division-of-labor and critique-loop entries, 2026-07-29/31);
+   Experience Blueprint §2.6; IA §3.4.
+   ================================ */
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #111;
+  background: #fff;
+  line-height: 1.6;
+}
+
+.skip-link { position: absolute; left: -999px; top: 0; background: #000; color: #fff; padding: 8px 12px; z-index: 100; border-radius: 6px; }
+.skip-link:focus { left: 8px; top: 8px; }
+
+/* ---- Nav — copied exactly from Homepage/Case Study/Resume ---- */
+.site-header-wrap { position: sticky; top: 20px; z-index: 50; display: flex; justify-content: center; padding: 0 24px; }
+.floating-nav { display: flex; align-items: center; gap: 44px; width: fit-content; max-width: 100%; background: #fff; border: 1px solid #ddd; border-radius: 999px; padding: 8px 8px 8px 28px; }
+.nav-logo { font-weight: 800; font-size: 15px; color: #111; text-decoration: none; white-space: nowrap; }
+.nav-links { display: flex; align-items: center; gap: 26px; }
+.nav-links a { color: #111; text-decoration: none; font-size: 14px; white-space: nowrap; border-bottom: 1px solid transparent; }
+.nav-links a:hover, .nav-links a:focus { border-bottom: 1px solid #111; }
+.nav-resume { border: 1px solid #111 !important; padding: 6px 16px; border-radius: 999px; text-decoration: none; color: #111; font-size: 14px; display: inline-block; }
+.nav-toggle { display: none; background: none; border: 1px solid #111; border-radius: 999px; padding: 6px 16px; font-size: 13px; }
+.mobile-nav-panel { display: none; flex-direction: column; gap: 4px; max-width: 480px; width: fit-content; margin: 8px auto 0; padding: 16px 24px; background: #fff; border: 1px solid #ddd; border-radius: 24px; }
+.mobile-nav-panel.open { display: flex; }
+.mobile-nav-panel a { color: #111; text-decoration: none; font-size: 15px; padding: 8px 0; }
+
+.content-shell { max-width: 1200px; margin: 0 auto; padding-left: 64px; padding-right: 64px; }
+.eyebrow { text-transform: uppercase; letter-spacing: 0.1em; font-size: 12px; color: #666; margin: 0 0 12px 0; }
+
+/* ---- Page header, with the IA §3.4-required return path to About ---- */
+.hiw-title { padding-top: 64px; padding-bottom: 56px; }
+.back-link { display: inline-block; font-size: 13px; color: #666; text-decoration: none; margin-bottom: 32px; }
+.back-link:hover, .back-link:focus { color: #111; }
+.hiw-title h1 { font-size: clamp(32px, 5.5vw, 56px); font-weight: 800; line-height: 1.15; margin: 0 0 20px 0; letter-spacing: -0.01em; }
+.hiw-intro { font-size: 17px; color: #444; max-width: 56ch; margin: 0; }
+
+/* ---- Essay body: single narrow column, generous vertical rhythm, no
+       boxes or cards — density comes from real content, not decoration.
+       Line-length capped at ~62ch per principle for long-form legibility. ---- */
+.hiw-essay { padding-bottom: 120px; max-width: 680px; }
+.principle { margin-bottom: 72px; }
+.principle:last-child { margin-bottom: 0; }
+.principle h2 { font-size: clamp(22px, 2.6vw, 28px); font-weight: 700; margin: 0 0 16px 0; letter-spacing: -0.005em; }
+.principle p { font-size: 16px; color: #333; margin: 0; max-width: 62ch; }
+.principle p + p { margin-top: 14px; }
+
+/* ---- Footer — copied exactly from Case Study / Resume ---- */
+.site-footer-expanded { padding-top: 100px; padding-bottom: 48px; }
+.footer-cta { font-size: clamp(28px, 4.5vw, 48px); font-weight: 800; line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 48px 0; max-width: 900px; }
+.footer-bottom { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 24px; }
+.footer-email { font-size: 15px; color: #111; display: block; margin-top: 8px; }
+.footer-links { display: flex; gap: 20px; font-size: 13px; }
+.footer-links a { color: #333; }
+
+@media (max-width: 720px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: block; }
+  .content-shell { padding-left: 24px; padding-right: 24px; }
+  .hiw-title { padding-top: 40px; padding-bottom: 40px; }
+  .principle { margin-bottom: 56px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}

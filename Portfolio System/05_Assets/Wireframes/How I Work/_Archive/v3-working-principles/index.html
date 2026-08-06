@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe — How I Work v3 — Working Principles</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#principles">Skip to content</a>
+
+<div class="site-header-wrap">
+  <nav class="floating-nav" aria-label="Primary">
+    <a href="/" class="nav-logo">[Name]</a>
+    <div class="nav-links">
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+      <a href="/resume" class="nav-resume">Resume</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav-panel">Menu</button>
+  </nav>
+  <div class="mobile-nav-panel" id="mobile-nav-panel">
+    <a href="/#work">Work</a>
+    <a href="/#about">About</a>
+    <a href="/#contact">Contact</a>
+    <a href="/resume" class="nav-resume">Resume</a>
+  </div>
+</div>
+
+<main>
+
+  <header class="hiw-title content-shell">
+    <a class="back-link" href="/#about">← Back to About</a>
+    <p class="eyebrow">Philosophy</p>
+    <h1>How I Work</h1>
+    <p class="hiw-intro">What I actually believe about design, and where it comes from — not just claims, but where they've been tested.</p>
+  </header>
+
+  <section class="hiw-stats content-shell">
+    <div class="stat-item">
+      <p class="stat-number">6</p>
+      <p class="stat-label">Industry collaborations, from Meta to Deloitte</p>
+    </div>
+    <div class="stat-item">
+      <p class="stat-number">2</p>
+      <p class="stat-label">Degrees — Computer Science, then Interactive Design</p>
+    </div>
+    <div class="stat-item">
+      <p class="stat-number">10</p>
+      <p class="stat-label">UX practitioners who validated my Feminist UX framework</p>
+    </div>
+  </section>
+
+  <section id="principles" class="hiw-list content-shell">
+
+    <div class="principle-item">
+      <p class="principle-num">01</p>
+      <div class="principle-body">
+        <h2>Design and engineering are the same conversation.</h2>
+        <p>I started in software engineering before design, and I don't treat feasibility as a limit on creativity — I treat technical understanding as another design material. On the Meta x SCADpro engagement, that meant presenting interaction concepts fluent in both design rationale and implementation reality, not leaving the "how" for someone else to sort out later.</p>
+      </div>
+    </div>
+
+    <div class="principle-item">
+      <p class="principle-num">02</p>
+      <div class="principle-body">
+        <h2>Systems matter more than screens.</h2>
+        <p>I rarely evaluate a decision in isolation — I'm asking what it assumes and what happens next. Leading the Terra Dotta redesign meant mapping the full student journey before touching a single page, because a coherent system beats a polished screen that doesn't fit into one.</p>
+      </div>
+    </div>
+
+    <div class="principle-item">
+      <p class="principle-num">03</p>
+      <div class="principle-body">
+        <h2>Design begins with people, not neutrality.</h2>
+        <p>My Feminist UX thesis exists because "usable" isn't the same as "equitable" — it's a framework for designing with power, access, and context in mind, not assuming a neutral user who looks like everyone else. Validated with 10 UX practitioners, not just my own read on it.</p>
+      </div>
+    </div>
+
+    <div class="principle-item">
+      <p class="principle-num">04</p>
+      <div class="principle-body">
+        <h2>Research exists to challenge me, not confirm me.</h2>
+        <p>On the Meta engagement, that meant synthesizing 5,000+ research data points and exploring 80+ interaction concepts before committing to a direction — research as a way to be proven wrong early, not a formality on the way to an idea I'd already decided on.</p>
+      </div>
+    </div>
+
+    <div class="principle-item">
+      <p class="principle-num">05</p>
+      <div class="principle-body">
+        <h2>AI amplifies. It doesn't decide.</h2>
+        <p>I use AI to accelerate exploration and remove repetitive work, including on this site — but every layout, every cut idea, every word was mine to make and defend. At Hack iX, that meant using AI-assisted development to prototype fast without letting the tool make the calls that were actually mine to make.</p>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="site-footer-expanded content-shell">
+  <p class="footer-cta">[Big closing statement — e.g. a call to action]</p>
+  <div class="footer-bottom">
+    <div class="footer-primary">
+      <p class="eyebrow">Contact</p>
+      <a href="mailto:hello@example.com" class="footer-email">hello@example.com</a>
+    </div>
+    <div class="footer-links">
+      <a href="/resume">Resume</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="#">Feminist UX</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var toggle = document.getElementById('nav-toggle');
+  var panel = document.getElementById('mobile-nav-panel');
+  toggle.addEventListener('click', function () {
+    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    panel.classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>

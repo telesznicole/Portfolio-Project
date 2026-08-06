@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe — How I Work v1 — Division of Labor</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#roles">Skip to content</a>
+
+<div class="site-header-wrap">
+  <nav class="floating-nav" aria-label="Primary">
+    <a href="/" class="nav-logo">[Name]</a>
+    <div class="nav-links">
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+      <a href="/resume" class="nav-resume">Resume</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav-panel">Menu</button>
+  </nav>
+  <div class="mobile-nav-panel" id="mobile-nav-panel">
+    <a href="/#work">Work</a>
+    <a href="/#about">About</a>
+    <a href="/#contact">Contact</a>
+    <a href="/resume" class="nav-resume">Resume</a>
+  </div>
+</div>
+
+<main>
+
+  <header class="hiw-title content-shell">
+    <a class="back-link" href="/#about">← Back to About</a>
+    <p class="eyebrow">Process</p>
+    <h1>How I Work</h1>
+    <p class="hiw-intro">Who does what when AI is part of the process — and how a decision actually gets made.</p>
+  </header>
+
+  <section id="roles" class="hiw-roles content-shell">
+    <p class="hiw-section-label">Division of Labor</p>
+    <div class="role-grid">
+      <div class="role-block">
+        <h3>Nicole</h3>
+        <p>Vision, storytelling, and every final decision. Nothing ships without approval.</p>
+      </div>
+      <div class="role-block">
+        <h3>Claude</h3>
+        <p>Large-context synthesis, drafting, and code — including the page you're reading right now.</p>
+      </div>
+      <div class="role-block">
+        <h3>ChatGPT</h3>
+        <p>Strategy and critique — a second, disposable perspective before ideas reach production tools.</p>
+      </div>
+      <div class="role-block">
+        <h3>Google Deep Research</h3>
+        <p>Market and industry research — the evidence base decisions get checked against.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="hiw-loop content-shell">
+    <p class="hiw-section-label">How a Decision Actually Gets Made</p>
+    <div class="loop-sequence">
+      <span>Nicole provides input</span>
+      <span aria-hidden="true">→</span>
+      <span>AI proposes a draft</span>
+      <span aria-hidden="true">→</span>
+      <span>Nicole critiques it</span>
+      <span aria-hidden="true">→</span>
+      <span>AI revises</span>
+      <span aria-hidden="true">→</span>
+      <span>Done</span>
+    </div>
+    <p class="loop-note">First passes are treated as starting points, not finished work — every meaningful decision on this site passed through this loop at least once, and most passed through it several times.</p>
+  </section>
+
+</main>
+
+<footer class="site-footer-expanded content-shell">
+  <p class="footer-cta">[Big closing statement — e.g. a call to action]</p>
+  <div class="footer-bottom">
+    <div class="footer-primary">
+      <p class="eyebrow">Contact</p>
+      <a href="mailto:hello@example.com" class="footer-email">hello@example.com</a>
+    </div>
+    <div class="footer-links">
+      <a href="/resume">Resume</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="#">Feminist UX</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var toggle = document.getElementById('nav-toggle');
+  var panel = document.getElementById('mobile-nav-panel');
+  toggle.addEventListener('click', function () {
+    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    panel.classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>

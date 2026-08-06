@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe — How I Work v2 — Expandable Principles</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#principles">Skip to content</a>
+
+<div class="site-header-wrap">
+  <nav class="floating-nav" aria-label="Primary">
+    <a href="/" class="nav-logo">[Name]</a>
+    <div class="nav-links">
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+      <a href="/resume" class="nav-resume">Resume</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav-panel">Menu</button>
+  </nav>
+  <div class="mobile-nav-panel" id="mobile-nav-panel">
+    <a href="/#work">Work</a>
+    <a href="/#about">About</a>
+    <a href="/#contact">Contact</a>
+    <a href="/resume" class="nav-resume">Resume</a>
+  </div>
+</div>
+
+<main>
+
+  <header class="hiw-title content-shell">
+    <a class="back-link" href="/#about">← Back to About</a>
+    <p class="eyebrow">Process</p>
+    <h1>How I Work</h1>
+    <p class="hiw-intro">Five things I actually believe about working with AI. Click to go deeper.</p>
+  </header>
+
+  <section id="principles" class="hiw-list content-shell">
+
+    <div class="principle-item">
+      <button class="principle-toggle" aria-expanded="false">
+        <span class="principle-num">01</span>
+        <span class="principle-headline">AI accelerates. It doesn't decide.</span>
+        <span class="toggle-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="principle-detail">
+        <p>I use AI to speed up exploration and remove repetitive work — never to make the creative call. Every choice on this site was mine to make and defend.</p>
+      </div>
+    </div>
+
+    <div class="principle-item">
+      <button class="principle-toggle" aria-expanded="false">
+        <span class="principle-num">02</span>
+        <span class="principle-headline">Every draft gets challenged before it survives.</span>
+        <span class="toggle-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="principle-detail">
+        <p>The loop is always the same: I give the input, AI proposes a draft, I critique it, AI revises. First passes are starting points, never the finish line.</p>
+      </div>
+    </div>
+
+    <div class="principle-item">
+      <button class="principle-toggle" aria-expanded="false">
+        <span class="principle-num">03</span>
+        <span class="principle-headline">The reasoning stays, not just the result.</span>
+        <span class="toggle-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="principle-detail">
+        <p>This project keeps a running decision log of what was tried and discarded, not just what worked. The homepage alone took nine rounds — all still documented.</p>
+      </div>
+    </div>
+
+    <div class="principle-item">
+      <button class="principle-toggle" aria-expanded="false">
+        <span class="principle-num">04</span>
+        <span class="principle-headline">Different tools do different jobs.</span>
+        <span class="toggle-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="principle-detail">
+        <p>Research, critique, and drafting don't come from the same place. Keeping them separate keeps any one tool from doing a job it isn't suited for.</p>
+      </div>
+    </div>
+
+    <div class="principle-item">
+      <button class="principle-toggle" aria-expanded="false">
+        <span class="principle-num">05</span>
+        <span class="principle-headline">I'm still the one who has to defend it.</span>
+        <span class="toggle-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="principle-detail">
+        <p>If a decision doesn't hold up when I explain it, it doesn't ship — regardless of which tool proposed it first.</p>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="site-footer-expanded content-shell">
+  <p class="footer-cta">[Big closing statement — e.g. a call to action]</p>
+  <div class="footer-bottom">
+    <div class="footer-primary">
+      <p class="eyebrow">Contact</p>
+      <a href="mailto:hello@example.com" class="footer-email">hello@example.com</a>
+    </div>
+    <div class="footer-links">
+      <a href="/resume">Resume</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="#">Feminist UX</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var toggle = document.getElementById('nav-toggle');
+  var panel = document.getElementById('mobile-nav-panel');
+  toggle.addEventListener('click', function () {
+    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    panel.classList.toggle('open');
+  });
+
+  document.querySelectorAll('.principle-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      btn.closest('.principle-item').classList.toggle('open');
+    });
+  });
+</script>
+
+</body>
+</html>

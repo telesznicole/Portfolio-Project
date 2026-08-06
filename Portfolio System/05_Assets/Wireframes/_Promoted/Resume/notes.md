@@ -34,4 +34,4 @@ Everything from `v2-refined`: phone number removed, `.engagement-tag` restored t
 
 ## Outcome
 
-**Status: Pending Nicole's review.** This addresses the audit portion of her last note in full. Once she confirms (particularly the Hack iX classification flagged in `v2-refined/notes.md`, and the footer padding-top open question above), this is a strong promotion candidate.
+**Status: 🔒 Promoted — 2026-08-06.** Nicole confirmed final approval (Hack iX classification and the footer padding-top question both accepted as-is, not revised further — see `../Consistency Audit.md`). This copy also carries the page title fix (name moved to a big `clamp(32px,5.5vw,56px)`/800 H1, matching every other standalone page), the universal toggle fixes (no more double `+`/`–`, `:focus-visible` instead of bare `:focus` on `.entry-toggle`), and working internal navigation (nav bar now points to real, resolving destinations within `_Promoted/` instead of placeholder root-relative paths). See Decision Log for the full account of each.

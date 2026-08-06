@@ -12,26 +12,34 @@
 
 <div class="site-header-wrap">
   <nav class="floating-nav" aria-label="Primary">
-    <a href="/" class="nav-logo">[Name]</a>
+    <a href="../Homepage/index.html" class="nav-logo">[Name]</a>
     <div class="nav-links">
-      <a href="/#work">Work</a>
-      <a href="/#about">About</a>
-      <a href="/#contact">Contact</a>
-      <a href="/resume" class="nav-resume">Resume</a>
+      <a href="../Homepage/index.html#work">Work</a>
+      <a href="../Homepage/index.html#about">About</a>
+      <a href="../Homepage/index.html#contact">Contact</a>
+      <a href="../Resume/index.html" class="nav-resume">Resume</a>
     </div>
     <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav-panel">Menu</button>
   </nav>
   <div class="mobile-nav-panel" id="mobile-nav-panel">
-    <a href="/#work">Work</a>
-    <a href="/#about">About</a>
-    <a href="/#contact">Contact</a>
-    <a href="/resume" class="nav-resume">Resume</a>
+    <a href="../Homepage/index.html#work">Work</a>
+    <a href="../Homepage/index.html#about">About</a>
+    <a href="../Homepage/index.html#contact">Contact</a>
+    <a href="../Resume/index.html" class="nav-resume">Resume</a>
   </div>
 </div>
 
 <main>
 
+  <!-- Quiet top orientation link, matching How I Work's .back-link exactly
+       — was missing here, the only return-path this page had was the
+       "← Back to Work" link at the very bottom, next to More Work. Both
+       now coexist: this one is pure wayfinding (available immediately,
+       doesn't ask you to commit to a long read first); the bottom one
+       remains as a natural next-step after finishing the page. See
+       Decision Log, 2026-08-06. -->
   <header class="cs-title content-shell">
+    <a class="back-link" href="../Homepage/index.html#work">← Back to Work</a>
     <div class="cs-title-sponsor">
       <div class="logo-mark large"><span>Meta</span></div>
       <span class="engagement-tag">Sponsored Engagement</span>
@@ -117,7 +125,7 @@
           <div class="decision-item">
             <button class="decision-toggle" aria-expanded="false">
               <span>[Decision one — the choice made, stated plainly]</span>
-              <span class="toggle-icon" aria-hidden="true">+</span>
+              <span class="toggle-icon" aria-hidden="true"></span>
             </button>
             <div class="decision-detail">
               <p class="rejected-label">Considered and rejected</p>
@@ -127,7 +135,7 @@
           <div class="decision-item">
             <button class="decision-toggle" aria-expanded="false">
               <span>[Decision two — the choice made, stated plainly]</span>
-              <span class="toggle-icon" aria-hidden="true">+</span>
+              <span class="toggle-icon" aria-hidden="true"></span>
             </button>
             <div class="decision-detail">
               <p class="rejected-label">Considered and rejected</p>
@@ -181,7 +189,7 @@
         <p>[Error states, empty states, permission edge cases.]</p>
         <h3>Engineering Collaboration</h3>
         <p>[How this project involved real engineering handoff or collaboration.]</p>
-        <a href="/how-i-work" class="deep-link">See how AI-assisted workflow shaped this project →</a>
+        <a href="../How%20I%20Work/index.html" class="deep-link">See how AI-assisted workflow shaped this project →</a>
       </section>
 
     </div>
@@ -191,11 +199,14 @@
        exactly (280px image height, 56px/48px grid gap) — previously
        220px and a flat 48px gap, contradicting the stated goal of this
        being "literally the same card component." See Cohesion Audit.md. -->
+  <!-- Both cards link back to this same template — no dedicated Terra
+       Dotta / Feminist UX case study page exists yet, only this one.
+       Per Nicole's direction, 2026-08-06. -->
   <section class="cs-crosslinks content-shell">
     <p class="section-title">More Work</p>
     <div class="work-grid">
       <article class="grid-item">
-        <a href="/work/feminist-ux" class="grid-item-link">
+        <a href="index.html" class="grid-item-link">
           <div class="placeholder-img">Feminist UX</div>
           <div class="case-title-row">
             <div class="case-title-left">
@@ -208,7 +219,7 @@
         </a>
       </article>
       <article class="grid-item">
-        <a href="/work/terra-dotta" class="grid-item-link">
+        <a href="index.html" class="grid-item-link">
           <div class="placeholder-img">Terra Dotta</div>
           <div class="case-title-row">
             <div class="case-title-left">
@@ -221,7 +232,7 @@
         </a>
       </article>
     </div>
-    <a href="/#work" class="back-to-work">← Back to Work</a>
+    <a href="../Homepage/index.html#work" class="back-to-work">← Back to Work</a>
   </section>
 
 </main>
@@ -231,13 +242,13 @@
   <div class="footer-bottom">
     <div class="footer-primary">
       <p class="eyebrow">Contact</p>
-      <a href="mailto:hello@example.com" class="footer-email">hello@example.com</a>
+      <a href="mailto:ni.telesz@gmail.com" class="footer-email">ni.telesz@gmail.com</a>
     </div>
     <div class="footer-links">
-      <a href="/resume">Resume</a>
-      <a href="#">LinkedIn</a>
-      <a href="#">GitHub</a>
-      <a href="#">Feminist UX</a>
+      <a href="/assets/nicole-telesz-resume.pdf" download>Resume</a>
+      <a href="https://www.linkedin.com/in/nicole-telesz-58a661201/">LinkedIn</a>
+      <a href="https://github.com/telesznicole/telesznicole">GitHub</a>
+      <a href="https://www.feministux.org">Feminist UX</a>
     </div>
   </div>
 </footer>

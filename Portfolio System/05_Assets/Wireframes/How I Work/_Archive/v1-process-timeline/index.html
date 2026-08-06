@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe — How I Work v1 — Process Timeline</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#timeline">Skip to content</a>
+
+<div class="site-header-wrap">
+  <nav class="floating-nav" aria-label="Primary">
+    <a href="/" class="nav-logo">[Name]</a>
+    <div class="nav-links">
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+      <a href="/resume" class="nav-resume">Resume</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav-panel">Menu</button>
+  </nav>
+  <div class="mobile-nav-panel" id="mobile-nav-panel">
+    <a href="/#work">Work</a>
+    <a href="/#about">About</a>
+    <a href="/#contact">Contact</a>
+    <a href="/resume" class="nav-resume">Resume</a>
+  </div>
+</div>
+
+<main>
+
+  <header class="hiw-title content-shell">
+    <a class="back-link" href="/#about">← Back to About</a>
+    <p class="eyebrow">Process</p>
+    <h1>How I Work</h1>
+    <p class="hiw-intro">A step-by-step look at how this portfolio itself got built — discovery through build, including the parts that got rewritten along the way.</p>
+  </header>
+
+  <section id="timeline" class="hiw-body content-shell">
+
+    <div class="hiw-row">
+      <p class="row-label">01<br>Discovery</p>
+      <div class="row-content">
+        <p>Before opening a design tool, I completed deep research across hiring expectations, portfolio strategy, AI-assisted workflows, and interaction design — evidence before aesthetics, not after.</p>
+      </div>
+    </div>
+
+    <div class="hiw-row">
+      <p class="row-label">02<br>Foundations</p>
+      <div class="row-content">
+        <p>A design manifesto, a portfolio PRD, and a full information architecture were written and locked before any visual exploration began. The sequence itself was a deliberate decision, not a default.</p>
+      </div>
+    </div>
+
+    <div class="hiw-row">
+      <p class="row-label">03<br>Design Exploration</p>
+      <div class="row-content">
+        <p>Dozens of real portfolios were studied and organized by design problem rather than by designer, so the research stayed retrievable — for me and for AI collaboration — and answered questions like "how should a homepage work," not "what did designer X do."</p>
+      </div>
+    </div>
+
+    <div class="hiw-row">
+      <p class="row-label">04<br>Wireframing</p>
+      <div class="row-content">
+        <p>Each page — Homepage, Case Study template, Resume, this one — went through multiple full rounds of AI-generated concepts, reviewed and either advanced, refined, or archived with a written reason. The homepage took nine rounds; the case study template took seven. Nothing discarded was deleted.</p>
+      </div>
+    </div>
+
+    <div class="hiw-row">
+      <p class="row-label">05<br>Build</p>
+      <div class="row-content">
+        <p>Wireframes are built directly in HTML and CSS rather than a separate design tool, so structural and feasibility questions get answered immediately instead of deferred to a handoff. What you're reading right now is that same process, one page further along.</p>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="site-footer-expanded content-shell">
+  <p class="footer-cta">[Big closing statement — e.g. a call to action]</p>
+  <div class="footer-bottom">
+    <div class="footer-primary">
+      <p class="eyebrow">Contact</p>
+      <a href="mailto:hello@example.com" class="footer-email">hello@example.com</a>
+    </div>
+    <div class="footer-links">
+      <a href="/resume">Resume</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="#">Feminist UX</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var toggle = document.getElementById('nav-toggle');
+  var panel = document.getElementById('mobile-nav-panel');
+  toggle.addEventListener('click', function () {
+    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    panel.classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>

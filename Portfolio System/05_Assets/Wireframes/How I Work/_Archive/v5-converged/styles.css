@@ -1,0 +1,132 @@
+/* ================================
+   Wireframe — How I Work v5: Converged
+   Round 5 — converges the three round-4 concepts into one, per Nicole's
+   direct feedback on each: keeps `v4-progressive-depth`'s structure and
+   fixes what was left visible-by-default (unchanged), but removes the
+   per-principle .logo-mark from the visible claim — Nicole's read was
+   that a brand logo next to a philosophy statement makes it read like
+   "my philosophies come from brands," which isn't the intent. Logos and
+   company names now only appear inside "More on this," where a specific
+   real project is actually being discussed. When that project is a real
+   flagship case study (Meta, Terra Dotta, Feminist UX), the expansion
+   includes a real link to it — the "point the user to that project"
+   idea. FINRA and Hack iX aren't flagship case studies with their own
+   page yet, so their mentions stay text-only, no link, no logo — honest
+   about what actually exists. Dropped the "Where This Shows Up" logo-
+   wall entirely (redundant now that each relevant expansion already
+   does that job). Kept the .quote-card from `v4-stepper-visual` — Nicole
+   liked it. Added a closing "Read the Work" section with real links to
+   the three flagship case studies, replacing the logo-wall as the
+   content that exists beyond the principles themselves.
+   Nav, footer, content-shell, corner-radius system, and typography scale
+   copied verbatim. .site-header-wrap includes the universal sticky-
+   clearance fix.
+   Reference: Nicole's round-4 review, 2026-08-06; IA §5 (cross-linking),
+   §6 (flagship case study cap of three).
+   ================================ */
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #111;
+  background: #fff;
+  line-height: 1.6;
+}
+
+.skip-link { position: absolute; left: -999px; top: 0; background: #000; color: #fff; padding: 8px 12px; z-index: 100; border-radius: 6px; }
+.skip-link:focus { left: 8px; top: 8px; }
+
+.site-header-wrap { position: sticky; top: 20px; z-index: 50; display: flex; justify-content: center; padding: 0 24px; margin-bottom: 20px; }
+.floating-nav { display: flex; align-items: center; gap: 44px; width: fit-content; max-width: 100%; background: #fff; border: 1px solid #ddd; border-radius: 999px; padding: 8px 8px 8px 28px; }
+.nav-logo { font-weight: 800; font-size: 15px; color: #111; text-decoration: none; white-space: nowrap; }
+.nav-links { display: flex; align-items: center; gap: 26px; }
+.nav-links a { color: #111; text-decoration: none; font-size: 14px; white-space: nowrap; border-bottom: 1px solid transparent; }
+.nav-links a:hover, .nav-links a:focus { border-bottom: 1px solid #111; }
+.nav-resume { border: 1px solid #111 !important; padding: 6px 16px; border-radius: 999px; text-decoration: none; color: #111; font-size: 14px; display: inline-block; }
+.nav-toggle { display: none; background: none; border: 1px solid #111; border-radius: 999px; padding: 6px 16px; font-size: 13px; }
+.mobile-nav-panel { display: none; flex-direction: column; gap: 4px; max-width: 480px; width: fit-content; margin: 8px auto 0; padding: 16px 24px; background: #fff; border: 1px solid #ddd; border-radius: 24px; }
+.mobile-nav-panel.open { display: flex; }
+.mobile-nav-panel a { color: #111; text-decoration: none; font-size: 15px; padding: 8px 0; }
+
+.content-shell { max-width: 1200px; margin: 0 auto; padding-left: 64px; padding-right: 64px; }
+.eyebrow { text-transform: uppercase; letter-spacing: 0.1em; font-size: 12px; color: #666; margin: 0 0 12px 0; }
+
+.hiw-title { padding-top: 64px; padding-bottom: 56px; }
+.back-link { display: inline-block; font-size: 13px; color: #666; text-decoration: none; margin-bottom: 32px; }
+.back-link:hover, .back-link:focus { color: #111; }
+.hiw-title h1 { font-size: clamp(32px, 5.5vw, 56px); font-weight: 800; line-height: 1.15; margin: 0 0 20px 0; letter-spacing: -0.01em; }
+.hiw-intro { font-size: 17px; color: #444; max-width: 60ch; margin: 0; }
+
+/* ---- Principles: visible claim carries no brand association. Full
+       width used via a wider paragraph cap (68ch) since there's no
+       side visual competing for space in this version. ---- */
+.hiw-list { padding-bottom: 80px; display: flex; flex-direction: column; gap: 4px; }
+.principle-item { border-bottom: 1px solid #f0f0f0; padding: 36px 0; }
+.principle-item:last-child { border-bottom: none; }
+.principle-copy h2 { font-size: clamp(22px, 2.6vw, 27px); font-weight: 700; margin: 0 0 12px 0; letter-spacing: -0.005em; }
+.principle-copy p { font-size: 16px; color: #333; margin: 0; max-width: 68ch; }
+
+.principle-more {
+  margin-top: 18px;
+  background: none; border: none; font: inherit; cursor: pointer;
+  font-size: 13px; font-weight: 600; color: #888; padding: 0;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.principle-more:hover, .principle-more:focus { color: #111; }
+.toggle-icon { font-size: 15px; font-weight: 400; }
+.principle-item.open .toggle-icon::before { content: "\2013"; }
+
+/* ---- Expansion: this is the only place a brand/logo appears — real
+       proof, shown once a reader has opted into the specific example. ---- */
+.principle-extra { display: none; margin-top: 16px; max-width: 68ch; }
+.principle-item.open .principle-extra { display: block; }
+.extra-source { margin-bottom: 12px; }
+.extra-source .logo-mark {
+  display: flex; align-items: center; justify-content: center;
+  width: fit-content; height: 26px; padding: 0 12px;
+  border: 1px solid #ccc; font-size: 11px; color: #777; background: #f5f5f5;
+  border-radius: 999px;
+}
+.principle-extra p { font-size: 15px; color: #555; margin: 0 0 10px 0; }
+.principle-extra .case-link { font-size: 14px; font-weight: 600; color: #111; text-decoration: none; }
+.principle-extra .case-link:hover { text-decoration: underline; }
+
+/* ---- Quote card — reused exactly from v4-stepper-visual. ---- */
+.hiw-closing { padding-top: 16px; padding-bottom: 80px; }
+.quote-card { border: 1px solid #ccc; border-radius: 16px; padding: 40px 48px; max-width: 760px; }
+.quote-mark { font-size: 48px; line-height: 1; color: #ccc; margin: 0 0 8px 0; font-weight: 800; }
+.quote-text { font-size: 19px; font-weight: 600; color: #1a1a1a; line-height: 1.5; margin: 0; }
+
+/* ---- Closing content beyond the principles: real links to the
+       flagship case studies referenced above, replacing the logo-wall. ---- */
+.hiw-explore { padding-bottom: 120px; }
+.hiw-section-label { font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin: 0 0 12px 0; }
+.hiw-explore-lead { font-size: 15px; color: #555; margin: 0 0 20px 0; }
+.explore-links { display: flex; flex-wrap: wrap; gap: 12px 32px; }
+.explore-links a { font-size: 15px; font-weight: 600; color: #111; text-decoration: none; }
+.explore-links a:hover { text-decoration: underline; }
+
+.site-footer-expanded { padding-top: 100px; padding-bottom: 48px; }
+.footer-cta { font-size: clamp(28px, 4.5vw, 48px); font-weight: 800; line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 48px 0; max-width: 900px; }
+.footer-bottom { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 24px; }
+.footer-email { font-size: 15px; color: #111; display: block; margin-top: 8px; }
+.footer-links { display: flex; gap: 20px; font-size: 13px; }
+.footer-links a { color: #333; }
+
+@media (max-width: 720px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: block; }
+  .content-shell { padding-left: 24px; padding-right: 24px; }
+  .hiw-title { padding-top: 40px; padding-bottom: 40px; }
+  .principle-item { padding: 28px 0; }
+  .quote-card { padding: 28px 24px; }
+  .quote-text { font-size: 17px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}

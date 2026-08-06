@@ -15,43 +15,44 @@
      same-page anchors). -->
 <div class="site-header-wrap">
   <nav class="floating-nav" aria-label="Primary">
-    <a href="/" class="nav-logo">[Name]</a>
+    <a href="../Homepage/index.html" class="nav-logo">[Name]</a>
     <div class="nav-links">
-      <a href="/#work">Work</a>
-      <a href="/#about">About</a>
-      <a href="/#contact">Contact</a>
-      <a href="/resume" class="nav-resume">Resume</a>
+      <a href="../Homepage/index.html#work">Work</a>
+      <a href="../Homepage/index.html#about">About</a>
+      <a href="../Homepage/index.html#contact">Contact</a>
+      <a href="index.html" class="nav-resume">Resume</a>
     </div>
     <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav-panel">Menu</button>
   </nav>
   <div class="mobile-nav-panel" id="mobile-nav-panel">
-    <a href="/#work">Work</a>
-    <a href="/#about">About</a>
-    <a href="/#contact">Contact</a>
-    <a href="/resume" class="nav-resume">Resume</a>
+    <a href="../Homepage/index.html#work">Work</a>
+    <a href="../Homepage/index.html#about">About</a>
+    <a href="../Homepage/index.html#contact">Contact</a>
+    <a href="index.html" class="nav-resume">Resume</a>
   </div>
 </div>
 
 <main>
 
-  <!-- Identity block: reuses the exact .player-card component from the
-       Homepage's About section (photo + name + title) rather than inventing
-       a new photo treatment — same reasoning as reusing the Work-card
-       component in Case Study's "More Work." No oversized hero heading here;
-       per Experience Blueprint §2.7 this page is "a reference document, not
-       a story beat," so .player-name (styled at the same scale as the
-       Homepage's About) carries the page's one <h1>, not a display headline. -->
+  <!-- Identity block: reuses the .player-card photo component from the
+       Homepage's About section. Per Experience Blueprint §2.7 this page is
+       "a reference document, not a story beat," which is why the layout
+       stays dense and utility-first even with a big title (below) — this
+       isn't a hero moment, just a page that also opens with the same
+       scale of heading every other standalone page uses. -->
+  <!-- Name moved out of the player-card and rendered as a big H1 in the
+       intro column, at the same clamp(32px,5.5vw,56px)/800 scale as every
+       other page's title. See Consistency Audit / Decision Log, 2026-08-06. -->
   <header class="resume-title content-shell">
+    <p class="eyebrow">Resume</p>
     <div class="resume-identity">
       <div class="player-card">
         <div class="player-photo">[Photo]</div>
-        <div class="player-info">
-          <h1 class="player-name">Nicole Telesz</h1>
-          <p class="player-title">UX Designer</p>
-        </div>
+        <p class="player-role">UX Designer</p>
       </div>
 
       <div class="resume-intro-block">
+        <h1 class="resume-name">Nicole Telesz</h1>
         <p class="resume-tagline">UX designer bridging systems thinking, engineering fluency, and research rigor.</p>
         <!-- Phone number removed per Nicole's privacy preference. -->
         <div class="about-links resume-contact-links">
@@ -121,7 +122,7 @@
               </div>
             </div>
             <span class="engagement-tag entry-classification">Sponsored Engagement</span>
-            <span class="toggle-icon" aria-hidden="true">+</span>
+            <span class="toggle-icon" aria-hidden="true"></span>
           </button>
           <div class="entry-detail">
             <p>Led interaction design for next-generation social experiences on Ray-Ban Meta smart glasses, synthesizing 5,000+ research data points into an interactive ecosystem.</p>
@@ -157,7 +158,7 @@
                  category (self-directed, not commissioned), but this one
                  is a judgment call worth Nicole's confirmation — see notes.md. -->
             <span class="engagement-tag entry-classification">Independent Research</span>
-            <span class="toggle-icon" aria-hidden="true">+</span>
+            <span class="toggle-icon" aria-hidden="true"></span>
           </button>
           <div class="entry-detail">
             <p>Co-founded SCAD's first low-code hackathon, coordinating planning, cross-functional collaboration, and participant experience for 60+ students across multiple disciplines.</p>
@@ -187,7 +188,7 @@
               </div>
             </div>
             <span class="engagement-tag entry-classification">Sponsored Engagement</span>
-            <span class="toggle-icon" aria-hidden="true">+</span>
+            <span class="toggle-icon" aria-hidden="true"></span>
           </button>
           <div class="entry-detail">
             <p>Conducted user research, designed interaction flows, and iterated through usability testing. Created an accessibility resource promoting inclusive design across digital products.</p>
@@ -219,7 +220,7 @@
             <!-- Matches the Homepage's own "Client Engagement" tag on this
                  exact project — direct reuse, not a new judgment call. -->
             <span class="engagement-tag entry-classification">Client Engagement</span>
-            <span class="toggle-icon" aria-hidden="true">+</span>
+            <span class="toggle-icon" aria-hidden="true"></span>
           </button>
           <div class="entry-detail">
             <p>Led a multidisciplinary team through a human-centered redesign of Terra Dotta's student experience.</p>
@@ -249,7 +250,7 @@
               </div>
             </div>
             <span class="engagement-tag entry-classification">Sponsored Engagement</span>
-            <span class="toggle-icon" aria-hidden="true">+</span>
+            <span class="toggle-icon" aria-hidden="true"></span>
           </button>
           <div class="entry-detail">
             <p>Led the creation of journey mapping and persona resources to support Human-Centered Design.</p>

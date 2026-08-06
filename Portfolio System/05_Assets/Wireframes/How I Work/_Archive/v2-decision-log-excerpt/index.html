@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe — How I Work v2 — Decision Log Excerpt</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#log">Skip to content</a>
+
+<div class="site-header-wrap">
+  <nav class="floating-nav" aria-label="Primary">
+    <a href="/" class="nav-logo">[Name]</a>
+    <div class="nav-links">
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+      <a href="/resume" class="nav-resume">Resume</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav-panel">Menu</button>
+  </nav>
+  <div class="mobile-nav-panel" id="mobile-nav-panel">
+    <a href="/#work">Work</a>
+    <a href="/#about">About</a>
+    <a href="/#contact">Contact</a>
+    <a href="/resume" class="nav-resume">Resume</a>
+  </div>
+</div>
+
+<main>
+
+  <header class="hiw-title content-shell">
+    <a class="back-link" href="/#about">← Back to About</a>
+    <p class="eyebrow">Process</p>
+    <h1>How I Work</h1>
+    <p class="hiw-intro">A live look at the decisions behind this site — the good calls and the ones I reversed.</p>
+  </header>
+
+  <section class="hiw-stats content-shell">
+    <div class="stat-item">
+      <p class="stat-number">58</p>
+      <p class="stat-label">Decisions logged</p>
+    </div>
+    <div class="stat-item">
+      <p class="stat-number">45</p>
+      <p class="stat-label">Discarded directions, kept not deleted</p>
+    </div>
+    <div class="stat-item">
+      <p class="stat-number">9</p>
+      <p class="stat-label">Rounds to get the homepage right</p>
+    </div>
+  </section>
+
+  <section id="log" class="hiw-log content-shell">
+    <p class="hiw-section-label">From the Decision Log</p>
+
+    <div class="log-item">
+      <button class="log-toggle" aria-expanded="false">
+        <span class="log-meta">
+          <span class="engagement-tag">Strategic</span>
+          <span class="log-date">Jul 29</span>
+        </span>
+        <span class="log-headline">Treat the portfolio as a product, not just a website.</span>
+        <span class="toggle-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="log-detail">
+        <p>Demonstrates UX thinking through the portfolio itself, encourages a structured process, and makes future decisions more consistent.</p>
+      </div>
+    </div>
+
+    <div class="log-item">
+      <button class="log-toggle" aria-expanded="false">
+        <span class="log-meta">
+          <span class="engagement-tag">Self-Correction</span>
+          <span class="log-date">Aug 4</span>
+        </span>
+        <span class="log-headline">Homepage round 2, discarded: three concepts that weren't actually different.</span>
+        <span class="toggle-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="log-detail">
+        <p>"The variations you gave me weren't very varied. It was the same layout and design presented three times. This was a bit of a disappointment." A real process correction, not just a concept discard — single-variable comparison is useful for resolving one specific question, but it's the wrong method when the goal is generating real options to choose from.</p>
+      </div>
+    </div>
+
+    <div class="log-item">
+      <button class="log-toggle" aria-expanded="false">
+        <span class="log-meta">
+          <span class="engagement-tag">QA Fix</span>
+          <span class="log-date">Aug 5</span>
+        </span>
+        <span class="log-headline">Case Study cohesion audit finds four real inconsistencies with the homepage.</span>
+        <span class="toggle-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="log-detail">
+        <p>A divider line that violated the homepage's own no-dividers rule, a mismatched card size, an inconsistent breakpoint, and a missing flex property — all "good catches," all fixed before promotion rather than left for later.</p>
+      </div>
+    </div>
+
+    <div class="log-item">
+      <button class="log-toggle" aria-expanded="false">
+        <span class="log-meta">
+          <span class="engagement-tag">Bug Fix</span>
+          <span class="log-date">Aug 6</span>
+        </span>
+        <span class="log-headline">A shared component was silently redefined — and it wasn't caught until Nicole asked.</span>
+        <span class="toggle-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="log-detail">
+        <p>A tag component was reused by name but quietly given different styling for a new purpose — so nothing named "engagement tag" on the page actually looked like one. Fixed by splitting it into two honestly-named components instead of one overloaded one.</p>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="site-footer-expanded content-shell">
+  <p class="footer-cta">[Big closing statement — e.g. a call to action]</p>
+  <div class="footer-bottom">
+    <div class="footer-primary">
+      <p class="eyebrow">Contact</p>
+      <a href="mailto:hello@example.com" class="footer-email">hello@example.com</a>
+    </div>
+    <div class="footer-links">
+      <a href="/resume">Resume</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="#">Feminist UX</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var toggle = document.getElementById('nav-toggle');
+  var panel = document.getElementById('mobile-nav-panel');
+  toggle.addEventListener('click', function () {
+    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    panel.classList.toggle('open');
+  });
+
+  document.querySelectorAll('.log-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      btn.closest('.log-item').classList.toggle('open');
+    });
+  });
+</script>
+
+</body>
+</html>

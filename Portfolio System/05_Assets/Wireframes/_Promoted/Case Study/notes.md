@@ -38,4 +38,4 @@ Everything else — body content, sidebar, stepper visuals, the Outcome tracking
 
 ## Outcome
 
-**Status: 🟡 Pending final approval.** Nicole: "I think after these last refinements I'll be able to give it the final approval." If confirmed, this is the version to promote per Wireframing Workflow §7.
+**Status: 🔒 Promoted — 2026-08-06.** Nicole gave final approval; this copy carries the same universal fixes applied everywhere else in the same pass: collapse/expand toggles no longer show both `+` and `–` at once, `.decision-toggle` uses `:focus-visible` instead of bare `:focus` (no more visible outline on mouse click), and all internal navigation (nav bar, back-links, "More Work," footer) now points to real, resolving destinations within `_Promoted/` instead of placeholder `#`/root-relative paths. See Decision Log, 2026-08-06 (cross-page linking pass) for the full account.

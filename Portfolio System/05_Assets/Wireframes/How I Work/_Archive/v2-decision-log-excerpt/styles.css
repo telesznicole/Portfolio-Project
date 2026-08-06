@@ -1,0 +1,108 @@
+/* ================================
+   Wireframe — How I Work v2: Decision Log Excerpt
+   Round 2 — the concept built specifically around Nicole's "make it
+   worthwhile to have its own page" note. Rather than restating
+   philosophy in new words, this page surfaces real, otherwise-buried
+   primary-source content: actual dated entries from this project's own
+   Decision Log, verbatim or lightly trimmed, browsable as an expandable
+   feed. The proof-stats row reuses the Homepage's .stats-banner shape
+   (plain, no border, big number + label) with three verified real
+   numbers — nothing rounded up or estimated. Each entry reuses the same
+   click-to-expand mechanism as v2-expandable-principles (and Case
+   Study's Decisions / Resume's Experience), and the entry-type label
+   reuses .engagement-tag exactly, matching the Homepage/Case
+   Study/Resume classification-tag pattern rather than inventing a new
+   tag style for a fourth page.
+   Nav, footer, content-shell, corner-radius system, and typography scale
+   copied verbatim.
+   Reference: Nicole's round-2 review; Decision Log entries dated 2026-07-29,
+   2026-08-04, 2026-08-05, 2026-08-06; IA §3.4.
+   ================================ */
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #111;
+  background: #fff;
+  line-height: 1.6;
+}
+
+.skip-link { position: absolute; left: -999px; top: 0; background: #000; color: #fff; padding: 8px 12px; z-index: 100; border-radius: 6px; }
+.skip-link:focus { left: 8px; top: 8px; }
+
+/* ---- Nav — copied exactly from Homepage/Case Study/Resume ---- */
+.site-header-wrap { position: sticky; top: 20px; z-index: 50; display: flex; justify-content: center; padding: 0 24px; }
+.floating-nav { display: flex; align-items: center; gap: 44px; width: fit-content; max-width: 100%; background: #fff; border: 1px solid #ddd; border-radius: 999px; padding: 8px 8px 8px 28px; }
+.nav-logo { font-weight: 800; font-size: 15px; color: #111; text-decoration: none; white-space: nowrap; }
+.nav-links { display: flex; align-items: center; gap: 26px; }
+.nav-links a { color: #111; text-decoration: none; font-size: 14px; white-space: nowrap; border-bottom: 1px solid transparent; }
+.nav-links a:hover, .nav-links a:focus { border-bottom: 1px solid #111; }
+.nav-resume { border: 1px solid #111 !important; padding: 6px 16px; border-radius: 999px; text-decoration: none; color: #111; font-size: 14px; display: inline-block; }
+.nav-toggle { display: none; background: none; border: 1px solid #111; border-radius: 999px; padding: 6px 16px; font-size: 13px; }
+.mobile-nav-panel { display: none; flex-direction: column; gap: 4px; max-width: 480px; width: fit-content; margin: 8px auto 0; padding: 16px 24px; background: #fff; border: 1px solid #ddd; border-radius: 24px; }
+.mobile-nav-panel.open { display: flex; }
+.mobile-nav-panel a { color: #111; text-decoration: none; font-size: 15px; padding: 8px 0; }
+
+.content-shell { max-width: 1200px; margin: 0 auto; padding-left: 64px; padding-right: 64px; }
+.eyebrow { text-transform: uppercase; letter-spacing: 0.1em; font-size: 12px; color: #666; margin: 0 0 12px 0; }
+
+/* ---- Page header, with the IA §3.4-required return path to About ---- */
+.hiw-title { padding-top: 64px; padding-bottom: 48px; }
+.back-link { display: inline-block; font-size: 13px; color: #666; text-decoration: none; margin-bottom: 32px; }
+.back-link:hover, .back-link:focus { color: #111; }
+.hiw-title h1 { font-size: clamp(32px, 5.5vw, 56px); font-weight: 800; line-height: 1.15; margin: 0 0 20px 0; letter-spacing: -0.01em; }
+.hiw-intro { font-size: 17px; color: #444; max-width: 56ch; margin: 0; }
+
+/* ---- Proof stats — extends the Homepage's .stats-banner shape:
+       plain spread row, no border, big bold number + small label. ---- */
+.hiw-stats { display: flex; gap: 56px; flex-wrap: wrap; padding-bottom: 72px; }
+.stat-number { font-size: clamp(32px, 4vw, 44px); font-weight: 800; margin: 0 0 6px 0; letter-spacing: -0.01em; }
+.stat-label { font-size: 13px; color: #666; margin: 0; max-width: 22ch; }
+
+.hiw-section-label { font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin: 0 0 20px 0; }
+
+/* ---- Expandable log feed — same toggle mechanism as
+       v2-expandable-principles. .engagement-tag reused exactly, unchanged,
+       as the entry-type label (Strategic / Self-Correction / QA Fix /
+       Bug Fix), same job it does classifying engagement type elsewhere. ---- */
+.hiw-log { padding-bottom: 120px; display: flex; flex-direction: column; gap: 12px; }
+.log-item { border: 1px solid #eee; border-radius: 16px; padding: 4px 24px; }
+.log-toggle {
+  width: 100%; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px;
+  background: none; border: none; font: inherit; padding: 18px 0; cursor: pointer; color: #111; text-align: left;
+}
+.log-toggle:focus { outline: 2px solid #111; outline-offset: 2px; }
+.log-meta { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.log-date { font-size: 12px; color: #999; }
+.engagement-tag { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: #777; border: 1px solid #ddd; padding: 4px 12px; border-radius: 999px; flex-shrink: 0; }
+.log-headline { flex: 1; min-width: 220px; font-size: 16px; font-weight: 600; }
+.toggle-icon { color: #999; font-weight: 400; flex-shrink: 0; font-size: 20px; margin-left: auto; }
+.log-item.open .toggle-icon::before { content: "\2013"; }
+.log-detail { display: none; padding: 0 0 24px 0; }
+.log-item.open .log-detail { display: block; }
+.log-detail p { font-size: 15px; color: #333; margin: 0; max-width: 68ch; }
+
+/* ---- Footer — copied exactly from Case Study / Resume ---- */
+.site-footer-expanded { padding-top: 100px; padding-bottom: 48px; }
+.footer-cta { font-size: clamp(28px, 4.5vw, 48px); font-weight: 800; line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 48px 0; max-width: 900px; }
+.footer-bottom { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 24px; }
+.footer-email { font-size: 15px; color: #111; display: block; margin-top: 8px; }
+.footer-links { display: flex; gap: 20px; font-size: 13px; }
+.footer-links a { color: #333; }
+
+@media (max-width: 720px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: block; }
+  .content-shell { padding-left: 24px; padding-right: 24px; }
+  .hiw-title { padding-top: 40px; padding-bottom: 32px; }
+  .hiw-stats { gap: 32px; padding-bottom: 48px; }
+  .toggle-icon { margin-left: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}

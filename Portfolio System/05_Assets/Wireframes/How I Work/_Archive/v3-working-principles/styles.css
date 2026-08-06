@@ -1,0 +1,95 @@
+/* ================================
+   Wireframe — How I Work v3: Working Principles
+   Round 3 — realigned after direct conversation with Nicole about what
+   this page is actually for (see notes.md and Decision Log). Scope:
+   broad design philosophy and what makes her distinct as a designer —
+   not a log of decisions or a gallery of how this site itself was
+   built. Content is visible by default, no click required to reach any
+   of it — a direct fix for round 2's "burden" complaint. The stats
+   strip extends the Homepage's .stats-banner shape with different, real
+   facts about her practice broadly (not this site's build). Principle
+   numbering reuses the visual idea from the archived
+   v2-expandable-principles (a lightweight numbered badge) without the
+   click-to-reveal gate.
+   Nav, footer, content-shell, corner-radius system, and typography scale
+   copied verbatim.
+   Reference: Nicole's realignment conversation, 2026-08-06; Portfolio
+   Manifesto; Professional Profile.md; Resume.md; IA §3.4.
+   ================================ */
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #111;
+  background: #fff;
+  line-height: 1.6;
+}
+
+.skip-link { position: absolute; left: -999px; top: 0; background: #000; color: #fff; padding: 8px 12px; z-index: 100; border-radius: 6px; }
+.skip-link:focus { left: 8px; top: 8px; }
+
+/* ---- Nav — copied exactly from Homepage/Case Study/Resume ---- */
+.site-header-wrap { position: sticky; top: 20px; z-index: 50; display: flex; justify-content: center; padding: 0 24px; }
+.floating-nav { display: flex; align-items: center; gap: 44px; width: fit-content; max-width: 100%; background: #fff; border: 1px solid #ddd; border-radius: 999px; padding: 8px 8px 8px 28px; }
+.nav-logo { font-weight: 800; font-size: 15px; color: #111; text-decoration: none; white-space: nowrap; }
+.nav-links { display: flex; align-items: center; gap: 26px; }
+.nav-links a { color: #111; text-decoration: none; font-size: 14px; white-space: nowrap; border-bottom: 1px solid transparent; }
+.nav-links a:hover, .nav-links a:focus { border-bottom: 1px solid #111; }
+.nav-resume { border: 1px solid #111 !important; padding: 6px 16px; border-radius: 999px; text-decoration: none; color: #111; font-size: 14px; display: inline-block; }
+.nav-toggle { display: none; background: none; border: 1px solid #111; border-radius: 999px; padding: 6px 16px; font-size: 13px; }
+.mobile-nav-panel { display: none; flex-direction: column; gap: 4px; max-width: 480px; width: fit-content; margin: 8px auto 0; padding: 16px 24px; background: #fff; border: 1px solid #ddd; border-radius: 24px; }
+.mobile-nav-panel.open { display: flex; }
+.mobile-nav-panel a { color: #111; text-decoration: none; font-size: 15px; padding: 8px 0; }
+
+.content-shell { max-width: 1200px; margin: 0 auto; padding-left: 64px; padding-right: 64px; }
+.eyebrow { text-transform: uppercase; letter-spacing: 0.1em; font-size: 12px; color: #666; margin: 0 0 12px 0; }
+
+/* ---- Page header, with the IA §3.4-required return path to About ---- */
+.hiw-title { padding-top: 64px; padding-bottom: 48px; }
+.back-link { display: inline-block; font-size: 13px; color: #666; text-decoration: none; margin-bottom: 32px; }
+.back-link:hover, .back-link:focus { color: #111; }
+.hiw-title h1 { font-size: clamp(32px, 5.5vw, 56px); font-weight: 800; line-height: 1.15; margin: 0 0 20px 0; letter-spacing: -0.01em; }
+/* max-width standardized to 60ch, matching Case Study's .cs-title-sub
+   and Resume's .resume-tagline — was 56ch, a real drift for the same
+   subtitle-under-H1 role. See Consistency Audit (cross-page), 2026-08-06. */
+.hiw-intro { font-size: 17px; color: #444; max-width: 60ch; margin: 0; }
+
+/* ---- Credibility strip — extends the Homepage's .stats-banner shape,
+       different real facts (practice/background, not site-build stats). ---- */
+.hiw-stats { display: flex; gap: 56px; flex-wrap: wrap; padding-bottom: 80px; }
+.stat-number { font-size: clamp(32px, 4vw, 44px); font-weight: 800; margin: 0 0 6px 0; letter-spacing: -0.01em; }
+.stat-label { font-size: 13px; color: #666; margin: 0; max-width: 24ch; }
+
+/* ---- Principles: fully visible by default, no click required.
+       Numbered badge is a lightweight visual anchor, not a toggle. ---- */
+.hiw-list { padding-bottom: 120px; display: flex; flex-direction: column; gap: 56px; }
+.principle-item { display: grid; grid-template-columns: 56px 1fr; gap: 20px; align-items: baseline; }
+.principle-num { font-size: 14px; font-weight: 700; color: #bbb; margin: 0; }
+.principle-body h2 { font-size: clamp(22px, 2.6vw, 27px); font-weight: 700; margin: 0 0 12px 0; letter-spacing: -0.005em; }
+.principle-body p { font-size: 16px; color: #333; margin: 0; max-width: 64ch; }
+
+/* ---- Footer — copied exactly from Case Study / Resume ---- */
+.site-footer-expanded { padding-top: 100px; padding-bottom: 48px; }
+.footer-cta { font-size: clamp(28px, 4.5vw, 48px); font-weight: 800; line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 48px 0; max-width: 900px; }
+.footer-bottom { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 24px; }
+.footer-email { font-size: 15px; color: #111; display: block; margin-top: 8px; }
+.footer-links { display: flex; gap: 20px; font-size: 13px; }
+.footer-links a { color: #333; }
+
+@media (max-width: 720px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: block; }
+  .content-shell { padding-left: 24px; padding-right: 24px; }
+  .hiw-title { padding-top: 40px; padding-bottom: 32px; }
+  .hiw-stats { gap: 32px; padding-bottom: 56px; }
+  .principle-item { grid-template-columns: 32px 1fr; gap: 12px; }
+  .hiw-list { gap: 44px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}

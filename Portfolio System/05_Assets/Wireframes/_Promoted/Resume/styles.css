@@ -25,7 +25,12 @@ body {
 .skip-link:focus { left: 8px; top: 8px; }
 
 /* ---- Nav — copied exactly from Homepage/Case Study ---- */
-.site-header-wrap { position: sticky; top: 20px; z-index: 50; display: flex; justify-content: center; padding: 0 24px; }
+/* margin-bottom matches the sticky top offset (20px) — sticky elements
+   reserve only their natural, unstuck flow height, so without this the
+   nav's stuck position can overlap the very top of whatever follows it.
+   Most visible on pages with a light/short header; fixed universally
+   since the underlying cause is identical everywhere. */
+.site-header-wrap { position: sticky; top: 20px; z-index: 50; display: flex; justify-content: center; padding: 0 24px; margin-bottom: 20px; }
 .floating-nav { display: flex; align-items: center; gap: 44px; width: fit-content; max-width: 100%; background: #fff; border: 1px solid #ddd; border-radius: 999px; padding: 8px 8px 8px 28px; }
 .nav-logo { font-weight: 800; font-size: 15px; color: #111; text-decoration: none; white-space: nowrap; }
 .nav-links { display: flex; align-items: center; gap: 26px; }
@@ -55,11 +60,17 @@ body {
   border: 1px dashed #ccc;
   border-radius: 12px;
 }
-.player-name { font-size: 19px; font-weight: 700; margin: 0 0 4px 0; }
-.player-title { font-size: 14px; color: #666; margin: 0; }
+.player-role { font-size: 14px; color: #666; margin: 12px 0 0 0; }
 
 .resume-intro-block { flex: 1; min-width: 280px; padding-top: 8px; display: flex; flex-direction: column; gap: 20px; }
-.resume-tagline { font-size: 20px; font-weight: 600; color: #1a1a1a; line-height: 1.4; margin: 0; max-width: 52ch; }
+/* Big page title — matches Case Study's .cs-title h1 and How I Work's
+   .hiw-title h1 exactly, so Resume opens with the same kind of large,
+   bold, page-declaring heading every other standalone page has. */
+.resume-name { font-size: clamp(32px, 5.5vw, 56px); font-weight: 800; line-height: 1.15; margin: 0; letter-spacing: -0.01em; }
+/* max-width standardized to 60ch, matching Case Study's .cs-title-sub
+   and How I Work's .hiw-intro — was 52ch, a real drift for the same
+   subtitle-under-H1 role. See Consistency Audit (cross-page), 2026-08-06. */
+.resume-tagline { font-size: 20px; font-weight: 600; color: #1a1a1a; line-height: 1.4; margin: 0; max-width: 60ch; }
 /* Gap matched to the Homepage's .about-links exactly (was 20px, a small
    unexplained drift from the 24px used there). flex-wrap kept — a
    reasonable addition for a 3-link row that Homepage's 2-link row never
@@ -91,7 +102,9 @@ body {
   width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 20px;
   background: none; border: none; font: inherit; padding: 18px 0; cursor: pointer; color: #111; text-align: left;
 }
-.entry-toggle:focus { outline: 2px solid #111; outline-offset: 2px; }
+/* :focus-visible, not :focus — was showing the outline on every mouse
+   click, not just keyboard navigation. */
+.entry-toggle:focus-visible { outline: 2px solid #111; outline-offset: 2px; }
 .entry-toggle-main { display: flex; align-items: center; gap: 16px; min-width: 0; flex: 1; }
 /* The classification tag sits between the role/company block and the
    toggle icon — same relative position as .engagement-tag next to
@@ -107,6 +120,9 @@ body {
 .entry-at { color: #999; font-weight: 400; }
 .entry-meta { font-size: 13px; color: #888; margin: 0; }
 .toggle-icon { color: #999; font-weight: 400; flex-shrink: 0; font-size: 18px; }
+/* Symbol now lives entirely in ::before, swapped by state — was
+   literal "+" text AND a "–" ::before when open, both rendering at once. */
+.toggle-icon::before { content: "+"; }
 .entry-detail { display: none; padding: 0 0 24px 0; }
 .entry-item.open .entry-detail { display: block; }
 .entry-item.open .toggle-icon::before { content: "\2013"; }

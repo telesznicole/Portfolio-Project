@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe — How I Work v6 — Refined</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#principles">Skip to content</a>
+
+<div class="site-header-wrap">
+  <nav class="floating-nav" aria-label="Primary">
+    <a href="/" class="nav-logo">[Name]</a>
+    <div class="nav-links">
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+      <a href="/resume" class="nav-resume">Resume</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav-panel">Menu</button>
+  </nav>
+  <div class="mobile-nav-panel" id="mobile-nav-panel">
+    <a href="/#work">Work</a>
+    <a href="/#about">About</a>
+    <a href="/#contact">Contact</a>
+    <a href="/resume" class="nav-resume">Resume</a>
+  </div>
+</div>
+
+<main>
+
+  <header class="hiw-title content-shell">
+    <a class="back-link" href="/#about">← Back to About</a>
+    <p class="eyebrow">Philosophy</p>
+    <h1>How I Work</h1>
+    <p class="hiw-intro">What I actually believe about design. Every principle is here in full — click any of them to see where it's been tested.</p>
+  </header>
+
+  <section id="principles" class="hiw-list content-shell">
+
+    <div class="principle-item">
+      <div class="principle-row">
+        <h2>Design and engineering are the same conversation.</h2>
+        <div class="principle-body">
+          <p>I started in software engineering before design, and I don't treat feasibility as a limit on creativity — I treat technical understanding as another design material.</p>
+          <button class="principle-more" aria-expanded="false">More on this <span class="toggle-icon" aria-hidden="true"></span></button>
+          <div class="principle-extra">
+            <div class="extra-source"><div class="logo-mark"><span>Meta</span></div></div>
+            <p>On the Meta engagement, that meant presenting interaction concepts fluent in both design rationale and implementation reality — not leaving the "how" for someone else to sort out later.</p>
+            <a href="/work/meta" class="case-link">See the full case study →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="principle-item">
+      <div class="principle-row">
+        <h2>Systems matter more than screens.</h2>
+        <div class="principle-body">
+          <p>I rarely evaluate a decision in isolation — I'm asking what it assumes and what happens next. A coherent system beats a polished screen that doesn't fit into one.</p>
+          <button class="principle-more" aria-expanded="false">More on this <span class="toggle-icon" aria-hidden="true"></span></button>
+          <div class="principle-extra">
+            <div class="extra-source"><div class="logo-mark"><span>Terra Dotta</span></div></div>
+            <p>Leading the Terra Dotta redesign meant mapping the full student journey before touching a single page.</p>
+            <a href="/work/terra-dotta" class="case-link">See the full case study →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="principle-item">
+      <div class="principle-row">
+        <h2>Design begins with people, not neutrality.</h2>
+        <div class="principle-body">
+          <p>"Usable" isn't the same as "equitable." I design with power, access, and context in mind, not an assumed neutral user who looks like everyone else.</p>
+          <button class="principle-more" aria-expanded="false">More on this <span class="toggle-icon" aria-hidden="true"></span></button>
+          <div class="principle-extra">
+            <div class="extra-source"><div class="logo-mark"><span>Ind.</span></div></div>
+            <p>My Feminist UX thesis turns this into a practical framework, validated with 10 UX practitioners — not just my own read on it.</p>
+            <a href="/work/feminist-ux" class="case-link">See the full case study →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="principle-item">
+      <div class="principle-row">
+        <h2>Research exists to challenge me, not confirm me.</h2>
+        <div class="principle-body">
+          <p>Research is how I get proven wrong early, before a user has to experience the mistake — not a formality on the way to an idea I'd already decided on.</p>
+          <button class="principle-more" aria-expanded="false">More on this <span class="toggle-icon" aria-hidden="true"></span></button>
+          <div class="principle-extra">
+            <p>On the FINRA engagement, that meant conducting user research and iterating through usability testing before committing to a direction.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="principle-item">
+      <div class="principle-row">
+        <h2>AI amplifies. It doesn't decide.</h2>
+        <div class="principle-body">
+          <p>I use AI to accelerate exploration and remove repetitive work — never to make the creative call. Every layout, every cut idea, every word stays mine to make and defend.</p>
+          <button class="principle-more" aria-expanded="false">More on this <span class="toggle-icon" aria-hidden="true"></span></button>
+          <div class="principle-extra">
+            <p>At Hack iX, that meant using AI-assisted development to prototype fast without letting the tool make the calls that were actually mine — including how this site itself got built.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Quote card: byte-accurate copy of Homepage's real .quote-card
+       component (blockquote + cite), not an approximation. -->
+  <section class="hiw-quote content-shell">
+    <blockquote class="quote-card">
+      <p class="quote-mark" aria-hidden="true">”</p>
+      <p class="quote-text">The designer should still be recognizable in the final work. The point of using AI isn't to become invisible — it's to create more space for the parts of design only humans can do.</p>
+      <cite>— From my design manifesto</cite>
+    </blockquote>
+  </section>
+
+  <!-- More Work: exact copy of Case Study's cross-link component
+       (.work-grid / .grid-item / .placeholder-img / .case-title-row /
+       .logo-mark / .engagement-tag / .proof), not a new pattern. -->
+  <section class="cs-crosslinks content-shell">
+    <p class="section-title">More Work</p>
+    <div class="work-grid">
+      <article class="grid-item">
+        <a href="/work/meta" class="grid-item-link">
+          <div class="placeholder-img">Meta</div>
+          <div class="case-title-row">
+            <div class="case-title-left">
+              <div class="logo-mark"><span>Meta</span></div>
+              <h3>Interaction Design Lead</h3>
+            </div>
+            <span class="engagement-tag">Sponsored Engagement</span>
+          </div>
+          <p class="proof">Shipped interaction patterns for a cross-functional wearable social experience team.</p>
+        </a>
+      </article>
+      <article class="grid-item">
+        <a href="/work/terra-dotta" class="grid-item-link">
+          <div class="placeholder-img">Terra Dotta</div>
+          <div class="case-title-row">
+            <div class="case-title-left">
+              <div class="logo-mark"><span>TD</span></div>
+              <h3>UX Lead</h3>
+            </div>
+            <span class="engagement-tag">Client Engagement</span>
+          </div>
+          <p class="proof">Led a human-centered redesign of the student-facing website experience.</p>
+        </a>
+      </article>
+      <article class="grid-item">
+        <a href="/work/feminist-ux" class="grid-item-link">
+          <div class="placeholder-img">Feminist UX</div>
+          <div class="case-title-row">
+            <div class="case-title-left">
+              <div class="logo-mark"><span>Ind.</span></div>
+              <h3>Independent Thesis</h3>
+            </div>
+            <span class="engagement-tag">Independent Research</span>
+          </div>
+          <p class="proof">Validated a feminist UX framework across ten practitioner sessions.</p>
+        </a>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer-expanded content-shell">
+  <p class="footer-cta">[Big closing statement — e.g. a call to action]</p>
+  <div class="footer-bottom">
+    <div class="footer-primary">
+      <p class="eyebrow">Contact</p>
+      <a href="mailto:hello@example.com" class="footer-email">hello@example.com</a>
+    </div>
+    <div class="footer-links">
+      <a href="/resume">Resume</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="#">Feminist UX</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var toggle = document.getElementById('nav-toggle');
+  var panel = document.getElementById('mobile-nav-panel');
+  toggle.addEventListener('click', function () {
+    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    panel.classList.toggle('open');
+  });
+
+  document.querySelectorAll('.principle-more').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      btn.closest('.principle-item').classList.toggle('open');
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+/* ================================
+   Wireframe — How I Work v2: Visual Process Gallery
+   Round 2 — the most visual, least text-forward of the three concepts,
+   built directly around "make it worthwhile to have its own page": this
+   is the one thing a skim of About or a case study can't show —  an
+   actual before/after of how a real piece of this site changed across
+   iteration rounds. Uses .placeholder-img exactly as it appears
+   elsewhere (dashed diagonal gradient, 16px radius — the established
+   "work/project imagery" placeholder, not the 12px "person photo"
+   variant), with a small, real interaction layered on: a button swaps
+   the frame's label between a real "before" and "after" state pulled
+   from actual archived wireframe rounds, addressing Nicole's "more
+   interactive" note with a functional toggle rather than decorative
+   motion. Respects reduced-motion (no animation, an instant content/
+   class swap only).
+   Nav, footer, content-shell, corner-radius system, and typography scale
+   copied verbatim.
+   Reference: Nicole's round-2 review; Homepage Decision Log entries
+   (round 5 hero/nav changes); Case Study Decision Log entries (progress
+   indicator rounds 3–5); IA §3.4.
+   ================================ */
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #111;
+  background: #fff;
+  line-height: 1.6;
+}
+
+.skip-link { position: absolute; left: -999px; top: 0; background: #000; color: #fff; padding: 8px 12px; z-index: 100; border-radius: 6px; }
+.skip-link:focus { left: 8px; top: 8px; }
+
+/* ---- Nav — copied exactly from Homepage/Case Study/Resume ---- */
+.site-header-wrap { position: sticky; top: 20px; z-index: 50; display: flex; justify-content: center; padding: 0 24px; }
+.floating-nav { display: flex; align-items: center; gap: 44px; width: fit-content; max-width: 100%; background: #fff; border: 1px solid #ddd; border-radius: 999px; padding: 8px 8px 8px 28px; }
+.nav-logo { font-weight: 800; font-size: 15px; color: #111; text-decoration: none; white-space: nowrap; }
+.nav-links { display: flex; align-items: center; gap: 26px; }
+.nav-links a { color: #111; text-decoration: none; font-size: 14px; white-space: nowrap; border-bottom: 1px solid transparent; }
+.nav-links a:hover, .nav-links a:focus { border-bottom: 1px solid #111; }
+.nav-resume { border: 1px solid #111 !important; padding: 6px 16px; border-radius: 999px; text-decoration: none; color: #111; font-size: 14px; display: inline-block; }
+.nav-toggle { display: none; background: none; border: 1px solid #111; border-radius: 999px; padding: 6px 16px; font-size: 13px; }
+.mobile-nav-panel { display: none; flex-direction: column; gap: 4px; max-width: 480px; width: fit-content; margin: 8px auto 0; padding: 16px 24px; background: #fff; border: 1px solid #ddd; border-radius: 24px; }
+.mobile-nav-panel.open { display: flex; }
+.mobile-nav-panel a { color: #111; text-decoration: none; font-size: 15px; padding: 8px 0; }
+
+.content-shell { max-width: 1200px; margin: 0 auto; padding-left: 64px; padding-right: 64px; }
+.eyebrow { text-transform: uppercase; letter-spacing: 0.1em; font-size: 12px; color: #666; margin: 0 0 12px 0; }
+
+/* ---- Page header, with the IA §3.4-required return path to About ---- */
+.hiw-title { padding-top: 64px; padding-bottom: 56px; }
+.back-link { display: inline-block; font-size: 13px; color: #666; text-decoration: none; margin-bottom: 32px; }
+.back-link:hover, .back-link:focus { color: #111; }
+.hiw-title h1 { font-size: clamp(32px, 5.5vw, 56px); font-weight: 800; line-height: 1.15; margin: 0 0 20px 0; letter-spacing: -0.01em; }
+.hiw-intro { font-size: 17px; color: #444; max-width: 56ch; margin: 0; }
+
+/* ---- Gallery: image-led, minimal caption text per entry. ---- */
+.hiw-gallery { padding-bottom: 120px; display: flex; flex-direction: column; gap: 80px; }
+.gallery-item { display: grid; grid-template-columns: 1fr 320px; gap: 56px; align-items: center; }
+.gallery-visual { display: flex; flex-direction: column; gap: 16px; align-items: flex-start; }
+.placeholder-img.gallery-frame {
+  width: 100%; aspect-ratio: 16 / 9;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; color: #999; text-align: center; padding: 16px;
+  background-image: repeating-linear-gradient(45deg, #eee, #eee 6px, #f9f9f9 6px, #f9f9f9 12px);
+  border: 1px dashed #ccc; border-radius: 16px;
+}
+.gallery-frame.is-after { color: #555; background-image: repeating-linear-gradient(45deg, #e4f0ea, #e4f0ea 6px, #f7fbf9 6px, #f7fbf9 12px); border-color: #b8d4c6; }
+.gallery-toggle { font-size: 13px; font-weight: 600; color: #111; background: #fff; border: 1px solid #111; border-radius: 999px; padding: 8px 18px; cursor: pointer; }
+.gallery-toggle:focus { outline: 2px solid #111; outline-offset: 2px; }
+
+.gallery-caption h3 { font-size: clamp(20px, 2.4vw, 24px); font-weight: 700; margin: 0 0 6px 0; }
+.gallery-rounds { font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: #888; margin: 0 0 14px 0; }
+.gallery-caption p:not(.gallery-rounds) { font-size: 15px; color: #333; margin: 0; }
+
+/* ---- Footer — copied exactly from Case Study / Resume ---- */
+.site-footer-expanded { padding-top: 100px; padding-bottom: 48px; }
+.footer-cta { font-size: clamp(28px, 4.5vw, 48px); font-weight: 800; line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 48px 0; max-width: 900px; }
+.footer-bottom { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 24px; }
+.footer-email { font-size: 15px; color: #111; display: block; margin-top: 8px; }
+.footer-links { display: flex; gap: 20px; font-size: 13px; }
+.footer-links a { color: #333; }
+
+@media (max-width: 900px) {
+  .gallery-item { grid-template-columns: 1fr; }
+}
+@media (max-width: 720px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: block; }
+  .content-shell { padding-left: 24px; padding-right: 24px; }
+  .hiw-title { padding-top: 40px; padding-bottom: 40px; }
+  .hiw-gallery { gap: 56px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}
