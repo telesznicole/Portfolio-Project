@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Editor/OS junk
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Temp/export scratch
+*.tmp
+~$*

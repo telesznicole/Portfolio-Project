@@ -1,0 +1,181 @@
+/* ================================
+   Wireframe — Resume v1: Baseline
+   Extends the locked Homepage/Case Study visual language directly:
+   nav, footer, content-shell, .engagement-tag, .logo-mark, .player-card,
+   and .placeholder-img are copied verbatim, not reinvented. The
+   expand/collapse Experience entries reuse the exact mechanism validated
+   in the Case Study template's Decisions cards. No divider lines between
+   sections — spacing only, per the locked Homepage rule.
+   Reference: 04_Research/Design Exploration/Layout/Andrea (expand/collapse
+   + photo + company logo pattern); Experience Blueprint §2.7; IA §3.5.
+   ================================ */
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #111;
+  background: #fff;
+  line-height: 1.6;
+}
+
+.skip-link { position: absolute; left: -999px; top: 0; background: #000; color: #fff; padding: 8px 12px; z-index: 100; border-radius: 6px; }
+.skip-link:focus { left: 8px; top: 8px; }
+
+/* ---- Nav — copied exactly from Homepage/Case Study ---- */
+.site-header-wrap { position: sticky; top: 20px; z-index: 50; display: flex; justify-content: center; padding: 0 24px; }
+.floating-nav { display: flex; align-items: center; gap: 44px; width: fit-content; max-width: 100%; background: #fff; border: 1px solid #ddd; border-radius: 999px; padding: 8px 8px 8px 28px; }
+.nav-logo { font-weight: 800; font-size: 15px; color: #111; text-decoration: none; white-space: nowrap; }
+.nav-links { display: flex; align-items: center; gap: 26px; }
+.nav-links a { color: #111; text-decoration: none; font-size: 14px; white-space: nowrap; border-bottom: 1px solid transparent; }
+.nav-links a:hover, .nav-links a:focus { border-bottom: 1px solid #111; }
+.nav-resume { border: 1px solid #111 !important; padding: 6px 16px; border-radius: 999px; text-decoration: none; color: #111; font-size: 14px; display: inline-block; }
+.nav-toggle { display: none; background: none; border: 1px solid #111; border-radius: 999px; padding: 6px 16px; font-size: 13px; }
+.mobile-nav-panel { display: none; flex-direction: column; gap: 4px; max-width: 480px; width: fit-content; margin: 8px auto 0; padding: 16px 24px; background: #fff; border: 1px solid #ddd; border-radius: 24px; }
+.mobile-nav-panel.open { display: flex; }
+.mobile-nav-panel a { color: #111; text-decoration: none; font-size: 15px; padding: 8px 0; }
+
+.content-shell { max-width: 1200px; margin: 0 auto; padding-left: 64px; padding-right: 64px; }
+.eyebrow { text-transform: uppercase; letter-spacing: 0.1em; font-size: 12px; color: #666; margin: 0 0 12px 0; }
+
+/* ---- Identity header: reuses .player-card from the Homepage's About
+       section verbatim ---- */
+.resume-title { padding-top: 64px; padding-bottom: 72px; }
+.resume-identity { display: flex; gap: 48px; align-items: flex-start; flex-wrap: wrap; }
+/* Width matched to the Homepage's .about-aside column (300px) — was
+   260px, a real size difference for the same identity card on two pages. */
+.player-card { border: 1px solid #ccc; padding: 24px; border-radius: 16px; width: 300px; flex-shrink: 0; }
+.player-photo {
+  width: 100%; aspect-ratio: 1 / 1;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; color: #999; margin-bottom: 18px;
+  background-image: repeating-linear-gradient(45deg, #eee, #eee 6px, #f9f9f9 6px, #f9f9f9 12px);
+  border: 1px dashed #ccc;
+  border-radius: 12px;
+}
+.player-name { font-size: 19px; font-weight: 700; margin: 0 0 4px 0; }
+.player-title { font-size: 14px; color: #666; margin: 0; }
+
+.resume-intro-block { flex: 1; min-width: 280px; padding-top: 8px; display: flex; flex-direction: column; gap: 20px; }
+.resume-tagline { font-size: 20px; font-weight: 600; color: #1a1a1a; line-height: 1.4; margin: 0; max-width: 52ch; }
+/* Gap matched to the Homepage's .about-links exactly (was 20px, a small
+   unexplained drift from the 24px used there). flex-wrap kept — a
+   reasonable addition for a 3-link row that Homepage's 2-link row never
+   needed to consider. */
+.about-links { display: flex; flex-wrap: wrap; gap: 24px; font-size: 14px; }
+.about-links a { color: #111; }
+.download-btn { width: fit-content; font-weight: 600; }
+
+/* ---- Row pattern: label column + content column, per the Andrea
+       reference — a fast-scan document layout, not the Case Study's
+       sidebar+narrative pattern ---- */
+.resume-body { padding-bottom: 120px; }
+.resume-row { display: grid; grid-template-columns: 160px 1fr; gap: 48px; margin-bottom: 80px; align-items: start; }
+.resume-row:last-child { margin-bottom: 0; }
+.row-label { font-size: 15px; font-weight: 600; color: #555; margin: 0; padding-top: 2px; }
+.row-content { display: flex; flex-direction: column; gap: 28px; }
+
+/* ---- Education ---- */
+.education-item p { margin: 0; }
+.education-degree { font-size: 16px; color: #111; margin-bottom: 4px !important; }
+.education-school { font-size: 14px; color: #444; margin-bottom: 4px !important; }
+.education-detail { font-size: 13px; color: #888; }
+
+/* ---- Experience: expand/collapse cards — same mechanism as the Case
+       Study template's .decision-item, different content ---- */
+.entry-list { gap: 12px; }
+.entry-item { border: 1px solid #eee; border-radius: 16px; padding: 4px 24px; }
+.entry-toggle {
+  width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 20px;
+  background: none; border: none; font: inherit; padding: 18px 0; cursor: pointer; color: #111; text-align: left;
+}
+.entry-toggle:focus { outline: 2px solid #111; outline-offset: 2px; }
+.entry-toggle-main { display: flex; align-items: center; gap: 16px; min-width: 0; flex: 1; }
+/* The classification tag sits between the role/company block and the
+   toggle icon — same relative position as .engagement-tag next to
+   .case-title-left on the Homepage/Case Study. */
+.entry-classification { flex-shrink: 0; }
+/* Matched to the standard .logo-mark size used on the Work grid / "More
+   Work" cards (32px, 9px label) — was 40px/10px, a third, undocumented
+   size that didn't match either the standard or the .logo-mark.large
+   variant used for the Case Study title. */
+.logo-mark { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; font-size: 9px; color: #777; background: #f5f5f5; border-radius: 999px; flex-shrink: 0; }
+.entry-heading { min-width: 0; }
+.entry-role { font-size: 15px; font-weight: 600; color: #111; margin: 0 0 4px 0; }
+.entry-at { color: #999; font-weight: 400; }
+.entry-meta { font-size: 13px; color: #888; margin: 0; }
+.toggle-icon { color: #999; font-weight: 400; flex-shrink: 0; font-size: 18px; }
+.entry-detail { display: none; padding: 0 0 24px 0; }
+.entry-item.open .entry-detail { display: block; }
+.entry-item.open .toggle-icon::before { content: "\2013"; }
+.entry-detail > p:first-child { font-size: 15px; color: #292929; margin: 0 0 16px 0; }
+.entry-contributions { margin: 0 0 20px 0; padding-left: 18px; }
+.entry-contributions li { font-size: 14px; color: #333; margin-bottom: 8px; }
+.entry-contributions li:last-child { margin-bottom: 0; }
+.entry-skills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.entry-photos { display: flex; gap: 12px; flex-wrap: wrap; }
+.placeholder-img.small {
+  width: 140px; height: 140px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; color: #999;
+  background-image: repeating-linear-gradient(45deg, #eee, #eee 6px, #f9f9f9 6px, #f9f9f9 12px);
+  border: 1px dashed #ccc; border-radius: 12px;
+}
+
+/* ---- Classification tag: EXACTLY the Homepage/Case Study
+       .engagement-tag — same values, not approximated — used here to
+       classify the type of engagement per Experience entry (Sponsored /
+       Client / Independent), the same job it does everywhere else. This
+       is an identifier, styled like every other identifier in the
+       portfolio. ---- */
+.engagement-tag { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: #777; border: 1px solid #ddd; padding: 4px 12px; border-radius: 999px; flex-shrink: 0; }
+
+/* ---- Skill tag: a new, deliberately different component for Skills +
+       Tools. Nicole's read: these present information ("what I know"),
+       not identification ("what kind of project this was") — so unlike
+       .engagement-tag, they're normal case, no letter-spacing, larger
+       and more legible for scanning a dense list of 11+ items. ---- */
+.expertise-group { margin-bottom: 24px; }
+.expertise-group:last-child { margin-bottom: 0; }
+.expertise-label { font-size: 13px; color: #888; margin: 0 0 12px 0; text-transform: uppercase; letter-spacing: 0.06em; }
+.tag-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.skill-tag { font-size: 12px; font-weight: 600; color: #444; border: 1px solid #ddd; padding: 6px 14px; border-radius: 999px; flex-shrink: 0; }
+
+/* ---- Footer — mostly copied exactly from Case Study / Homepage, with
+       one open question: padding-top here is 40px vs. 100px on the other
+       two pages. Not auto-corrected — Resume's body already ends with
+       generous spacing (.resume-body padding-bottom: 120px) immediately
+       before this, so stacking another 100px may be more than this
+       page needs. Flagged in Consistency Audit.md as a real numeric
+       departure worth a deliberate decision, not silent drift. ---- */
+.site-footer-expanded { padding-top: 40px; padding-bottom: 48px; }
+.footer-cta { font-size: clamp(28px, 4.5vw, 48px); font-weight: 800; line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 48px 0; max-width: 900px; }
+.footer-bottom { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 24px; }
+.footer-email { font-size: 15px; color: #111; display: block; margin-top: 8px; }
+.footer-links { display: flex; gap: 20px; font-size: 13px; }
+.footer-links a { color: #333; }
+
+@media (max-width: 900px) {
+  .resume-row { grid-template-columns: 1fr; gap: 12px; }
+  .row-label { padding-top: 0; }
+}
+@media (max-width: 720px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: block; }
+  .content-shell { padding-left: 24px; padding-right: 24px; }
+  .resume-title { padding-top: 40px; padding-bottom: 48px; }
+  .resume-identity { flex-direction: column; gap: 28px; }
+  .player-card { width: 100%; max-width: 260px; }
+  /* The classification tag drops below the role/company block instead of
+     competing for the same row once space is tight. */
+  .entry-toggle { flex-wrap: wrap; }
+  .entry-classification { margin-left: 56px; }
+  .resume-row { margin-bottom: 56px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}

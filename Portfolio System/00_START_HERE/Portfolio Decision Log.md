@@ -925,4 +925,52 @@ Case Study round 5 reviewed. `v3-progress-stylized` confirmed outright as the wi
 **What's promoted, concretely:** the stepper progress nav (marker + connecting line, visited/active states, now tracking all 7 sections including Outcome) with corrected click behavior; the sidebar exec-summary card with no divider line; bold narrative heading scale applied uniformly across every tracked section, including Retrospective; expandable Decisions cards (click-to-expand, considered-and-rejected detail); Retrospective's bordered-box treatment; plain-text Deep/Technical layer with a "Deeper Look" label matching its nav entry, separated by spacing alone (no divider line); a "More Work" section using the Homepage's Work-card component exactly (matched image height and grid gap); and full alignment with the Homepage's responsive breakpoint, nav z-index, and tag component behavior.
 
 **Status**
-🔒 Locked. The Case Study Template wireframing phase is complete.
+🔒 Locked. The Case Study Template wireframing phase is complete. Next: Resume Template wireframing, per the Wireframing Workflow's `Resume/` folder (already scaffolded, currently empty).
+
+---
+
+### Decision
+
+Resume Template wireframing begun. One concept generated: `v1-baseline`, in `05_Assets/Wireframes/Resume/`.
+
+**Why**
+- Unlike Homepage and Case Study, this phase didn't start from an open structural question. Nicole provided a specific reference she'd already saved (`04_Research/Design Exploration/Layout/Andrea` — an expandable-entry résumé with photos and company logos, "almost exact copy" flagged as the goal) and a direct brief matching it exactly. The Experience Blueprint (§2.7) had independently specified the same expand/collapse + PDF pattern before the reference was found, so there was no real disagreement to generate alternatives for — see `v1-baseline/notes.md` for the fuller reasoning on why this phase starts with one concept instead of several.
+- The page reuses the Homepage/Case Study component library directly rather than introducing a fourth visual language: `.player-card` for identity, `.logo-mark` and `.engagement-tag` for company/skill tags, and the Case Study's `.decision-item` expand/collapse mechanism retargeted as `.entry-item` for Experience entries.
+- Layout deliberately departs from Case Study's sidebar+narrative pattern in favor of a label/content row structure (matching the Andrea reference), since the Experience Blueprint frames this page as "a reference document, not a story beat" — a fast-scan utility, not a narrative arc.
+- Content uses Nicole's real résumé data (`01_Me/Resume.md`, `01_Me/Professional Profile.md`) rather than bracketed placeholders, since this page's whole premise (a real academic/professional timeline) can't be meaningfully evaluated with fake entries. Dates/locations required synthesis across the two source documents and are flagged in `notes.md` as needing Nicole's confirmation before this is treated as final content. An Awards section from the Andrea reference was deliberately omitted — no real awards data exists yet, and Nicole's own standing instruction is not to invent metrics or overstate experience.
+- The "Resume" naming question, raised and deliberately left open in the 2026-08-04 Decision Log entry, stays open per Nicole's explicit instruction — she wants to keep the "Resume" label for this round and resolve naming separately before this wireframe is pushed.
+
+**Status**
+🟡 Revisit — pending Nicole's review.
+
+---
+
+### Decision
+
+`v1-baseline` reviewed — "nearly perfect," with one privacy fix, one real cohesion bug caught and fixed, and a consistency audit requested. Produced `v2-refined` (tag split, phone removal) and `v3-aligned` (audit fixes); `v1-baseline` and `v2-refined` both archived in sequence.
+
+**Why**
+- **Phone number removed** from the identity block, for privacy — no other content changed.
+- **Overloaded component bug caught and fixed:** `v1-baseline` reused the `.engagement-tag` class name for the new Skills/Tools pills but silently redefined its CSS, so nothing named `.engagement-tag` on the page actually matched the real one used on the Homepage/Case Study. Nicole's read: these are two different jobs — a classification tag is an *identifier* ("what kind of project was this," the same question `.engagement-tag` already answers elsewhere), a skill/tool pill is *information* ("what do I know"). Resolved by restoring `.engagement-tag` to its exact original definition, used fresh on each Experience entry as a classification tag (Sponsored Engagement / Client Engagement / Independent Research, confidence levels noted per entry in `v2-refined/notes.md`, with Hack iX flagged as the weakest fit), and introducing `.skill-tag` as a separate, honestly-named component carrying forward the modified look for Skills/Tools only.
+- **Consistency audit performed** (`05_Assets/Wireframes/Resume/Consistency Audit.md`), following the same methodology as the earlier Case Study Cohesion Audit. Found and fixed three real, unexplained size drifts in components reused from the Homepage: `.player-card` width (260px vs. 300px), `.logo-mark` size (a third, undocumented 40px/10px vs. the established 32px/9px standard), and `.about-links` gap (20px vs. 24px). One additional finding — footer `padding-top` (40px here vs. 100px on Homepage/Case Study) — was deliberately left as an open question rather than auto-corrected, since Resume's own generous pre-footer spacing may justify the difference; flagged for Nicole's direct call.
+- Content specificity (location/time/etc.) explicitly deferred by Nicole as out of scope for low/mid-fi wireframing — not treated as an open issue.
+- Naming ("Resume" vs. an alternative label) remains deliberately unresolved, per the standing decision to settle it before this wireframe is pushed, not during this round.
+
+**Status**
+🔒 Locked — tag-system fix, phone removal, and all three consistency-audit fixes applied in `v3-aligned`. 🟡 Revisit — Hack iX classification confidence, footer padding-top open question, and final naming decision, all pending Nicole's review of `v3-aligned`.
+
+---
+
+### Decision
+
+**Resume low-fidelity wireframe formally promoted.** Nicole confirmed `v3-aligned` and copied it into `05_Assets/Wireframes/_Promoted/Resume/` as the canonical promoted artifact, closing the Resume wireframing effort.
+
+**Why**
+- Meets every condition in Wireframing Workflow §7: structural and interaction direction confirmed by Nicole, component reuse validated against Homepage/Case Study via the consistency audit, no open structural questions remain — only content specifics (dates, locations, final classification wording) and the standing naming question, both of which belong to later phases, not to this wireframe round.
+- Three rounds of iteration (`v1-baseline` through `v3-aligned`), fully traceable through `05_Assets/Wireframes/Resume/_Archive/` and this Decision Log.
+- Two items were surfaced but deliberately not force-resolved before promotion: the Hack iX engagement classification (flagged as the weakest fit of five in `v2-refined/notes.md`) and the footer `padding-top` discrepancy (40px vs. 100px elsewhere, flagged in `Consistency Audit.md`). Both accepted as-is rather than revised further — neither blocks the structural direction, and both are recorded for a future pass if Nicole wants to revisit them.
+
+**What's promoted, concretely:** identity header with `.player-card` (matched to the Homepage's 300px column) and contact links (phone removed for privacy); a row-pattern (label + content) layout distinct from Case Study's sidebar+narrative pattern, matching the Andrea reference; Education entries; expandable Experience entries reusing the Case Study's `.decision-item` mechanism, each carrying a `.logo-mark` (standard 32px/9px size), a restored-to-original `.engagement-tag` as a type-of-engagement classifier, and a separate `.skill-tag` component for per-entry skills; a Skills/Tools section using `.skill-tag` at the page level; and a downloadable PDF resume link. Page label remains "Resume" — naming still open, to be resolved before final push per the 2026-08-04 decision.
+
+**Status**
+🔒 Locked. The Resume wireframing phase is complete. Next: How I Work page, per the Wireframing Workflow's `How I Work/` folder (already scaffolded, currently empty).

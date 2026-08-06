@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe — Resume v2 — Refined</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#education">Skip to content</a>
+
+<!-- Nav: copied exactly from _Promoted/Homepage and Case Study, standalone-page
+     link pattern per IA §1 (nav items point to homepage anchors, not assumed
+     same-page anchors). -->
+<div class="site-header-wrap">
+  <nav class="floating-nav" aria-label="Primary">
+    <a href="/" class="nav-logo">[Name]</a>
+    <div class="nav-links">
+      <a href="/#work">Work</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+      <a href="/resume" class="nav-resume">Resume</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav-panel">Menu</button>
+  </nav>
+  <div class="mobile-nav-panel" id="mobile-nav-panel">
+    <a href="/#work">Work</a>
+    <a href="/#about">About</a>
+    <a href="/#contact">Contact</a>
+    <a href="/resume" class="nav-resume">Resume</a>
+  </div>
+</div>
+
+<main>
+
+  <!-- Identity block: reuses the exact .player-card component from the
+       Homepage's About section (photo + name + title) rather than inventing
+       a new photo treatment — same reasoning as reusing the Work-card
+       component in Case Study's "More Work." No oversized hero heading here;
+       per Experience Blueprint §2.7 this page is "a reference document, not
+       a story beat," so .player-name (styled at the same scale as the
+       Homepage's About) carries the page's one <h1>, not a display headline. -->
+  <header class="resume-title content-shell">
+    <div class="resume-identity">
+      <div class="player-card">
+        <div class="player-photo">[Photo]</div>
+        <div class="player-info">
+          <h1 class="player-name">Nicole Telesz</h1>
+          <p class="player-title">UX Designer</p>
+        </div>
+      </div>
+
+      <div class="resume-intro-block">
+        <p class="resume-tagline">UX designer bridging systems thinking, engineering fluency, and research rigor.</p>
+        <!-- Phone number removed per Nicole's privacy preference. -->
+        <div class="about-links resume-contact-links">
+          <a href="mailto:ni.telesz@gmail.com">Email</a>
+          <a href="https://www.linkedin.com/in/nicole-telesz-58a661201/">LinkedIn</a>
+          <a href="https://github.com/telesznicole/telesznicole">GitHub</a>
+        </div>
+        <!-- IA §3.5: "Viewable inline (not download-only), Downloadable PDF
+             available." This page IS the inline view; this button is the
+             direct download path, styled like the nav's .nav-resume pill. -->
+        <a href="/assets/nicole-telesz-resume.pdf" download class="nav-resume download-btn">Download PDF ↓</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="resume-body content-shell">
+
+    <!-- Row pattern: a left-column label paired with right-column content,
+         following the reference layout (04_Research/Design Exploration/
+         Layout/Andrea) rather than Case Study's sidebar+narrative pattern —
+         deliberately, since the Experience Blueprint frames this page as a
+         fast-scan utility document, not a story arc. -->
+    <section class="resume-row" id="education">
+      <p class="row-label">Education</p>
+      <div class="row-content">
+        <div class="education-item">
+          <p class="education-degree"><strong>MFA, Interactive Design</strong></p>
+          <p class="education-school">Savannah College of Art and Design · 2023 – 2026 · 3.94 GPA</p>
+          <p class="education-detail">SCADpro Industry Collaborations · SCADamp Certificate · Hack iX Founding Project Manager</p>
+        </div>
+        <div class="education-item">
+          <p class="education-degree"><strong>BS, Computer Science</strong> — Minor in Digital Arts and Sciences</p>
+          <p class="education-school">University of Florida · 2019 – 2023 · 3.87 GPA</p>
+          <p class="education-detail">Honors Program · Cum Laude</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience: expand/collapse per entry, reusing the exact
+         .decision-item / .decision-toggle mechanism validated and promoted
+         in the Case Study template — same interaction, same CSS pattern,
+         just carrying different content (role/company/logo instead of a
+         design decision). Collapsed state always shows the one-line summary
+         per Experience Blueprint §2.7 ("high information density is
+         appropriate and expected here"); expanding reveals contribution
+         detail, skill tags, and photos, matching the Andrea reference.
+
+         Two distinct tag systems, per Nicole's round-2 feedback:
+         .engagement-tag (unmodified — same uppercase, letter-spaced style
+         as Home/Case Study) classifies the TYPE of engagement, exactly
+         like "Sponsored Engagement"/"Client Engagement" on those pages —
+         it's an identifier, so it should look like the identifier used
+         everywhere else. .skill-tag (new) presents skills/tools as
+         information, not identification, so it's deliberately styled
+         differently — see the Expertise section below. -->
+    <section class="resume-row" id="experience">
+      <p class="row-label">Experience</p>
+      <div class="row-content entry-list">
+
+        <div class="entry-item">
+          <button class="entry-toggle" aria-expanded="false">
+            <div class="entry-toggle-main">
+              <div class="logo-mark"><span>Meta</span></div>
+              <div class="entry-heading">
+                <p class="entry-role">Interaction Designer · Interaction Design Lead · Photographer <span class="entry-at">@</span> <strong>Meta × SCADpro</strong></p>
+                <p class="entry-meta">Mar – Jun 2025 · Savannah, GA</p>
+              </div>
+            </div>
+            <span class="engagement-tag entry-classification">Sponsored Engagement</span>
+            <span class="toggle-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="entry-detail">
+            <p>Led interaction design for next-generation social experiences on Ray-Ban Meta smart glasses, synthesizing 5,000+ research data points into an interactive ecosystem.</p>
+            <ul class="entry-contributions">
+              <li>Explored 80+ interaction concepts and collaborated with a multidisciplinary team to shape interaction patterns and communicate product vision through iterative design.</li>
+              <li>Selected to present the team's design strategy and product vision to stakeholders at Meta headquarters.</li>
+            </ul>
+            <div class="entry-skills">
+              <span class="skill-tag">Interaction Design</span>
+              <span class="skill-tag">Emerging Technology</span>
+              <span class="skill-tag">Research Synthesis</span>
+              <span class="skill-tag">Stakeholder Communication</span>
+            </div>
+            <div class="entry-photos">
+              <div class="placeholder-img small">Photo</div>
+              <div class="placeholder-img small">Photo</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="entry-item">
+          <button class="entry-toggle" aria-expanded="false">
+            <div class="entry-toggle-main">
+              <div class="logo-mark"><span>HiX</span></div>
+              <div class="entry-heading">
+                <p class="entry-role">Founding Project Manager · Technical Developer <span class="entry-at">@</span> <strong>Hack iX</strong></p>
+                <p class="entry-meta">Apr – Sep 2025 · Savannah, GA</p>
+              </div>
+            </div>
+            <!-- Weakest-fit classification of the five — Hack iX isn't a
+                 client or a sponsor relationship, and isn't research
+                 either. "Independent Research" is the closest existing
+                 category (self-directed, not commissioned), but this one
+                 is a judgment call worth Nicole's confirmation — see notes.md. -->
+            <span class="engagement-tag entry-classification">Independent Research</span>
+            <span class="toggle-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="entry-detail">
+            <p>Co-founded SCAD's first low-code hackathon, coordinating planning, cross-functional collaboration, and participant experience for 60+ students across multiple disciplines.</p>
+            <ul class="entry-contributions">
+              <li>Designed the event website and interactive planning platform to support event operations and user engagement.</li>
+              <li>Rapidly prototyped an AI-powered application using AI-assisted development workflows.</li>
+            </ul>
+            <div class="entry-skills">
+              <span class="skill-tag">Project Leadership</span>
+              <span class="skill-tag">Technical Development</span>
+              <span class="skill-tag">AI-Assisted Workflows</span>
+              <span class="skill-tag">Event Experience Design</span>
+            </div>
+            <div class="entry-photos">
+              <div class="placeholder-img small">Photo</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="entry-item">
+          <button class="entry-toggle" aria-expanded="false">
+            <div class="entry-toggle-main">
+              <div class="logo-mark"><span>FINRA</span></div>
+              <div class="entry-heading">
+                <p class="entry-role">UX Designer · Final Presentation Lead · Photographer <span class="entry-at">@</span> <strong>FINRA × SCADpro</strong></p>
+                <p class="entry-meta">Jan – Mar 2025 · Savannah, GA</p>
+              </div>
+            </div>
+            <span class="engagement-tag entry-classification">Sponsored Engagement</span>
+            <span class="toggle-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="entry-detail">
+            <p>Conducted user research, designed interaction flows, and iterated through usability testing. Created an accessibility resource promoting inclusive design across digital products.</p>
+            <ul class="entry-contributions">
+              <li>Led the final client presentation and communicated key research insights.</li>
+              <li>Created a WCAG-aligned accessibility resource centered on inclusive design practices.</li>
+            </ul>
+            <div class="entry-skills">
+              <span class="skill-tag">UX Research</span>
+              <span class="skill-tag">Accessibility</span>
+              <span class="skill-tag">Usability Testing</span>
+              <span class="skill-tag">Design Communication</span>
+            </div>
+            <div class="entry-photos">
+              <div class="placeholder-img small">Photo</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="entry-item">
+          <button class="entry-toggle" aria-expanded="false">
+            <div class="entry-toggle-main">
+              <div class="logo-mark"><span>TD</span></div>
+              <div class="entry-heading">
+                <p class="entry-role">UX Designer · Project Manager &amp; Lead <span class="entry-at">@</span> <strong>Terra Dotta × SCADpro</strong></p>
+                <p class="entry-meta">Sep – Nov 2024 · Savannah, GA</p>
+              </div>
+            </div>
+            <!-- Matches the Homepage's own "Client Engagement" tag on this
+                 exact project — direct reuse, not a new judgment call. -->
+            <span class="engagement-tag entry-classification">Client Engagement</span>
+            <span class="toggle-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="entry-detail">
+            <p>Led a multidisciplinary team through a human-centered redesign of Terra Dotta's student experience.</p>
+            <ul class="entry-contributions">
+              <li>Coordinated client communication, project planning, and design collaboration across a 10-week engagement.</li>
+              <li>Guided teammates through UX methods from research to prototyping.</li>
+            </ul>
+            <div class="entry-skills">
+              <span class="skill-tag">UX Leadership</span>
+              <span class="skill-tag">Project Management</span>
+              <span class="skill-tag">Information Architecture</span>
+              <span class="skill-tag">Team Collaboration</span>
+            </div>
+            <div class="entry-photos">
+              <div class="placeholder-img small">Photo</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="entry-item">
+          <button class="entry-toggle" aria-expanded="false">
+            <div class="entry-toggle-main">
+              <div class="logo-mark"><span>Del.</span></div>
+              <div class="entry-heading">
+                <p class="entry-role">UX Designer · Project Manager &amp; Lead <span class="entry-at">@</span> <strong>Deloitte × SCADpro</strong></p>
+                <p class="entry-meta">May – Jul 2024 · Savannah, GA</p>
+              </div>
+            </div>
+            <span class="engagement-tag entry-classification">Sponsored Engagement</span>
+            <span class="toggle-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="entry-detail">
+            <p>Led the creation of journey mapping and persona resources to support Human-Centered Design.</p>
+            <ul class="entry-contributions">
+              <li>Coordinated cross-functional collaboration and served as the primary client liaison.</li>
+              <li>Developed practical design resources informed by user-centered research.</li>
+            </ul>
+            <div class="entry-skills">
+              <span class="skill-tag">Design Systems Thinking</span>
+              <span class="skill-tag">UX Strategy</span>
+              <span class="skill-tag">Client Communication</span>
+              <span class="skill-tag">Leadership</span>
+            </div>
+            <div class="entry-photos">
+              <div class="placeholder-img small">Photo</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Expertise: matches 01_Me/Resume.md's own heading structure exactly
+         (# Expertise > ## Skills, ## Tools), rendered as two tag rows
+         reusing .engagement-tag directly rather than a new pill style. -->
+    <section class="resume-row" id="expertise">
+      <p class="row-label">Expertise</p>
+      <div class="row-content">
+        <div class="expertise-group">
+          <p class="expertise-label">Skills</p>
+          <div class="tag-row">
+            <span class="skill-tag">UX Design</span>
+            <span class="skill-tag">Interaction Design</span>
+            <span class="skill-tag">Product Design</span>
+            <span class="skill-tag">User Research</span>
+            <span class="skill-tag">Usability Testing</span>
+            <span class="skill-tag">Information Architecture</span>
+            <span class="skill-tag">Wireframing</span>
+            <span class="skill-tag">Prototyping</span>
+            <span class="skill-tag">Accessibility</span>
+            <span class="skill-tag">Design Systems</span>
+            <span class="skill-tag">AI-Assisted Design</span>
+          </div>
+        </div>
+        <div class="expertise-group">
+          <p class="expertise-label">Tools</p>
+          <div class="tag-row">
+            <span class="skill-tag">Figma</span>
+            <span class="skill-tag">Framer</span>
+            <span class="skill-tag">Photoshop</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">C++</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</main>
+
+<!-- Footer: copied exactly from Case Study / Homepage. Per IA §1, the
+     footer's Resume link is a direct download action on every page
+     (distinct from primary nav's Resume, which navigates to this page) —
+     the `download` attribute is what encodes that distinction here. -->
+<footer class="site-footer-expanded content-shell">
+  <p class="footer-cta">Let's build something worth caring about.</p>
+  <div class="footer-bottom">
+    <div class="footer-primary">
+      <p class="eyebrow">Contact</p>
+      <a href="mailto:ni.telesz@gmail.com" class="footer-email">ni.telesz@gmail.com</a>
+    </div>
+    <div class="footer-links">
+      <a href="/assets/nicole-telesz-resume.pdf" download>Resume</a>
+      <a href="https://www.linkedin.com/in/nicole-telesz-58a661201/">LinkedIn</a>
+      <a href="https://github.com/telesznicole/telesznicole">GitHub</a>
+      <a href="https://www.feministux.org">Feminist UX</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var toggle = document.getElementById('nav-toggle');
+  var panel = document.getElementById('mobile-nav-panel');
+  toggle.addEventListener('click', function () {
+    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    panel.classList.toggle('open');
+  });
+
+  document.querySelectorAll('.entry-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      btn.closest('.entry-item').classList.toggle('open');
+    });
+  });
+</script>
+
+</body>
+</html>
