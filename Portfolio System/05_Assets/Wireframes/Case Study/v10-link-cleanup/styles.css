@@ -1,6 +1,12 @@
 /* ================================
-   Wireframe — Case Study — Promoted
-   Source: 05_Assets/Wireframes/Case Study/v10-link-cleanup/
+   Wireframe — Case Study v10: Link Cleanup
+   Base: v9-descriptive-filler, unchanged structurally and visually.
+   Two links removed from index.html (bottom "← Back to Work" near More
+   Work, and the "See how AI-assisted workflow shaped this project"
+   link out to How I Work) — no CSS changes required for either removal.
+   .back-to-work and .deep-link rules are left in place even though
+   currently unused in markup, since they're small, harmless, and may
+   be needed again if either pattern returns in a future round.
    ================================ */
 
 * { box-sizing: border-box; }

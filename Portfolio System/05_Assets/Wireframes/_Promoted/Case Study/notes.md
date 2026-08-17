@@ -1,41 +1,35 @@
 # Case Study Wireframe — Promoted (Canonical)
 
-**🔒 Promoted: 2026-08-05.** This is the full, self-contained promoted copy of the Case Study Template, per Wireframing Workflow §7. Copied from `05_Assets/Wireframes/Case Study/v7-final-candidate/`, which remains in place at its original location as the version-history record of how this was reached — see that folder's `notes.md` for the complete round-by-round trail (`v1` through `v7`).
+**🔒 Promoted: 2026-08-17.** This is the full, self-contained promoted copy of the Case Study Template, per Wireframing Workflow §7 — replacing the previous promotion (source: `v7-final-candidate`, promoted 2026-08-05). Copied from `05_Assets/Wireframes/Case Study/v10-link-cleanup/`, which remains in place at its original location as the version-history record of how this was reached (`v8-narrative-expansion` → `v9-descriptive-filler` → `v10-link-cleanup`; `v7-final-candidate` and earlier now live in `_Archive/`, alongside every other archived Case Study iteration).
 
 **Generated:** Claude (Sonnet), August 2026
-**Base:** `v6-final-candidate` — this iteration changes exactly three things, per Nicole's review.
-**Tested against:** Nicole's review of `v6-final-candidate`, one revision before final approval.
-**Human curation applied:** Nicole reviewed `v7-final-candidate` and confirmed final approval, then copied it into `_Promoted/Case Study/` herself.
-**Shared Components used:** Everything from `v6-final-candidate` unchanged except the three fixes below.
+**Base:** `v9-descriptive-filler` — this iteration changes exactly two things (two link removals) plus adds section-length guidance as comments, per Nicole's review.
+**Human curation applied:** Nicole reviewed `v10-link-cleanup` and confirmed it was ready to promote directly, with no further changes requested.
 
 ---
 
-## What This Iteration Tests
+## What Changed Since the Previous Promotion (`v7-final-candidate`)
 
-Whether the three issues Nicole flagged in `v6-final-candidate` — a hierarchy mismatch, a label inconsistency, and two real interaction bugs — are fully resolved without disturbing anything else that was already working.
+This is a genuinely substantial content-structure update, not a cosmetic refresh — it followed a dedicated conversation working through the Case Study Template's section outline before any real project content was written, cross-referenced against the Experience Blueprint, the Stakeholder Evaluation Strategy, and the Product Design Portfolio Research reports.
 
-## Fix 1 — Retrospective's heading now matches standard hierarchy
+- **New Discovery section**, between Context and Constraints — paragraph format, capturing what was actually learned during research/exploration, distinct from Context's brief-and-starting-situation and from Decisions' resolved choices.
+- **Hero visual** added to the title block, plus a **conditional live-site button** ("Visit Live Site →") shown only when a project has a real URL.
+- **Optional metric/proof callout** inside Outcome, reusing the Homepage's `.stats-banner` exactly — present when a project has a real number to show, entirely omitted (not left as a visible gap) otherwise.
+- **Tools & Skills tag row** closing out Layer 2, reusing Resume's `.skill-tag` exactly.
+- **H1 changed from role to project title** (role now lives only in the Executive Summary card), matching the Homepage Work-card title convention.
+- **Both back-navigation links removed** (top `.back-link` and the bottom "← Back to Work" near More Work) — Nicole's direct call.
+- **"See how AI-assisted workflow shaped this project" link removed** — no per-project AI-process page exists; a project's specific AI involvement is intended to live as inline Deep/Technical content instead, not a link to the general How I Work page. Whether "AI-Assisted Workflow" becomes an actual third named Deep/Technical subsection (alongside Edge Cases and Engineering Collaboration) is still open.
+- **Section-length guidance** recorded as inline HTML comments near Decisions and Retrospective: most Layer 2 sections should stay to one tight paragraph; Decisions reads longer only from accumulating short items; Retrospective is the one deliberate exception, reasonably running to two paragraphs as "the credibility peak of the page" per the Experience Blueprint.
+- **Content is fully generic/instructional** throughout — an earlier version of this round (`v8-narrative-expansion`) had grounded the filler in real Meta facts to test realistic pacing, but was corrected: a template shouldn't be built on top of one real project. Every field is bracketed, describing what belongs there rather than asserting real content.
 
-Nicole: "If retrospective is on the same level hierarchically to be in the progress indicator then it should have the same text treatment hierarchically as the other section titles. Currently it's smaller which implies it's a subsection rather than its own standalone section."
+Everything else — the stepper progress nav mechanics, the sidebar Executive Summary card structure, Decisions' expand/collapse, Retrospective's bordered-box treatment, cross-page nav/footer, responsive behavior — is unchanged from the previous promotion.
 
-This directly reverses the correction made back in `v2-bold-type` (toning the heading down because the bordered box already carried elevation). That reasoning made sense in isolation, but once Retrospective became a tracked, equal-level entry in the progress nav — same status as Context, Constraints, Decisions, Trade-offs, Outcome, Deeper Look — a smaller heading contradicts what the nav is telling the reader. The `font-size: 22px !important` / `font-weight: 700 !important` override is removed; `.retrospective h2` now inherits the same `clamp(26px, 3.4vw, 40px)` / `800`-weight treatment as every other section. The bordered box remains as its own, separate signal of emphasis.
+## What's Still Open
 
-## Fix 2 — "Deeper Look" label consistency
-
-Nicole: "the progress indicator says 'deeper look' but the body says 'a deeper look'... change it to match the progress indicator and say 'deeper look'." The eyebrow text above the Deep/Technical heading changed from "A deeper look" to "Deeper Look," matching the nav exactly.
-
-## Fix 3 — Two scrollspy interaction bugs
-
-Both bugs were real, and worth explaining rather than just patching silently:
-
-**Bug A — clicking a nav link highlighted the wrong (next) section.** The `IntersectionObserver` marks a section active when it crosses a thin detection band roughly 40–45% down the viewport. That works well for *scrolling*, but short sections (Trade-offs, Outcome) don't reliably occupy that band once they're jumped to and land at the top of the viewport — by the time the band is checked, it can already be inside the *next* section, which is what was getting marked active instead. Fix: clicking a link now sets its active/visited state immediately and directly, and the observer's own updates are suppressed for 700ms afterward (long enough for the scroll animation to finish) so it can't override the click's intent mid-flight. Normal scroll-driven tracking resumes automatically once that window passes.
-
-**Bug B — the jumped-to section's title landed under the sticky nav.** Sections had no `scroll-margin-top`, so a native anchor jump scrolled the target's top edge to exactly `y = 0` — directly behind the floating pill nav. Added `.narrative-block[id] { scroll-margin-top: 120px; }`, which reserves clearance above every tracked section so the browser (and the click handler's scroll behavior) stop short of the nav instead of hiding behind it.
-
-## What Didn't Change
-
-Everything else — body content, sidebar, stepper visuals, the Outcome tracking fix, all four Cohesion Audit corrections — is identical to `v6-final-candidate`.
+- Layer 3's full menu of optional content types (beyond Edge Cases and Engineering Collaboration) — deliberately deferred until real per-project content exists.
+- Whether "AI-Assisted Workflow" becomes a named Deep/Technical subsection.
+- All real project content (Meta and Feminist UX) — this template is structurally ready to receive it, but none has been written yet.
 
 ## Outcome
 
-**Status: 🔒 Promoted — 2026-08-06.** Nicole gave final approval; this copy carries the same universal fixes applied everywhere else in the same pass: collapse/expand toggles no longer show both `+` and `–` at once, `.decision-toggle` uses `:focus-visible` instead of bare `:focus` (no more visible outline on mouse click), and all internal navigation (nav bar, back-links, "More Work," footer) now points to real, resolving destinations within `_Promoted/` instead of placeholder `#`/root-relative paths. See Decision Log, 2026-08-06 (cross-page linking pass) for the full account.
+**Status: 🔒 Promoted — 2026-08-17.**

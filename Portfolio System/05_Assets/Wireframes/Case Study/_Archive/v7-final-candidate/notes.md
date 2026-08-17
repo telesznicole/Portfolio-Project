@@ -36,4 +36,6 @@ Everything else — body content, sidebar, stepper visuals, the Outcome tracking
 
 ## Outcome
 
-**Status: 🔒 Promoted — 2026-08-05.** Nicole confirmed final approval and copied this iteration into `05_Assets/Wireframes/_Promoted/Case Study/` as the canonical promoted artifact, closing the Case Study Template wireframing effort. This file stays in place, unmoved, as the version-history record — seven rounds of iteration (`v1` through `v7`), fully traceable through `05_Assets/Wireframes/Case Study/_Archive/` and the Decision Log, each with reasoning preserved rather than overwritten.
+**Status: 🔒 Promoted — 2026-08-05. Superseded — 2026-08-17.** Nicole confirmed final approval and copied this iteration into `05_Assets/Wireframes/_Promoted/Case Study/` as the canonical promoted artifact, closing the Case Study Template wireframing effort. Seven rounds of iteration (`v1` through `v7`), fully traceable through `05_Assets/Wireframes/Case Study/_Archive/` and the Decision Log, each with reasoning preserved rather than overwritten.
+
+Superseded on 2026-08-17 by `v10-link-cleanup`, following a content-structure conversation that added a Discovery section, an optional metric callout, a Tools & Skills row, a hero visual, and a conditional live-site button to Layer 2 — see the Decision Log for the full round. Archived (moved into `_Archive/`) rather than left in place, since it's no longer the most recent pre-promotion iteration in the active lineage.

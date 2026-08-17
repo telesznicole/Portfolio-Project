@@ -1,6 +1,13 @@
 /* ================================
-   Wireframe — Case Study — Promoted
-   Source: 05_Assets/Wireframes/Case Study/v10-link-cleanup/
+   Wireframe — Case Study v9: Descriptive Filler
+   Base: v8-narrative-expansion. One content change, no structural
+   change: every piece of copy that was grounded in real Meta facts is
+   replaced with generic, instructional filler describing what belongs
+   in each section — per Nicole's direction that the template shouldn't
+   be built on top of one real project. The live-site button is now
+   rendered visibly (was commented out in v8) so it can actually be
+   evaluated. All CSS is otherwise identical to v8; one addition below
+   for spacing now that the button is real markup, not a comment.
    ================================ */
 
 * { box-sizing: border-box; }
@@ -42,6 +49,10 @@ body {
 .cs-title h1 { font-size: clamp(32px, 5.5vw, 56px); font-weight: 800; line-height: 1.2; letter-spacing: -0.01em; margin: 0 0 16px 0; }
 .cs-title-sub { font-size: 16px; color: #444; margin: 0 0 24px 0; max-width: 60ch; }
 
+/* live-site-btn: margin-bottom increased slightly vs. v8 (24px → 32px)
+   now that it's visible, real markup sitting directly above the hero
+   visual — needed a touch more separation than when it only existed
+   as a comment. */
 .live-site-btn { display: inline-block; font-size: 14px; font-weight: 600; color: #111; text-decoration: none; border: 1px solid #111; padding: 8px 18px; border-radius: 999px; margin-bottom: 32px; }
 .live-site-btn:hover, .live-site-btn:focus { background: #111; color: #fff; }
 

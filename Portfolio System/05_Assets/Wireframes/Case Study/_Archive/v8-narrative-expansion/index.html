@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe — Case Study v8 — Narrative Expansion</title>
+<link rel="stylesheet" href="styles.css">
+<script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+</head>
+<body>
+
+<a class="skip-link" href="#context">Skip to content</a>
+
+<!-- Nav: unchanged from _Promoted/Case Study — nav restructuring (About-
+     mediated Resume/How I Work access) was a separate, already-logged
+     decision and is intentionally NOT touched in this iteration, per
+     Nicole's "don't make extra changes except what we've discussed."
+     Known stale relative to the live Figma/Framer build; flagged, not
+     fixed, here. -->
+<div class="site-header-wrap">
+  <nav class="floating-nav" aria-label="Primary">
+    <a href="../../_Promoted/Homepage/index.html" class="nav-logo">[Name]</a>
+    <div class="nav-links">
+      <a href="../../_Promoted/Homepage/index.html#work">Work</a>
+      <a href="../../_Promoted/Homepage/index.html#about">About</a>
+      <a href="../../_Promoted/Homepage/index.html#contact">Contact</a>
+      <a href="../../_Promoted/Resume/index.html" class="nav-resume">Resume</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav-panel">Menu</button>
+  </nav>
+  <div class="mobile-nav-panel" id="mobile-nav-panel">
+    <a href="../../_Promoted/Homepage/index.html#work">Work</a>
+    <a href="../../_Promoted/Homepage/index.html#about">About</a>
+    <a href="../../_Promoted/Homepage/index.html#contact">Contact</a>
+    <a href="../../_Promoted/Resume/index.html" class="nav-resume">Resume</a>
+  </div>
+</div>
+
+<main>
+
+  <!-- Title block: top .back-link REMOVED per Nicole's direction this
+       round. Assumption, stated plainly: this refers to the quiet top
+       orientation link only — the bottom "← Back to Work" CTA near
+       More Work is a structurally different element (a natural next
+       step after finishing the page, not wayfinding) and is left in
+       place. Flag if that's not the right read. -->
+  <header class="cs-title content-shell">
+    <div class="cs-title-sponsor">
+      <div class="logo-mark large"><span>Meta</span></div>
+      <span class="engagement-tag">Sponsored Engagement</span>
+    </div>
+
+    <!-- H1 changed from role ("Interaction Design Lead") to project
+         title, matching the Homepage card-title convention locked
+         earlier. Role now lives only in the Executive Summary card
+         below — not duplicated here. -->
+    <h1>Designing for Connection</h1>
+    <p class="cs-title-sub">Shipped interaction patterns for a cross-functional wearable social experience team.</p>
+
+    <!-- Live-site button: conditional, only rendered when a project has
+         a real URL to send someone to. Meta is NDA-restricted, so it's
+         intentionally absent here — this is the negative case, not a
+         missing feature. Feminist UX (feministux.org) would render:
+         <a href="https://www.feministux.org" class="live-site-btn" target="_blank" rel="noopener">Visit Live Site →</a>
+    -->
+
+    <!-- Hero visual: new this round. Reuses the same full-bleed
+         placeholder treatment already validated on Homepage's Work
+         cards, sized larger since it's the page's own lead image, not
+         a grid tile. Caption reflects the sanitized/white-labeled
+         handling already locked in the IA for NDA-restricted work. -->
+    <figure class="cs-hero-visual">
+      <div class="placeholder-img hero">Hero visual — final concept, sanitized for public presentation</div>
+      <figcaption>The interaction pattern presented at Meta headquarters, shown here in a form that respects the project's NDA.</figcaption>
+    </figure>
+  </header>
+
+  <div class="cs-layout content-shell">
+
+    <aside class="cs-sidebar">
+      <!-- Executive Summary: UNCHANGED. Layer 1 was confirmed "perfect"
+           — nothing here was touched this round. -->
+      <div class="exec-summary-card">
+        <p class="exec-label">At a glance</p>
+        <dl>
+          <div class="exec-row"><dt>Role</dt><dd>Interaction Design Lead</dd></div>
+          <div class="exec-row"><dt>Team</dt><dd>Cross-functional research + engineering</dd></div>
+          <div class="exec-row"><dt>Duration</dt><dd>12 weeks</dd></div>
+          <div class="exec-row"><dt>Problem</dt><dd>Existing interaction model didn't hold up for first-time wearable users.</dd></div>
+          <div class="exec-row"><dt>Proof</dt><dd>Adopted as the default interaction pattern across the team's next release.</dd></div>
+        </dl>
+      </div>
+
+      <!-- Progress nav: 8 tracked sections now, Discovery added between
+           Context and Constraints. -->
+      <nav class="cs-progress-nav stepper" aria-label="Case study sections">
+        <a href="#context" class="progress-link" data-section="context">
+          <span class="progress-marker" aria-hidden="true"></span>
+          <span class="progress-label">Context</span>
+        </a>
+        <a href="#discovery" class="progress-link" data-section="discovery">
+          <span class="progress-marker" aria-hidden="true"></span>
+          <span class="progress-label">Discovery</span>
+        </a>
+        <a href="#constraints" class="progress-link" data-section="constraints">
+          <span class="progress-marker" aria-hidden="true"></span>
+          <span class="progress-label">Constraints</span>
+        </a>
+        <a href="#decisions" class="progress-link" data-section="decisions">
+          <span class="progress-marker" aria-hidden="true"></span>
+          <span class="progress-label">Decisions</span>
+        </a>
+        <a href="#tradeoffs" class="progress-link" data-section="tradeoffs">
+          <span class="progress-marker" aria-hidden="true"></span>
+          <span class="progress-label">Trade-offs</span>
+        </a>
+        <a href="#outcome" class="progress-link" data-section="outcome">
+          <span class="progress-marker" aria-hidden="true"></span>
+          <span class="progress-label">Outcome</span>
+        </a>
+        <a href="#retrospective" class="progress-link" data-section="retrospective">
+          <span class="progress-marker" aria-hidden="true"></span>
+          <span class="progress-label">Retrospective</span>
+        </a>
+        <a href="#deeper" class="progress-link" data-section="deeper">
+          <span class="progress-marker" aria-hidden="true"></span>
+          <span class="progress-label">Deeper Look</span>
+        </a>
+      </nav>
+    </aside>
+
+    <div class="cs-narrative">
+
+      <!-- All prose below is illustrative filler, grounded in real
+           Meta facts already established elsewhere in this project
+           (5,000+ data points, 80+ concepts, Meta HQ presentation) so
+           the pacing is realistic rather than abstract — but it is a
+           DRAFT for evaluating structure, not final locked case-study
+           copy. Flagged again in notes.md. -->
+
+      <section id="context" class="narrative-block">
+        <h2>Context</h2>
+        <p>Ray-Ban Meta's smart glasses were adding new social features, but the existing interaction model had been designed around simpler, single-purpose use cases. As the feature set grew, that model started to show its limits — particularly for people picking up the glasses for the first time, with no existing mental model for how a wearable device should respond to a social interaction. Meta brought in a SCADpro team to explore what the next generation of that interaction language could look like, working directly alongside Meta's own research and engineering teams over a twelve-week engagement.</p>
+      </section>
+
+      <!-- New: Discovery. Sits between Context (the brief, the starting
+           situation) and Constraints (the real-world limits) — what
+           was actually found once the team looked past the initial
+           framing. Paragraph format, no expand/collapse, per this
+           round's discussion. -->
+      <section id="discovery" class="narrative-block">
+        <h2>Discovery</h2>
+        <p>Early research made clear the problem wasn't one broken interaction — it was an assumption baked into the whole system. Synthesizing more than 5,000 data points across the team's existing research, the throughline was a mismatch in mental models: first-time users expected the glasses to behave like a phone notification, when the actual interaction was closer to a passive, ambient signal. That gap — not any single screen or gesture — was the real source of confusion.</p>
+      </section>
+
+      <figure class="narrative-image">
+        <div class="placeholder-img wide">Full-width narrative image</div>
+        <figcaption>[Caption — what this image shows and why it's here.]</figcaption>
+      </figure>
+
+      <section id="constraints" class="narrative-block">
+        <h2>Constraints</h2>
+        <p>The engagement ran twelve weeks inside an academic semester, working alongside a live product team with its own roadmap — not a hypothetical timeline. Any concept had to work within the glasses' existing hardware: a small display, limited input methods, and real battery constraints. It also had to be explainable to a stakeholder audience in a single presentation, not rolled out gradually with room to course-correct.</p>
+      </section>
+
+      <section id="decisions" class="narrative-block">
+        <h2>Decisions</h2>
+        <p>Two decisions did the most to shape the final direction — and each had a real alternative that didn't survive.</p>
+
+        <div class="decision-list">
+          <div class="decision-item">
+            <button class="decision-toggle" aria-expanded="false">
+              <span>Treat the glasses as an ambient signal, not a notification surface</span>
+              <span class="toggle-icon" aria-hidden="true"></span>
+            </button>
+            <div class="decision-detail">
+              <p class="rejected-label">Considered and rejected</p>
+              <p>An early prototype mirrored phone-style notification patterns. It was dropped after testing showed it created the same "did I miss something" anxiety the project was trying to design away from.</p>
+            </div>
+          </div>
+          <div class="decision-item">
+            <button class="decision-toggle" aria-expanded="false">
+              <span>Design one core interaction pattern, not a menu of options</span>
+              <span class="toggle-icon" aria-hidden="true"></span>
+            </button>
+            <div class="decision-detail">
+              <p class="rejected-label">Considered and rejected</p>
+              <p>A more flexible system offering multiple interaction styles per feature was considered, since it gave more room per use case. It was set aside because it multiplied what a first-time user had to learn — working against the goal of an interaction that needed no explanation.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tradeoffs" class="narrative-block">
+        <h2>Trade-offs</h2>
+        <p>Committing to one core interaction pattern meant some proposed features didn't get a fully custom-tailored interaction of their own — they had to fit inside the same ambient model, even in places where a more specific gesture might have technically performed better in isolation. That was an intentional trade: consistency across the system mattered more than optimizing any single feature on its own.</p>
+      </section>
+
+      <figure class="narrative-image">
+        <div class="placeholder-img wide">Full-width narrative image</div>
+        <figcaption>[Caption — what this image shows and why it's here.]</figcaption>
+      </figure>
+
+      <!-- Outcome: metric/proof callout included as a worked example —
+           reuses Homepage's .stats-banner component exactly (same class
+           names), scoped to this narrower column. Per this round's
+           discussion, this callout is OPTIONAL per project — shown here
+           because Meta genuinely has real numbers to offer; a project
+           without one simply keeps the plain paragraph and omits this
+           block entirely, with no visual gap implied. -->
+      <section id="outcome" class="narrative-block">
+        <h2>Outcome</h2>
+        <p>The interaction pattern was presented to stakeholders at Meta headquarters and was adopted as the team's default approach heading into their next release.</p>
+        <div class="outcome-stats stats-banner">
+          <div class="stat"><span class="stat-num">5,000+</span><span class="stat-label">Research data points synthesized</span></div>
+          <div class="stat"><span class="stat-num">80+</span><span class="stat-label">Interaction concepts explored</span></div>
+          <div class="stat"><span class="stat-num">1</span><span class="stat-label">Pattern adopted as the team's default</span></div>
+        </div>
+      </section>
+
+      <section id="retrospective" class="narrative-block retrospective">
+        <h2>Retrospective</h2>
+        <p>If I revisited this project today, I'd push earlier for a low-fidelity way to test the ambient-signal concept with real first-time users, rather than leaning as heavily on the team's existing research base before validating it independently. Twelve weeks is enough time to develop a strong point of view — it's not quite enough to fully close the loop on testing it, and that's the honest gap in this version of the work.</p>
+      </section>
+
+      <!-- New: Tools & Skills, closing out Layer 2 per this round's
+           discussion — sits after Retrospective, before Layer 3 begins.
+           Reuses Resume's .skill-tag component exactly (not a new
+           style), and is intentionally NOT a tracked progress-nav
+           section — same treatment as the narrative images, a closing
+           element rather than a story beat. -->
+      <div class="cs-tools">
+        <p class="eyebrow">Tools &amp; Skills</p>
+        <div class="tag-row">
+          <span class="skill-tag">Interaction Design</span>
+          <span class="skill-tag">Emerging Technology</span>
+          <span class="skill-tag">Research Synthesis</span>
+          <span class="skill-tag">Prototyping</span>
+          <span class="skill-tag">Stakeholder Communication</span>
+        </div>
+      </div>
+
+      <section id="deeper" class="narrative-block deep-layer">
+        <p class="eyebrow">Deeper Look</p>
+        <h2>Edge Cases &amp; System States</h2>
+        <p>An ambient interaction pattern has to account for a device that's frequently in a partially-attended state — glasses being worn but not actively looked at, low-battery states that shouldn't compete for the same ambient channel, and moments where more than one signal could plausibly fire at once.</p>
+        <h3>Engineering Collaboration</h3>
+        <p>Because the concept had to work within real hardware constraints, this stayed a close collaboration with Meta's engineering team throughout — testing what was actually perceivable given the display's limitations, not just what looked right in a static mockup.</p>
+        <a href="../../_Promoted/How%20I%20Work/index.html" class="deep-link">See how AI-assisted workflow shaped this project →</a>
+      </section>
+
+    </div>
+  </div>
+
+  <section class="cs-crosslinks content-shell">
+    <p class="section-title">More Work</p>
+    <div class="work-grid">
+      <article class="grid-item">
+        <a href="index.html" class="grid-item-link">
+          <div class="placeholder-img">Feminist UX</div>
+          <div class="case-title-row">
+            <div class="case-title-left">
+              <div class="logo-mark"><span>Ind.</span></div>
+              <h3>Independent Thesis</h3>
+            </div>
+            <span class="engagement-tag">Independent Research</span>
+          </div>
+          <p class="proof">Validated a feminist UX framework across ten practitioner sessions.</p>
+        </a>
+      </article>
+      <article class="grid-item">
+        <a href="index.html" class="grid-item-link">
+          <div class="placeholder-img">Terra Dotta</div>
+          <div class="case-title-row">
+            <div class="case-title-left">
+              <div class="logo-mark"><span>TD</span></div>
+              <h3>UX Lead</h3>
+            </div>
+            <span class="engagement-tag">Client Engagement</span>
+          </div>
+          <p class="proof">Delivered a full website redesign under a fixed sponsor timeline.</p>
+        </a>
+      </article>
+    </div>
+    <a href="../../_Promoted/Homepage/index.html#work" class="back-to-work">← Back to Work</a>
+  </section>
+
+</main>
+
+<!-- Footer: UNCHANGED, including the still-bracketed footer-cta —
+     fixing that wasn't part of this round's scope, flagged separately
+     rather than silently patched. -->
+<footer class="site-footer-expanded content-shell">
+  <p class="footer-cta">[Big closing statement — e.g. a call to action]</p>
+  <div class="footer-bottom">
+    <div class="footer-primary">
+      <p class="eyebrow">Contact</p>
+      <a href="mailto:ni.telesz@gmail.com" class="footer-email">ni.telesz@gmail.com</a>
+    </div>
+    <div class="footer-links">
+      <a href="/assets/nicole-telesz-resume.pdf" download>Resume</a>
+      <a href="https://www.linkedin.com/in/nicole-telesz-58a661201/">LinkedIn</a>
+      <a href="https://github.com/telesznicole/telesznicole">GitHub</a>
+      <a href="https://www.feministux.org">Feminist UX</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var toggle = document.getElementById('nav-toggle');
+  var panel = document.getElementById('mobile-nav-panel');
+  toggle.addEventListener('click', function () {
+    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    panel.classList.toggle('open');
+  });
+
+  document.querySelectorAll('.decision-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      btn.closest('.decision-item').classList.toggle('open');
+    });
+  });
+
+  var sections = document.querySelectorAll('.narrative-block[id]');
+  var links = Array.prototype.slice.call(document.querySelectorAll('.progress-link'));
+
+  function setActive(link) {
+    var idx = links.indexOf(link);
+    links.forEach(function (l, i) {
+      l.classList.remove('active', 'visited');
+      if (i < idx) l.classList.add('visited');
+    });
+    link.classList.add('active');
+  }
+
+  var suppressObserverUntil = 0;
+  links.forEach(function (link) {
+    link.addEventListener('click', function () {
+      setActive(link);
+      suppressObserverUntil = Date.now() + 700;
+    });
+  });
+
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      if (Date.now() < suppressObserverUntil) return;
+      entries.forEach(function (entry) {
+        var link = document.querySelector('.progress-link[data-section="' + entry.target.id + '"]');
+        if (!link) return;
+        if (entry.isIntersecting) {
+          setActive(link);
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+    sections.forEach(function (s) { observer.observe(s); });
+  }
+</script>
+
+</body>
+</html>

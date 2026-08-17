@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wireframe — Case Study — Promoted</title>
+<title>Wireframe — Case Study v10 — Link Cleanup</title>
 <link rel="stylesheet" href="styles.css">
 <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
 </head>
@@ -14,20 +14,20 @@
 <!-- Nav: unchanged — not part of this round's scope. -->
 <div class="site-header-wrap">
   <nav class="floating-nav" aria-label="Primary">
-    <a href="../Homepage/index.html" class="nav-logo">[Name]</a>
+    <a href="../../_Promoted/Homepage/index.html" class="nav-logo">[Name]</a>
     <div class="nav-links">
-      <a href="../Homepage/index.html#work">Work</a>
-      <a href="../Homepage/index.html#about">About</a>
-      <a href="../Homepage/index.html#contact">Contact</a>
-      <a href="../Resume/index.html" class="nav-resume">Resume</a>
+      <a href="../../_Promoted/Homepage/index.html#work">Work</a>
+      <a href="../../_Promoted/Homepage/index.html#about">About</a>
+      <a href="../../_Promoted/Homepage/index.html#contact">Contact</a>
+      <a href="../../_Promoted/Resume/index.html" class="nav-resume">Resume</a>
     </div>
     <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav-panel">Menu</button>
   </nav>
   <div class="mobile-nav-panel" id="mobile-nav-panel">
-    <a href="../Homepage/index.html#work">Work</a>
-    <a href="../Homepage/index.html#about">About</a>
-    <a href="../Homepage/index.html#contact">Contact</a>
-    <a href="../Resume/index.html" class="nav-resume">Resume</a>
+    <a href="../../_Promoted/Homepage/index.html#work">Work</a>
+    <a href="../../_Promoted/Homepage/index.html#about">About</a>
+    <a href="../../_Promoted/Homepage/index.html#contact">Contact</a>
+    <a href="../../_Promoted/Resume/index.html" class="nav-resume">Resume</a>
   </div>
 </div>
 
@@ -198,11 +198,15 @@
         </div>
       </div>
 
-      <!-- Deep/Technical: no external link out. A project's specific AI
-           involvement, when relevant, belongs as inline content here
-           rather than a link to a general philosophy page — see notes.md
-           for the still-open question of whether "AI-Assisted Workflow"
-           becomes a third named subsection alongside these two. -->
+      <!-- Deep/Technical: external link to How I Work removed — no
+           per-project AI-process page exists, and Nicole's own read is
+           that a project's specific AI involvement is better handled
+           as inline content in this section rather than a link out to
+           the general philosophy page. "AI-Assisted Workflow" as a
+           third example subsection here (alongside Edge Cases and
+           Engineering Collaboration) is a real candidate for Layer 3's
+           still-open content menu — not added automatically, pending
+           Nicole's call on whether to include it. -->
       <section id="deeper" class="narrative-block deep-layer">
         <p class="eyebrow">Deeper Look</p>
         <h2>Edge Cases &amp; System States</h2>
@@ -244,6 +248,9 @@
         </a>
       </article>
     </div>
+    <!-- Bottom "← Back to Work" link removed — Nicole took out both
+         back buttons on this page, not just the top one as previously
+         assumed. -->
   </section>
 
 </main>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wireframe — Case Study — Promoted</title>
+<title>Wireframe — Case Study v9 — Descriptive Filler</title>
 <link rel="stylesheet" href="styles.css">
 <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
 </head>
@@ -11,28 +11,32 @@
 
 <a class="skip-link" href="#context">Skip to content</a>
 
-<!-- Nav: unchanged — not part of this round's scope. -->
+<!-- Nav: unchanged from v8/_Promoted/Case Study — not part of this
+     round's scope. -->
 <div class="site-header-wrap">
   <nav class="floating-nav" aria-label="Primary">
-    <a href="../Homepage/index.html" class="nav-logo">[Name]</a>
+    <a href="../../_Promoted/Homepage/index.html" class="nav-logo">[Name]</a>
     <div class="nav-links">
-      <a href="../Homepage/index.html#work">Work</a>
-      <a href="../Homepage/index.html#about">About</a>
-      <a href="../Homepage/index.html#contact">Contact</a>
-      <a href="../Resume/index.html" class="nav-resume">Resume</a>
+      <a href="../../_Promoted/Homepage/index.html#work">Work</a>
+      <a href="../../_Promoted/Homepage/index.html#about">About</a>
+      <a href="../../_Promoted/Homepage/index.html#contact">Contact</a>
+      <a href="../../_Promoted/Resume/index.html" class="nav-resume">Resume</a>
     </div>
     <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav-panel">Menu</button>
   </nav>
   <div class="mobile-nav-panel" id="mobile-nav-panel">
-    <a href="../Homepage/index.html#work">Work</a>
-    <a href="../Homepage/index.html#about">About</a>
-    <a href="../Homepage/index.html#contact">Contact</a>
-    <a href="../Resume/index.html" class="nav-resume">Resume</a>
+    <a href="../../_Promoted/Homepage/index.html#work">Work</a>
+    <a href="../../_Promoted/Homepage/index.html#about">About</a>
+    <a href="../../_Promoted/Homepage/index.html#contact">Contact</a>
+    <a href="../../_Promoted/Resume/index.html" class="nav-resume">Resume</a>
   </div>
 </div>
 
 <main>
 
+  <!-- Title block: entirely genericized this round — no Meta-specific
+       facts anywhere on this page anymore, per Nicole's direction that
+       the template shouldn't be built on top of one real project. -->
   <header class="cs-title content-shell">
     <div class="cs-title-sponsor">
       <div class="logo-mark large"><span>[Co.]</span></div>
@@ -42,6 +46,11 @@
     <h1>[Project Title]</h1>
     <p class="cs-title-sub">[One-sentence proof statement — the single strongest, most specific outcome this project produced.]</p>
 
+    <!-- Live-site button: rendered here as a visible worked example,
+         per Nicole's request to actually see it — not commented out
+         this round. Still conditional in real use: only appears when a
+         project has a real URL to send someone to; omitted entirely
+         (not disabled/grayed) otherwise. -->
     <a href="#" class="live-site-btn">Visit Live Site →</a>
 
     <figure class="cs-hero-visual">
@@ -53,6 +62,9 @@
   <div class="cs-layout content-shell">
 
     <aside class="cs-sidebar">
+      <!-- Executive Summary: genericized to match the rest of the page
+           — Layer 1's structure is unchanged, only the example values
+           are no longer Meta-specific. -->
       <div class="exec-summary-card">
         <p class="exec-label">At a glance</p>
         <dl>
@@ -124,12 +136,6 @@
 
       <section id="decisions" class="narrative-block">
         <h2>Decisions</h2>
-        <!-- This section will naturally read longer than most others on
-             the page — not because any one decision is wordy, but
-             because it's the accumulation of 2–4 short items. Each
-             individual item should stay to a headline plus a couple
-             sentences; the expand/collapse keeps the total from
-             feeling dense. -->
         <p>This section presents the handful of decisions that mattered most in shaping the final direction — not a full history of every choice made, just the ones a reviewer would actually need to understand the work. Each one below should be stated as a plain, specific claim, paired with the alternative that was seriously considered and the concrete reason it didn't survive.</p>
 
         <div class="decision-list">
@@ -169,6 +175,11 @@
       <section id="outcome" class="narrative-block">
         <h2>Outcome</h2>
         <p>This section states what actually happened as a result of the work — shipped, adopted, measured, tested, or validated in some concrete way. It should stay honest about the real scale of the outcome rather than inflating it, and should connect directly back to the problem named in Context.</p>
+        <!-- Metric callout: OPTIONAL, shown here as a worked example.
+             Reuses Homepage's .stats-banner exactly. Omit this whole
+             block entirely — not gray it out — on a project with no
+             real number to offer; the plain paragraph above stands on
+             its own either way. -->
         <div class="outcome-stats stats-banner">
           <div class="stat"><span class="stat-num">[X]</span><span class="stat-label">[What this number represents]</span></div>
           <div class="stat"><span class="stat-num">[Y]</span><span class="stat-label">[What this number represents]</span></div>
@@ -176,12 +187,6 @@
         </div>
       </section>
 
-      <!-- Retrospective: per the Experience Blueprint, this is "the
-           credibility peak of the page... paced as the most considered
-           part of the page, not the most compressed." Reasonable to
-           expect this section to run to two paragraphs where the
-           others stay to one — that's intentional, not a sign it's
-           gotten off track. -->
       <section id="retrospective" class="narrative-block retrospective">
         <h2>Retrospective</h2>
         <p>This is the most important place on the page to be honest. It should name something that didn't go perfectly — a decision made without enough time to fully test it, a scope cut that mattered, or something that would be handled differently with more time or information. This isn't a place to undercut the work; it's where the work becomes credible, because nothing before it was oversold.</p>
@@ -198,17 +203,13 @@
         </div>
       </div>
 
-      <!-- Deep/Technical: no external link out. A project's specific AI
-           involvement, when relevant, belongs as inline content here
-           rather than a link to a general philosophy page — see notes.md
-           for the still-open question of whether "AI-Assisted Workflow"
-           becomes a third named subsection alongside these two. -->
       <section id="deeper" class="narrative-block deep-layer">
         <p class="eyebrow">Deeper Look</p>
         <h2>Edge Cases &amp; System States</h2>
         <p>[For the reviewer who wants to see how the work holds up under real, unglamorous conditions — error states, empty states, edge cases, or anything that doesn't show up in a polished final screen but still had to be designed for.]</p>
         <h3>Engineering Collaboration</h3>
         <p>[A real account of how this work was actually handed off or built alongside engineering — a specific technical constraint that shaped a decision, or a real moment of collaboration, not a generic claim of "worked closely with engineers."]</p>
+        <a href="../../_Promoted/How%20I%20Work/index.html" class="deep-link">See how AI-assisted workflow shaped this project →</a>
       </section>
 
     </div>
@@ -244,6 +245,7 @@
         </a>
       </article>
     </div>
+    <a href="../../_Promoted/Homepage/index.html#work" class="back-to-work">← Back to Work</a>
   </section>
 
 </main>

@@ -1228,6 +1228,68 @@ How I Work's five principles revised for prose economy (em dashes minimized) and
 
 ---
 
+### Decision
+
+Case Study Template content-structure conversation held before writing real project content, per Nicole's request to work through the section outline itself first. Three additions locked for Layer 2: a new **Discovery** section (between Context and Constraints, paragraph format, no expand/collapse), an **optional metric/proof callout** inside Outcome (reusing Homepage's `.stats-banner` exactly, omitted entirely rather than left empty when a project has no real number), and a **Tools & Skills tag row** closing out Layer 2 (reusing Resume's `.skill-tag` exactly). Also locked: a hero visual in the title block, and a **conditional live-site button** shown only when a project has a real URL. Layer 3's exact menu of optional content types is deliberately left open until real per-project content is in hand.
+
+**Why**
+- The core tension Nicole raised — wanting to show real UX-process fluency without the case study reading like a generic step-by-step template — is directly addressed by the Portfolio Strategy research's distinction between mechanical process-following (a junior signal) and "conscious competence" (articulating why a method was used or skipped, a senior signal). This reframes the fear: restraint in the narrative is the credibility signal, not a risk to it. Top-level section labels (Context, Decisions, etc.) stay stable for wayfinding and cross-project comparison; specificity happens inside each section's content, matching the research's "active takeaway headline" guidance without renaming the structural scaffolding itself.
+- **Discovery** fills a real gap both research docs flagged (user-research findings and how they altered direction) that the existing six-section structure had no explicit home for. Placed between Context and Constraints so it sits right after the two things that justify Decisions. Nicole's own refinement sharpened the Context/Discovery boundary further: Context now explicitly includes the originating client brief, so Discovery is unambiguously "what was found once the team looked past that brief," not a redundant restatement of it.
+- **Metric callout** answers the Portfolio Strategy research's recommendation for "styled callout containers... that highlight critical insights, business outcomes" for fast visual scanning — reusing an existing component rather than inventing one, consistent with this project's repeated lesson about component drift. Confirmed optional, not mandatory, since not every project (Feminist UX, an academic thesis; Meta, NDA-bound) will have a business metric, and Outcome's plain paragraph was already sufficient on its own before this was added.
+- **Tools & Skills** answers the Stakeholder research's Metadata Panel spec (tools utilized) and the Engineering Interviewer persona's evaluation focus specifically. Placed at the end of Layer 2 (not inside the compact Layer 1 card, which is protected from added density) per Nicole's direct call.
+- **Hero visual + live-site button**: both research docs and the Experience Blueprint independently call for a prominent link to real, live work where one exists ("an embedded interactive prototype... demonstrating the final shipped experience"). Made explicitly conditional rather than a fixed element, since not every project (Meta, NDA) has one to offer.
+- **Before/after comparison**: discussed and explicitly kept OUT of the template as a standard component — Nicole's call, on the grounds that it's project-specific (relevant to Terra Dotta as a redesign) rather than something every case study needs.
+- **Zoomable/lightbox artifact viewing**: agreed as a pattern worth having, but treated as a build-phase interaction question, not a content-structure one — deferred rather than blocking this conversation.
+
+**Status**
+🔒 Locked — Discovery, the optional metric callout, Tools & Skills placement, hero visual, and the conditional live-site button. 🟡 Revisit — Layer 3's full menu of optional content types, deliberately deferred until real project content exists.
+
+---
+
+### Decision
+
+Case Study wireframe iteration `v8-narrative-expansion` generated, implementing the round above with realistic filler content grounded in real Meta facts (rather than abstract placeholders) so pacing could be evaluated honestly. Reviewed and superseded by `v9-descriptive-filler`, which replaces every Meta-grounded sentence with generic, instructional filler — full paragraph-length versions of the original template's bracketed placeholders — and renders the live-site button as real, visible markup instead of a code comment.
+
+**Why**
+- Nicole's read on `v8`: structure and every discussed addition worked, but grounding the filler in one real project undermined the point of a reusable template ("i don't really want this based on a project for my template"). This is a legitimate content-strategy correction, not a structural one — nothing from the locked round above changed, only how the example content demonstrates it.
+- Two assumptions were made explicit rather than guessed silently while building `v8`, both still standing in `v9`: "removed the back button" was read as the top `.back-link` only (the bottom "← Back to Work" near More Work was kept, as a structurally different element); and the engagement-tag taxonomy rename from an earlier session was deliberately NOT propagated into this file, since it wasn't part of this round's discussion and touching it would have violated "don't make extra changes except what we've discussed."
+- Per the Wireframing Workflow (§4), `v8` was not overwritten in place — a new iteration folder was created and `v8`'s own `notes.md` marked with an Iterate outcome pointing to `v9`, preserving the reasoning trail rather than silently replacing it.
+- Neither iteration is promoted. Both live in `05_Assets/Wireframes/Case Study/` (not `_Promoted/`) pending Nicole's further review — per the Workflow's own promotion criteria, real per-project content and Layer 3's final menu are still open questions.
+
+**Status**
+🟡 Revisit — `v9-descriptive-filler` pending Nicole's review.
+
+---
+
+### Decision
+
+Two corrections applied in `v10-link-cleanup`: the bottom "← Back to Work" link removed from More Work, and the "See how AI-assisted workflow shaped this project" link removed from Deep/Technical. Section-length expectations discussed and recorded as inline comments near Decisions and Retrospective.
+
+**Why**
+- **Back-to-Work removal corrects a standing assumption.** `v8`'s notes had flagged, explicitly rather than silently, that "removed the back button" was read as the top `.back-link` only. Nicole confirmed both were removed from her actual build — the assumption was wrong, and this closes that flag rather than leaving it open.
+- **AI-workflow link removal, with a real idea surfaced in the process.** No per-project AI-process page exists to link to, and linking every case study out to the same general How I Work page for this one claim didn't hold up. Nicole's own alternative — handling a project's specific AI involvement as inline Deep/Technical content instead of an external link — is recorded as a genuine candidate for Layer 3's still-open content menu (alongside Edge Cases and Engineering Collaboration), not adopted outright, since that menu remains deliberately undecided until real project content exists.
+- **Section-length guidance**, answering Nicole's direct question: most Layer 2 sections should stay to one tight paragraph. Decisions will read longer only because it accumulates 2–4 short items, not because any single item should run long. Retrospective is the one deliberate exception — the Experience Blueprint frames it as "the credibility peak of the page... the most considered part of the page, not the most compressed," which supports two paragraphs there specifically, not as a default anywhere else. Recorded as inline HTML comments in the template itself, not just here, so the guidance travels with the file.
+
+**Status**
+🔒 Locked — both link removals, and the section-length guidance as a documented (not hard-enforced) expectation. 🟡 Revisit — whether "AI-Assisted Workflow" becomes an actual Layer 3 content type remains open, folded into the still-deferred Deep/Technical menu decision.
+
+---
+
+### Decision
+
+**Case Study Template re-promoted.** Nicole confirmed `v10-link-cleanup` and copied it into `_Promoted/Case Study/`, replacing the previous promotion (sourced from `v7-final-candidate`, 2026-08-05). `v7-final-candidate`, `v8-narrative-expansion`, and `v9-descriptive-filler` moved into `Case Study/_Archive/`; `v10-link-cleanup` remains in place at its original location as the new version-history anchor, per Wireframing Workflow §7.
+
+**Why**
+- Meets the Workflow's promotion criteria: Nicole confirmed the structural and content direction with no further changes requested, and the only remaining open items (Layer 3's full content menu, real project content) are explicitly out of scope for a template promotion — they're per-project content work, not structural questions.
+- This promotion carries a genuinely substantial update over the previous one, not a cosmetic refresh: a new Discovery section, an optional metric/proof callout, a Tools & Skills row, a hero visual with a conditional live-site button, an H1 changed from role to project title, both back-navigation links removed, the AI-workflow external link removed, and section-length guidance documented inline. Full account in `_Promoted/Case Study/notes.md`.
+- Archiving `v7`–`v9` (rather than leaving all of them in place) keeps the active section folder showing only the current lineage anchor, consistent with how Homepage/Resume/How I Work's own superseded pre-promotion rounds were handled — each archived file's `notes.md` was updated with its supersession reasoning before the move, not silently relocated.
+- `_Promoted/Case Study/notes.md` explicitly lists what's still open (Layer 3's menu, AI-Assisted Workflow's status, and that no real project content exists yet) so the promotion isn't mistaken for a fully finished page — it's a structurally locked template, not a finished case study.
+
+**Status**
+🔒 Locked — promotion complete, archiving complete. 🟡 Revisit — Layer 3's content menu and real project content, both explicitly deferred to the next phase (writing Meta and Feminist UX's actual case study content).
+
+---
+
 ## Reflection
 
 This pass covered the bulk of Homepage, Resume, and How I Work copy — About, hero, Work section, Stats banner, the engagement-tag taxonomy, and How I Work's five principles — largely through iterative back-and-forth rather than first-draft acceptance, consistent with the critique-loop workflow established back on 2026-07-31. Several smaller decisions (card titles, hover-photo blurbs, the closing quote, Feminist UX's date range) were narrowed to strong candidates without being explicitly locked, and are recorded above as open rather than asserted as settled. The Case Study Template's own content — the task originally queued up as "next" — has not yet been started.

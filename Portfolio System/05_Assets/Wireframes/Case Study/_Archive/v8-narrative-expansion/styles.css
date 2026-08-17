@@ -1,6 +1,25 @@
 /* ================================
-   Wireframe — Case Study — Promoted
-   Source: 05_Assets/Wireframes/Case Study/v10-link-cleanup/
+   Wireframe — Case Study v8: Narrative Expansion
+   Base: _Promoted/Case Study (= v7-final-candidate), copied verbatim,
+   then extended with exactly what was discussed this round:
+   1) Top .back-link removed from the title block.
+   2) H1 changed from role to project title; role lives only in the
+      Executive Summary card now.
+   3) New .cs-hero-visual — reuses the existing wide placeholder-image
+      pattern, sized as a lead image rather than a mid-narrative one.
+   4) Conditional live-site button (see index.html comment — omitted
+      here since this instance is NDA-restricted).
+   5) New Discovery section — identical .narrative-block treatment,
+      no new CSS needed.
+   6) Outcome's optional metric callout — .outcome-stats reuses
+      Homepage's .stats-banner/.stat/.stat-num/.stat-label EXACTLY,
+      values copied from _Promoted/Homepage/styles.css rather than
+      re-approximated, per this project's own repeated lesson about
+      component drift (.quote-card, .engagement-tag).
+   7) New .cs-tools row, closing Layer 2 — reuses Resume's .skill-tag
+      EXACTLY, same reasoning as above.
+   Everything else (sidebar, decisions, retrospective, deep layer,
+   footer, nav) is untouched from the promoted file.
    ================================ */
 
 * { box-sizing: border-box; }
@@ -40,11 +59,17 @@ body {
 .logo-mark.large { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; font-size: 10px; color: #777; background: #f5f5f5; border-radius: 999px; }
 .engagement-tag { flex-shrink: 0; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: #777; border: 1px solid #ddd; padding: 4px 12px; border-radius: 999px; }
 .cs-title h1 { font-size: clamp(32px, 5.5vw, 56px); font-weight: 800; line-height: 1.2; letter-spacing: -0.01em; margin: 0 0 16px 0; }
-.cs-title-sub { font-size: 16px; color: #444; margin: 0 0 24px 0; max-width: 60ch; }
+.cs-title-sub { font-size: 16px; color: #444; margin: 0 0 32px 0; max-width: 60ch; }
 
+/* ---- New: live-site button. Small bordered pill, same visual family
+   as .nav-resume/.back-to-work — not a new button style invented from
+   scratch. Only appears in markup when a project has a real URL. ---- */
 .live-site-btn { display: inline-block; font-size: 14px; font-weight: 600; color: #111; text-decoration: none; border: 1px solid #111; padding: 8px 18px; border-radius: 999px; margin-bottom: 32px; }
 .live-site-btn:hover, .live-site-btn:focus { background: #111; color: #fff; }
 
+/* ---- New: hero visual. Same dashed-placeholder language as every
+   other placeholder image on the site, just larger — this is the
+   page's lead image, not a mid-narrative supporting one. ---- */
 .cs-hero-visual { margin: 0; }
 .placeholder-img.hero {
   height: 460px;
@@ -142,6 +167,13 @@ body {
 .placeholder-img.wide { height: 380px; display: flex; align-items: center; justify-content: center; font-size: 13px; color: #999; background-image: repeating-linear-gradient(45deg, #eee, #eee 6px, #f9f9f9 6px, #f9f9f9 12px); border: 1px dashed #ccc; border-radius: 16px; }
 figcaption { font-size: 12px; color: #888; margin-top: 10px; }
 
+/* ---- New: outcome metric callout. Values copied exactly from
+   _Promoted/Homepage/styles.css's .stats-banner/.stat/.stat-num/
+   .stat-label — same component, just scoped inside the narrower
+   760px narrative column instead of the full content-shell width,
+   so it wraps to fewer items per row rather than spreading edge to
+   edge. Optional per project; simply omitted (not hidden) when a
+   project has no real number to show. ---- */
 .outcome-stats { display: flex; flex-wrap: wrap; gap: 32px; margin-top: 24px; }
 .outcome-stats .stat { display: flex; flex-direction: column; max-width: 220px; }
 .outcome-stats .stat-num { font-size: 30px; font-weight: 800; }
@@ -149,7 +181,9 @@ figcaption { font-size: 12px; color: #888; margin-top: 10px; }
 
 .retrospective { padding: 40px; border: 1px solid #ddd; border-radius: 16px; }
 
-.cs-tools { margin-top: 72px; padding-top: 40px; }
+/* ---- New: Tools & Skills, closing Layer 2. .skill-tag copied exactly
+   from _Promoted/Resume/styles.css. ---- */
+.cs-tools { margin-top: 72px; padding-top: 40px; border-top: none; }
 .cs-tools .tag-row { display: flex; flex-wrap: wrap; gap: 10px; }
 .skill-tag { font-size: 12px; font-weight: 600; color: #444; border: 1px solid #ddd; padding: 6px 14px; border-radius: 999px; flex-shrink: 0; }
 
