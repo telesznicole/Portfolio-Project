@@ -1351,3 +1351,17 @@ Resume page title/label confirmed as **"Resume"** — closing the naming questio
 
 **Status**
 🔒 Locked.
+
+---
+
+### Decision
+
+Two build changes made directly in Figma/Framer, outside this project's filesystem: the integrated top-of-page back buttons (`.back-link` — "← Back to Work," "← Back to About") are removed everywhere, and the primary nav bar has been replaced with a reused, updated version of Nicole's old portfolio nav — five tabs: **Work, About, logo (home), Collabs, Contact.**
+
+**Why**
+- **Back buttons removed** on the reasoning that users can use their browser's own back button instead — a real, deliberate reversal of the 2026-08-05 decision that specifically *added* a top back-link to Case Study after flagging its absence as an inconsistency with How I Work's existing one (that entry's own reasoning was "immediate orientation, doesn't ask a reader to commit to the long scroll before they can leave"). Recorded as a reversal, not folded silently into that earlier entry, per this log's standing practice for corrections. The bottom-of-page "Back to Work" links (next to the More Work/The Work grids, a distinct component from the top `.back-link`) weren't mentioned as removed — only "integrated back buttons" — so those may still be in place; worth confirming with Nicole if the intent was broader.
+- **Nav bar structure changed**, superseding the pill-nav pattern locked and promoted across all four `_Promoted` pages (logo leading on the left, `Work / About / Contact` links, separate `Resume` pill, per Homepage's original round-8 "floating nav" decision). The reused old-portfolio nav instead centers the logo as a home link between two link groups (`Work, About` / `Collabs, Contact`) rather than leading with it. **Collabs is a new top-level nav destination** — previously the Collaborations section (BMW, FINRA, Deloitte, Hyundai MOBIS, Hack iX logos) was only reachable by scrolling Homepage, with no nav entry of its own. Resume is correctly absent from this five-tab list, not a gap — consistent with the nav-structure decision two entries above confirming Resume and How I Work are reached via internal links inside the About section, not top-level nav items.
+- Both changes are Nicole's own report of work done directly in Figma/Framer — recorded as confirmed by her, not independently verified against the live build, consistent with how other build-phase confirmations have been logged in this section.
+
+**Status**
+🔒 Locked — per Nicole's confirmation. Supersedes the `_Promoted/` wireframes' back-link and floating-nav patterns as the current source of truth for the live build; the wireframe HTML/CSS files themselves are not being updated to match (per this project's established handoff: `_Promoted/` is the frozen low-fi structural reference, the Figma/Framer build is now where active changes happen). 🟡 Revisit — whether bottom-of-page "Back to Work" links were also intended to be removed, not just the top ones.
