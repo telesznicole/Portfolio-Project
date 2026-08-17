@@ -1115,6 +1115,239 @@ Two universal collapse/expand bugs fixed across every page, including already-pr
 - **External/contact links, real on Resume's footer but still placeholder everywhere else.** Resume's footer already had real values (`ni.telesz@gmail.com`, real LinkedIn/GitHub/Feminist UX URLs) from earlier in the project; Homepage, Case Study, and How I Work's footers still had `hello@example.com` and bare `#`. Propagated Resume's already-established real values to all three, and to the nav-adjacent "Feminist UX (external)" link in Homepage's About section — no new values invented, just made consistent with what Resume already had approved.
 - **`_Promoted/Case Study` and `_Promoted/Resume`'s notes.md both still said "Pending"/"Pending final approval" in their Outcome section**, despite the file header of Case Study's own notes.md already stating "🔒 Promoted: 2026-08-05" and both files having lived in `_Promoted/` — with numerous Nicole-approved fixes layered on since (back-link, big title, toggle bugs, cross-page width audit) — for most of this session. This was a stale documentation bug, not an open design question. Corrected both Outcome sections to 🔒 Promoted, cross-referencing the fixes applied since the original promotion.
 - All eight touched HTML files (four `_Promoted` + four source) and the two touched CSS files verified programmatically after the edits: HTML tags balance, CSS braces balance, and every non-external href in `_Promoted/` (including `#anchor` fragments) resolves to a real file and a real `id` on the target page.
+- **First verification pass missed one instance.** Homepage's mobile nav panel has its own separate `<a class="nav-resume">` (distinct markup from the floating-nav's copy, for the collapsed-menu state below 720px) — the floating-nav's Resume link got rewired to `../Resume/index.html` but the mobile panel's identical-looking link was missed and still read `href="#"`. Caught on a final grep sweep across all four `_Promoted` pages after the "done" verification had already passed, since that check only scanned for the broken patterns it already knew about (`/#`, `/resume`, `hello@example.com`) rather than a fresh `href="#"` search. Fixed in both `_Promoted/Homepage` and source `v9-rounded-final`; re-ran the full link-resolution check afterward with a clean result. Worth naming since it's the same lesson as the `.engagement-tag`/`.quote-card` drift bugs earlier in this project: a "these are now fixed" claim is only as good as what was actually re-checked, not what was assumed to be one edit away from identical markup.
 
 **Status**
-🔒 Locked — How I Work promoted; all four `_Promoted` pages link to each other correctly and are verified to resolve. Ready for Nicole's repo push. Building dedicated Terra Dotta / Feminist UX case study pages is explicitly out of scope for this phase, per Nicole's own direction — a natural next-phase task if she wants distinct case study content down the line.
+🔒 Locked — How I Work promoted; all four `_Promoted` pages link to each other correctly and are verified to resolve (including the mobile nav panel). Ready for Nicole's repo push. Building dedicated Terra Dotta / Feminist UX case study pages is explicitly out of scope for this phase, per Nicole's own direction — a natural next-phase task if she wants distinct case study content down the line.
+
+---
+
+## 2026-08-17
+
+### Decision
+
+Adopted a concrete pipeline for turning the promoted low-fidelity HTML/CSS wireframes into the live high-fidelity build: Claude Code + Figma's remote MCP server ("Code to Canvas") to bring wireframes into Figma as editable frames, manual refinement in Figma, then Framer's native "HTML to Framer" Chrome extension to bring the refined Figma work into Framer, followed by manual refinement there.
+
+**Why**
+- Both halves of the pipeline run on infrastructure Nicole already pays for — Claude Pro includes Claude Code access, and Figma's Code to Canvas tool works on any paid seat when writing to drafts and is exempt from the rate limits that otherwise apply to read tools. No new subscription was needed.
+- Going straight from the original HTML/CSS (rather than round-tripping through a screenshot or a rebuild) preserves the most layout and content fidelity at each hop; Figma's Code to Canvas and Framer's HTML to Framer extension both convert real markup into native, editable layers/elements rather than flattening to an image.
+- The pipeline was chosen over Figma-only or Framer-only import tools (e.g., the third-party `html.to.design` plugin) specifically because it reuses tools already inside Nicole's existing stack instead of adding a separate paid plugin subscription.
+- Two limitations were identified going in, not discovered as surprises later: neither Figma's import nor Framer's HTML to Framer extension carries over CSS media-query responsiveness as literal rules — Framer's own breakpoint + Stack system has to be rebuilt by hand per breakpoint after import — and neither carries over JS-driven interactivity/animation, which needs to be recreated using Framer's native motion tools. Both are treated as expected, budgeted-for work, not pipeline failures.
+- **Technical note for future reference:** the documented install path for the Figma MCP server in Claude Code (`claude plugin install figma@claude-plugins-official`) failed with a "not found in marketplace" error during setup. The working fallback, used successfully, was manual registration: `claude mcp add --transport http figma-remote-mcp https://mcp.figma.com/mcp`, followed by restarting Claude Code and running `/mcp` → Authenticate → Allow access. Worth trying this fallback first if the plugin path fails again, rather than re-troubleshooting the marketplace error.
+
+**Status**
+🔒 Locked — pipeline adopted and actively in use for the current build phase. Reaffirms the 2026-07-29 decision to "Keep Framer as the publishing platform for now" (previously 🟡 Revisit only if necessary) — Framer is now the confirmed final publishing target, evidenced by active investment in this two-tool pipeline rather than a placeholder choice.
+
+---
+
+### Decision
+
+Current build-phase status and next steps, as of this entry: the Case Study Template is the remaining page to bring through the Figma/Framer high-fidelity pipeline above. Once complete, the next phase is gathering and writing the actual content for the three flagship case studies (Meta, Terra Dotta, Feminist UX) to fill that template.
+
+**Why**
+- This follows directly from the wireframing phase's own conclusion (2026-08-05 entries): Homepage, Case Study Template, Resume, and How I Work were all promoted as low-fidelity wireframes, and building dedicated Terra Dotta / Feminist UX case study pages was explicitly deferred as out of scope for the wireframing phase — that deferred work is what "getting the content to fill it out" now picks up.
+- Recorded here mainly as a milestone marker so this Decision Log stays current with where the project actually stands, not as a new design decision in itself.
+
+**Status**
+🟢 Exploring — next phase, not yet begun.
+
+---
+
+### Decision
+
+Content-writing phase begun ahead of the Case Study Template's own content (originally slated as the next step) — Nicole worked through copy for Homepage, Resume, and How I Work first. Engagement-tag taxonomy renamed and finalized: **Industry Collaboration**, **Client Contract**, **Independent Research**, **Founder-Led**, replacing the three-tag placeholder system (Sponsored Engagement / Client Engagement / Independent Research) used throughout every promoted wireframe to date.
+
+**Why**
+- This directly resolves the Hack iX classification flagged as the weakest fit of the original three tags back in the 2026-08-05 Resume decisions (`v2-refined/notes.md`) — Founder-Led is a real category now, not a forced one.
+- The distinguishing line for the first two tags isn't breadth of brief, it's **engagement structure**: Industry Collaboration = SCADpro client courses (semester-embedded, ~10-week format); Client Contract = SCADpro contract work (direct engagement, shorter/defined scope). Nicole corrected an initial mis-mapping (she'd first proposed splitting on how exploratory the brief was) — Terra Dotta sits with Meta/FINRA/BMW because all four ran the same 10-week course structure, not because their briefs were similarly broad.
+- Confirmed mapping across all eight real projects, none forced: **Industry Collaboration** — Meta, FINRA, BMW, Terra Dotta. **Client Contract** — Deloitte, Hyundai MOBIS. **Independent Research** — Feminist UX. **Founder-Led** — Hack iX.
+- "Sponsored Engagement" was rejected specifically because it read as undermining the work ("almost seems to undermine it and not sound like real work"), not just as unclear — of four alternate pairings offered, Industry Collaboration / Client Contract was chosen because neither term implies the other tag is less legitimate.
+
+**Status**
+🔒 Locked — tag names and full eight-project mapping confirmed. 🟡 Revisit — this supersedes the tag labels currently baked into `_Promoted/Homepage`, `_Promoted/Case Study`, `_Promoted/Resume`, and `_Promoted/How I Work` (all still read "Sponsored Engagement"/"Client Engagement" as of this entry); propagating the new labels site-wide is outstanding build work, not yet applied to any file.
+
+---
+
+### Decision
+
+Homepage hero and Work section copy substantially finalized, with two pieces still genuinely open.
+
+**Why**
+- **"Trusted by" line locked**, replacing the placeholder "trusted by cool companies" language: just **"Trusted by"** (no colon), letting the five collaborator logos that follow do the credibility work without an adjective standing in for it.
+- **Work section second line locked**, replacing the earlier "Three projects, chosen for range — not volume" line: **"Not everything made the cut. Here's what did."** Several replacement directions were drafted (framing the selection around range, pride, or what Nicole would personally walk a visitor through), but the shortest, least-editorializing option won on the reasoning that the sentence's job (signal curation, not defend it) is already accomplished by "made the cut" alone, and three fully-developed cards on the page communicate quality-over-quantity structurally without needing to state it.
+- **Work card structural change: title field changed from role-based to project-title-based.** Nicole's own instinct ("I feel like they can ascertain pretty well that I played some sort of UX role... I think a title would give them more intrigue") is directly supported by prior research already in this system (NN/G's case study card spec separates project title from role tag as two distinct fields) and by the IA's own Layer 0/1 split (card = title + one proof point; role/team specifics are a Layer 1 reveal, not lost, just relocated to the click-through). Role and engagement tag move to a drafted, not-yet-pasted-in reference set covering all eight entries (see Resume entry below for the shared version), with "Photographer" dropped as a secondary credit everywhere it appeared (Meta, FINRA, BMW) since it doesn't serve design positioning.
+- **Card titles for the three flagship projects: recommended but not explicitly reconfirmed.** After narrowing from company-inclusive options, the no-company-name set (logo already signals which company) was: *"Designing for Connection"* (Meta — kept inside NDA boundaries, naming the challenge space rather than the actual solution), *"Beyond the Checklist"* (Feminist UX), *"Rebuilding Study Abroad"* (Terra Dotta). This was the recommended consistent-shape set, but Nicole moved on to role/tag before explicitly locking it.
+- **New hero element surfaced, not yet in any promoted wireframe: hover-triggered photos in the hero** (MacBook/Figma-in-Figma, film camera, Figma app icon, Meta Ray-Ban glasses), each with a short personality blurb on hover. This is a structural addition beyond what `_Promoted/Homepage` currently contains (its hero is documented as headline + intro line + inline "Trusted by" sentence only) — flagged directly to Nicole as a departure from the hero's established lowest-density role, and accepted as fine so long as the blurbs themselves stay short. Multiple rounds of blurb options were drafted for all four images; a final set of exactly four lines was not locked.
+
+**Status**
+🔒 Locked — "Trusted by" line, Work section second line, and the title/role structural change. 🟡 Revisit — final card title wording (three projects), final hover-photo blurb selection (one per image), and whether the hero hover-photos are added to the actual wireframe file (currently discussed only, not built).
+
+---
+
+### Decision
+
+Homepage About section and Stats banner copy finalized, closing two open items from the 2026-08-04/2026-08-05 wireframe decisions ("exact content... remains open"; "About section restructured... exact new placement to be determined").
+
+**Why**
+- **About copy finalized**, matching the real fields in `_Promoted/Homepage`'s About section (`v9-rounded-final`) rather than an earlier, looser draft that had to be corrected once the actual wireframe placeholders were checked directly: lead statement ("I studied computer science because I liked solving problems. I chose design because I wanted to solve the ones rooted in people."), three method chunks tied to real, specific work rather than abstract philosophy — **Systems Thinking** (Meta, 80+ concepts into one ecosystem), **Engineering Fluency** (built feministux.org's front end herself), **Research Rigor** (Feminist UX's 10-practitioner validation) — quick facts (MFA Interactive & Experience Design/SCAD, Computer Science background, based in [location — still a placeholder]), and the existing Hack iX leadership mention/anchor-link, unchanged.
+- **A real correction applied mid-draft, worth recording as a standing guardrail, not just a one-time fix:** early About copy implied a professional software-engineering career ("my path to design ran through engineering," "I still think like an engineer"). Nicole corrected this directly — she holds a CS degree but was never professionally employed in it. All lead-statement and method-chunk language was revised to describe the degree/technical foundation accurately without implying prior industry experience. **Flag for a future pass:** `01_Me/Professional Profile.md` contains the same overstatement ("What drew me from software engineering to UX...") and has not been corrected at the source — only the new Homepage copy avoids it.
+- **Homepage stats banner content finalized**, replacing the vague/unimpressive/non-stat placeholder trio ("7 sponsored engagements," "1 independent research thesis," "CS background"): **6 — Industry collaborations · 3+ — Years of design practice · 2 — Degrees (Computer Science & Interactive Design).** Chosen specifically to be about Nicole in aggregate rather than reusing one project's numbers as a stand-in for the whole banner — a distinct approach from How I Work's now-dropped stats banner (which had leaned on "10 practitioners," a single-project number, and was removed entirely in that page's round 4 for not feeling pertinent to a philosophy page).
+
+**Status**
+🔒 Locked — About section copy and Stats banner figures. 🟡 Revisit — quick facts' location field is still a bracketed placeholder; `Professional Profile.md`'s own CS/engineering overstatement remains uncorrected at the source.
+
+---
+
+### Decision
+
+Resume page Experience section: two missing entries drafted (BMW, Hyundai MOBIS), Feminist UX added as a new entry not previously represented anywhere in the Experience section, all eight entries reordered into genuine reverse-chronological order, and tags updated to match the new taxonomy above. Full copy compiled and handed to Nicole to paste in; not yet applied to the actual `_Promoted/Resume` file.
+
+**Why**
+- Cross-referencing `_Promoted/Resume`'s live HTML against `Professional Profile.md` directly (rather than working from memory) surfaced that the wireframe was missing two of Nicole's seven real professional entries (BMW, Hyundai MOBIS) and that its existing five were **not actually in chronological order** (Hack iX, starting Apr 2025, was sequenced before FINRA, starting Jan 2025). Corrected order, most recent first: Feminist UX (placement tentative, see below) → Hack iX → Meta → FINRA → Terra Dotta → Hyundai MOBIS → Deloitte → BMW.
+- Full field set drafted per entry (logo mark, role line, meta/dates line, tag, one-line summary, two contribution bullets, four skill tags) to match the exact structure already used in the wireframe's five existing entries — nothing invented beyond what `Professional Profile.md` and `Portfolio Overview.md` already state, including Hyundai MOBIS's stakeholder detail (presented to the VP and President), which exists in source but wasn't yet surfaced anywhere on the site.
+- **Feminist UX's placement is a genuine open item, not a confirmed decision:** no start/end date range exists anywhere in the source documents, only "2025" and "year-long research." It was tentatively placed first (most recent) since the MFA ran through May 2026 and thesis work typically culminates near a program's end, but this is a placeholder assumption, not a sourced fact, and was flagged directly to Nicole as needing her confirmation before treating this order as final.
+- This entry's tag updates (Industry Collaboration / Client Contract / Founder-Led, per the taxonomy decision above) are reflected in the drafted copy but, like that decision itself, not yet applied to the live wireframe file.
+
+**Status**
+🟡 Revisit — full copy drafted and delivered to Nicole for paste-in; Feminist UX date range and resulting placement need her confirmation; not yet written into `_Promoted/Resume/index.html`.
+
+---
+
+### Decision
+
+How I Work's five principles revised for prose economy (em dashes minimized) and one example rewritten; the closing quote's replacement is still an open, unresolved question as of this entry.
+
+**Why**
+- All five principles' body/extra text were passed through a light edit reducing em-dash use to a single remaining instance (principle 1's body), per Nicole's direct request to use as few as possible — mostly resolved by splitting into two sentences or using a comma instead of a dash-separated clause.
+- The Hack iX example under "AI amplifies. It doesn't decide." was rewritten at Nicole's request into a single clean sentence — *"At Hack iX, that meant using AI-assisted development to quickly deploy collaborative tools for participants, while keeping the calls that actually mattered mine to make."* — replacing both the original wireframe copy and Nicole's own draft rewrite, which had an awkward trailing clause.
+- **The closing quote is flagged as a real content problem, not yet resolved.** The quote currently in `_Promoted/How I Work` ("The designer should still be recognizable in the final work...") is pulled from the Manifesto's AI section specifically, which Nicole correctly identified as a mismatch — the quote's job is to cap all five principles, not spotlight the AI one, since AI is secondary to her larger design philosophy. A first replacement candidate ("The goal isn't flawless work. The goal is thoughtful work.") was raised and then walked back by Nicole herself, since taken as a standalone line it risks reading as if she isn't aiming for excellence, when the opposite is true. The most recent alternative offered — *"I never want my work to feel like a first draft. Every project deserves my best thinking."* (also pulled directly from the Manifesto's "Standard I Hold Myself To" section) — was proposed as a stronger fit but has not yet been confirmed by Nicole.
+- Consistent with the earlier-noted footer CTA gap: `_Promoted/Homepage` and `_Promoted/Resume` already carry a real, locked footer line ("Let's build something worth caring about."), but `_Promoted/How I Work`'s footer is still the bracketed placeholder (`[Big closing statement — e.g. a call to action]`) — propagating the already-approved line here is outstanding, low-risk build work, not an open design question.
+
+**Status**
+🔒 Locked — em-dash cleanup and Hack iX example rewrite. 🟡 Revisit — closing quote replacement (pending Nicole's confirmation of the "first draft" line or a further alternative), and propagating the existing footer CTA line into `_Promoted/How I Work`.
+
+---
+
+## Reflection
+
+This pass covered the bulk of Homepage, Resume, and How I Work copy — About, hero, Work section, Stats banner, the engagement-tag taxonomy, and How I Work's five principles — largely through iterative back-and-forth rather than first-draft acceptance, consistent with the critique-loop workflow established back on 2026-07-31. Several smaller decisions (card titles, hover-photo blurbs, the closing quote, Feminist UX's date range) were narrowed to strong candidates without being explicitly locked, and are recorded above as open rather than asserted as settled. The Case Study Template's own content — the task originally queued up as "next" — has not yet been started.
+
+---
+
+### Decision
+
+Hero positioning statement locked: **"I design with a systems thinker's logic and an empathy for the humans on the other side."** Work card titles locked for the two projects currently featured — **"Designing for Connection"** (Meta) and **"Equity by Design"** (Feminist UX, superseding the earlier "Beyond the Checklist" recommendation). Homepage Work section scope reduced to these two cards; Terra Dotta's card is temporarily hidden rather than shipped.
+
+**Why**
+- Hero statement resolves the 1a/4a finalist choice left open earlier — close to 1a, with "researcher's" dropped in favor of repeating "the humans on the other side," echoing the same phrase already used in `Professional Profile.md`'s LinkedIn About section.
+- **Scope change, worth recording plainly rather than folding into a routine content update:** Nicole is holding Terra Dotta's card back specifically because she hasn't resolved the hover animation she wants for it, and would rather publish two fully-working case studies now — for an active job search — than delay launch chasing a third card's interaction polish. This is a deliberate, stated-temporary reduction ("build out two case studies... and work on that in the background"), not a decision to permanently drop to a two-project Work section. It supersedes, for now, the three-flagship-project structure referenced throughout this log and IA §6's cap of three — that structure is expected to resume once Terra Dotta's card is ready, not permanently revised.
+
+**Status**
+🔒 Locked — hero statement, both live card titles, and the two-card interim scope. 🟡 Revisit — Terra Dotta's card (title, hover animation, and re-addition to the Work grid) remains in progress in the background.
+
+---
+
+### Decision
+
+All four hero hover-photo blurbs locked and built.
+
+**Why**
+- Final set, one per image: MacBook/Figma-in-Figma — *"Yes, this is design-ception."* Film camera — *"Not all of my good frames are on Figma."* Figma logo/cursor — *"My most-used app, by a wide margin..."* Meta Ray-Ban glasses — *"The most fun 'what if' I've gotten to work on!"*
+- This also resolves the earlier open question of whether the hover-photos would be built into the site at all — they're live in the Figma/Framer build, not just discussed.
+
+**Status**
+🔒 Locked.
+
+---
+
+### Decision
+
+Build propagation confirmed for four items previously flagged as "drafted but not yet applied to any file": the renamed engagement-tag taxonomy, the How I Work footer CTA, the full Resume Experience section copy, and How I Work's closing quote.
+
+**Why**
+- Engagement tags (Industry Collaboration / Client Contract / Independent Research / Founder-Led) updated directly in Figma and Framer, closing the gap flagged when the taxonomy was first renamed — the labels no longer only exist in this log and in conversational drafts.
+- Footer CTA ("Let's build something worth caring about.") added to How I Work in Figma/Framer, matching what Homepage and Resume already had.
+- Full Resume Experience copy (BMW, Hyundai MOBIS, Feminist UX additions, reordered chronology, updated tags) pasted into Framer.
+- How I Work's closing quote locked: **"I never want my work to feel like a first draft. Every project deserves my best thinking."** — resolving the open AI-quote replacement question, confirming the candidate pulled from the Manifesto's "Standard I Hold Myself To" section over the earlier, walked-back "flawless vs. thoughtful" line.
+- Note on verification: these four are Nicole's own report of work done directly in Figma/Framer, tools outside this project's filesystem access — recorded as confirmed by her, not independently verified against the live build the way `_Promoted/` HTML/CSS changes have been elsewhere in this log.
+
+**Status**
+🔒 Locked — per Nicole's confirmation.
+
+---
+
+### Decision
+
+Selected Collaborations (BMW, FINRA, Deloitte, Hyundai MOBIS, Hack iX) resolved with a different, simpler structure than originally planned — no written one-line contribution blurb; logo, role, and engagement tag, with a project photo revealed on hover.
+
+**Why**
+- The original round-2 (2026-08-04) plan called for "logo-based entries with role and contribution" — implying written per-company text. Nicole's actual build instead surfaces a project photo on hover in place of that written contribution line, which accomplishes the same credibility-recognition goal (per the original Credibility-First rationale) without needing five separate blurbs drafted.
+- Recorded as a resolved design decision, not an outstanding copy task — this closes an item that had been sitting open since content-drafting began.
+
+**Status**
+🔒 Locked.
+
+---
+
+### Decision
+
+Several older open items closed or clarified: both flagged Cross-Page Consistency Audit questions (Resume tagline type-treatment, Resume footer `padding-top`), the About quick facts' location placeholder, and footer consistency generally.
+
+**Why**
+- Nicole reports both remaining Consistency Audit questions addressed directly in Figma/Framer during the build — self-reported and not independently re-verified by Claude, since the live build lives outside this project's filesystem access, but recorded as resolved on her word, consistent with how build-phase confirmations are being logged going forward.
+- Footer consistency is structurally guaranteed rather than manually maintained: the footer is a single reused Framer component across every page, so the drift that previously required an audit to catch (different `padding-top` values, placeholder vs. real footer CTA text) can't recur by construction.
+- About's Quick Facts location placeholder ("Based in [your city/region]") is filled with a real value in the Framer build — confirmed resolved, exact text not captured in this log since Nicole didn't need to supply it here.
+
+**Status**
+🔒 Locked.
+
+---
+
+### Decision
+
+Resume page: Feminist UX's date range confirmed (May 2025 – Jul 2026) and its placement as the first, most-recent Experience entry confirmed correct. Site navigation to Resume and How I Work clarified as About-mediated (primary nav links to Homepage's About section; About carries the internal links to both pages) rather than direct top-level nav items. The standing "Resume" page-title/label naming question (Resume vs. Journey vs. Experience, open since 2026-08-04) is **not** resolved by this — flagged as a distinct, still-open question from how the page is reached.
+
+**Why**
+- Feminist UX's date range had been a placeholder assumption ("dates TBD," tentatively placed first); Nicole's real dates confirm the tentative placement was correct.
+- The nav-structure description answers a different, related question (how visitors reach the Resume and How I Work pages) than the one originally logged (what the Resume page itself is titled/labeled). Recorded as a genuine, worthwhile architecture clarification, but the label question itself — whether the page's own H1 still reads "Resume" — remains open pending Nicole's direct confirmation.
+
+**Status**
+🔒 Locked — Feminist UX date/placement, nav-access structure. 🟡 Revisit — the Resume page's actual title/label wording, still unconfirmed.
+
+---
+
+### Decision
+
+Correction to the entry above: `Professional Profile.md` requires **no changes**. Nicole clarified that her earlier CS/engineering guidance was about emphasis in newly-drafted Homepage copy, not a factual problem with this source document — both statements in the Profile "still hold true": she has a real CS background and never had a formal engineering career, and the document's existing phrasing doesn't actually claim otherwise once read as she intended it. A standing rule is added: **Claude asks very explicit, direct confirmation before making any edit to `Professional Profile.md`**, a higher bar than the general practice elsewhere in this project of drafting first and revising on feedback.
+
+**Why**
+- Worth naming plainly, per this project's own standard for recording process corrections rather than silently overwriting them: the prior entry over-generalized a note about tone/emphasis in new copy into a claim that the source document itself contained a factual inaccuracy needing a rewrite. That was a misread, not a confirmed problem — Nicole and Claude were already aligned when the About copy was being drafted; nothing here was in dispute.
+- `Professional Profile.md` is Nicole's own foundational reference document, distinct from the wireframe/build files this project regularly edits directly (styles.css, notes.md, this Decision Log) — the higher confirmation bar reflects that distinction going forward, not a one-time exception.
+
+**Status**
+🔒 Locked — no source-document change needed; standing confirmation rule in effect for any future edit to this file.
+
+---
+
+### Decision
+
+Correction to an earlier entry: About's Quick Facts were not filled in with a real location value as previously logged — the location field was dropped entirely and replaced with a different four-item set: **MFA Interactive Design, SCAD · BS Computer Science, UF · Creator, Feminist UX · Co-Founder, Hack iX.**
+
+**Why**
+- The prior log entry assumed the "Based in [location]" placeholder had simply been completed with a real city; Nicole's actual build replaced that field's premise entirely, trading a location fact for two credit lines (Feminist UX, Hack iX) instead — closer to an early draft version of this section from earlier in the conversation than to the wireframe's original three-item placeholder set.
+- Recorded as a correction rather than a silent edit to the earlier entry, consistent with this log's standing practice.
+
+**Status**
+🔒 Locked — final Quick Facts content confirmed.
+
+---
+
+### Decision
+
+Resume page title/label confirmed as **"Resume"** — closing the naming question left open since 2026-08-04. Nav-access structure reconfirmed: the primary nav's "About" link points to the About section on the Homepage; internal links to both the Resume and How I Work pages live inside that About section rather than as separate top-level nav items.
+
+**Why**
+- Nicole confirmed directly: her About section "is in my nav bar" (i.e., the primary nav links to it) and, within it, links to "the resume page (named resume)" and How I Work exist as internal links, not additional nav-bar entries — matching and finalizing what was recorded provisionally in the prior nav-structure entry.
+
+**Status**
+🔒 Locked.
