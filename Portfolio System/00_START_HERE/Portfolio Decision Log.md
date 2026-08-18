@@ -1427,3 +1427,34 @@ Two build changes made directly in Figma/Framer, outside this project's filesyst
 
 **Status**
 🔒 Locked — per Nicole's confirmation. Supersedes the `_Promoted/` wireframes' back-link and floating-nav patterns as the current source of truth for the live build; the wireframe HTML/CSS files themselves are not being updated to match (per this project's established handoff: `_Promoted/` is the frozen low-fi structural reference, the Figma/Framer build is now where active changes happen). 🟡 Revisit — whether bottom-of-page "Back to Work" links were also intended to be removed, not just the top ones.
+
+---
+
+### Decision
+
+Two site-wide visual changes made during the Figma-to-Framer high-fidelity pass, applying to every page, not just Case Study: the shared footer redesigned to a split-column layout (logo + copyright left, CTA + links right, drawing on Nicole's previous portfolio), and every previously solid-bordered element across the build converted to a soft-shadow treatment instead.
+
+**Why**
+- **Footer redesign.** The footer has been a single reused Framer component across every page since the build-propagation round earlier in this session, so this change reaches Homepage, Case Study, Resume, and How I Work simultaneously rather than needing to be applied four separate times — the same structural guarantee that made the earlier footer-CTA rollout low-risk applies here too.
+- **Border → shadow, a real Design System pivot, not a small tweak.** Every wireframe round across all four pages, from the very first Homepage concept through `v10-link-cleanup`, used solid 1px borders as the default depth/containment signal (`.exec-summary-card`, `.decision-item`, `.skill-tag`, `.engagement-tag`, `.nav-resume`, the retrospective box, etc.) — this is the first point in the project where that language changes. Consistent with the repeated framing throughout the wireframing phase that "only visual decisions (typography, color, imagery, branding) are left, which belong to the Design System phase" — this is exactly that phase now happening, appropriately, in Figma/Framer rather than retroactively in the low-fi HTML/CSS wireframes.
+- Both changes are self-reported from Nicole's own work directly in Figma/Framer, outside this project's filesystem access — recorded as confirmed by her, not independently verified against files Claude can see, consistent with how build-phase confirmations have been logged elsewhere in this session.
+- **Not propagated backward into `_Promoted/` or any source wireframe HTML/CSS**, per the same established handoff referenced in the entry above.
+
+**Status**
+🔒 Locked — per Nicole's confirmation, applied in Framer.
+
+---
+
+### Decision
+
+Four Case Study-specific structural refinements made in the same Figma-to-Framer pass. Retrospective's bordered-box treatment removed. "Deeper Look" removed from the progress-nav tracking, joining Tools & Skills as untracked, tertiary closing content. Both Tools & Skills and Deep/Technical confirmed sharing the same small-caps eyebrow label treatment used elsewhere on the site. Deep/Technical's internal treatment (a collapsible/expandable card) is being explored but not finalized, pending real project content.
+
+**Why**
+- **Retrospective's box removed — a real reversal of a specific earlier decision, not a new idea.** The 2026-08-05 promotion of `v7-final-candidate` explicitly kept "the bordered box... as its own, separate signal of emphasis" once the heading hierarchy was corrected to match other sections. In practice, once built in Framer, the box read oddly rather than as intended emphasis. Nicole's resolution: drop the box entirely, so Retrospective now shares identical hierarchy and container treatment with every other tracked section — its importance is carried by its position (last tracked section, the progress nav's own endpoint) and its content, not a visual frame. Reasoned as actually better for visual scanning, not just a simplification.
+- **"Deeper Look" no longer tracked in the progress nav — a correction to what `v10-link-cleanup`/`_Promoted/Case Study` currently builds.** That file tracks 8 sections including `#deeper`; Nicole's Framer build now treats Deep/Technical the same way Tools & Skills has always been treated — untracked, tertiary, positioned after Retrospective as closing/optional content rather than a numbered story beat. This makes Retrospective the true last *tracked* section, reinforcing its role as the narrative's actual endpoint rather than one of eight equal stops.
+- **Eyebrow-label consistency confirmed, not changed.** Both Tools & Skills and Deep/Technical already used the shared `.eyebrow` small-caps treatment in `v10-link-cleanup` — Nicole's description confirms this held up through the Figma/Framer conversion rather than drifting, worth noting as a case where the wireframe's intent survived the handoff cleanly.
+- **Deep/Technical's collapsible-card treatment is explicitly unresolved**, by Nicole's own account ("largely still up in the air, depends on the content"). Consistent with the standing decision to leave Layer 3's exact treatment open until real project content exists — not a new open item, the same one continuing.
+- Self-reported from Figma/Framer, not independently verified against accessible files; the promoted wireframe HTML/CSS is not being edited to match, per the same reasoning as the entry above.
+
+**Status**
+🔒 Locked — Retrospective's box removal, Deeper Look's removal from progress-nav tracking, and the confirmed eyebrow-label consistency. 🟡 Revisit — Deep/Technical's internal card treatment, still explicitly in progress.
