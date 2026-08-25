@@ -8,7 +8,9 @@
 3. What skills should be tagged?
 
 ## Your Answers
-_(fill in during our conversation)_
+**Approved by Nicole 2026-08-23.** Deliberately trimmed to 6 tags (not the initial 11) after Nicole flagged that an overwhelming list defeats the purpose. Ordered specifically for recruiter scanning — fast-recognition items first (title match, skill match, tool match), then differentiators, then the specialist term last.
+
+Interaction Design · UX Research · Figma · Cross-Functional Collaboration · Storytelling & Presentation · Wizard-of-Oz Prototyping
 
 ## Assets That Support This Section
 _(usually none needed — this is a tag list)_

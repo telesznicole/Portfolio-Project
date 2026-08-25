@@ -1458,3 +1458,150 @@ Four Case Study-specific structural refinements made in the same Figma-to-Framer
 
 **Status**
 🔒 Locked — Retrospective's box removal, Deeper Look's removal from progress-nav tracking, and the confirmed eyebrow-label consistency. 🟡 Revisit — Deep/Technical's internal card treatment, still explicitly in progress.
+
+---
+
+## 2026-08-20 to 2026-08-22
+
+### Decision
+
+Case study content-creation phase begun for Meta, per the plan set two entries up (2026-08-17: "next phase is gathering and writing the actual content"). A dedicated raw-materials system was built ahead of drafting: per-project `00_Raw/` (organized into Notes, NDA, Presentations, Process, Photos, Other — structure adapted to actual materials rather than forced into a fixed template, documented per-project in a `STRUCTURE.md`), a parallel `00_Raw_Extracted/` for plain-text/resized-image versions of files too large to read directly, a `manifest.md` index, and a `FINAL-COPY.md` per project as the single clean copy-paste destination (distinct from `01_Content/`'s drafting workspace).
+
+**Why**
+- Raw materials for Meta turned out to be extensive and richly documented: full presentation decks with speaker notes across every checkpoint (Check-In 1 through the Encore at Meta HQ), four formal written reports, a three-chapter design-process trail (raw data → synthesis → HMWs → ideation → convergence), an already-built project website, and six photo folders — all catalogued and cross-referenced in `Meta/STRUCTURE.md` and `Meta/00_Raw/manifest.md`.
+- `00_Raw_Extracted/` was a necessary workaround, not a preference — large PPTX/PDF/HTML files broke the filesystem connection when read directly; Nicole ran her own extraction scripts, and Claude reads exclusively from the extracted folder for text going forward.
+- **This is a system, not a one-off for Meta** — it's the standing definition for how future case-study content-gathering happens across the portfolio, per the earlier 2026-08-17 phase-transition entry.
+
+**Status**
+🔒 Locked — system in active use for Meta; Feminist UX not yet started.
+
+---
+
+### Decision
+
+Full NDA guideline built for Meta (`NDA/nda-guidelines.md`), combining the actual signed NDA text with informal SCADpro-rep email guidance, and resolving a real tension between the two. A visible in-page redaction device (▓▓▓) was adopted as the way to handle NDA-restricted content in case-study prose, first used in the Decisions section.
+
+**Why**
+- The NDA's own text (Section 5A) technically permits broader portfolio use of "the Work" than the informal client-relayed guidance (redacted deck only) — the narrower, more specific, named-approver guidance was chosen as the standing rule, not the technically-broader contract right, since it reflects what was actually cleared by the people overseeing the project.
+- Nicole confirmed the actual final concept by name mid-conversation, which let several previously-ambiguous raw materials (the ideation chapters, the Midpoint/Check-In 2/Final reports, the project website's Solution page) be definitively sorted into safe/restricted.
+- **The redaction device solves a real content-quality problem**, not just an NDA-compliance one: writing carefully around a restriction produces vaguer prose than writing confidently up to a visible, intentional cut. First applied to the Decisions section's flagship card, which named three real, safe alternative directions and redacted only the specific winning concept name — richer and more specific than any fully-avoidant version could have been. Intended for sparing, deliberate use (this section is where it earns its keep, not scattered throughout).
+- NDA handling was deliberately kept out of the Constraints section's narrative — Nicole felt it read as "breaking the fourth wall" — and instead assigned to UI treatment (a small tag/badge plus a closing contact-me note), documented in the same guidelines file.
+
+**Status**
+🔒 Locked — guidelines complete, redaction device adopted and in use.
+
+---
+
+### Decision
+
+A portfolio-wide Tone & Voice guide established (`03_Case Studies/TONE-AND-VOICE.md`), covering register, sentence rhythm, AI-writing tells to avoid, and a functional framework for when to use "I" versus "we" in team-project narrative.
+
+**Why**
+- Built collaboratively while drafting Meta's Context section, through direct iteration on a single paragraph until it read right, then extracted into reusable guidance rather than re-derived per section or per project.
+- **Core finding: specificity, not formality, is what actually reads as "less academic."** Abstract phrasing is the real tell, regardless of how casual or formal the sentence structure around it is — concrete, specific language is simultaneously more credible and more natural-sounding.
+- **"I" vs. "we" resolved by function, not by picking one for the whole piece:** "I" for Nicole's specific decisions and judgment calls (where hiring-manager evaluation of individual contribution actually happens), "we" for genuinely collective moments — avoids both the vagueness of all-"we" and the overclaiming risk of all-"I" on a 22-person project.
+- Also captured as standing lessons: watch for "the brief/report made clear" style phrasing (abstracts the sentence away from any real actor), and don't let a closing payoff line get separated from what it's supposed to pay off by an unrelated point wedged in between.
+- Applies across all future case studies, not just Meta — written explicitly at the `03_Case Studies/` level rather than nested in one project's folder.
+
+**Status**
+🔒 Locked.
+
+---
+
+### Decision
+
+Meta case study content locked through five of ten Layer 2 sections: Executive Summary, Context, Discovery, Constraints, Decisions. Two structural findings from this drafting process apply beyond Meta: the Experience Blueprint's originally-assumed Executive Summary fields (sponsor/role/problem/proof/hero) don't match Nicole's actual wireframe fields (Role/Team/Duration/Problem/Proof, sponsor shown visually not as text), and Discovery/Constraints do not have to share Context's single-paragraph format — a multi-paragraph, card-based structure was adopted once single-paragraph was judged to be minimizing genuinely substantial research and decision-making work.
+
+**Why**
+- **Executive Summary**: Team field went through three drafts (student headcount+majors → flagged as not compelling → "Meta × SCADpro," chosen for recruiter brand-recognition value) before landing; hero image deliberately deferred until all written content was locked first, per Nicole's explicit sequencing preference.
+- **Context**: single flowing paragraph, tone-calibration reference example for the whole guide (see entry above). Went through real revision, not first-draft acceptance — reordering so the closing "realistically build" line pays off the constraints stated immediately before it, and cutting a "the brief made clear" phrase flagged as too abstracted/report-like.
+- **Discovery**: rebuilt from an initial single-paragraph draft after Nicole flagged it as minimizing genuinely extensive research (four distinct methodologies, 5000+ data points) and over-emphasizing one finding (social awkwardness) as if it were the headline. Rebuilt as opener + four roughly-equal finding cards + closing reframe; one finding (self-expression/hardware-locked) was reframed rather than cut once tied to a real pivot point, another (privacy) was cut entirely since the actual solution didn't address it and Nicole didn't want an unresolved thread in the case study's throughline.
+- **Constraints**: deliberately NOT a repeat of Context's brief-level constraints (timeline, hardware) — reframed as the real limits on the solution space *after* Discovery reframed the problem, avoiding a narrative loop backward. One earlier draft (team constraint framed around "13 majors" needing management) was corrected mid-process — Nicole flagged the claim as unsupported by what the actual client feedback said, and the section was locked only after her explicit approval on a second pass, not on the first draft Claude presented.
+- **Decisions**: the redaction device's primary showcase (see entry above) — the flagship card names Nicole's personal, confirmed-real contribution (proposing the unifying concept) alongside three genuinely safe named alternatives.
+- Every section follows the same close pattern: drafted grounded in real source material (not invented), refined through direct critique from Nicole, written into both `01_Content/[section].md` (with full revision history) and `FINAL-COPY.md` (clean, copy-paste-ready text only) only once actually approved — not before.
+
+**Status**
+🔒 Locked — five sections. 🟡 Revisit — remaining five sections (Trade-offs, Outcome, Retrospective, Tools & Skills, Deep/Technical) and hero image selection, not yet started. Per Nicole: further review of flagged items deferred until all ten sections have a first full pass.
+
+---
+
+## 2026-08-23
+
+### Decision
+
+Full re-review of all Meta raw materials conducted before continuing content drafting, prompted by Nicole's direct feedback that earlier sections were drafted from a partial picture (reports and a couple of presentations only) rather than the complete set of source material available. Explicit source checklist verified: all 9 presentation decks read in full (not just the 2-3 used earlier), all 4 reports, the Process Magazine, the original brief, all 4 website pages, all 3 design-process chapters, the NDA, and all photos. Executive Summary, Context, Discovery, Constraints, Decisions, and the newly-renamed Production section were then revisited against this fuller picture.
+
+**Why**
+- The gap was real, not just a process nicety — the deeper read surfaced genuinely new material: three full persona journey stories with specific interaction detail, a distinct unused critique quote (bystander/exclusion discomfort, not just self-consciousness), a corrected and far larger idea-generation number (nearly 1,000 raw ideas narrowed to ~80, not 80 as an absolute starting count), a real staged go-to-market strategy, real industry quotes the team grounded their pitch in, and confirmation of Nicole's own stated role directly from her introduction in the Encore deck ("Interaction Design Lead... concept, experience, and interaction development").
+- **A standing caution was set alongside this work, directly from Nicole:** the goal of the re-review is to enrich the existing throughline with real nuance, not to hunt for the single most novel/interesting detail and build a new story around it. Several proposed additions were floated and explicitly rejected on exactly this basis (see below) — this is now the standard the AI applies to any future "enrichment" pass, not just this one.
+- **Executive Summary**: confirmed as-is, no changes needed.
+- **Context**: trimmed and sharpened — cut a clause that pre-empted Discovery's reveal, added Meta's real public mission statement ("build the future of human connection and the technology that makes it possible") in place of vaguer framing, net shorter overall.
+- **Discovery**: reverted two proposed additions after Nicole's specific pushback — a second public-friction addition to Finding 1, and a swap of Finding 2 toward privacy-adjacent framing that reopened territory she'd explicitly closed off earlier in the project. Finding 4 was replaced outright (not just reworded) with a belonging-focused finding (76% inner-circle-only sharing), chosen so all four findings now map cleanly onto the closing three-tier framework (Everyday Living / Belonging / Personal Identity) — a real structural gap the mapping exercise surfaced.
+- **Constraints**: reviewed against the fuller material and found to already hold up well — the feasibility framework and battery/gesture constraint were independently corroborated by the Check-In 2 report's own language. One fresh candidate (testing sample size) was found but Nicole chose to leave the section at 4, confirming "already solid" is a legitimate outcome of a review, not just "find something to add."
+- **Decisions**: two new candidates (a staged-rollout decision, an AI-personality-framework decision) were both explicitly declined — the first because Nicole didn't personally drive it and didn't want to speak to it, the second because it would require revealing the solution involves AI before the reader has any reason to expect that. Only a small opener update was made (correcting the idea count).
+
+**Status**
+🔒 Locked — Executive Summary, Context, Discovery, and Constraints all reconfirmed/revised and approved. Decisions' opener updated.
+
+---
+
+### Decision
+
+Trade-offs section fundamentally redefined and renamed to **Production**, both in Meta's content and in the shared `_Template/`. New purpose: what it actually took to turn the concept into something real and presentable (production breadth), not "cost of a decision" (the original framing). This is now the standing definition for this section across all future case studies, not a Meta-specific choice.
+
+**Why**
+- The original Trade-offs framing kept circling the same ground Constraints and Decisions already covered — three sections examining the same tension from slightly different angles, which Nicole identified directly as a structural problem, not a wording one.
+- Reframing around production breadth gave Outcome room to be scoped more narrowly (what shipped + validation + reception only), instead of trying to carry "what + how + reaction" all in one section.
+- **A hard content rule was set during drafting, worth recording as a standing guardrail:** do not describe production assets in a way that implies alternative concepts were abandoned or sacrificed, when they were actually examples/instances of the one converged idea. A first draft made exactly this mistake (implying "three example concepts" were competing options); Nicole caught it, and the fix was to cut the misleading framing entirely rather than search for a rescue-phrasing.
+- The section now uses the NDA redaction device (▓▓▓) in its opener, at Nicole's request, as a deliberate acknowledgment that specifics are being withheld rather than working around the topic silently.
+- Confirmed content, grounded in Nicole's direct account: the Final Presentation was a fully performed, scripted scene on a custom soundstage (matches the theatrical LED-backdrop set already identified from photos), with Nicole as driving narrator, followed by a separate live demo walkthrough for the Meta team. Production assets named: working prototype, full UI file, produced commercial, individual demo videos, process book, project website.
+- **Versioning approach, explicit per Nicole:** older wireframe rounds (including her own Figma history) intentionally keep the "Trade-offs" label as a historical snapshot of that point in the project — not updated retroactively. The active Framer build will be updated to "Production" by Nicole herself, consistent with the established handoff where `_Promoted/`/wireframe history is frozen reference and the live build is where active changes happen.
+
+**Status**
+🔒 Locked — rename and full section content approved. Propagation to the live Framer build is Nicole's own task, not done by Claude, per the established wireframe/build handoff.
+
+---
+
+### Decision
+
+Remaining five sections (Outcome, Retrospective, Tools & Skills, Deep/Technical) drafted, revised, and locked, closing out all ten Layer 2/3 sections of Meta's case study content.
+
+**Why**
+- **Outcome**: initial opener flagged as unclear, and the jump from Production's ending (the final presentation) back to testing results read as narrative whiplash — fixed by rewriting the opener to explicitly frame the section as "the receipts behind what you just saw" rather than a new forward step. Purchase-decision language in Card 1 and "than it currently did" in Card 2 were both softened to avoid any implication that a real, purchasable product exists — a real risk given how concrete the validation stats are. Grounded entirely in real Process Magazine validation data (the 80/70/60% figures) and the Menlo Park story, including the audience-reframing detail (pitching to product/business decision-makers instead of mentors and creatives).
+- **Retrospective**: deliberately NOT framed around "what would you do differently," per Nicole's explicit choice to keep this section uplifting rather than self-critical — a real, considered deviation from the section's own guiding questions, not an oversight. Went through the most iteration of any section in the case study: an early opening line was cut for sounding braggy/precocious and disconnected from the actual project; a "how big the concept could grow" phrase was flagged as vague and replaced with something concrete; a middle sentence was untangled into two; a closing thanks paragraph went from underwritten to specific (naming the team size and the trust extended) and back down once a line read as unintentionally dark ("I don't take that lightly"); and a final pass caught a genuine tense inconsistency ("None of this happens alone" mixing present tense into an otherwise past-tense recounting).
+- **Tools & Skills**: an initial 11-tag list was cut to 6 after Nicole flagged that an overwhelming list defeats the section's purpose. Final list and ordering were built specifically around recruiter-scanning logic (title match → skill match → tool match → differentiators → specialist term last), per Nicole's direct question about what would serve that audience best.
+- **Deep/Technical**: three collapsible cards, chronologically ordered (team → ideas → testing). A fourth candidate (an AI tone/personality framework) was explicitly declined, consistent with the standing rule from Decisions that nothing in the case study should be the first place to reveal the solution involves AI. Card 1's Wizard-of-Oz detail was expanded, at Nicole's request, to explain that the simulation let the team act out and test full interactions in real time — but a specific proprietary tool Meta provided for this process was explicitly excluded per Nicole's direct instruction; the card stays entirely at the level of human process (timing, coordination, real LLM responses played out loud) with no tooling referenced at all.
+
+**Status**
+🔒 Locked — all four sections approved. All ten Layer 2/3 sections of Meta's case study content are now complete.
+
+---
+
+### Decision
+
+Two real process failures caught and corrected during a final cleanup pass, both worth recording plainly rather than folding silently into routine edits.
+
+**Why**
+- **Failure 1 — approved content not written to files.** After Outcome, Retrospective, Tools & Skills, and Deep/Technical were each approved in conversation ("good to lock," "that list works perfectly," etc.), none of the four were actually written to `01_Content/` or `FINAL-COPY.md` — Claude treated conversational approval as equivalent to being saved, without a persistence step actually happening. Nicole caught this directly ("none of the content we just made got pushed into my files") after noticing it herself, not because Claude flagged it. All four sections have since been written and independently verified by reading each file back after writing it, rather than trusted on the strength of the write confirmation alone.
+- **Failure 2 — wrong tool used for local file edits.** While attempting the fix above, Claude's own sandboxed `str_replace` tool (which operates on Claude's private container filesystem, not Nicole's actual machine) was used instead of the `filesystem:edit_file` MCP tool that actually reaches her repository. This produced a "file not found" error that, combined with an earlier unrelated directory-listing glitch, briefly looked like a serious data-loss/sync bug rather than what it actually was: Claude using the wrong tool. Once corrected, all writes succeeded and were verified.
+- **Also resolved:** lingering `05-tradeoffs.md` stub files (Meta, `_Template`, Feminist UX) and a genuinely missing `_Template/01_Content/05-production.md` (a real gap — an earlier creation attempt had not actually persisted, unrelated to the tense-fix bug above). Nicole renamed the Meta and `_Template` files herself directly; Claude does not have a file-deletion capability in this environment, which is why stub files persisted even after the rename was declared "complete" earlier — flagged explicitly so this limitation is documented rather than silently worked around again in the future.
+- **Standing lesson for this project going forward:** "approved in chat" and "saved to disk" are not the same claim, and should not be conflated in status language (e.g. "Text ready") without an actual verified write. Future sections should be written to file and read back for confirmation in the same turn they're approved, not deferred to a later cleanup pass.
+
+**Status**
+🔒 Locked — all content verified present and correct across `01_Content/` and `FINAL-COPY.md`. `_Template/01_Content/05-production.md` recreated and confirmed. Stub file removal (full deletion, not just archiving) remains Nicole's own task, since Claude cannot delete files in this environment — she has already handled the Meta and `_Template` renames herself.
+
+---
+
+### Decision
+
+Correction to the entry above: the "recreated and confirmed" claim for `05-production.md` was itself inaccurate. A follow-up direct check found genuinely wrong content in three separate files, not just the missing-file gap already caught.
+
+**Why**
+- **Meta's `01_Content/05-production.md`** still held an early, incomplete draft ("in progress — see chat for current draft state") rather than the actual approved Card 1/2/3 content that had been correctly written into `FINAL-COPY.md`. The two files had silently diverged.
+- **`_Template/01_Content/05-production.md`** contained old Trade-offs guiding questions with only the page title swapped to "Production" — not the actual Production template content drafted at rename time.
+- **`Feminist UX/01_Content/05-production.md`** was even further off: still titled "Trade-offs" internally, with Feminist-UX-specific Trade-offs content untouched, despite the file itself being newly created under the `05-production.md` name.
+- All three were rewritten with verified-correct content and independently re-read immediately after writing, not just after the write call reported success — the same discipline established in the previous entry, applied a second time after it turned out not to have been followed consistently the first time.
+- **Root cause, stated plainly:** `create_file` was used for the original Template/Feminist UX creation attempts and did not reliably persist the intended content, even when it returned a success message. `filesystem:edit_file` proved reliable across every verification in this session and is now the preferred tool for any local file write going forward, not `create_file`.
+
+**Status**
+🔒 Locked — all three files independently re-verified correct by direct read-back. This closes the Production rename cleanup for real.

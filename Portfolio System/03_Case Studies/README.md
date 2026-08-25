@@ -31,7 +31,7 @@ Framer itself (the live, high-fidelity build) is entirely Nicole's — Claude ha
       02-discovery.md
       03-constraints.md
       04-decisions.md
-      05-tradeoffs.md
+      05-production.md
       06-outcome.md
       07-retrospective.md
       08-tools-and-skills.md
