@@ -18,5 +18,9 @@ Finalized 2026-08-23, after the full-materials re-review (supersedes the 2026-08
 
 Revision history: originally reordered so buildability constraints sit right before the "realistically build" payoff line, and "the brief made clear" was replaced with "solving that meant designing for" (too abstracted/third-person). Then, during the 2026-08-23 full-materials review, trimmed further: cut the "solving that meant designing for how young people actually behave" clause (this was pre-empting Discovery's feature-gap/behavior-gap reveal) and added Meta's real, public mission statement in its place — gives a concrete, sourced answer to "why did this matter to Meta" instead of leaving it implicit, and nets about 20 words shorter overall.
 
+**NDA note appended (2026-08-23):** a short aside now closes out this section, set in Nicole's tertiary text style (visually distinct from the main paragraph, not blended into the narrative voice) rather than embedded in the story itself. This placement was chosen after ruling out several alternatives: inside Context's own prose (breaks the same fourth-wall rule established for Constraints), under the top-of-page NDA badge (illegibly small), and as its own standalone block between the hero and Context (read as awkward/disconnected in practice). A caption-style line immediately after Context landed best — physically near where a reader is primed to learn part of the project is protected, but typographically separated so it doesn't disrupt the narrative sentence flow.
+
+Final text: "A few details in this project are under NDA. If you're curious what's behind the redactions, ask me. :)"
+
 ## Assets That Support This Section
 None required — text only.

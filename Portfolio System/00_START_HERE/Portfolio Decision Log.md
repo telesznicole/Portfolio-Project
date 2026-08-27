@@ -1605,3 +1605,104 @@ Correction to the entry above: the "recreated and confirmed" claim for `05-produ
 
 **Status**
 🔒 Locked — all three files independently re-verified correct by direct read-back. This closes the Production rename cleanup for real.
+
+---
+
+### Decision
+
+Full sweep of the entire Decision Log's history performed, checking every previously-flagged 🟡 Revisit item for whether a later entry had actually resolved it — several had, and hadn't been cross-referenced forward before now. Combined with Nicole's direct answers on the remaining items, this consolidates a long tail of small open questions spanning back to early Homepage/Resume/How I Work wireframing.
+
+**Why**
+- **Confirmed already resolved by earlier entries, just not cross-referenced until now:** Quick Facts location field, Resume's Hack iX classification (resolved via a real "Founder-Led" tag category), Resume footer `padding-top`, Resume tagline type-treatment, and Resume's page title/label (confirmed "Resume").
+- **`Professional Profile.md` requires no changes** — already correctly resolved in an earlier entry (a prior note over-generalized a tone observation about *new Homepage copy* into a false claim the source document itself was inaccurate; both statements in the Profile hold true as written). No revision drafted, none needed.
+- **Newly confirmed resolved, directly by Nicole:** the Homepage Contact→footer merge (final visual treatment done, matching her prior portfolio's footer content in the new stylization); Homepage hero cards and hover-photos (built into the final live site; Terra Dotta's card intentionally left out for now, consistent with the standing paused-card decision); Work-card tag labels and How I Work's footer CTA (both propagated into the live Framer build — confirmed NOT to be replicated into the local wireframe snapshot files, which remain intentional historical references per the established `_Promoted/`-is-frozen handoff).
+- **How I Work's closing quote, finally locked:** *"I never want my work to feel like a first draft. Every project deserves my best thinking."* Closes a question left open since the 2026-08-17 entry.
+- **"AI-Assisted Workflow" as a Layer 3 content type** — recontextualized rather than closed: Nicole confirmed this isn't relevant unless she pursues a possible future case study about building the portfolio site itself. Deprioritized, not abandoned.
+- **Deep/Technical's "internal card treatment"** — clarified for Nicole's benefit (she didn't recognize the term from the original entry): this referred to Layer 3's general content-menu question, which has now been substantively informed by Meta's real, finished Deep/Technical content (three concrete cards) rather than remaining abstract.
+
+**Status**
+🔒 Locked — every previously open item from Homepage, Resume, and How I Work wireframing/build phases is now resolved, confirmed, or explicitly recontextualized. **Only two items remain genuinely open across the entire project:** Meta's hero image selection (directly blocking Nicole's finishing touches on the case study), and Terra Dotta's card (title, hover animation, Work-grid re-addition) — both already known, neither a new discovery.
+
+---
+
+### Decision
+
+Meta's hero image finalized, closing the last genuinely open content item on the case study. Alongside this, every remaining section (Discovery, Constraints, Decisions, Production, Outcome, Retrospective) had its supporting photos selected, captioned, and fully documented, and a new Deep/Technical intro blurb was added.
+
+**Why**
+- **Hero image:** `meta_hero.jpg` — an official Meta gesture-capture product shot (chosen after reviewing the full `Meta_RBM_Image_Assets` library together, including several files too large to view until Nicole resized them), with a "Hey Meta..." voice-bubble/waveform graphic and the Meta × SCADpro branding lockup added on top. Deliberately a product shot, not a personal photo — Nicole appears extensively elsewhere in the case study, so the opening moment stays product-focused.
+- **Color-treatment exploration, resolved as "not yet":** several options (dark vignette, blue accent glow, bottom-fade gradient, plain-with-interaction-motif) were mocked up visually in chat for Nicole to react to, inspired by her existing homepage Work card's dark starfield treatment. Nicole explicitly chose to ship the hero plain/untreated for now rather than block progress — a deliberate, informed deferral, not an oversight. The "Hey Meta" bubble Nicole added to the final image was directly inspired by one of the mocked-up options (carrying the Work card's interaction motif via behavior rather than color-matching).
+- **Full photo pass across the rest of the case study:** Discovery (`DSC_0647.jpg`, a synthesis-session photo), Constraints (`design_group.png` for sub-teams, `DSC_0036.png` for Wizard-of-Oz rehearsal — the latter flagged and cleared for legible on-screen ideation text confirmed as discarded, non-final ideation), Decisions (`DSC_0624.JPG` whiteboard photo, `meta_solution.png` framework diagram, `DSCF8638.JPG` testing photo), Production (`me_presenting.jpeg`, plus two frozen non-interactive mockups of the project website and process magazine, both on confirmed-safe pages), Outcome (a 3-photo hero+2-smaller layout from the Encore trip, plus a 2-stat highlight-reel banner), and Retrospective (a 20+ person group photo, chosen over an 8-person alternative specifically to match the "twenty-one other people" language in the text).
+- **A real NDA judgment call, worth recording as a standing precedent:** the Constraints whiteboard photo (`DSC_0624.JPG`) visibly shows the word "AI" on generic wireframe sketches. Initially flagged as conflicting with the standing rule against revealing AI involvement (established when a Deep/Technical card was cut for the same reason). Nicole clarified the actual applicable test: whether a competitor would gain an actionable advantage, not whether the word "AI" appears at all — and since Meta's glasses are already publicly known to include AI, a bare, non-specific mention gives away nothing not already public. This is now documented as the standing NDA test in `nda-guidelines.md`, distinguished from genuinely specific execution detail (like a full AI-personality framework), which remains restricted.
+- **A real accuracy catch during photo selection:** Nicole originally described a testing photo as showing "mixed reactions." On direct review, that wasn't accurate to what the photo showed, and the caption was rewritten to plainly mark it as a testing moment rather than interpret expressions that weren't actually mixed.
+- **New Deep/Technical intro blurb added:** "More on how a team of 22 actually pulled this off. The details behind the details." — casual, project-specific, avoids the "skippable" framing the section's standing rule prohibits.
+- **A genuine process gap surfaced and fixed:** several newly-referenced photos (`DSC_0036`, `DSC_0624`, `DSC_0647`, `DSCF8638`, and the full `Meta_RBM_Image_Assets` library) were not in `00_Raw_Extracted/` and could not be viewed until Nicole resized them — confirmed her workflow going forward is that Claude asks and she resizes on request, rather than Claude assuming a file is unviewable and working from description alone.
+
+**Status**
+🔒 Locked — hero image finalized, all remaining section photos selected and documented, one new standing NDA precedent recorded. **Zero content items remain open on the Meta case study.** Only Terra Dotta's card remains open project-wide, unrelated to Meta and already known/paused.
+
+**Addendum, same day:** the single `meta_hero.jpg` was superseded by three responsive versions (`meta_hero_desktop.jpg`, `meta_hero_tablet.jpg`, `meta_hero_phone.jpg`) once Nicole built out proper per-breakpoint crops. Same source photo and graphic elements throughout, but genuinely re-composed per aspect ratio rather than mechanically cropped — phone stacks the "Hey Meta" bubble above the model instead of beside him, since the side-by-side layout wouldn't have held up at a narrow viewport. Documentation in `00-executive-summary.md` and `STRUCTURE.md` updated to reflect all three files.
+
+---
+
+### Decision
+
+A full, from-scratch audit of the entire `03_Case Studies` system was performed at Nicole's explicit request, after she directly caught multiple instances of Claude claiming something was "checked" or "complete" when it wasn't — most pointedly, that `02_Selected_Assets/` was still completely empty despite extensive photo selection/captioning work having happened throughout every section, and that `STRUCTURE.md` only ever documented `00_Raw/`, never the rest of the system. Both were confirmed accurate criticisms, not overstated.
+
+**Why**
+- **Real gap, now addressed as fully as tooling allows:** `02_Selected_Assets/` had a `README.md` but zero actual curated content, for any of the three projects. A `CURATION-INDEX.md` was built for Meta, listing all 16 selected images with exact source path, target filename, and caption. **A genuine tool limitation was surfaced and disclosed rather than worked around silently:** Claude has no ability to copy binary image files — only `move_file` (relocate) exists — so moving originals out of `00_Raw/` would destroy the source archive, and the only alternative copies (in `00_Raw_Extracted/`) are resized/lower-quality, unsuitable for final production use. The index is therefore the actual curation deliverable; the mechanical file-copying at full quality is necessarily a manual step for Nicole. This limitation, and the corrected workflow (index updated in the same turn an asset is selected, not batched for later), is now documented in the top-level `README.md`.
+- **`STRUCTURE.md`'s scope was genuinely undocumented**, not just incomplete — nothing stated that it covered `00_Raw/`/`00_Raw_Extracted/` only, leaving `01_Content/`, `02_Selected_Assets/`, and `FINAL-COPY.md` as an implicit, unstated gap. Added an explicit scope note.
+- **Real factual errors found and fixed in `STRUCTURE.md`:** several recently-added files (the hero images, framework diagram, mockups) had been documented as living in `Other/` when they actually live in `Photos/other/` — a different, easily-conflated nested folder. Four other files previously marked "folder location not confirmed" were confirmed via a full directory tree read and corrected.
+- **Two new issues surfaced that need Nicole's own judgment, not Claude's assumption:** `Meta_RBM_Image_Assets/` appears to exist in duplicate (both `Other/` and directly under `Photos/`) — unclear if intentional; and an undocumented nested `other/` subfolder inside `Meta Design Files/` contains three loose animated Instagram assets never catalogued anywhere. Both flagged directly in `STRUCTURE.md` rather than silently resolved either way.
+- **The top-level `03_Case Studies/README.md` was confirmed stale**, exactly as Nicole suspected — its structure diagram never mentioned `STRUCTURE.md`, `TONE-AND-VOICE.md`, `00_Raw_Extracted/`, or the new `CURATION-INDEX.md` pattern, all of which had become real, load-bearing parts of the system over the course of the Meta build. Rewritten to reflect the system as it actually works now, not as it was originally scoped.
+- **Two more real, small inheritance bugs found:** both `Feminist UX/FINAL-COPY.md` and, more importantly, **`_Template/FINAL-COPY.md` itself** still said "Trade-offs" instead of "Production" — meaning any future project copied from the template would have silently inherited the stale name. Both fixed.
+- **Confirmed genuinely clean, not just assumed:** Feminist UX's and `_Template`'s `01_Content/` files and Feminist UX's `manifest.md` were checked directly and found to be honestly unstarted (matching their empty `00_Raw/` folders), not stale — an audit should also report what's fine, not only what's broken.
+
+**Status**
+🔒 Locked — `CURATION-INDEX.md` created for Meta, `STRUCTURE.md` corrected and scope-noted, top-level `README.md` brought current, two template-inheritance bugs fixed at the source. 🟡 **Two items need Nicole's direct input, flagged in `STRUCTURE.md`, not resolved by Claude:** the possible `Meta_RBM_Image_Assets/` duplication, and the undocumented animated-asset subfolder. 🟡 **The actual file-copying from source into `02_Selected_Assets/`** (per the new `CURATION-INDEX.md`) remains a manual task for Nicole — outside Claude's tool capability, not an oversight.
+
+---
+
+### Decision
+
+A second, genuinely-from-scratch audit performed same day at Nicole's explicit request (not trusting the prior audit's conclusions). Found and fixed real issues from Nicole's own restructuring, plus uncovered the precise root cause of a recurring file-persistence bug that had been mischaracterized earlier.
+
+**Why**
+- **Nicole restructured `00_Raw/` in both `_Template` and `Feminist UX`** to a new five-folder set (Notes/Other/Photos/Presentations/Process), done for cohesion across projects. `_Template/00_Raw/manifest.md` still referenced the old structure in two places: the "Notes on File Types" section named specific now-deleted folders (`Figma_Exports/`, `Miro_Exports/`) as export destinations, and the Section Key still said "Trade-offs" instead of "Production" (a miss from the earlier rename pass — the manifest's Section Key had never been checked, only `FINAL-COPY.md`'s section headers). Both fixed; file-type guidance kept (how to handle Figma/Miro exports) while removing references to folders that no longer exist.
+- **Top-level `README.md` still showed the old `_Template` structure** (`Process/Visuals/Photos/Notes/Figma_Exports/Miro_Exports`) in both the structure diagram and Step 1 of the workflow. Updated both to the current five-folder set, with an explicit note that this is a per-project starting point likely to keep evolving, not a fixed spec.
+- **Root cause found for a recurring problem, more precise than previously understood:** Meta's `CURATION-INDEX.md`, created earlier the same day, had not actually persisted — exactly the kind of silent failure flagged as a standing risk in the prior audit entry. Investigation traced this to a specific, fixable error: Claude used the generic `create_file` tool (which writes to Claude's own private sandbox) instead of `filesystem:write_file` (the correct MCP tool that reaches Nicole's actual machine), for this one file specifically. This is a more precise finding than the earlier session's general "`create_file` is unreliable" conclusion — the tool itself works fine; the error was calling the wrong tool by that similar name. Recreated using `filesystem:write_file` and independently verified by direct read-back.
+- **Standing lesson, stated plainly for future reference:** on this project, all new-file creation for Nicole's actual files must use `filesystem:write_file`, never the bare `create_file` tool, which silently succeeds against the wrong filesystem entirely rather than erroring — making this an easy, quiet mistake to repeat without independent verification.
+
+**Status**
+🔒 Locked — `_Template`'s manifest and the top-level README both corrected to match Nicole's actual restructuring. Meta's `CURATION-INDEX.md` recreated with the correct tool and verified present. Root cause of the file-persistence issue now understood precisely, not just observed.
+
+---
+
+### Decision
+
+Meta's asset curation completed end to end — all 16 selected images physically copied into `02_Selected_Assets/` with final filenames, closing the loop that the original audit could only index, not execute.
+
+**Why**
+- Nicole did the actual file copying by hand (as expected, since Claude cannot copy binary images), then marked each row "DONE" in `CURATION-INDEX.md` with two filename deviations noted for two files that needed disambiguation (both originally shared the source name `me_presenting.jpeg` across two different raw folders).
+- **A real naming-convention gap surfaced along the way:** Nicole had not seen the section-prefixed naming suggestion in the original index (easy to miss in a dense table), so 14 of 16 files initially kept their original source filenames rather than the `[section]_[number]_[description]` pattern documented in `02_Selected_Assets/README.md`. Rather than silently accept the mismatch or silently rename anything, this was surfaced directly and Nicole chose to rename all 14 to match the documented convention — confirmed by direct folder listing, not assumed from her saying so.
+- **Two mechanical file-extension bugs caught before finalizing:** the renaming process had doubled two extensions (`decisions_03_testing-session.jpg.JPG`, `outcome_02_presenting-encore.jpeg.jpeg`). Flagged directly, Nicole fixed both, reconfirmed by direct listing before documentation proceeded.
+- **`CURATION-INDEX.md` rewritten from a to-do index into a completion record** once everything was verified in place — dropped the per-row "DONE" markers (redundant once the whole file represents a completed state), dropped the "not yet selected" section per Nicole's instruction (those are intentional exclusions, not open items), kept the source-collision context since it explains two of the filenames' history for future reference.
+- **`02_Selected_Assets/README.md` checked against the final result and confirmed still accurate** — its documented naming convention now genuinely matches every file in the folder, not just in theory.
+
+**Status**
+🔒 Locked — Meta's `02_Selected_Assets/` folder is complete: 16/16 images present, correctly named, matching both the documented convention and the finished `CURATION-INDEX.md` record. **This closes the last open structural gap from the original system audit.** Nothing outstanding remains on Meta's case study — content, photos, and curation are all genuinely done, not just claimed done.
+
+---
+
+### Decision
+
+A final, genuinely-from-scratch audit of the entire `03_Case Studies` system performed immediately before Nicole's GitHub push — explicitly not trusting any prior audit's conclusions. Read every file fresh: all 10 Meta `01_Content/` files, `FINAL-COPY.md`, `STRUCTURE.md`, `manifest.md`, NDA guidelines, `general-context.md`, both `02_Selected_Assets/` files, the top-level `README.md` and `TONE-AND-VOICE.md`, Terra Dotta's README, and the `_Template`/`Feminist UX` files touched in the previous audit.
+
+**Why**
+- **Found the real gap this pass was meant to catch:** every one of Meta's ten `01_Content/` "Assets That Support This Section" notes, plus two `FINAL-COPY.md` status lines, still referenced pre-curation raw filenames and paths (e.g. `DSC_0624.JPG`, `me_presenting.jpeg` in `Photos/final presentation/`) instead of the final curated filenames now living in `02_Selected_Assets/` (e.g. `decisions_01_whiteboarding-ui.jpg`, `production_01_presenting-scad.jpeg`). This was a direct, predictable consequence of curation happening *after* those notes were written — the notes were accurate when written, then silently went stale the moment the actual copy/rename work completed, and nothing had gone back to update them until this pass.
+- **Fixed all nine affected files:** Executive Summary, Discovery, Constraints, Decisions, Production, Outcome, Retrospective, and Deep/Technical in `01_Content/`, plus two status lines in `FINAL-COPY.md` (Executive Summary's hero-image note, Discovery's stale "images optional, not yet picked" line). Each now points to the actual final filename in `02_Selected_Assets/` rather than the original raw source.
+- **Two secondary staleness items caught and fixed in the same pass:** Constraints' "Assets" note still framed Constraints 2–3 as undecided open items ("not yet decided") when `CURATION-INDEX.md` had already confirmed these as intentionally image-free by design; Decisions' note similarly said Decision 2 "doesn't yet have a confirmed image" when it was already confirmed to have none. Both corrected from open-item language to confirmed-by-design language.
+- **Everything else checked this pass — `STRUCTURE.md`, `manifest.md`, NDA guidelines, `general-context.md`, `02_Selected_Assets/README.md`, the top-level `README.md`, `TONE-AND-VOICE.md`, Terra Dotta's README, and the `_Template`/`Feminist UX` fixes from the prior audit — confirmed genuinely accurate, no further changes needed.** Worth recording plainly: not everything checked turns up broken, and a thorough audit should say so rather than manufacture busywork.
+
+**Status**
+🔒 Locked. Every file in `03_Case Studies` independently re-verified fresh, with nine real staleness fixes made and everything else confirmed accurate as-is. **The Meta case study, the shared system documentation, and the Decision Log are all genuinely ready for Nicole's push — not assumed ready.**

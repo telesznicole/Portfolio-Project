@@ -7,7 +7,7 @@
 ---
 
 ## Executive Summary
-**Status:** Text ready — hero image still TBD
+**Status:** Complete — hero image finalized, all three responsive versions in `02_Selected_Assets/` (`executive-summary_01_hero-desktop.png`, `_02_hero-tablet.png`, `_03_hero-phone.png`)
 
 Role: Interaction Design Lead
 Team: Meta × SCADpro
@@ -22,10 +22,13 @@ Proof: Earned an encore to 20+ Meta stakeholders
 
 In early 2025, Meta partnered with SCADpro, bringing on a team of 22 students, myself included, to help build toward its own mission: the future of human connection, and the technology that makes it possible. The Ray-Ban Meta glasses were strong technology, but they hadn't yet become part of how Gen Z actually connects with each other day to day. The brief came with real constraints already attached: no changes to the hardware, and a solution achievable within 18 to 24 months. This wasn't a concept exercise. It needed to be something Meta could realistically build.
 
+NDA note (tertiary text style, appended after the paragraph):
+A few details in this project are under NDA. If you're curious what's behind the redactions, ask me. :)
+
 ---
 
 ## Discovery
-**Status:** Text ready — structured as opener + 4 finding cards + closing reframe; supporting images optional, not yet picked
+**Status:** Complete — structured as opener + 4 finding cards + closing reframe; supporting image finalized (`discovery_01_synthesis-session.jpg` in `02_Selected_Assets/`)
 
 Opener:
 My work on this project started with research: self-ethnography, interviews with friends, and online research, on top of structured focus groups and surveys, pulling in 150+ survey responses and 300+ insights from focus group sessions alone, totaling more than 5,000 data points. I contributed across that data collection, but where I focused most was synthesis, turning all of it into affinity-mapped themes.
@@ -165,7 +168,10 @@ Interaction Design · UX Research · Figma · Cross-Functional Collaboration · 
 ---
 
 ## Deep/Technical
-**Status:** Text ready — 3 collapsible cards
+**Status:** Text ready — intro blurb + 3 collapsible cards
+
+Intro blurb:
+More on how a team of 22 actually pulled this off. The details behind the details.
 
 Card 1 — Coordinating 22 People Across 13 Disciplines:
 The team spanned UX, industrial design, sound design, film, advertising, and more, 13 majors in total. Rather than trying to run one unified process across all of it, we split into focused sub-teams to explore different directions in parallel, each with the freedom to dig deep on its own angle, then regularly brought everything back together to compare notes and converge.

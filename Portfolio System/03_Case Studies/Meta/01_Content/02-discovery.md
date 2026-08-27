@@ -37,4 +37,8 @@ Finalized 2026-08-23, after the full-materials re-review (supersedes the 2026-08
 - Length check performed across all four findings after the Finding 4 swap — all four sit in the 22–30 word range, matching Constraints' card rhythm.
 
 ## Assets That Support This Section
-Candidates from `design process/chapter 1/` (raw data, data archive, I-statements) once we curate `02_Selected_Assets/` — could support the findings cards visually if desired.
+**Final, in `02_Selected_Assets/`:** `discovery_01_synthesis-session.jpg` — standalone visual (not one-per-card), placed near the opener. Shows Nicole's profile at a laptop with two screens visible showing FigJam stickies (unreadable at this size, but a thumbs-down mark and cursors are visible), plus physical sticky notes on the laptop itself. Chosen over other candidates for tying directly to Nicole's synthesis-focused claim in the opener, and for the authenticity of the thumbs-down mark and analog/digital mix.
+
+**Caption:** "Two screens, a thumbs down, and a laptop that couldn't decide if it was digital or analog."
+
+**Rejected candidates:** a wide shot (Nicole most visually present, but no research material legible enough to read as evidence); a single-screen laptop shot (good composition, visible thumbs-up marks, but doesn't include Nicole); an over-the-shoulder shot with the most sticky-note density of any option, but average composition and no personal presence. A user-testing photo was also considered and explicitly rejected for this section — it's from a later testing round, not Discovery's research phase, and using it here would misrepresent when it was taken; reserved instead for Outcome, where it's chronologically accurate.

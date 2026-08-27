@@ -19,4 +19,6 @@ What I'm proudest of isn't the trip itself. It's what it represented. My peers n
 None of this happened alone. Twenty-one other genuinely talented people built this with me, each bringing something I couldn't have on my own. I'm grateful SCADpro and Meta trusted a room full of students with something this real, and that trust still means a lot to me."
 
 ## Assets That Support This Section
-_(usually text-only, but reference anything relevant)_
+**Final, in `02_Selected_Assets/`, confirmed by Nicole:** `retrospective_01_full-team-photo.jpeg` (source: `Photos/final presentation/group_photo.jpeg`, NOT the 8-person `Photos/encore/group_photo.jpg` — this is the full 20+ team-and-guests shot on the theatrical soundstage, with the starry LED backdrop and glasses graphic). Placed at the very end of the section, after the closing thanks paragraph. Caption: "Every one of the twenty-two, in one frame." Chosen specifically to visually echo the closing paragraph's "twenty-one other genuinely talented people" line, and placed at section-end (not alongside Outcome's three photos) so it doesn't visually compete with that trio right before it.
+
+An 8-person `encore/group_photo.jpg` was considered first but ruled out — it doesn't match the "twenty-one/twenty-two" scale the text specifically references.

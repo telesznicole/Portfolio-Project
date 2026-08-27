@@ -18,7 +18,7 @@
 - **Discovery** — what research/testing revealed once you looked past the brief
 - **Constraints** — real limits (time, tech, stakeholder, NDA, resources)
 - **Decisions** — key calls made, and what was considered and rejected
-- **Trade-offs** — what was given up to make those decisions
+- **Production** — what it took to turn the concept into something real
 - **Outcome** — what shipped / what happened, incl. any real metric
 - **Retrospective** — honest reflection, what you'd do differently
 - **Tools & Skills** — the tag row (software, methods, skills used)
@@ -28,7 +28,7 @@
 
 ## Notes on File Types
 
-- **Figma files:** export key frames as PNG/PDF into `Figma_Exports/`. Note the frame/board name in the Description column so we know what part of the file it's from.
-- **Miro files:** same idea — export key boards/clusters as images into `Miro_Exports/`, note which board.
+- **Figma files:** export key frames as PNG/PDF, note the frame/board name in the Description column so we know what part of the file it's from. Drop into whichever folder fits the content best (often `Other/` or `Process/`, depending what the export actually shows) — there's no dedicated Figma folder in the current structure, since folder sets vary per project.
+- **Miro files:** same idea — export key boards/clusters as images, note which board, drop into whichever folder fits.
 - **Written notes/journal entries:** don't worry about organizing these first. Drop them as-is into `Notes/` (a .txt, .md, screenshot of a notes app, whatever exists) — we'll mine them together during the Q&A.
 - **"It's mostly in my head":** totally fine — you don't need a file for everything. Just show up to the section conversation ready to talk it through; I'll ask the questions.

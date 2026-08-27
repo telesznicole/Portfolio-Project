@@ -50,3 +50,18 @@ The finalized Context paragraph (below) is the reference point for tone going fo
 
 - **Ordering matters as much as word choice.** A closing payoff line should pay off whatever sits directly before it — don't let an unrelated point get wedged between a setup and its payoff, even if that point is true and well-written on its own.
 - **Watch for "the brief/report/document made clear" style phrasing** — this abstracts the sentence's subject away from any real person or action, which is a specific, nameable version of the "too academic" problem. Prefer tying the sentence to what was actually being solved or done.
+
+## Reusable portfolio-wide microcopy
+
+Small pieces of copy that live outside any single case study's narrative content — reused as-is across every case study page, not customized per project. Documented here rather than in a project's own content files.
+
+**End-of-case-study redirect to other work** (locked 2026-08-23): *"This is one story. There are others worth reading."*
+
+- Replaces an earlier draft — *"The same three projects — not a new selection, just where these principles play out in full"* — which was flagged for two problems: it hardcoded a project count (breaks the moment a project is added or removed) and it explained itself to the reader rather than just being the section, which read as over-justified rather than confident.
+- Deliberately count-agnostic — works whether the redirect shows two projects or ten.
+- Went through a first round of shorter, single-line options before Nicole asked for something with more of a "full sentence" feel — the two-short-sentences structure of the final line was chosen specifically for that rhythm.
+
+**Bottom-of-page contact callout** (locked 2026-08-23): *"Want to talk about this project? I'd love to hear from you."*
+
+- Distinct from the NDA "ask me" note that closes Context — this one is a general, page-level invitation to reach out, not NDA-specific. Confirmed by Nicole as the broader of the two, not a duplicate/reinforcement of the NDA angle.
+- Placement: Claude's working assumption is that this sits *after* the "This is one story..." redirect, so the page's actual final beat is a personal, direct invitation rather than a pointer to other work — this placement was proposed but never explicitly confirmed by Nicole, flagging as assumed rather than locked.

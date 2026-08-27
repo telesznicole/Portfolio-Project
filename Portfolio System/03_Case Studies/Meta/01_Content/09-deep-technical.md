@@ -13,6 +13,8 @@
 ## Your Answers
 **Approved by Nicole 2026-08-23.** Format: collapsible cards (title + description), same click-to-expand pattern as Decisions. Three cards, ordered chronologically (team → ideas → testing). A fourth candidate (an AI-tone/personality framework) was explicitly declined — it would have been the first place in the case study to reveal the solution involves AI at all, which stays off-limits per the same logic established in Decisions.
 
+**Section intro blurb (added 2026-08-23):** "More on how a team of 22 actually pulled this off. The details behind the details." Casual, project-specific (not generic/reused across projects), avoids framing the section as skippable per the standing rule above. Went through a few rounds: started more formal/generic ("a closer look at how the team, ideas, and testing came together"), then simplified and made more casual per Nicole's preference, then made specific to Meta ("a team of 22") rather than staying fully generic, then extended by one small beat once Nicole felt it was slightly too short.
+
 **Card 1 — Coordinating 22 People Across 13 Disciplines:**
 "The team spanned UX, industrial design, sound design, film, advertising, and more, 13 majors in total. Rather than trying to run one unified process across all of it, we split into focused sub-teams to explore different directions in parallel, each with the freedom to dig deep on its own angle, then regularly brought everything back together to compare notes and converge."
 
@@ -25,4 +27,4 @@
 Note: Card 3 deliberately avoids naming any specific tool used for this process, per Nicole's explicit instruction — kept entirely at the level of human process (timing, coordination, real LLM responses), no tooling referenced at all.
 
 ## Assets That Support This Section
-_(reference filenames from the manifest)_
+No images — confirmed via `CURATION-INDEX.md`, this section stays text-only by design (collapsible cards don't need visual support).

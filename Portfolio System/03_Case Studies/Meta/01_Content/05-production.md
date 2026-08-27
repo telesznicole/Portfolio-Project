@@ -30,4 +30,10 @@
 - Section renamed Production; redaction device used in the opener per Nicole's request for a "cheeky" acknowledgment that specifics are being withheld.
 
 ## Assets That Support This Section
-Full deliverables list, confirmed from Check-In 2 report and Final Presentation: working Figma prototype, final UI Figma file, process book, project website, a produced commercial video, formal presentation recordings, individual concept videos (referenced as standalone "THE VIDEO" slides at Check-In 2), and a PRD. Final Presentation photos (already identified in `STRUCTURE.md` — the soundstage/theatrical set shots) are strong candidates once `02_Selected_Assets/` curation begins.
+**Final, in `02_Selected_Assets/`, all confirmed by Nicole:**
+- **With Card 1 (the performed scene):** `production_01_presenting-scad.jpeg` — Nicole presenting on the soundstage. Caption: "This is what 'driving narrator' actually looked like."
+- **With Card 2 (production assets):** `production_02_website-mockup.png` and `production_03_magazine-mockup.png` — two frozen mockups, not screenshots — a laptop-screen mockup of the project website and a flipped-open magazine mockup of the process book. Deliberately static/frozen images, not live/clickable, and NDA-safe pages only (website: About or Research page, never Solution, and avoiding Overview's one restricted paragraph; magazine: an early spread from Understand/Define/Research phase, not Decide onward). No Meta team members or final-project specifics shown in either.
+  - Magazine (`production_03`) hover blurb: "The full process, start to finish."
+  - Website (`production_02`) hover blurb: "A behind-the-scenes look at how it came together." (Revised from an earlier draft, "A deeper look, if you want it" — Nicole flagged that phrasing as implying the reader could actually click through and explore, which they can't given the NDA restriction on the rest of the site.)
+
+Full deliverables list (for future reference, not all pictured): working Figma prototype, final UI Figma file, process book, project website, a produced commercial video, formal presentation recordings, individual concept videos (referenced as standalone "THE VIDEO" slides at Check-In 2), and a PRD.

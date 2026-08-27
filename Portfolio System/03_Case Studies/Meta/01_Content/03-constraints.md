@@ -27,4 +27,8 @@
 Revision history: Constraint 3 (originally "13 majors" framing) removed the unsupported major-diversity causal link — client feedback tied sub-teams to managing scope, not major count. Then reframed entirely at Nicole's correction: sub-teams were about parallel breadth of exploration, not internal logistics management. Added a 4th card (Wizard-of-Oz prototyping) sourced from Midpoint report client feedback, reframed from "workaround" language to methodology-forward language per Nicole's note about not undermining the team's skill — naming the actual UX research technique signals deliberate professional judgment, not an admission of limitation.
 
 ## Assets That Support This Section
-Candidates from `Process/reports/Meta_Midpoint_Report` (feasibility mapping, Wizard-of-Oz feedback) and `Meta_Check_In_1_Report` (sub-team feedback) once `02_Selected_Assets/` curation begins.
+**Final, in `02_Selected_Assets/`, both confirmed by Nicole:**
+- **Constraint 1 (sub-teams):** `constraints_01_design-team.png` — a genuine sub-team working shot. Caption: "Our design team, mid-exploration and fully accessorized."
+- **Constraint 4 (Wizard-of-Oz):** `constraints_02_wizard-of-oz-rehearsal.jpg` — a teammate filming two others practicing an early round of Wizard-of-Oz prototyping. Deliberately scrappy/internal, and explicitly NOT related to the polished final performance (that's a separate, later moment reserved for Production's Card 1 instead — see that file). Caption: "Rough, early, and exactly how you find out if something actually works."
+
+Constraints 2 and 3 confirmed as no image, by design — not an open item.

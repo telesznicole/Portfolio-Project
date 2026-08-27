@@ -32,7 +32,16 @@
 Revision history: original opener was flagged as unclear and swapped for one that directly ties to Production's closing line, avoiding narrative whiplash from jumping back to testing after already covering the final presentation. Card 1's purchase-decision language was softened, and Card 2's "than it currently did" was fixed, both to avoid implying a shipped/purchasable product exists.
 
 ## Metric Callout (optional)
-80% — expressed strong interest in testing
+**Banner (stats-banner component, counting-up treatment, 2 stats, highlight-reel framing, placed BEFORE Card 1's paragraph):**
+- 80% — "expressed strong interest"
+- 70% — "said it would shape their decision"
+
+(60% intentionally excluded from the banner — it's the honest "room to grow" stat, not a highlight-reel number; it stays in Card 2's text only.)
 
 ## Assets That Support This Section
-_(reference filenames from the manifest)_
+**Final, in `02_Selected_Assets/`, all confirmed by Nicole. Layout: hero + two smaller:**
+- **Hero:** `outcome_01_meta-hq-sign.jpg` (the classic group shot at the Meta infinity-logo sign). Caption: "Ten weeks in a classroom led here."
+- **Smaller 1:** `outcome_02_presenting-encore.jpeg` (the Encore-folder version — Nicole presenting at Meta HQ, NOT the same source as Production's presenting photo, which came from `Photos/final presentation/`). Caption: "Same story. A very different room."
+- **Smaller 2:** `outcome_03_instagram-installation.jpg` (the Instagram-branded cloud installation photo-op). Caption: "Even the hallway had a photo op!"
+
+Considered and explicitly rejected for this section: `post_presentation.jpeg` (shows two named individuals on a remote-call screen, needs cropping, and reads more as presentation-documentation than a strong standalone shot) and `post_presentation_2.jpeg` (genuine NDA risk — appears to show actual sketch/concept content on a screen, plus many named individuals visible; ruled out entirely, not to be used anywhere without a much closer review).

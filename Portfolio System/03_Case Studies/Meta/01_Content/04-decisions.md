@@ -33,4 +33,9 @@ Provenance/credibility note: Decision 1 is a genuine, personally significant cla
 Revision history: an earlier draft ("synthesis over feature-listing") was cut and merged into Decision 1 once the redaction device made it possible to name the three real alternative directions specifically — the vaguer version was redundant once the sharper one existed.
 
 ## Assets That Support This Section
-Candidates from `Process/reports/Meta_Check_In_2_Report` (client feedback quotes, framework, user testing) and `design process/chapter 3/11. final groupings` (the four convergence categories) once `02_Selected_Assets/` curation begins.
+**Final, in `02_Selected_Assets/`, all confirmed by Nicole:**
+- **Top-level (section-wide, not tied to one card):** `decisions_01_whiteboarding-ui.jpg` — whiteboarding the UI, the real messy thinking behind the flagship decision. Caption: "Not the final version. Just the moment it started making sense." Deliberately placed at section level rather than with Decision 1 specifically, alongside the redaction bar carrying that card's visual weight instead.
+- **Decision 3 (formal framework):** `decisions_02_framework-diagram.png` — a mapped visual of the three-part framework itself. Caption: "The framework we built to defend a direction, not just describe one."
+- **Decision 4 (testing before committing):** `decisions_03_testing-session.jpg` — a genuine testing session photo (one tester smiling, another thoughtful, others out of focus holding papers, looking at the solution off-screen). Caption: "This is what testing before committing actually looks like." Note: an earlier draft caption attempted to read the specific expressions in the photo — Nicole corrected that it wasn't a "mixed reactions" moment and asked for something that just plainly marks it as testing, not an interpretation of the reactions shown.
+
+Decision 1 and 2 confirmed as no per-card image, by design — Decision 1 gets its visual distinctiveness from the redaction bar itself (adding an unrelated photo would dilute rather than reinforce it); Decision 2 has no image.
