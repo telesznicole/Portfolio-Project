@@ -1735,3 +1735,30 @@ Meta case study pushed to GitHub. Post-push additions: the approved Encore deck 
 
 **Status**
 🔒 Locked — folder documented, cross-referenced, and confirmed accurate by Nicole.
+
+---
+
+### Decision
+
+Microanimation system finalized for the Meta case study page. Page-load hero animation (fade in + 20px Y-offset) extended down the page as a consistent scroll-triggered reveal: each section fades in (0→1 opacity) with a 24px Y-offset as it enters the viewport on scroll.
+
+**Why**
+- Reuses the hero's existing motion language rather than introducing a new effect, so the whole page reads as one coherent system — directly following Claude's recommendation to extend rather than invent, and consistent with the soft/subtle fade pattern Nicole used on her previous portfolio.
+- This is a Framer/live-build implementation detail, not case-study narrative content — logged here for the record since it's a real, finished design decision, but it lives entirely in the live build, not in any `01_Content/` file.
+
+**Status**
+🔒 Locked. **This closes out active work on the Meta case study** — content, photos, curation, SEO/social assets, and now motion are all finished. Nicole is moving next into raw materials collection for Feminist UX.
+
+---
+
+### Decision
+
+`05_Assets/Wireframes/` renamed to `Low-Fi Wireframes/`, paired with a new `Mid-Fi Wireframes/` folder (Nicole's full-page Figma exports of the mid-fi round, built after the low-fi wireframes).
+
+**Why**
+- Nicole had originally saved the new mid-fi exports as "Mid-Fi Prototypes/" — sitting next to the existing "Wireframes/" folder, the two names didn't read as a matched pair (one said "wireframes," the other said "prototypes"), even though they're the same design process at two fidelity stages, not two different kinds of artifact.
+- Both folders renamed together so they read as a set from the start: `Low-Fi Wireframes/` (the original folder, contains `_Promoted/`, per-page subfolders, and the existing consistency-audit doc, untouched) and `Mid-Fi Wireframes/` (new, flat full-page PNG exports, one per page: Homepage, Resume, How I Work, Case Study Template).
+- A `README.md` added to `Mid-Fi Wireframes/` explaining what it is and noting the rename, matching the documentation pattern already used for `Site Assets/`.
+
+**Status**
+🔒 Locked — both folders confirmed renamed with contents intact (verified by direct directory listing before and after), new folder documented.
