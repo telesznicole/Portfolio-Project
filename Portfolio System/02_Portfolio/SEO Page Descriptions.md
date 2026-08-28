@@ -3,6 +3,8 @@
 > The description tag that shows up in Google search results and link previews (Slack, iMessage, etc.) for each live page. Kept here since this is site-wide content, not specific to any one case study — doesn't fit `03_Case Studies/`'s structure.
 >
 > Standard length target: ~150–160 characters, since that's roughly where Google truncates.
+>
+> **See also:** `05_Assets/Site Assets/social_preview.png` — the image half of this same system (what shows up visually in a link preview, alongside this text).
 
 ---
 

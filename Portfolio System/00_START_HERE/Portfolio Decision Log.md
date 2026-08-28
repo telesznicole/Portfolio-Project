@@ -1722,3 +1722,16 @@ Meta case study pushed to GitHub. Post-push additions: the approved Encore deck 
 
 **Status**
 🔒 Locked — both the callout subtext and the SEO descriptions file are confirmed written and accurate. Meta case study is live, pushed, and fully documented end to end.
+
+---
+
+### Decision
+
+`05_Assets/Site Assets/` created (by Nicole) as the new home for cross-page media — social preview image, app icon, logo variants (black/white). Documented with a `README.md`, cross-referenced from `02_Portfolio/SEO Page Descriptions.md` since the two are the visual and text halves of the same "how the site looks when shared" system.
+
+**Why**
+- This is the visual counterpart to the SEO descriptions work — `social_preview.png` is the Open Graph image shown in link previews (Slack, iMessage, social platforms), alongside the meta description text already documented.
+- Claude could not visually verify the image directly (file too large for available tools), so dimension/ratio correctness (standard OG size is 1200×630px) was flagged for Nicole to confirm manually. **Nicole confirmed dimensions are correct** — the README's caveat language was removed once confirmed, rather than left as a lingering unresolved note.
+
+**Status**
+🔒 Locked — folder documented, cross-referenced, and confirmed accurate by Nicole.
