@@ -1706,3 +1706,19 @@ A final, genuinely-from-scratch audit of the entire `03_Case Studies` system per
 
 **Status**
 🔒 Locked. Every file in `03_Case Studies` independently re-verified fresh, with nine real staleness fixes made and everything else confirmed accurate as-is. **The Meta case study, the shared system documentation, and the Decision Log are all genuinely ready for Nicole's push — not assumed ready.**
+
+---
+
+### Decision
+
+Meta case study pushed to GitHub. Post-push additions: the approved Encore deck given a real public role on the page, and site-wide SEO meta descriptions drafted for the four live pages.
+
+**Why**
+- **The approved, redacted Encore presentation PDF** — already catalogued in `manifest.md` as "the cleared source" — is now actually linked from the bottom-of-page contact callout as a subtext line: *"In the meantime, here's a sneak peek: the deck Meta approved for public sharing."* This was a genuinely missed opportunity Nicole caught herself after the initial page was otherwise finished — the one fully public-cleared asset in the whole project wasn't being used anywhere. Documented in `TONE-AND-VOICE.md`'s reusable-microcopy section, since the callout itself lives there. The Google Drive share link was converted to a direct-download format (`/uc?export=download&id=...`) so clicking it downloads rather than opens a preview page.
+- **A real documentation gap caught in this review, not assumed fixed:** the sneak-peek subtext was agreed in chat but never actually written into `TONE-AND-VOICE.md` until this pass — same category of miss as earlier sessions (approved-in-chat is not the same as saved-to-file), now corrected.
+- **SEO meta descriptions drafted for Homepage, Resume, How I Work, and the Meta case study** — written in the established voice, with the Meta description built almost verbatim from the NDA-sanctioned partnership language (already pre-cleared, so an especially safe choice for public-facing text). Nicole revised the Homepage draft from third-person to a first-person "Hi! I'm..." opening.
+- **Documented at `02_Portfolio/SEO Page Descriptions.md`**, a new file — this is site-wide content, not case-study-specific, so it doesn't belong inside `03_Case Studies/`. Initially named "SEO Meta Descriptions," renamed immediately after Nicole flagged that "Meta" now reads as the project name first and the technical term second anywhere else in the system — genuinely ambiguous, worth the rename.
+- Feminist UX and Terra Dotta both explicitly left as "still needed" in that file rather than drafted preemptively, since neither page is live yet.
+
+**Status**
+🔒 Locked — both the callout subtext and the SEO descriptions file are confirmed written and accurate. Meta case study is live, pushed, and fully documented end to end.

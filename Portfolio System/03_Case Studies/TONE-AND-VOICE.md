@@ -61,7 +61,9 @@ Small pieces of copy that live outside any single case study's narrative content
 - Deliberately count-agnostic — works whether the redirect shows two projects or ten.
 - Went through a first round of shorter, single-line options before Nicole asked for something with more of a "full sentence" feel — the two-short-sentences structure of the final line was chosen specifically for that rhythm.
 
-**Bottom-of-page contact callout** (locked 2026-08-23): *"Want to talk about this project? I'd love to hear from you."*
+**Bottom-of-page contact callout** (locked 2026-08-23, subtext added 2026-08-24): *"Want to talk about this project? I'd love to hear from you."*
+
+Subtext: *"In the meantime, here's a sneak peek: the deck Meta approved for public sharing."* — links directly to the approved Encore presentation PDF (the one asset in the entire project explicitly cleared for public sharing). Turns the callout from a pure promise ("reach out and I'll tell you more") into an immediate, real payoff.
 
 - Distinct from the NDA "ask me" note that closes Context — this one is a general, page-level invitation to reach out, not NDA-specific. Confirmed by Nicole as the broader of the two, not a duplicate/reinforcement of the NDA angle.
 - Placement: Claude's working assumption is that this sits *after* the "This is one story..." redirect, so the page's actual final beat is a personal, direct invitation rather than a pointer to other work — this placement was proposed but never explicitly confirmed by Nicole, flagging as assumed rather than locked.
