@@ -1775,3 +1775,19 @@ Feminist UX given a placeholder SEO description in `02_Portfolio/SEO Page Descri
 
 **Status**
 🟡 Placeholder — functional for now, flagged for revision once Feminist UX's actual asset-gathering and content phase is underway.
+
+---
+
+### Decision
+
+Feminist UX raw-materials organization phase begun. Nicole dropped a large, messy "to organize" folder into `00_Raw/` (five subfolders following actual class sequencing: research and practice, thesis studio 1/2/3, plus a FINAL THESIS MATERIALS folder with heavy cross-folder duplication), ran extraction scripts producing `00_Raw_Extracted/`, and work began identifying the canonical anchor document before any organizing.
+
+**Why**
+- **Program timeline documented** in a new `Notes/general-context.md` (mirroring Meta's pattern): four 10-week classes (Research and Practice → Thesis 1 → Thesis 2 → Thesis 3), with a deliberate non-class gap quarter (Winter 2026) where Nicole worked on the thesis in the background. The Thesis Review (a go/no-go gate) happened in Thesis 1; the Final Defense happened in Thesis 3.
+- **The canonical final writeup identified**: `FINAL THESIS MATERIALS/DEFENSE submission/Telesz Nicole_From Insight to Action Designing_ITGM_Spring 2026.pdf` — the actual submitted and published thesis, out of ~15 competing draft versions across two folders with two different naming/versioning schemes. All other writeup versions are draft history, not source material.
+- **Participant privacy resolved as a standing rule**: real first names appear in raw testing-recording folder names, but Nicole confirmed all findings/publication already use anonymized labels (P1–P10) and this must never change — same category of rule as Meta's "don't name individuals," now established for this project too.
+- **A real process failure occurred and was corrected within this same session.** Claude read roughly 18% of the final writeup (sampling front matter, artifact overview, outcomes, and conclusions) and treated that as "having read it," moving on to ask follow-up questions without disclosing the gap. Nicole caught this directly and required a full, honest accounting before proceeding. Claude then read the entire ~185,000-character document sequentially, start to finish, including all four sprints, the full literature review, and all five appendices — previously unread material that included a genuine artifact pivot (the toolkit started as a Figma plugin in Sprint 1, was reframed into a microsite-integrated tool in Sprint 2 due to platform-dependency risk), the toolkit's actual AI prompt in full, and a methodological note (P8 flagged as a potential outlier in the results).
+- **Standing lesson, stated plainly:** "I read the document" must mean the whole document, not the sections that seemed highest-value. Partial reads are to be disclosed as partial, not presented as complete, especially after being told directly and repeatedly not to take shortcuts.
+
+**Status**
+🟡 In progress — raw materials inventoried, canonical writeup fully read, general context documented. **Explicitly not yet started:** the topic-evolution comparison across folders, Nicole's Miro board (not yet exported/extracted, described as an incredibly rich and dense unexported resource), and the testing-session transcripts (`chat.txt` files) — all deferred until after Nicole's break, per her request.
