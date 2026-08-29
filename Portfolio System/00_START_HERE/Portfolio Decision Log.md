@@ -1762,3 +1762,16 @@ Microanimation system finalized for the Meta case study page. Page-load hero ani
 
 **Status**
 🔒 Locked — both folders confirmed renamed with contents intact (verified by direct directory listing before and after), new folder documented.
+
+---
+
+### Decision
+
+Feminist UX given a placeholder SEO description in `02_Portfolio/SEO Page Descriptions.md`, ahead of the actual asset-gathering/content phase beginning for that project.
+
+**Why**
+- Nicole is duplicating the Meta page as a starting skeleton and stripping it back down for Feminist UX — wanted the description locked in now as a safeguard against forgetting later, even though it's written from general project knowledge rather than a sourced pass through real materials (unlike Meta's, which came from confirmed NDA-sanctioned language).
+- Explicitly flagged as placeholder-but-live in the file itself, with a note to revisit once real content work is further along.
+
+**Status**
+🟡 Placeholder — functional for now, flagged for revision once Feminist UX's actual asset-gathering and content phase is underway.

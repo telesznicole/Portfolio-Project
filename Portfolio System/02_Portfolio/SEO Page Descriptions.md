@@ -28,9 +28,14 @@
 
 *(Uses the NDA-sanctioned partnership description almost verbatim — see `03_Case Studies/Meta/00_Raw/NDA/nda-guidelines.md` — since that language is already pre-cleared for public use, making this description especially safe.)*
 
+## Feminist UX Case Study
+
+> "Feminist UX — a framework and practitioner toolkit for designing with feminist principles, built as an MFA thesis and validated by real UX practitioners."
+
+*(Placeholder-but-live, added 2026-08-24 as a "just in case" safeguard while Nicole rebuilds the page skeleton — written from general project facts already established (MFA thesis, framework/toolkit, practitioner validation), not from a fresh pass through the project's actual materials. Nicole flagged this should be revisited once the real content/asset-gathering phase for Feminist UX is further along, the same way Meta's description was grounded in confirmed, sourced language rather than general knowledge.)*
+
 ---
 
 ## Still Needed
 
-- **Feminist UX** — not drafted yet, page isn't built out
 - **Terra Dotta** — not drafted yet, project paused

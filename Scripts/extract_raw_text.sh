@@ -16,8 +16,8 @@
 set -e
 
 # EDIT THESE TWO PATHS IF NEEDED -------------------------------------------
-SOURCE_DIR="/Users/nicoletelesz/website redesign/Portfolio Project/Portfolio System/03_Case Studies/Meta/00_Raw"
-OUTPUT_DIR="/Users/nicoletelesz/website redesign/Portfolio Project/Portfolio System/03_Case Studies/Meta/00_Raw_Extracted"
+SOURCE_DIR="/Users/nicoletelesz/website redesign/Portfolio Project/Portfolio System/03_Case Studies/Feminist UX/00_Raw"
+OUTPUT_DIR="/Users/nicoletelesz/website redesign/Portfolio Project/Portfolio System/03_Case Studies/Feminist UX/00_Raw_Extracted"
 # ----------------------------------------------------------------------------
 
 echo "Source folder: $SOURCE_DIR"
