@@ -1865,3 +1865,43 @@ Major new raw materials added by Nicole — the actual live website (all 5 pages
 
 **Status**
 🔒 Locked — both new material types read in full, organized into the standard folder structure, and comprehensively documented in `general-context.md` and `manifest.md`. **Only the Miro board remains outstanding across the entire raw-materials phase.** Ready for Nicole's repo push.
+
+---
+
+### Decision
+
+Nicole's Miro board — the last remaining raw-materials source — exported into both `00_Raw/` and `00_Raw_Extracted/`, and read to a significant depth. **Honesty note up front: this pass is genuinely NOT fully complete**, and is documented as such rather than rounded up to "done," consistent with the standard set earlier this session after the false-completion incident.
+
+**Why**
+- **The single most consequential finding**: Nicole's own participant tracking table (`Final Validation Sessions/Wrap-Up.md`) gives the **confirmed P-number-to-real-name mapping** for all 10 final validation participants. This retroactively confirms a hypothesis from earlier in this session was exactly right — P8 is Sanskruti Deshpande, matching the session with the genuine disruption and `_1` filename suffix. This mapping is now the single most sensitive piece of information in the whole raw-materials set and is flagged with extra weight in `general-context.md`: never near public-facing content, P-numbers only, always.
+- **Real behavioral/observational data**, not just verbal transcripts — Nicole's own live notes per participant per page (scroll speed, what was clicked/skipped, facial reactions) meaningfully enrich the Whisper transcripts already read, without contradicting them. Confirms P2 (Thompson Draper) participated in an earlier toolkit round before his final validation session, resolving a previously-unexplained loose file (`THOMPSON.mov`) sitting outside any transcript folder.
+- **Real private editorial commentary from Nicole found and preserved**: direct evidence of her actively curating participant suggestions against her own vision (explicitly rejecting a subscription-platform idea as "against my goals"), rather than treating all feedback as equally actionable.
+- **A real privacy-sensitive element found and explicitly NOT reproduced**: the Planning folder contains actual participant email addresses. Documented that this tracker exists without copying a single address into any documentation file.
+- **An entirely new, previously-unknown testing round discovered**: "Microsite Focus Sessions," using anonymous Subject Numbers (1–5), confirmed to match the "5 practitioners" co-creation round described in the final thesis's Sprint 4 — distinct from the 10-participant Final Validation. Real design-inspiration references surfaced (Buzzfeed quizzes, Notion cards, Spotify Wrapped, bento-box layouts) that plausibly shaped the toolkit's final visual polish.
+- **A real, significant access limitation surfaced and disclosed plainly, not minimized**: roughly 20 Miro files — including Nicole's own synthesis of the validation findings and the full AI-prompt version history (V1 through V6 plus FINAL) — extracted to near-zero bytes. These are image-only Miro exports with no underlying text layer, genuinely inaccessible through current tools, not skipped or deprioritized. Would require Nicole's direct involvement (re-export, walkthrough) if ever needed.
+- **Genuinely unread material named explicitly rather than folded into a vague "done" claim**: 7 files in Microsite Focus Sessions, 3 in Feminism Research, 2 in Learn Content Outline remain unread — not yet reached, not intentionally skipped.
+- **The "Raw-Materials Reading" status section rewritten from a completion claim into an honest status breakdown** — read / unread / inaccessible, each named specifically, rather than a single "complete" marker that would risk repeating the earlier false-completion pattern.
+- **`DEF_MIRO-Export/` moved out of `to organize/`** into `Other/`, mirrored across both trees. `to organize/` is empty again.
+
+**Status**
+🟡 **Genuinely partial, stated honestly.** Majority of the Miro board read and documented, with real, valuable findings (especially the P-number mapping). Meaningful material remains both unread and, separately, inaccessible — both categories named explicitly in `general-context.md` and `manifest.md` rather than glossed over. Ready for Nicole's repo push; her call on whether to continue the remaining Miro reading or treat this as sufficient.
+
+---
+
+### Decision
+
+Nicole fixed the previously-broken Miro extraction herself (the ~20 files that had extracted to near-empty are now real, substantial content), and reorganized the Miro export by class — splitting the single `DEF_MIRO-Export/` wrapper into six separately-coded folders (`T2_MIRO-*` for four Thesis 2 folders, `T3_MIRO-*` for two Thesis 3 folders), moved directly into `Other/`, mirrored across both trees.
+
+**Why**
+- **The genuinely inaccessible material from the prior pass is now fully readable**, and turned out to contain some of the richest content in the entire project:
+  - **The complete AI-prompt version history (V1 through FINAL)** — comparing the bookends reveals a real, principle-level design shift: the final prompt explicitly bans all scoring/grading language ("Do not imply grading... describe behaviors and actions"), a genuine ethical refinement beyond what the earlier partial read (from Appendix C) had shown.
+  - **The toolkit's full question-set evolution (V1–V4)** — confirms dropped "Advice Type" hints and a real tone shift from clinical third-person to personal first-person phrasing.
+  - **Nicole's own complete validation analysis** — her structured research synthesis mapped against RQ3/RQ4/RQ5, almost certainly the direct structural source for the thesis's own Outcomes section, and containing far more detailed methodological reasoning for the P8 exclusion decision than the thesis's brief appendix note.
+  - **The exact informed consent and survey instrument**, and **the full co-creation session script** — both confirm, with verbatim wording, what was already understood from the thesis's own appendices.
+- **A major cross-reference finding**: the 5 co-creation participants' real identities are now known (Arnav, Shivani Varandani, Thomas Walker, Blake Mitchell, Thompson Draper). Two of them — Thomas Walker and Thompson Draper — participated *twice*, once in this earlier round and again later as full Final Validation participants (P10 and P2), resolving Thompson's own "liked the evolution from last time" comment and a previously-unexplained loose video file. **Blake Mitchell is confirmed to have actually participated** — the same Blake Mitchell from Nicole's Meta team — correcting an earlier assumption drawn from a stale planning-tracker snapshot that had listed him as "not contacted."
+- **Real evidence of iterative refinement between rounds**: specific UX critique from the co-creation round (spacing, hierarchy, navigation aids) doesn't appear as a complaint in any of the later Final Validation sessions, suggesting genuine fixes happened in between.
+- **The reorganization itself reflects real project structure Nicole confirmed directly**: Feminism Research, Learn Content Outline, Toolkit Ideation, and Toolkit Development all belong to Thesis 2 (the artifact-building class); Final Validation and Microsite Focus Sessions belong to Thesis 3. This is a more accurate classification than treating the whole Miro export as one undifferentiated blob.
+- **`general-context.md`'s entire Miro section rewritten** to reflect the new folder paths, the newly-readable content, and a corrected reading-status breakdown — the count of genuinely unread files dropped from ~9 unread + ~20 inaccessible to a small handful of unread files and **zero remaining inaccessible material**. `manifest.md`'s single `DEF_MIRO-Export` row replaced with six accurate, individually-described rows.
+
+**Status**
+🔒 **Substantially more complete than the prior entry, and stated as such honestly.** The extraction-failure problem that blocked ~20 files is fully resolved. A small, explicitly-named remainder of files stays genuinely unread (not deprioritized, just not yet reached). No content in this project is now inaccessible. Ready for Nicole's repo push.
