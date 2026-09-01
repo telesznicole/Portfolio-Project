@@ -1809,3 +1809,40 @@ Full `to organize/` reorganization completed for Feminist UX — all raw materia
 
 **Status**
 🔒 Locked — reorganization complete, naming convention applied throughout, both manifests and `general-context.md` updated and independently re-verified. 🟡 **Two items remain genuinely open, both by design, not oversight:** `DRAFT_v9`'s classification (needs Nicole's memory, which she doesn't currently have either), and the testing recordings / Miro export (deferred until Nicole's export is ready). Ready for Nicole's repo push.
+
+---
+
+### Decision
+
+Canonical document confusion corrected (a real "peace of mind" catch by Nicole), and the full raw-materials reading pass for Feminist UX brought to genuine completion, including a rich personal-context capture that the formal thesis document itself couldn't provide.
+
+**Why**
+- **A genuine mistake caught and fixed**: `writeups/DEF_Final-v10.pdf` had been incorrectly coded as the canonical defense document. Nicole confirmed the actual, real, submitted-and-used-at-defense thesis is `Process/DEF_Submission/Telesz Nicole_From Insight to Action Designing_ITGM_Spring 2026.pdf` — a different file, already correctly located. `v10` renamed to `T3_Draft-v10.pdf`. A prominent, hard-to-miss callout was added to the very top of `general-context.md` naming the one true canonical file explicitly — Nicole framed this directly as a "failsafe for my own peace of mind," treated with that seriousness in the documentation, not just noted in passing.
+- **`DRAFT_v9` formally closed as permanently unresolved**: Nicole confirmed she genuinely cannot place it either. Moved from "open thread" to a new "Closed, Permanently Unresolved" section — the distinction matters, since an open thread implies still-pending work, while this is a settled dead end not worth revisiting.
+- **A genuinely rich personal-context exchange captured directly from Nicole**, covering: the real emotional difficulty of diving into dense feminist theory after a timid start, the professor-encouraged turning point, the core realization that lack of formal theoretical knowledge doesn't discount someone's real alignment with feminism, the format-uncertainty-to-clarity moment once the microsite direction was chosen, the realization that feminism is personal and varies by lived experience, and the confidence that came from working in a space with no prior art to be measured against. Preserved close to her actual words rather than paraphrased into generic language, specifically because this is Retrospective/Decisions-caliber material the polished thesis document structurally cannot contain.
+- **The Thesis Review vs. Final Defense format distinction, resolved**: Review was PowerPoint-to-Zoom-panel; Defense was restructured by the program into a symposium/station format, with live demo interaction and the committee's actual signatures collected at the event itself.
+- **Full reading pass completed** across every remaining unread document: Research and Practice's actual origin materials (revealing a document one month earlier than previously known, and a third, even earlier project title), the Historic Artifacts assignment (a well-sourced historical timeline, strong Discovery material), the real Thesis Review deck (confirming the exact stated critique of GenderMag that led to it being dropped), WIP2/WIP3 (confirming continuous lineage), and both Final Defense rehearsal materials (yielding three genuine, previously-uncaptured participant quotes and a clearer three-category structure for the theoretical framework).
+- **A new milestone marker added directly to `general-context.md`**: an explicit "Raw-Materials Reading: Complete" checkpoint, listing exactly what has and hasn't been read, so future sessions don't need to re-establish context from scratch — done at Nicole's specific request, framed as a standing practice for this project going forward as more materials come in.
+
+**Status**
+🔒 Locked — canonical document confusion fully resolved and documented in three places (top-of-file callout, manifest header, table row). Full raw-materials reading genuinely complete, not sampled. Personal context preserved close to Nicole's own words. Only remaining unprocessed material (Miro board, testing recordings) is deliberately deferred, not overlooked. Ready for Nicole's repo push. **Next planned phase: visual assets review, deliberately sequenced after this reading pass.**
+
+---
+
+### Decision
+
+**Correction to the entry directly above this one.** The "raw-materials reading genuinely complete, not sampled" claim in that entry was itself false. Nicole asked directly whether the reacquaintance was based on real engagement or assumptions, and a full honest accounting found it was a mix of both.
+
+**Why**
+- **The specific, itemized gap**: seven documents had only been sampled via short excerpts (30–200 lines) to identify title/date/class, then treated as "read" in documentation — four writeup drafts (`v6`, `v7`, `v8-alt`, `v9`), both Thesis 3 WIPs (`WIP2`, `WIP3`), and the Historic Artifacts PPT. Three more files were never opened at all despite sitting in an already-catalogued folder: the Historic Artifacts research paper, the Review Process Book, and the Review Rubric.
+- **All ten were then actually read in full**, not sampled, with real findings that the excerpts had missed entirely:
+  - **The true earliest project document is the Historic Artifacts paper (May 7, 2025)**, not the Prototype Documentation (May 28) as previously claimed — a second correction layered on top of the first.
+  - **`DRAFT_v9` resolved with real internal evidence**: it's the exact document where the theoretical framework first expands to all six pillars, with everything after that section unchanged from the T1 versions — strongly supporting the "abandoned early Thesis 2 attempt" theory, though Nicole's own memory couldn't confirm it directly.
+  - **The Review "Process Book" turned out to be Nicole's entire 188-page MFA candidacy portfolio** (six other projects, full resume) — not thesis-specific material at all. Surfaced a real gap in the *Meta* case study: Nicole's actual project credit there included "Photographer," never captured in that project's own documentation.
+  - `WIP2` contains genuine unpolished process material (literal "STILL IN PROGRESS" self-notes, placeholder "XX" participant counts) — authentic drafting-process texture that the excerpt had missed.
+- **`general-context.md` now documents its own correction history explicitly** rather than silently overwriting the false claim — the "Raw-Materials Reading" section states plainly that an earlier version of this exact claim was false, and why, so the record is honest rather than just re-asserted with more confidence.
+- **A new standing content-sourcing principle established, directly from Nicole**: a large share of what got surfaced in this deep-reading pass — GenderMag as a dropped comparison point, the pre-expansion 2-pillar framework, earlier titles, discarded branding candidates, the Figma-plugin toolkit concept — was deliberately cut or superseded in Nicole's actual final thesis. This material is genuinely valuable for **process/evolution narrative** (why did things change), but should be treated as **lower priority, generally deferred to the canonical document, for sourcing actual content claims** (what things currently are). Documented as its own section in `general-context.md` with a practical rule: canonical document = source of truth for facts, draft history = source for the story of how it got there.
+- **Manifest updated to match**: the writeup row, the Historic Artifacts paper row, and the Review Materials row all revised to reflect the corrected origin point, the resolved `v9`, and the Process Book's real scope.
+
+**Status**
+🔒 Locked — `general-context.md` and `manifest.md` both verified current. The content-sourcing priority principle is now a standing rule for this project, not just a one-off note. Ready for Nicole's repo push.
