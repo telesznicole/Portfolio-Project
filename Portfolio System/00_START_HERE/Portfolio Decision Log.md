@@ -1846,3 +1846,22 @@ Canonical document confusion corrected (a real "peace of mind" catch by Nicole),
 
 **Status**
 🔒 Locked — `general-context.md` and `manifest.md` both verified current. The content-sourcing priority principle is now a standing rule for this project, not just a one-off note. Ready for Nicole's repo push.
+
+---
+
+### Decision
+
+Major new raw materials added by Nicole — the actual live website (all 5 pages, HTML + extracted text) and, critically, real Whisper-generated spoken transcripts for all 10 final validation testing sessions plus 1 separate Sprint 4 co-creation session. All read in full and documented.
+
+**Why**
+- **The live website** revealed a real discrepancy worth flagging rather than silently resolving: the site's actual live tagline is "Design for everyone," not "Design for all." as documented from the thesis text. Also surfaced real public-facing content not in the thesis document at all — quotes from Laurie Penny and bell hooks, a Facebook "proper name" policy example, a personal public quote from Nicole herself, and a practical UX Maturity Model breakdown.
+- **The testing transcripts are a dramatically richer primary source than the thesis's own excerpted quotes.** Confirmed the exact source of the already-known "no rights to my own soul anymore" quote, and surfaced extensive new material: real bugs caught live during testing (a failed button load, leftover placeholder branding still visible), the single most structurally rigorous piece of participant feedback across the whole validation (a real gap between the toolkit's principles and its AI-generated output, clearly articulated), and multiple genuinely powerful personal parallels volunteered by participants (a real ID-verification system failing a long last name, historical menstrual product testing with water instead of blood, an extended reflection from a male participant on "default male" design failing him too).
+- **A major demographic pattern surfaced and documented**: most participants are confirmed to be Nicole's own SCAD peers and classmates, not random external testers — consistent with the final thesis's own stated recruitment strategy, but worth having explicit for future context.
+- **A real hypothesis developed for the thesis's own flagged "P8 outlier"**: one session shows a genuine external disruption (an apparent fire alarm) and carries a `_1` filename suffix suggesting an interrupted session — a strong, evidence-based candidate, though not asserted as certain.
+- **The separate toolkit-only transcript was reclassified**: confirmed to be an earlier Sprint 4 co-creation session testing outdated AI-output category names, not a final validation session — and its specific feedback is very likely the direct evidence trail for why those categories were later reworked into friendlier language. The manifest's prior claim of "2 sessions" in this folder was also caught and corrected to the accurate 1.
+- **Both materials moved out of `to organize/`** into `Other/DEF_Website/`, mirrored across `00_Raw/` and `00_Raw_Extracted/`. `to organize/` is now genuinely empty again.
+- **A standing privacy reminder reinforced explicitly in `general-context.md`**: real participant names appear throughout these transcripts for internal tracking, but must never appear in any public-facing case study content — anonymized P-numbers only, consistent with the rule established earlier in this project.
+- **The "Raw-Materials Reading: Complete" marker and Open Threads section were both updated** to reflect the new true state — only Nicole's Miro board remains genuinely unprocessed.
+
+**Status**
+🔒 Locked — both new material types read in full, organized into the standard folder structure, and comprehensively documented in `general-context.md` and `manifest.md`. **Only the Miro board remains outstanding across the entire raw-materials phase.** Ready for Nicole's repo push.
