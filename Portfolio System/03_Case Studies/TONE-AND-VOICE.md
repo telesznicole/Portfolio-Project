@@ -67,3 +67,26 @@ Subtext: *"In the meantime, here's a sneak peek: the deck Meta approved for publ
 
 - Distinct from the NDA "ask me" note that closes Context — this one is a general, page-level invitation to reach out, not NDA-specific. Confirmed by Nicole as the broader of the two, not a duplicate/reinforcement of the NDA angle.
 - Placement: Claude's working assumption is that this sits *after* the "This is one story..." redirect, so the page's actual final beat is a personal, direct invitation rather than a pointer to other work — this placement was proposed but never explicitly confirmed by Nicole, flagging as assumed rather than locked.
+
+---
+
+## Applying This Guide to Feminist UX (established 2026-08-XX)
+
+The core principles above are shared across every case study. Two things are genuinely different about this project, worth stating explicitly rather than assuming Meta's version carries over unchanged.
+
+### "I" vs. "we" simplifies for solo work
+Meta's person/voice framework exists to solve a specific tension: proving individual contribution honestly within a 22-person team. Feminist UX is solo thesis work — that tension doesn't exist. **"I" is the default almost everywhere.** "We" (or specific names) only shows up for genuine collaborative moments: committee feedback, working with SME MaryClaire Pappas, peer co-creation sessions. Not a section-by-section balancing act like Meta needed — just a much simpler default.
+
+### How much theory stays visible: folded in, not front-loaded
+Nicole's explicit priority: **sound, not the focus. Written for a recruiter, not an academic reviewer.** Resolved via a concrete either/or, since "visible on page vs. folded in" was itself an abstract distinction until grounded in an example:
+
+- **Visible on page** (what we're avoiding as the default): *"I grounded the framework in Feminist HCI, Design Justice, and Technofeminism, later expanding to include Cyberfeminism and Post-Third Wave Feminism as the project's scope grew."* — asks the reader to already know or care what these terms mean.
+- **Folded in** (the chosen default): *"The framework started narrow — just two ideas — and grew as I kept finding gaps it didn't cover. By the end it pulled from five distinct schools of feminist thought, each catching something the others missed."* — same underlying fact, but the rigor shows through specificity ("five distinct schools," "each catching something the others missed") rather than through naming.
+
+**Locked approach**: theory named once, briefly, likely in Discovery, so a reader who does know the field sees real scholarship underneath. Everything after that stays in plain language — the names don't need to keep reappearing to prove the rigor once, since the actual work (the pivots, the real quotes, the validation data) carries that weight on its own.
+
+### The real structural opportunity this project has that Meta didn't
+Meta's Decisions and Production sections had to work around NDA redaction — large parts of the actual solution couldn't be shown in detail. Nothing blocks Feminist UX the same way. **Decisions and Production should run richer and more specific here** — the real Figma-plugin-to-microsite pivot, the AI prompt's real evolution (with actual before/after text), the toolkit's actual mechanics — all of it is fair game, and Nicole named this directly as a priority: this project is where she finally gets to show full process, solution included.
+
+### Captions
+Same register as Meta's ("Our design team, mid-exploration and fully accessorized" is the reference point) — specific, a little wry, never generic. Actual lines to be developed once curating specific images.

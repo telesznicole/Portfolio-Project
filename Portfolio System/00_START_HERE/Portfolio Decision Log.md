@@ -1988,3 +1988,18 @@ Nicole uploaded the project's first genuinely new photos and diagram figures sin
 
 **Status**
 🔒 **All 7 uploaded files resolved** — 6 organized into the correct locations with class codes applied, 1 duplicate flagged for deletion. All three documentation files current and cross-consistent. Ready for Nicole's repo push.
+
+---
+
+### Decision
+
+Tone and voice for Feminist UX established, applying (not replacing) the shared `TONE-AND-VOICE.md` guide.
+
+**Why**
+- **Nicole's stated priorities**: avoid academic language (wrong register for her audience), mirror Meta's established voice including caption personality, and lean into this project's real advantage over Meta — full process is showable here, including the actual solution, which NDA restrictions blocked for Meta.
+- **The "I vs. we" framework simplifies for solo work**: Meta's version exists to balance individual-contribution proof against honest team-crediting across 22 people. That tension doesn't exist here. "I" is now the default almost everywhere; "we"/named collaborators only for genuine collaborative moments (committee, SME, peer co-creation).
+- **The harder question — how much named theory to surface — resolved through a concrete worked example**, since the visible-vs-folded-in distinction was itself too abstract until grounded in real sentences. Chosen default: theory named once, briefly, then folded into plain language everywhere after — rigor demonstrated through specificity, not vocabulary.
+- **Documented directly in the shared `TONE-AND-VOICE.md`** as a new "Applying This Guide to Feminist UX" section, not a separate project-only file — keeps one source of truth for voice across the whole portfolio while still capturing what's genuinely project-specific.
+
+**Status**
+🔒 Tone and voice locked for this project. Ready for Nicole's repo push. Next: likely visual asset curation (as more come in) or beginning actual `01_Content/` drafting.
