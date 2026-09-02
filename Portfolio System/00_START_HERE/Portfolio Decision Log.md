@@ -2019,3 +2019,20 @@ A full pre-content-drafting audit was run at Nicole's request — every open fla
 
 **Status**
 🔒 **Every genuinely open item from the raw-materials phase is now resolved.** `general-context.md` updated with a prominent, consolidated two-errors callout plus inline resolutions at each original discrepancy. Ready for Nicole's repo push. Nothing outstanding is blocking the move into `01_Content/` drafting.
+
+---
+
+### Decision
+
+**First content section of Feminist UX locked: Executive Summary.** The actual first content-drafting work on this project, following the Meta-established five-field format (Role, Team, Duration, Problem, Proof).
+
+**Why**
+- **Claude's first draft used the wrong format entirely** — free-flowing sentence answers to the template's five broad guiding questions, not the real, much stricter five-field tag-length format Meta actually settled on. Nicole caught this immediately. Corrected by going back to Meta's actual finalized `01_Content/00-executive-summary.md` rather than reconstructing the format from memory a second time.
+- **Role**: "UX Researcher, Designer & Developer" — leaning into all three since Nicole did the entire stack solo, a genuine differentiator from Meta's team-credited role.
+- **Duration**: went through a real correction — Nicole clarified the project actually started **March 2025**, not the previously-documented "Spring 2025" vague window, and runs through **end of May 2026** at defense, landing on 14 months. Then corrected again to **"14+ months"** since she's still doing some background work on it past the formal defense. This also revised `general-context.md`'s own timeline: the project's true start now predates the previously-flagged "earliest surviving document" (May 7, 2025) by roughly a month — documented as expected (early coursework/ideation with no surviving artifact), not a gap to chase.
+- **Problem**: Nicole asked directly for the word "UX" to be present, since the project's whole point is UX-specific, not a general feminism statement. Revised to "inclusive UX design" while keeping the folded-in-theory approach from the tone/voice conversation intact.
+- **Proof**: Nicole deferred entirely to Claude's judgment on audience fit. Chose the validation stat over a vivid quote or a "nothing like this exists" novelty claim, reasoning by direct analogy to Meta's own proof point ("encore to 20+ Meta stakeholders") — external, quantitative validation beats an internal claim about the work, and this project actually has real before/after numbers Meta's proof point didn't.
+- **Hero visual deliberately deferred**, per Nicole's explicit request, matching exactly how Meta's hero image was finalized only after the rest of the section's content was locked.
+
+**Status**
+🔒 **Executive Summary fully locked** — all five fields finalized, `01_Content/00-executive-summary.md` updated to match Meta's real format and written with full revision history. Hero visual and supporting assets intentionally left open for later. Ready for Nicole's repo push.
