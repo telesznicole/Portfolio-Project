@@ -2036,3 +2036,21 @@ A full pre-content-drafting audit was run at Nicole's request — every open fla
 
 **Status**
 🔒 **Executive Summary fully locked** — all five fields finalized, `01_Content/00-executive-summary.md` updated to match Meta's real format and written with full revision history. Hero visual and supporting assets intentionally left open for later. Ready for Nicole's repo push.
+
+---
+
+### Decision
+
+**The full content spine for the Feminist UX case study is locked.** Built through several rounds of direct conversation, refined each pass rather than settled on the first draft.
+
+**Why**
+- **A real error was caught and corrected mid-process**: Claude's first version of the Context hook claimed "the theory existed, but nobody had built anything you could actually use" — collapsing Nicole's actual, more specific contribution (she both *defined* "Feminist UX" as a formal framework, which didn't exist, *and* built the first tools to operationalize it) into just the tooling half. Nicole flagged this as a foundational point and was right to be disappointed. Corrected by going back to the thesis's own Research Gap section directly rather than trusting memory a second time — verbatim source quote now anchors the corrected hook in the spine itself.
+- **Historical timeline cut entirely** from Discovery — Nicole's call, reinforced by the project's own content-sourcing principle: it didn't survive into the final defended thesis, so it doesn't belong in the case study either.
+- **Constraints re-scoped from personal to project-level** — solo scope, no existing precedent, solo technical feasibility, and the validation study's real disclosed limitations. "Academic milestone structure" explicitly dropped at Nicole's request: every UX project has a timeline, so it isn't distinctive enough to earn space.
+- **Solo framing explicitly bounded**: genuinely impressive and factually real, kept in Context, but Nicole was clear it should not become the section's driving narrative device.
+- **A real, unresolved structural concern preserved rather than solved prematurely**: Nicole wants readers to know what was actually built early, so they're not still wondering "what's the product?" deep into the case study, distracting from everything else on the way to Outcome. Candidate solutions (Exec Summary hero, a Context-level preview) logged but explicitly not decided — revisit when Production is actually drafted.
+- **Two sections (Discovery, Decisions/Production) flagged as genuinely dense**, expected to need real discussion once actually drafted rather than being treated as quick passes.
+- **Documented directly in `general-context.md`** as a new, prominently placed "Content Spine — LOCKED" section, immediately after the Two Confirmed Errors callout, so it's one of the first things seen when opening the file.
+
+**Status**
+🔒 **Content spine locked and documented**, including its two deliberately-preserved open threads (Discovery's comparison-work question, Production's reveal-timing question). Ready for Nicole's repo push. Next: drafting Context.
