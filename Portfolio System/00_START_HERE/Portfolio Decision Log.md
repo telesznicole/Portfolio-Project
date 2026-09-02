@@ -2003,3 +2003,19 @@ Tone and voice for Feminist UX established, applying (not replacing) the shared 
 
 **Status**
 🔒 Tone and voice locked for this project. Ready for Nicole's repo push. Next: likely visual asset curation (as more come in) or beginning actual `01_Content/` drafting.
+
+---
+
+### Decision
+
+A full pre-content-drafting audit was run at Nicole's request — every open flag, discrepancy, and loose end across the whole raw-materials phase compiled into one list, organized by real urgency (needs a decision / housekeeping / accepted gap / standing rule). Nicole resolved every item that needed her input in one pass.
+
+**Why**
+- **Both confirmed thesis errors resolved the same way**: "Design for everyone." is the real slogan ("Design for all." in the thesis text is itself a second error, same category as the already-known Figma Plugin sitemap error). Neither gets corrected in the source — both documented so case-study content uses the true version.
+- **Nielsen citation resolved**: defer to the thesis's own Works Cited/References section (2017), not the in-text 2005, for any future citation.
+- **A new, highly visible "Two Confirmed Errors" callout added right after the canonical-document section** at the very top of `general-context.md`, pairing both thesis errors together so neither gets missed or rediscovered later.
+- **The `ITGM765_checkIn2` item caused genuine confusion** — Nicole went looking for a file to fix when there was nothing to find; it's an existing raw file with a failed *text extraction*, not a missing file. Clarified directly and simplified in documentation to prevent the same confusion recurring.
+- **The comprehensive flag list itself confirmed the project is in genuinely good shape**: of everything surfaced, only 3 items needed a real decision, all three resolved in this exchange. Everything else was already housekeeping (duplicates deleted by Nicole), accepted low-priority gaps, or standing rules to keep in mind going forward — not open problems.
+
+**Status**
+🔒 **Every genuinely open item from the raw-materials phase is now resolved.** `general-context.md` updated with a prominent, consolidated two-errors callout plus inline resolutions at each original discrepancy. Ready for Nicole's repo push. Nothing outstanding is blocking the move into `01_Content/` drafting.
