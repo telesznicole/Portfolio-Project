@@ -1972,3 +1972,19 @@ Nicole asked directly whether Feminist UX was missing any documentation Meta had
 
 **Status**
 🔒 **`STRUCTURE.md` built and verified present in Nicole's actual filesystem.** Feminist UX now has full documentation parity with Meta's system, and arguably exceeds it given the added naming-convention section this project specifically needed. Ready for Nicole's repo push.
+
+---
+
+### Decision
+
+Nicole uploaded the project's first genuinely new photos and diagram figures since the raw-materials phase began — 7 files total, dropped into `to organize/`. All 7 reviewed directly (photos viewed as images, diagrams compared pixel-by-pixel against existing raw materials), organized, and documented.
+
+**Why**
+- **Three genuine new photos from the actual Final Defense event** kept in `Photos/`: a classmate group photo, a candid selfie, and — most valuably — Nicole standing at her own real defense station with her actual poster and the live validation-results screen visible behind her. First real photographic documentation this project has had of the defense itself.
+- **Three diagram files compared directly against the existing `T1_MicrositeMapsAndFlows/` diagrams**, not assumed to be duplicates or new without checking: one (`simulation_flowmap.png`) was a confirmed exact duplicate, moved to `_Duplicates/` for Nicole to delete. The other two were confirmed genuinely different — later-stage versions showing real, visible evolution (the sitemap gaining the final page structure while still referencing "Figma Plugin"; the toolkit flow fully post-pivot with no plugin references at all).
+- **Nicole confirmed all three diagrams are T3/DEF-era** — the actual figures used in the final, defended thesis, not earlier drafts as Claude had initially guessed might be the case. A new `T3_MicrositeMapsAndFlows/` folder created (parallel to the existing `T1_MicrositeMapsAndFlows/`) to hold them, mirrored across both trees.
+- **A genuinely remarkable finding surfaced and confirmed directly by Nicole**: the sitemap figure that made it into the actual published, defended thesis still says "Figma Plugin" under Engage — a real error that survived the entire review and defense process without Nicole or any of her professors catching it. This is now documented clearly across all three files (`general-context.md`, `manifest.md`, `STRUCTURE.md`) as a citable, real detail about the final academic artifact, not something to quietly correct or omit.
+- **All three documentation files updated in the same pass** — `general-context.md` with a full new dated section, `manifest.md` with new Photos/ rows and an updated Process/ row, `STRUCTURE.md` with updated Photos/ and Process/ sections plus a new Change Log entry. `to organize/` confirmed empty in both trees afterward.
+
+**Status**
+🔒 **All 7 uploaded files resolved** — 6 organized into the correct locations with class codes applied, 1 duplicate flagged for deletion. All three documentation files current and cross-consistent. Ready for Nicole's repo push.

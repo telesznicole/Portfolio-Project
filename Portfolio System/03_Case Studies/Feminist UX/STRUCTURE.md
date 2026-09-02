@@ -65,8 +65,9 @@ The most structurally complex folder in this project — six distinct sub-collec
 **⚠️ Standing privacy rule for everything in `T3_FinalValidation/` and `T3_FocusSessions/`:** real names appear throughout for internal tracking. These must never appear in public-facing case study content — anonymized P-numbers (Final Validation) or Subject Numbers (Focus Sessions) only, always. Full detail and the actual name mapping table live in `general-context.md`.
 
 ### Photos/
-Deliberately minimal — reclassified per Nicole's direct guidance to hold only genuine photographic/documentary evidence, not process artifacts like flyers (those live in `Process/` instead; see below).
-- `T3_FinalClassScreenshot.png` — the only file that meets this bar.
+Reclassified per Nicole's direct guidance to hold only genuine photographic/documentary evidence, not process artifacts like flyers (those live in `Process/` instead).
+- `T3_FinalClassScreenshot.png` — a screenshot from before the defense photos were added.
+- **`DEF_DefenseGroupPhoto.JPEG`, `DEF_MyDefenseStation.JPEG`, `DEF_DefenseCandid.JPEG`** (added 2026-08-XX) — the first genuine new photos added to this project since the raw-materials phase began, from the actual Final Defense symposium. `DEF_MyDefenseStation` in particular shows Nicole at her own real defense station with her actual poster and live validation-results screen visible — a strong Outcome-section hero candidate.
 
 ### Presentations/
 The formal deck/video record across the whole program, organized by class.
@@ -86,7 +87,8 @@ Everything used *during* the actual creation of the artifact and the writeup, pl
 - **`REV_ThesisApplication/`** — the actual written proposal, thesis application form, and timeline — formal registration paperwork, submitted for Spring 2026 (Thesis 3) registration.
 - **`RP_HistoricArtifacts-Paper.pdf`** — the written component of the Historic Artifacts assignment. **This is the true earliest surviving document in the entire project (May 7, 2025)** — earlier than any Thesis 1 material, and earlier than what was originally believed to be the earliest document.
 - **`T1_AF-FlowPics/`, `T1_F-FlowPics/`** — two complete 13-screen onboarding-flow exports (the "Anti-Feminist" and "Feminist" simulation flows), real design work from Thesis 1.
-- **`T1_MicrositeMapsAndFlows/`** — early sitemap and flow diagrams for the microsite, simulation, and toolkit.
+- **`T1_MicrositeMapsAndFlows/`** — early sitemap and flow diagrams for the microsite, simulation, and toolkit. Thesis 1-era planning stage.
+- **`T3_MicrositeMapsAndFlows/`** (added 2026-08-XX, 3 files) — the later, final-thesis-era counterpart, confirmed by Nicole to be the actual figures used in the defended thesis. **`T3_MicrositeSitemap.jpg` is a real, citable find: this is the literal sitemap figure published in the final thesis, and it still says "Figma Plugin" under Engage** — an error that survived the entire review and defense process uncaught, by Nicole or any professor. `T3_ToolkitFlowchart.jpg` and `T3_ToolkitUserflow.jpg` are fully post-pivot, no plugin references.
 - **`T3_OutreachFlyer.png`** — the recruitment flyer for Final Validation testing (a duplicate was found and resolved; this is the one surviving copy).
 - **`DEF_ResearchFlyer.pdf`, `DEF_ResearchFlyer (letter).png`** — a separate research flyer, letter and PDF format.
 - **`T3_WriteupWIPs/`** (4 files, WIP1–4) — later-stage Thesis 3 drafts of the writeup. WIP2 contains genuinely authentic unpolished process material (literal "STILL IN PROGRESS" self-notes, placeholder "XX" participant counts before real numbers were filled in).
@@ -105,3 +107,5 @@ Raw audio/video/chat exports from Zoom, now paired with Whisper-generated spoken
 ## Change Log
 
 **Initial build (2026-08-XX).** Created from scratch, matching Meta's `STRUCTURE.md` format and depth, in response to Nicole flagging this as a real documentation gap this project didn't have yet (unlike Meta). Built from a fresh, verified directory tree at time of writing — not from memory of earlier passes in this project's long working history. Cross-referenced against `general-context.md` and `manifest.md` throughout to ensure consistency across all three documents rather than introducing a fourth, slightly-different account of the same materials.
+
+**2026-08-XX — first new photos/diagrams added.** Nicole uploaded 7 files; 6 kept (3 genuine new Final Defense photos, 3 new final-thesis-era diagram figures in a new `T3_MicrositeMapsAndFlows/` folder), 1 confirmed exact duplicate moved to `_Duplicates/`. Updated the Photos/ and Process/ sections above to reflect both additions, including the genuinely notable finding that one of the new diagrams is a real, uncaught error preserved in the actual defended thesis document.
