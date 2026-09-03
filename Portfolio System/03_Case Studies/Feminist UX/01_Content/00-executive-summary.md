@@ -9,7 +9,7 @@
 UX Researcher, Designer & Developer
 
 **Team:**
-Independent thesis project — SCAD MFA
+Independent thesis project, SCAD MFA
 
 **Duration:**
 14+ months
@@ -18,7 +18,7 @@ Independent thesis project — SCAD MFA
 No practical framework existed for inclusive UX design
 
 **Proof:**
-10 UX practitioners tested it — confidence rose across every measure
+10 UX practitioners tested it: confidence rose across every measure
 
 ## Your Answers
 Finalized 2026-08-XX. Written content locked for all five fields — see above.
@@ -28,6 +28,9 @@ Finalized 2026-08-XX. Written content locked for all five fields — see above.
 - **Duration**: corrected from an initial "14 months" to "14+ months" — Nicole is still working with the project some in the background, so the plus accounts for ongoing work past the formal defense.
 - **Problem**: went through one revision — Nicole wanted "UX" explicitly present, since the whole point is that this is UX-specific, not a general feminism statement. Landed on "inclusive UX design" to keep both the word and the folded-in-theory approach intact.
 - **Proof**: Nicole was open to whatever fit the audience and goals best. Chose the validation stat over a vivid quote or a novelty claim — same logic as Meta's "encore to 20+ Meta stakeholders": external, quantitative evidence that real people vouched for the work beats an internal claim about it, and unlike Meta this project has actual before/after numbers, not just anecdotal approval.
+
+## Revision History Addendum (2026-08-XX, added during full-project audit)
+A later full-project audit caught that this section's actual field text (Team, Proof) still had em dashes, left over from before the em-dash rule was established during Decisions drafting. Fixed to match the now-portfolio-wide-for-this-project rule: zero em dashes in actual page copy, documented in `TONE-AND-VOICE.md`. Nothing else about these fields changed.
 
 ## Hero Visual
 Deliberately deferred, per Nicole's request — matches how Meta's hero image was finalized only after the rest of the section's content was locked, not decided alongside it.

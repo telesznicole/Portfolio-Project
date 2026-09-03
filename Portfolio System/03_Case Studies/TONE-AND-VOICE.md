@@ -90,3 +90,6 @@ Meta's Decisions and Production sections had to work around NDA redaction — la
 
 ### Captions
 Same register as Meta's ("Our design team, mid-exploration and fully accessorized" is the reference point) — specific, a little wry, never generic. Actual lines to be developed once curating specific images.
+
+### Em dashes: escalated to zero for this project (established during Decisions, 2026-08-XX)
+The shared rule above says "minimize, not a hard zero." For Feminist UX specifically, Nicole asked for none at all, not just minimized — this was a direct, explicit instruction during Decisions drafting, then explicitly extended to apply to every section of this project going forward, not just that one. Applied throughout Constraints, Decisions, Production, Outcome, Retrospective, Tools & Skills, and Deep/Technical. **This is a Feminist-UX-specific escalation, not a retroactive change to Meta**, which remains under the shared "minimize" standard since it's already locked and complete.

@@ -2054,3 +2054,202 @@ A full pre-content-drafting audit was run at Nicole's request — every open fla
 
 **Status**
 🔒 **Content spine locked and documented**, including its two deliberately-preserved open threads (Discovery's comparison-work question, Production's reveal-timing question). Ready for Nicole's repo push. Next: drafting Context.
+
+---
+
+### Decision
+
+**Context and Discovery both locked.** `FINAL-COPY.md` caught up in the same pass — it had gone stale after Executive Summary and Context were locked but never copied over.
+
+**Why**
+- **Context**: built directly from the corrected hook in the locked spine. One real content decision worth logging — solo framing stayed present ("working solo under my committee's guidance") but deliberately minimal, matching the spine's explicit instruction not to let it become the section's narrative driver.
+- **Discovery required real structural work, matching Nicole's read that this section needed specific attention.** Pulled up Meta's actual `02-discovery.md` first rather than guessing at format — confirmed Discovery is NOT a single paragraph like Context, but opener → finding cards → closing reframe.
+- **GenderMag dropped at Nicole's request** ("extremely shallow resource") and replaced with Feminist UX of AI — which turned out to be much better grounded once Claude actually re-checked the thesis's own Historical-Technical Survey: it's literally paired with User Inyerface in the thesis's own List of Figures (Figures 1 and 2, back to back), and the thesis's own text already frames the two as a complementary pair of shortfalls. The section's structure draws directly on that existing framing rather than inventing a new one.
+- **Findings went through a real reframing pass**: an early draft critiqued documents ("X doesn't ask why"), which Nicole correctly read as still missing real stakes. Revised to root each finding in its actual human/practical consequence, matching how Meta's findings worked.
+- **The closing reframe went through a real revision too**: an early version merely recapped the three findings rather than synthesizing them. Revised into one memorable phrase ("translation gap"), pulled from language already present repeatedly in the thesis itself ("gap between theory and application") rather than invented fresh.
+- **A one-line bridge added** between the opener and first finding after Nicole flagged the jump into naming "User Inyerface" as too abrupt.
+- **A genuinely new formatting question surfaced**: Nicole wants bold-phrase skim targets in each line, matching how Meta's actual site (not its planning docs) uses bolding. Checked Meta's `FINAL-COPY.md` directly and confirmed no markdown bold exists there either — it's a Framer/build-stage decision, not something tracked in these files. Provided bold-phrase *candidates* inline instead, each written to carry its finding's core insight standalone, on the assumption each finding will render as a titled card.
+- **Length note**: Nicole raised whether Discovery felt sparse. Deliberately kept short rather than padded — Decisions/Production are already flagged as running rich, so a sharp, quick Discovery is functioning as intended, not falling short.
+
+**Status**
+🔒 **Context and Discovery both locked**, `01_Content/` files updated with full revision history, `FINAL-COPY.md` caught up to reflect both plus Executive Summary. Ready for Nicole's repo push. Next: Constraints.
+
+---
+
+### Decision
+
+**Constraints locked at three cards.** This section went through a genuine overhaul, not minor edits, including a real factual error Claude introduced and Nicole caught directly.
+
+**Why**
+- **A real factual error, not just a tone problem**: an early draft of the Figma-plugin constraint invented a reason Nicole moved away from it ("solo, on top of everything else, hit a hard technical ceiling") that implied she avoided it out of being overwhelmed working alone. This was fabricated, not sourced. The actual reason, confirmed directly by Nicole: she didn't want the tool locked to one piece of software, restricted to certain design phases or that software's specific users, or at risk of breaking if that software changed — a real, considered technical/product decision, not an avoidance move. Rewritten around her actual reasoning.
+- **A broader tonal drift caught alongside the factual error**: the whole section had leaned into an "I did it all alone" framing across multiple constraints, reading as a sob story rather than a simple, confident, factual statement. Solo scope itself stayed (Constraint 1, approved unchanged through every revision), but nothing after it kept leaning on that same framing.
+- **A fourth constraint was cut, twice**: first, validation-study limits were cut for being genuinely premature — referencing the final validation study before the case study has even shown what was built, which read as real narrative whiplash. A replacement (AI output unpredictability) was drafted, then also cut at Nicole's call, weighing conciseness (Decisions/Production are both flagged to run longer, so a tight Constraints section sets up useful pacing contrast) against a fourth beat that hadn't earned its place. Landed on three, matching Discovery's three-finding structure.
+- **A larger structural issue surfaced here and was deliberately not patched locally**: attempting to explain the AI toolkit within Constraints ran into the fact that a reader still doesn't know what the actual product is at this point in the case study — not just in Constraints, but in Decisions too, since Decisions comes before Production in the locked order. This is exactly the open concern flagged back when the spine was first locked. Rather than over-explain inline (which would have worked against the conciseness goal), the real fix identified: finish the Executive Summary hero visual, deliberately deferred earlier, so a reader has already seen the actual three-part product (Learn/Experience/Engage) before reaching Constraints or Decisions.
+- **`FINAL-COPY.md` updated in the same pass**, keeping it current rather than letting it go stale again.
+
+**Status**
+🔒 **Constraints locked at three cards.** `01_Content/03-constraints.md` and `FINAL-COPY.md` both updated with full revision history including the corrected factual error. Ready for Nicole's repo push. **Immediate next step, not deferred further: the Executive Summary hero visual** — Nicole has ideas to share.
+
+---
+
+### Decision
+
+**Constraints re-opened and genuinely finalized** after Nicole had second thoughts post-lock — two real, substantive fixes, not cosmetic.
+
+**Why**
+- **Constraint 3 reframed a second time, more fundamentally than the first correction.** The prior pass had fixed the *factual* error (why Nicole moved away from the Figma plugin) but left a structural problem unaddressed: describing that move ("I moved away from that on purpose") is inherently a decision, not a constraint — constraints are things that were true and had to be worked around, not choices already resolved. Nicole caught this distinction directly. Also caught a second issue in the same card: naming "Figma plugin" at all assumes context the reader doesn't have, since nothing earlier in the case study ever establishes a plugin was under consideration. Rewritten a third time as a fully self-contained, general constraint (reach across platforms + persistence over time) with zero mention of Figma or plugins — states a requirement the work had to satisfy, not a past choice.
+- **A second bolding pass requested, scoped more narrowly**: bold phrases apply only within the three constraint cards themselves, explicitly not the opener or closing line — a genuine scope difference from Discovery's bolding, which included the opener and closing reframe. Documented clearly so this isn't assumed to generalize to other sections.
+- **Constraint 1's bold phrase failed Nicole's own stated test on the first attempt**: reading only the bold text, a reader must be able to reconstruct the point without the surrounding sentence. "Ran through one person, sequentially, not in parallel" fails this, since it never names a subject. Reworded so the bold phrase itself ("built by one person, working through every phase alone, one at a time") is a complete, self-contained claim. Constraints 2 and 3's bold phrases were checked against the same test and passed without rewording.
+- **Both `01_Content/03-constraints.md` and `FINAL-COPY.md` updated in the same pass**, both now reflecting the true final text with no further edits pending.
+
+**Status**
+🔒 **Constraints genuinely finalized this time** — both files updated, both consistent, full revision history preserved across all three passes this section went through. Ready for Nicole's repo push. Immediate next step: the Executive Summary hero visual.
+
+---
+
+### Decision
+
+**The "what's the actual product" structural concern, open since the spine was first locked, is resolved.** Nicole's own solution: a new Product Gallery component.
+
+**Why**
+- **A genuinely smart structural fix, not a patch**: a single gallery component sitting between the zero-scroll viewport and the case study body, showing Learn/Experience/Engage as styled mockup screens with hover-triggered blurbs — reusing an interaction pattern Nicole already built for her portfolio homepage, minimizing new design work.
+- **Resolves two problems with one component**: the original Constraints-adjacent concern, plus the Decisions-before-Production ordering issue that was never separately solved — since the gallery establishes the product before both sections, not just before Constraints.
+- **A real split confirmed for the Executive Summary hero slot**: it stays simple, a clean brand/logo moment (matching Meta's use of official product photography there), rather than becoming the product reveal itself. The gallery, not the hero, is the actual "here's what I built" moment.
+- **Scope confirmed as Learn/Experience/Engage only** — the three parts already established as "the product" throughout Context/Discovery/Constraints. Home and About deliberately excluded.
+- **Actual content (captions, hover-blurb copy, real mockup assets) deliberately deferred**, per Nicole's explicit call to prioritize finishing the case study body first, and revisit visual asset production as its own dedicated pass later.
+- **Documented in `general-context.md`'s Content Spine section**, replacing the prior "open concern" flag with a resolved status — keeps the spine itself as the accurate, current planning reference rather than needing a separate document to track this.
+
+**Status**
+🔒 **Structural concern resolved and documented.** Ready for Nicole's repo push. Next: Decisions.
+
+---
+
+### Decision
+
+**Decisions locked, after the most extensive revision process of any section so far** — three separate real factual errors caught and corrected, on top of the format and tone fixes Constraints had already required.
+
+**Why**
+- **A genuine factual error on "pillars" vs. tenets, caught directly by Nicole and confirmed via direct text search**: "pillar" does not appear anywhere in the thesis. The real structure is five core tenets, which started at zero (not two) and each pull from multiple source frameworks at once. This wasn't a wording quibble — it had been the framing used throughout `general-context.md` and the locked spine for multiple sessions, meaning the error was inherited, not just introduced fresh. Decision 2 rewritten entirely around the tenets, correctly framed 0 → 5, and also now carries Nicole's requested quick Feminist UX definition, sourced directly from the thesis's own Theoretical Framework section.
+- **A second factual error, separate from the first**: an early Decision 3 draft implied the toolkit was once built in Figma before being moved. It never was, only planned. Corrected to state plainly it was never built as a plugin.
+- **A third factual error**: an early Decision 4 draft implied users were once shown numeric scores, softened after pushback. Nicole corrected this directly: scoring was always purely internal, routing which feedback tier to generate, never shown to users at any point. Reason rewritten to keep only what's actually testing-grounded — the co-creation session's real pushback on output *format*, not an invented pushback on scoring.
+- **Decision 5 required a direct re-verification against the thesis's Sprint 3 section** after Nicole flagged that an earlier two-round version undersold real testing volume. Confirmed a genuine four-round pattern (early prototype, a 9-participant Sprint 3 toolkit survey, a Sprint 4 co-creation session, plus the separate final validation study). Decision 5 rewritten to name three distinct pre-validation rounds rather than implying just one or two.
+- **A new standing style rule locked**: no em dashes anywhere, per Nicole's explicit request during this section — documented as guidance for all sections going forward, not just this one.
+- **The claim + reason two-part format was confirmed directly against Meta's actual working file**, after Nicole flagged that Claude's first draft didn't match Meta's real structure at all — caught before content review even started, avoiding a wasted content pass on the wrong shape.
+- **All three files updated in the same pass**: `01_Content/04-decisions.md` with full revision history (five sections' worth of real corrections, not paraphrased), `FINAL-COPY.md` with the clean final text, and this log entry.
+
+**Status**
+🔒 **Decisions locked**, all three factual errors corrected across every file that referenced them, standing no-em-dash rule established. Ready for Nicole's repo push. Next: Production — Nicole has thoughts to share before drafting starts.
+
+---
+
+### Decision
+
+**Production's real shape established, diverging deliberately from Meta's format** — and its first two subsections (Intro, Learn) locked.
+
+**Why**
+- **Checked Meta's actual Production file before assuming its 3-card format should carry over.** Found it was short specifically because it was NDA-redacted almost entirely, gesturing at deliverable types without describing real content. Nicole's own instinct (informed by "a bunch of different things, a long process for each") led to a genuinely different, better-fitting shape for this project: one dedicated subsection per microsite page (Learn, Experience, Engage), each with real narrative room, since nothing here needs to be redacted.
+- **A real, substantive concern surfaced early**: Nicole flagged the case study as feeling shorter than Meta's despite 14+ months of work and zero redaction. Traced this honestly to Production simply not being written yet, not to a structural deficiency in what's already locked — this is the one section built specifically to hold the depth Meta's version couldn't show.
+- **A new standing rule locked while drafting Learn**: every subsection's first sentence must state plainly what that page *is* before doing anything else, so a reader is never left guessing. Applied retroactively to Learn's opening (added a lead sentence) and will apply to Experience and Engage going forward.
+- **A real technical-depth gap was caught and fixed**: Nicole explicitly flagged that skimping on technical execution (Figma to Framer, custom TypeScript for the toolkit's scoring/AI logic) would be a mistake, having noticed the case study hadn't touched technical specifics anywhere yet. Added as Intro's second paragraph, went through several rounds to avoid both under-explaining and over-explaining, including a factual fix (an early version implied only the toolkit needed custom development, when other parts of the site did too).
+- **A real, tangible asset gap surfaced**: Nicole has actual low-fi and mid-fi mockups in Figma for all three pages, not yet added to the project filesystem. Flagged in `01_Content/05-production.md` for the dedicated visual-asset pass rather than lost in conversation.
+- **The SME (subject matter expert) collaboration**, missing from early Learn drafts, was added directly at Nicole's request as genuinely relevant recruiter-facing material.
+
+**Status**
+🔒 **Production's overall shape locked; Intro and Learn subsections locked**, both written into `01_Content/05-production.md` and `FINAL-COPY.md` with full revision history. Experience and Engage still to come — this section is expected to end up the longest and richest in the whole case study. Ready for Nicole's repo push.
+
+---
+
+### Decision
+
+**Production is fully complete.** Experience and Engage both drafted and locked, closing out the section entirely. This entry covers both, including Experience's lock, which was written into the files but never separately logged at the time.
+
+**Why**
+- **Experience's opening went through a real structural correction**: an early draft framed the subsection around Experience being the literal origin point of the whole project. Nicole cut this directly, correctly identifying it as Context/Decisions material that caused real narrative whiplash inside a Production section specifically about what got built, not why it started.
+- **A genuine, substantive naming correction in Experience**: early drafts described the two onboarding flows as generically "exclusionary" and "inclusive." Nicole pushed back that this flattened the actual framework being demonstrated, and explicitly distinguished this from her being overly attached to academic language, since the generic terms could describe any bad-UX-vs-good-UX comparison, while "anti-Feminist UX" and "Feminist UX" are specific to what was actually built, with "Feminist UX" itself functioning as a callback to the site's own name rather than new jargon. Full names restored.
+- **Both example anti-patterns and the closing quote in Experience were swapped for better-grounded choices**, through several real rounds: the original forced-legal-name example was replaced with terms-and-conditions and rushed-decision-pressure patterns, both traced directly to Paige's actual testing session. The closing quote went through two swaps (malware/bow → "no rights to my own soul" → final: "wanted you to fail at every turn") before landing on one that thematically matched the final pattern examples chosen.
+- **Engage's internal-mechanics paragraph required the most precision of anything drafted in this entire project.** Nicole caught three separate, layered issues in sequence: an early version implied individual answers directly determined outcomes rather than combining into an aggregate score; "tier" read as misaligned with the real mechanism despite being internally accurate; and "what kind of feedback to generate" wrongly implied the AI selects from preset feedback categories rather than generating free text shaped by score. "Dimension" was also tried and rejected as reading like an abstraction to an unfamiliar reader, replaced with the more concrete "principle." Final wording for this mechanic was substantially Nicole's own construction, refined only for grammar.
+- **All three files kept in sync throughout**: `01_Content/05-production.md` carries the full revision history for both subsections, `FINAL-COPY.md` now marks Production as fully Complete rather than in-progress.
+
+**Status**
+🔒 **Production complete** — Intro, Learn, Experience, and Engage all locked across `01_Content/05-production.md` and `FINAL-COPY.md`, with full revision history preserved for every subsection. This is now the longest and richest section in the case study, as anticipated. Ready for Nicole's repo push. Next: Outcome — the final content section before Retrospective and optional Deep/Technical.
+
+---
+
+### Decision
+
+**Outcome locked**, with a real format divergence from Meta and two real overreach corrections along the way.
+
+**Why**
+- **Format confirmed directly rather than assumed from Meta's precedent**: Nicole clarified her original Outcome was continuous prose with stat banners dropped in wherever earned, not discrete cards like Meta's. Documented explicitly as a deliberate divergence, not an inconsistency.
+- **Real numbers re-verified directly against the canonical thesis's Pre-/Post-Survey Analysis section** before drafting, per the Content-Sourcing Priority Principle, rather than trusting any previously-flagged garbled OCR figures from Miro/poster sources.
+- **A genuine framing decision on the numbers themselves**: raw 1–5 scale scores read as unimpressive, and relative percentage increase made two genuinely strong, already-high numbers look weak. Landed on percentage-of-maximum-possible-score, which reads consistently strong across all five real figures without misrepresenting any of them.
+- **A real, substantive error caught and corrected**: an early draft framed the smallest of three confidence gains (82% to 84%) as something to "state plainly rather than hide," mis-applying Meta's honest "room to grow" pattern to data that didn't call for it. All three numbers land in a genuinely strong range; singling one out as a confession implied a weakness that wasn't actually present. Rewritten to present all three gains together, same positive framing, no singled-out weak point.
+- **Two separate real overreach corrections, both caught directly by Nicole**: the field-implications paragraph originally claimed "a shift the whole UX field is due for" and was softened to reflect what participants' own responses point toward, not a standalone claim about the entire field. The closing line originally claimed proven ongoing usage ("something people actually use and want to keep using"), which the thesis's own methodology doesn't support, since it measures self-reported confidence, not behavioral change. Rewritten to state only what the data actually shows.
+- **The real participant quote was kept woven into continuous prose**, not isolated in its own card, consistent with the confirmed format.
+
+**Status**
+🔒 **Outcome locked**, `01_Content/06-outcome.md` and `FINAL-COPY.md` both updated with full revision history. Ready for Nicole's repo push. Next: Retrospective.
+
+---
+
+### Decision
+
+**Retrospective locked, after the most extensive and difficult iteration of any section in this project** — 7+ full drafts, each rejected for a genuinely different reason, before landing on the right approach.
+
+**Why**
+- **The real problem across most failed attempts was a wrong lens, not wrong wording.** Early drafts recycled the personal reflection material already gathered earlier in this project (fear of feminist theory, the "feminism is personal" realization) — rejected first for length, then for adding nothing new (reading as Discovery/Decisions restated in a different voice), then, most importantly, for being a retrospective on feminism itself rather than on a product design project, which Nicole was explicit wouldn't be useful from a recruiter's perspective.
+- **Two further attempts tried to build a design lesson out of an imposter-syndrome/fear framing anyway** (rejected outright) **and then a specific process-mistake narrative** (a Thesis Review panel catching a thin foundation) — rejected as inaccurate to how it actually happened, and Nicole was explicit this section didn't need a negative-to-positive arc imposed on it at all.
+- **A purely reflective, arc-free version landed closer** but was flagged as needing genuine uplift, not just recounting events — leading to an attempt at a specific invented scene (a moment of things "clicking"), which Nicole rejected as fabricated, restating clearly that this should be about her growth as a designer, not a dramatized narrative device.
+- **The version that finally worked dropped both the feminism-journey framing and any invented scene entirely**, centering purely on verifiable growth: carrying a project of this scope solo for the first time, sharpening real decision-making judgment through heavy iteration, and coming out more confident. Nicole called this "nearly perfect" and would have accepted it as written.
+- **A real process lesson worth carrying forward**: when several revisions in a row fail for different surface reasons, the right move is to ask directly what's wrong rather than keep guessing new angles at the same underlying material. That direct question is what actually unlocked the correct direction here, documented explicitly in `01_Content/07-retrospective.md` for future reference.
+- **Final micro-revision**: the closing line was brightened slightly ("genuinely excited about what I can take on next"), with everything else preserved exactly per Nicole's explicit instruction.
+
+**Status**
+🔒 **Retrospective locked.** `01_Content/07-retrospective.md` carries the full, honest revision history including every rejected direction, not just the final version — `FINAL-COPY.md` updated to match. This closes out the mandatory content sections. Ready for Nicole's repo push. Next: Deep/Technical (optional).
+
+---
+
+### Decision
+
+**Tools & Skills and Deep/Technical both locked. Every section of Feminist UX's body text is now complete.**
+
+**Why**
+- **Tools & Skills deliberately runs longer than Meta's** (9 tags vs. 6), a considered choice rather than an inconsistency: Nicole's real scope on this project (research, design, front-end development, and AI integration, entirely solo) is genuinely broader than Meta's single-role contribution, and she considers this her strongest full-scope product design case study. Figma and Front-End Development were both added after initial drafts omitted them; Product Design was added as the leading tag specifically to capture that full-scope framing.
+- **Deep/Technical's four cards went through real, substantive revision**, not just polish: the intro blurb was caught over-promising a toolkit-only focus and rewritten to stay general; Card 2 needed an added context sentence after opening directly into scoring mechanics with no setup; Card 4's title was flagged as too abstract and its body had to be updated to actually reference Figma once the title named it; Card 3's example rule ("no markdown formatting") was swapped for one actually relevant to feedback quality ("every response grounded in the five tenets") after Nicole pointed out the original was a build-utility concern, not a user-facing one.
+- **A real question about diversifying beyond toolkit-heavy content was raised and deliberately not acted on**: a candidate 5th card on the Experience simulation's code component was proposed, but the four toolkit-adjacent cards were individually strong enough on their own merits that forcing in different subject matter for variety's sake wasn't judged necessary.
+- **`FINAL-COPY.md` now shows every section as Complete** — Executive Summary through Deep/Technical, no more "Not started" statuses anywhere in the file.
+- **`general-context.md`'s Content Spine section updated with a prominent, dated completion marker**, stating plainly that all body text is done and what remains is visuals only (the Product Gallery, the Executive Summary hero, and Decisions/Production's supporting images per the already-established Visual Asset Placement Rule).
+
+**Status**
+🔒 **All body text for the Feminist UX case study is complete and locked.** Every section from Executive Summary through Deep/Technical is written, revised, and documented with full history across `01_Content/`, `FINAL-COPY.md`, and this log. Ready for Nicole's repo push. Next phase: visuals, captions, and asset selection.
+
+---
+
+### Decision (Portfolio-wide, not Feminist-UX-specific)
+
+**A standing portfolio-wide UI feature disclosed by Nicole, documented here since it applies across the whole site, not just one case study.**
+
+**Why**
+- **Nicole's Framer build includes an omnipresent resume button**, fixed in the bottom-right corner of the viewport, persistent across the whole portfolio site (not scoped to any single case study page). It functions as a direct jump to her resume page.
+- **The stated reason for this UI decision**: Nicole felt the resume page, while important, was somewhat buried in the site's normal navigation, and wanted a persistent, always-available shortcut to it rather than relying on a visitor to find their way there through standard nav alone.
+- **Documented here, in the shared Portfolio Decision Log, rather than inside any single case study's `general-context.md`**, since this is a whole-site navigation/UI fact relevant to how every page (including every case study) actually gets experienced, not something specific to Feminist UX or Meta individually. Future work referencing overall site navigation, UI patterns, or the resume page specifically should account for this persistent element.
+
+**Status**
+🔒 **Documented as a standing, portfolio-wide fact.** No content-drafting action needed — this is a structural/UI note for future reference, not an open task.
+
+---
+
+### Decision
+
+**A genuine, thorough re-audit performed at Nicole's explicit request** — "don't rely on past checks or assumptions," zoom out beyond just the case study. This found real, concrete issues, not a clean bill of health rubber-stamped on the first look.
+
+**Why**
+- **A real gap in the shared `TONE-AND-VOICE.md`**: the em-dash rule established during Decisions (escalated from "minimize" to "none") had only ever been written into `04-decisions.md`'s own local revision history — it never propagated to the shared guide that's supposed to be the actual source of truth for portfolio-wide style rules. Added properly, explicitly scoped to this project only, not retroactive to Meta.
+- **Seven stray em dashes found in `FINAL-COPY.md`'s actual page copy**, all confined to sections drafted before the em-dash rule existed (Executive Summary, Context, Discovery, Constraints). This required three full passes to catch completely — the first two manual read-throughs each missed at least one instance, and only a third pass, verified programmatically by searching for the literal character rather than trusting eyes alone, gave real confidence nothing remained. Worth naming directly: manual visual scanning proved genuinely unreliable for this kind of exhaustive check, and defaulting to a precise, mechanical verification method should be the standard going forward for this class of "find every instance" task, not a fallback only reached for after visual scanning already failed twice.
+- **A more structurally important discovery than the em dashes themselves: `01_Content/` files can silently drift from `FINAL-COPY.md`.** Three files (Discovery, Constraints, and Context) still had pre-fix text even after `FINAL-COPY.md` had already been corrected in an earlier turn — an earlier correction had only been applied to one of the two files, and that gap went uncaught until this audit. This is a real, systemic risk given this project's two-file structure (working file + copy-paste file), not a one-off mistake. All three `01_Content/` files corrected to match. **Standing rule going forward**: any future correction to either file must be explicitly checked against its counterpart, never assumed to have propagated automatically.
+- **All 10 `01_Content/*.md` files individually re-read in full and compared against `FINAL-COPY.md`** after the fixes above, confirming genuine word-for-word consistency across the entire project with no further drift.
+- **Zoomed out beyond the case study itself, per Nicole's explicit instruction**: checked the shared `03_Case Studies/README.md` workflow document (confirmed accurate, correctly defers to per-project `STRUCTURE.md` files) and confirmed `STRUCTURE.md`/`manifest.md` are legitimately out of scope for a content-drafting audit, since they track raw materials, which haven't changed.
+- **Documented in `general-context.md`'s Content Spine section** with a new, dated "GENUINELY AUDITED" marker and a full accounting of what was actually found, not just a restated completion claim.
+
+**Status**
+🔒 **Audit complete, with real findings fixed, not just re-asserted.** Seven em dashes corrected across both `FINAL-COPY.md` and the three affected `01_Content/` files. `TONE-AND-VOICE.md` updated with the previously-undocumented em-dash rule. All 10 content files verified consistent. Two other shared documents checked and confirmed either accurate or out of scope. Ready for Nicole's repo push.
