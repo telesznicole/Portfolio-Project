@@ -39,4 +39,9 @@ Finalized 2026-08-XX. Structure: opener (the literature search itself) → one-l
 - **Em-dash correction (2026-08-XX, added during full-project audit):** this file had gone stale relative to `FINAL-COPY.md` — three em dashes (the opener, Finding 2, and the closing reframe's "so I did") were still present here despite already being fixed in the copy-paste file. All three now corrected to match: colon, restructured commas, and a period-split "So I did" respectively. This staleness is itself a lesson: `01_Content/` files and `FINAL-COPY.md` can drift apart if a later fix only gets applied to one of them — worth double-checking both whenever a correction is made.
 
 ## Assets That Support This Section
-_(not yet selected — real photos/screenshots of User Inyerface, Feminist UX of AI, or Feminist HCI source material could support the findings visually; to be revisited during the visual-asset pass)_
+Locked 2026-08-XX. Two of the three findings get real screenshots (Finding 3, Feminist HCI, stays text-only since it's an academic field, not a specific site to screenshot):
+
+- **`discovery_01_user-inyerface.png`** (Finding 1) — real screenshot of the live User Inyerface site, taken directly by Nicole. Caption: "Built to frustrate you. It's very good at its job."
+- **`discovery_02_feminist-ux-of-ai.png`** (Finding 2) — real screenshot of Nadia Piet's live project page. Caption: "Genuinely thoughtful concepts. Still just concepts." (Note: full author name confirmed as Nadia Piet from the screenshot itself — more precise than "N. Piet" used elsewhere in this project's documentation.)
+
+Full record, including sourcing/privacy notes, lives in `02_Selected_Assets/CURATION-INDEX.md`.

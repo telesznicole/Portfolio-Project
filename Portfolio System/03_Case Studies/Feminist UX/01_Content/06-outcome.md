@@ -42,4 +42,4 @@ Closing line:
 Two banners used within the body (see above), not one single banner: 74% → 88% / 92% / 84% (confidence gains), and 96% / 92% (forward-looking numbers). All five numbers sourced directly from the thesis's own Pre-/Post-Survey Analysis section, converted to percentage-of-maximum for readability, not invented or estimated.
 
 ## Assets That Support This Section
-_(not yet selected — to be revisited during the visual-asset pass)_
+Revised 2026-08-XX: `DEF_MyDefenseStation.JPEG` was reassigned to Retrospective instead (see `07-retrospective.md`) — Nicole's own read was that a photo of her alone, focused, at her station fit Retrospective's "carried this solo" content more directly than it fit Outcome's data-driven proof. **Outcome is text-only.** Not a loss: the section's real proof is the stat banners already embedded in the copy above, which were always doing the actual work; the photo was a nice addition, not load-bearing.

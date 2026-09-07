@@ -93,3 +93,10 @@ Same register as Meta's ("Our design team, mid-exploration and fully accessorize
 
 ### Em dashes: escalated to zero for this project (established during Decisions, 2026-08-XX)
 The shared rule above says "minimize, not a hard zero." For Feminist UX specifically, Nicole asked for none at all, not just minimized — this was a direct, explicit instruction during Decisions drafting, then explicitly extended to apply to every section of this project going forward, not just that one. Applied throughout Constraints, Decisions, Production, Outcome, Retrospective, Tools & Skills, and Deep/Technical. **This is a Feminist-UX-specific escalation, not a retroactive change to Meta**, which remains under the shared "minimize" standard since it's already locked and complete.
+
+### Bottom-of-page contact callout: Feminist UX's subtext (locked 2026-08-XX)
+The shared callout itself ("Want to talk about this project? I'd love to hear from you.") stays identical across every case study, per its own definition above. The subtext underneath it is project-specific, since Meta's version teased a real downloadable asset (the NDA-approved deck) that has no Feminist UX equivalent, there's no comparable bonus document to share here.
+
+Feminist UX's subtext: *"Whether it's the framework, the toolkit, or UX in general, always up for a conversation."*
+
+Given there was no asset to tease, this line's job is different from Meta's: not a payoff/reward for reaching out, just a warm, specific bridge into the actual contact link, naming real topics (the framework, the toolkit, UX broadly) rather than a generic "feel free to reach out."

@@ -54,4 +54,12 @@ Reason: "I could have waited for a finished product before getting outside react
 - **No em dashes anywhere in this section**, per Nicole's explicit request during this section's drafting — apply this as standing style guidance for all sections going forward, not just this one.
 
 ## Assets That Support This Section
-Per the newly-established Visual Asset Placement Rule (see `general-context.md`'s Content Spine section): early/conceptual visuals belong here — low-fi sketches, the simulation flow map, early toolkit interaction diagrams, sitemap evolution shots — supporting the reasoning behind specific decision cards. Exact pairings deliberately deferred to the dedicated visual-asset pass; real candidates on file include `Process/T1_MicrositeMapsAndFlows/` and `Process/T3_MicrositeMapsAndFlows/`.
+Locked 2026-08-XX, real assets selected, not just placement rules. Three images total, going card by card:
+
+- **`decisions_01_miro-screenshot.png`** (opener, above the cards) — a real screenshot of Nicole's own "Thesis Ideation" research tracker in Miro. Caption: "Every source got logged and rated before it shaped anything. This is where the decisions below actually started."
+- **`decisions_02_microsite-sitemap.png`** (Card 1, three parts not one) — the final sitemap, Learn/Experience/Engage/About. Caption: "Learn, Experience, Engage: mapped out before they were built."
+- **Card 2** (five tenets) — deliberately no image. The tenets are already fully listed in the card's own text; a text-only visual would be redundant. A tenet-to-source-framework mapping visual was considered but no such asset currently exists.
+- **Card 3** (never a Figma plugin) — deliberately no image. The one existing flow diagram (`toolkit_interaction_flow.png`) was tried and rejected as illegible at card size; a cropped slice read as an accidental mistake, not an intentional partial view. Omitted rather than force something that looks like an error.
+- **`decisions_04_toolkit-testing.png`** (Card 5, tested early and kept testing) — a real screenshot from an actual final validation session: the live toolkit question on screen, question 6 of 7, the participant fully blurred and unidentifiable, name blacked out. Caption: "Real reactions, caught mid-session."
+
+Full record, including privacy/sourcing notes, lives in `02_Selected_Assets/CURATION-INDEX.md`.

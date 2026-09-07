@@ -2253,3 +2253,93 @@ A full pre-content-drafting audit was run at Nicole's request — every open fla
 
 **Status**
 🔒 **Audit complete, with real findings fixed, not just re-asserted.** Seven em dashes corrected across both `FINAL-COPY.md` and the three affected `01_Content/` files. `TONE-AND-VOICE.md` updated with the previously-undocumented em-dash rule. All 10 content files verified consistent. Two other shared documents checked and confirmed either accurate or out of scope. Ready for Nicole's repo push.
+
+---
+
+### Decision
+
+**The visual-asset pass began, going section by section as planned. Context, Discovery, Constraints, and Decisions all resolved** — hero visuals still deliberately deferred to the end, as agreed at the outset of this phase.
+
+**Why**
+- **Context and Constraints confirmed text-only**, matching real precedent rather than an assumption: Meta's own Context is text-only, and Meta's Constraints already had 2 of 4 cards with no image, confirmed in that project's own curation index as "not omissions." Feminist UX's three Constraints (solo scope, no existing framework, reach/persistence) are all too conceptual to honestly photograph.
+- **Discovery got a real, deliberate deviation from Meta's own Discovery pattern** (which used a single top-level photo, not per-finding images) — confirmed acceptable directly by Nicole, who was explicit that visual treatment should evolve per case study within one cohesive system, not repeat an identical structure every time. Two of three findings (User Inyerface, Feminist UX of AI) got real screenshots of the actual live sites, since both are genuinely visitable; the third (Feminist HCI, an academic field) stayed text-only since no single site represents it.
+- **A real, small factual correction surfaced from the Feminist UX of AI screenshot itself**: the project's actual author is Nadia Piet, not just "N. Piet" as documented elsewhere in this project from secondhand citation. Noted in `02-discovery.md` for future reference.
+- **Decisions got three real images, two cards deliberately left without**: an opener image (Nicole's own Miro research tracker, a genuinely rigorous, rated literature database) sits above the cards; Card 1 (three parts) got the final clean sitemap; Card 5 (tested early, kept testing) got a real, privacy-conscious screenshot from an actual validation session (participant fully blurred and unidentifiable, name blacked out, Nicole herself visible since she isn't an anonymized subject). Cards 2 and 3 stayed without images after real attempts: Card 2's tenets are already fully listed in the card text (an image would be redundant), and Card 3's only existing flow diagram was tried and rejected as illegible at card size — a cropped slice read as an accidental mistake rather than an intentional choice, so it was cut rather than shipped looking like an error.
+- **Caption-writing for this project surfaced a genuinely new failure mode not seen during body-text drafting**: several early caption attempts leaked *thesis*-framing language (e.g., referencing "citations") into what's supposed to be a *product case study*, a distinct problem from the em-dash/factual-error issues found during body-text work. Caught and corrected directly by Nicole. Also caught: captions written for the very first image a reader sees need to carry real context (what is this, why does it matter here), not just mood — a plain mood-only caption doesn't do enough work in that specific position.
+- **A `CURATION-INDEX.md` created for Feminist UX for the first time** (didn't exist previously, unlike Meta's), recording all five locked captions plus explicit reasoning for every deliberately-omitted card, matching the lesson already learned on Meta that curation decisions need to be indexed in the same turn they're made, not batched for later.
+- **A real tool-use mistake caught and corrected mid-task**: an attempt to create `CURATION-INDEX.md` first used Claude's own sandbox `create_file` tool by mistake, the same recurring confusion documented multiple times earlier in this project. Caught immediately, corrected with `filesystem:write_file`, verified the real file landed correctly.
+
+**Status**
+🔒 **Context, Discovery, Constraints, and Decisions all resolved for visuals** — real assets selected and captioned where they add value, real omissions documented with reasoning where they don't. `CURATION-INDEX.md`, `02-discovery.md`, and `04-decisions.md` all updated. Ready for Nicole's repo push. Next: Production, likely the richest section for visuals given how much real material exists across all three page builds.
+
+---
+
+### Decision
+
+**Production's Intro, Learn, and Experience subsections resolved for visuals** — Engage still pending. This pass produced some of the strongest visual material in the whole project.
+
+**Why**
+- **Intro got a genuine side-by-side**: the same Learn page shown low-fidelity (lorem ipsum, wireframe placeholders) next to its final high-fidelity build. A "final produced result" showcase image was considered for the very end of Production and deliberately rejected as redundant, since high-fidelity real screens already appear throughout the section by that point — a deliberate restraint decision, not an oversight.
+- **A real live-site CTA added at the true end of Production**, after Engage: tertiary-text microcopy ("Take a look at the live site before you go! :)") linking to feministux.org, matching the established warm/playful register from the NDA aside's "ask me. :)". Confirmed directly with Nicole that this is genuinely distinct from whatever live-site button already exists near the Executive Summary hero, not a duplicate, different position, different reader.
+- **Experience got what may be the single strongest visual moment in the entire case study**: real screen exports of the exact same onboarding step ("screen 5") from both the anti-pattern and inclusive flows, confirmed as genuinely parallel by matching filenames across `T1_AF-FlowPics/` and `T1_F-FlowPics/`, not a coincidence. The real copy contrast needs no added commentary: the anti-pattern version reads "Women, please avoid makeup or any appearance-altering products so your photo accurately reflects how you look" with a disabled Continue button; the inclusive version reads "Share a photo if you'd like, just something that feels like you" with a genuine Skip option and an active Continue button.
+- **A real raw-materials gap caught and flagged, not silently worked around**: `production_01/02/03` exist only in `00_Raw_Extracted/Photos/`, not `00_Raw/Photos/` — the full-quality originals never made it into the raw folder, breaking the established raw/extracted mirror. Flagged in both `05-production.md` and `CURATION-INDEX.md` for Nicole to fix whenever convenient; did not block caption work since the extracted versions were viewable.
+- **A real editing mistake caught and corrected within this same turn**: an edit meant to add a new "Production: privacy/sourcing note" to `CURATION-INDEX.md` accidentally replaced (rather than supplemented) the existing Discovery and Decisions privacy notes, deleting real prior documentation. Caught immediately by re-reading the file after the edit, not assumed correct, and restored in a follow-up edit — consistent with this project's standing practice of verifying edits landed as intended rather than trusting them by default.
+
+**Status**
+🔒 **Production's Intro, Learn, and Experience subsections fully resolved for visuals and documented across `05-production.md` and `CURATION-INDEX.md`.** Engage remains the one open piece. Ready for Nicole's repo push.
+
+---
+
+### Decision
+
+**Production fully resolved for visuals — all four subsections.** The raw-file gap flagged last entry is fixed (Nicole confirmed), so that note is cleared from both `05-production.md` and `CURATION-INDEX.md`. Engage's treatment is functional rather than visual: a real "Download Toolkit" button plus the already-documented closing live-site CTA, not a new image — confirmed as deliberate, not a placeholder.
+
+**Status**
+🔒 **Production, entirely done for visuals.** Next: Outcome.
+
+---
+
+### Decision
+
+**Outcome resolved for visuals — one image, reused rather than newly sourced.**
+
+**Why**
+- **`DEF_MyDefenseStation.JPEG`** (already in the raw materials from the earlier Final Defense photo batch) reused here: Nicole standing at her actual defense station, the real validation numbers visible on the monitor behind her. Genuine documentary evidence of these exact results being presented, not staged for this purpose.
+- **Grounded in real Meta precedent before proposing anything**: Meta's own Outcome used three real photos as evidence the outcome actually landed, not decoration — confirmed this section benefits from a photo rather than defaulting to one.
+- **Caption went through a real correction**: early options ("the day these numbers got defended," "this is what a defended thesis looks like") leaned into academic "defense" framing, which Nicole flagged directly as not the register this project wants. Landed on "Presenting real results, to real people," no academic language at all.
+- **A repeated editing mistake, same pattern as last entry**: an edit to `CURATION-INDEX.md` again accidentally deleted an existing section (this time the "Production, Engage" note) instead of adding alongside it. Caught immediately via re-read, restored in a follow-up edit. Worth naming as a real, recurring risk with this specific edit pattern (adding a new section near the end of a file with sequential headers) — double-checking the full file after any edit near the end is now warranted by default, not just when something seems off.
+
+**Status**
+🔒 **Outcome done for visuals.** Next: Retrospective.
+
+---
+
+### Decision
+
+**Retrospective resolved for visuals — the Outcome photo was moved here instead of a new one being sourced.**
+
+**Why**
+- **A real structural swap, not just a caption exercise**: Nicole's own instinct was that `DEF_MyDefenseStation.JPEG` fit Retrospective's "carried this solo" content more directly than it fit Outcome's data-driven proof, since Outcome's real evidence was always the stat banners, not the photo. Outcome now runs text-only; both `06-outcome.md` and `07-retrospective.md` updated to reflect the swap.
+- **The caption required real course-correction**: the first two directions both leaned on "alone" as the emotional center, and Nicole flagged this directly as repeating the same over-emphasized solo-work framing she'd already corrected multiple times earlier in this project (in this section's own body text, and separately in Constraints). Neither direction was salvaged with a reword — both were dropped outright. Landed on "Still smiling by the end of it" only once the angle moved away from a themed statement about the work and toward something specific and human about the actual photo.
+- **`CURATION-INDEX.md` rewritten in full this time, not edited incrementally**, specifically to avoid repeating the same accidental-deletion mistake made twice in the two prior entries. Re-read in full after writing to confirm every existing section survived alongside the new content.
+
+**Status**
+🔒 **Retrospective done for visuals.** Every section with mandatory content (Executive Summary through Retrospective) is now fully resolved for both text and visuals. Ready for Nicole's repo push. Remaining: the Executive Summary hero and the Product Gallery component, both deliberately deferred since the start of the visual-asset phase; Deep/Technical and Tools & Skills weren't part of this visual pass (collapsible cards and a tag row respectively, neither typically paired with images per Meta's own precedent) but worth a quick confirmation pass whenever convenient.
+
+---
+
+### Decision
+
+**The bottom-of-page contact callout's Feminist UX-specific subtext was locked, the Product Gallery component was fully finalized (hovers, overall caption, real images), and a genuine, thorough documentation audit was performed across the whole project at Nicole's request** — real stale references found and fixed, not a rubber-stamp.
+
+**Why**
+- **The contact callout subtext required a genuinely different approach than Meta's version**, since Meta's teased a real downloadable asset (the NDA-approved deck) with no Feminist UX equivalent. Documented in `TONE-AND-VOICE.md` as its own subsection, landing on "Whether it's the framework, the toolkit, or UX in general, always up for a conversation" as a warm bridge line rather than a payoff tease.
+- **The Product Gallery's Experience hover required a real correction**: an early version compared the page to "reading about it first," which didn't make sense given Experience is genuinely the second thing a reader encounters in the gallery, nothing has been "read about" yet at that point. Fixed to drop the comparison entirely ("Feel the difference for yourself").
+- **The overall gallery caption needed real expansion, twice**: the first draft jumped straight to describing the site's form ("here's a microsite") without ever stating what Feminist UX actually *is*. Revised to lead with the framework itself before its form, landing on: "Feminist UX is a framework for designing more inclusively, built as a live microsite with three connected parts: understand it, feel it, then put it into practice."
+- **A genuine, thorough audit was requested and performed, matching the standard already set earlier in this project** ("don't rely on past checks or assumptions"). Checked `general-context.md`, `manifest.md`, `STRUCTURE.md`, and `CURATION-INDEX.md` fresh, not from memory. **Found real, concrete staleness in three separate files, all the same underlying issue**: `DEF_MyDefenseStation.JPEG` was still described as a "strong Outcome-section hero candidate" in `general-context.md`, `manifest.md`, AND `STRUCTURE.md`, even though it had been reassigned to Retrospective several turns earlier. All three fixed in the same pass.
+- **A second, separate real gap found**: `manifest.md` and `STRUCTURE.md` had no entries at all for the Product Gallery screenshots (`LEARN.png`/`EXPERIENCE.png`/`ENGAGE.png`) or any of the other screenshot batches added during the visual-asset pass (`production_01/02/03`, `decisions_01/02/04`, `discovery_01/02`) — genuinely new raw materials that had never been logged in either file, since all the documentation attention during that phase had gone to `CURATION-INDEX.md` and the `01_Content/` files specifically. Added to both.
+- **The top-level Content Spine status line and `STRUCTURE.md`'s own scope note were both stale in the same way**: both still implied content drafting was incomplete or hadn't started, when it's now essentially done except the hero. Both updated to reflect the real current state.
+- **This audit reinforces a pattern already named once before in this project**: staleness risk isn't confined to any one file. It was found in `general-context.md` (twice, actually, across two different sessions), `manifest.md`, and `STRUCTURE.md` this time, on top of the `01_Content`/`FINAL-COPY.md` drift found earlier. Cross-referencing multiple files against each other, not just checking one file in isolation, is what actually surfaces this class of error.
+
+**Status**
+🔒 **Genuine audit complete, with real findings fixed across four files** (`general-context.md`, `manifest.md`, `STRUCTURE.md`, `CURATION-INDEX.md`), not just re-asserted as clean. Product Gallery and the contact callout subtext both fully locked. Ready for Nicole's repo push. **The only genuinely remaining piece across the entire project is the Executive Summary hero.**
