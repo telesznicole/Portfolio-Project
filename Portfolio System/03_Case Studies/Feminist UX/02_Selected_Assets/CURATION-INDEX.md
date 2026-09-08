@@ -1,9 +1,10 @@
 # Curation Index — Feminist UX
 
-> **Status: in progress.** Real filenames and captions are locked here as sections get curated, following the same pattern as Meta's index. Actual image files still need to be copied from `00_Raw/Photos/` (full quality) into this folder by Nicole — Claude cannot copy binary files, only relocate, and moving originals out of `00_Raw/` would destroy the source archive.
+> **Status: COMPLETE (2026-08-XX).** Every section of the case study, plus the Product Gallery and the Executive Summary hero, has a locked, final visual treatment (or a documented, deliberate no-image decision). Actual image files still need to be copied from `00_Raw/Photos/` (full quality) into this folder by Nicole for final Framer assembly — Claude cannot copy binary files, only relocate, and moving originals out of `00_Raw/` would destroy the source archive.
 
 | Filename | Section | Caption |
 |---|---|---|
+| `feminist_ux_hero_desktop.png`, `feminist_ux_hero_tablet.png`, `feminist_ux_hero_phone.png` | Executive Summary hero (zero-scroll viewport) | No caption (hero visuals don't carry captions, matching Meta's pattern) — a laptop mockup of the live Home page (real headline "Feminist UX." and tagline "Design for everyone.") against a purple halftone dot portrait, with the "Feminist UX" wordmark and a purposefully-placed cursor. |
 | `LEARN.png`, `EXPERIENCE.png`, `ENGAGE.png` | Product Gallery (page-level component, sits before Context, not part of a numbered section) | Overall caption: "Feminist UX is a framework for designing more inclusively, built as a live microsite with three connected parts: understand it, feel it, then put it into practice." Hover blurbs: Learn — "Start here to understand the why." / Experience — "Feel the difference for yourself." / Engage — "Turn what you just learned into action." |
 | `discovery_01_user-inyerface.png` | Discovery (Finding 1) | "Built to frustrate you. It's very good at its job." |
 | `discovery_02_feminist-ux-of-ai.png` | Discovery (Finding 2) | "Genuinely thoughtful concepts. Still just concepts." |
@@ -14,6 +15,14 @@
 | `production_03_learn-page-quote.png` | Production — Learn | "The kind of quote that earns a page to itself." |
 | `Process/T1_AF-FlowPics/5 Personalize Account - Start with the basics - Profile Picture.jpg` + the matching file in `T1_F-FlowPics/` | Production — Experience (side-by-side layout) | "The exact same step in the account setup, told two different ways. Read the copy on each side closely, the difference isn't subtle." |
 | `Photos/DEF_MyDefenseStation.JPEG` | Retrospective (moved here from Outcome, 2026-08-XX) | "Still smiling by the end of it." |
+
+## Hero visual: real iteration history (2026-08-XX)
+Went through three genuinely different concepts, not a single pass:
+1. **Claude's first suggestion**: a red halftone treatment on an abstract shape (mocked up via the Visualizer tool). Rejected — a decorative blob didn't carry meaning the way the halftone technique does elsewhere on the site, where it's applied to something specific and recognizable.
+2. **Nicole's own first real mockup**: a laptop showing the five core tenets as cards over a red halftone background. Genuinely closer, but created real redundancy with the Product Gallery directly below, which already handles "here's what's inside."
+3. **Final version**: real headline/tagline copy on screen instead of content cards, purple halftone dots forming an actual portrait rather than scattered texture, and a purposefully-repositioned cursor. Claude initially read the cursor as decorative and suggested cutting it; Nicole pushed back directly that it was intentional, signaling real site interactivity — kept, and repositioned closer to the screen so it reads as pointing at something. Color changed from red to purple at Nicole's direct call, based on her own knowledge of the live Framer build's actual color usage in the first few scrolls, which Claude couldn't independently verify.
+
+Full detail and reasoning in `01_Content/00-executive-summary.md`.
 
 ## Notes on numbering
 `decisions_04_toolkit-testing.png` corresponds to Decisions Card 5 ("tested early, and kept testing") in the actual case study copy, not Card 4 — the filename's "04" reflects it being the fourth image file added to this section, not a literal card-number match. Worth knowing if this ever causes confusion during Framer assembly.

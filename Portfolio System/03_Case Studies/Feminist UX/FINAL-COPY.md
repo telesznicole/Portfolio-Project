@@ -7,7 +7,7 @@
 ---
 
 ## Executive Summary
-**Status:** Complete — hero visual deliberately deferred, per Nicole's request
+**Status:** Complete — hero visual locked (3 responsive sizes: `feminist_ux_hero_desktop/tablet/phone.png`)
 
 Role: UX Researcher, Designer & Developer
 Team: Independent thesis project, SCAD MFA

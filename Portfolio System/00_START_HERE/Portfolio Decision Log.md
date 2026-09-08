@@ -2343,3 +2343,19 @@ A full pre-content-drafting audit was run at Nicole's request — every open fla
 
 **Status**
 🔒 **Genuine audit complete, with real findings fixed across four files** (`general-context.md`, `manifest.md`, `STRUCTURE.md`, `CURATION-INDEX.md`), not just re-asserted as clean. Product Gallery and the contact callout subtext both fully locked. Ready for Nicole's repo push. **The only genuinely remaining piece across the entire project is the Executive Summary hero.**
+
+---
+
+### Decision
+
+**The Executive Summary hero is locked — the last remaining piece of the entire Feminist UX case study.** Went through real, visible iteration, including a genuine design disagreement between Claude and Nicole that Nicole was right about.
+
+**Why**
+- **Three genuinely different concepts, not incremental polish on one idea**: Claude's first suggestion (a red halftone treatment on an abstract shape, actually mocked up via the Visualizer tool to react to concretely rather than describe) was rejected once seen — a decorative blob didn't carry the same meaning as the halftone technique does elsewhere on the site, where it's applied to something specific and recognizable. Nicole's own first real mockup (a laptop with the five tenet cards over red halftone dots) was closer but created real redundancy with the Product Gallery directly below the hero, which already handles "here's what's inside." The final version dropped the content cards for real headline/tagline copy instead.
+- **A genuine design disagreement, resolved in Nicole's favor**: Claude read the mockup's cursor as purely decorative and suggested removing it. Nicole pushed back directly — it was intentional, meant to signal the site's real interactivity, not an oversight. Kept, and repositioned closer to the screen in the final version so it reads as pointing at something specific.
+- **A color change deferred entirely to Nicole's own knowledge**: red was changed to purple based on Nicole's direct familiarity with the live Framer build's actual color usage in its first few scrolls — something Claude explicitly could not independently verify, so deferred rather than second-guessed.
+- **The final halftone treatment achieves what the first attempt didn't**: the dot density in the final version actually forms a deliberate, recognizable portrait, the same quality that makes the site's existing bell hooks treatment work, rather than reading as scattered decorative texture.
+- **All four documentation files updated in one pass, verified via full re-reads, not assumed to have propagated**: `00-executive-summary.md` (full iteration history), `FINAL-COPY.md` (status line), `general-context.md` (Content Spine's top-level completion marker and a dedicated hero-history subsection), `manifest.md`, `STRUCTURE.md` (scope note, Photos/ section, and Change Log), and `CURATION-INDEX.md` (full hero row plus its own history section).
+
+**Status**
+🔒 **The Feminist UX case study is genuinely, fully complete** — every section of text, every visual decision (image or deliberate no-image), and the hero are all locked and consistently documented across every project file. Nicole is doing final technical checks (hooking the project into the portfolio homepage) before pushing. Nothing content-related remains outstanding.
