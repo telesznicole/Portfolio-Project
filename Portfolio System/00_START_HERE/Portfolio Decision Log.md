@@ -2500,3 +2500,17 @@ A full pre-content-drafting audit was run at Nicole's request — every open fla
 
 **Status**
 🔒 **Context-gathering phase for Portfolio Build is complete.** Both corrections applied, full inventory documented, `general-context.md` headline updated. Ready for Nicole's push, and ready to move into spine planning on her go-ahead.
+
+---
+
+### Decision
+
+**Preliminary spine agreed with Nicole through direct back-and-forth**, with two real structural changes from the first draft, plus a standing drafting rule established before any content gets written.
+
+**Why**
+- **"System before pages" moved into Decisions**, with its real original July 29 reasoning, rather than explained for the first time inside Production. Chronologically accurate (it was genuinely the first real decision, before any design work happened) and lightens Production, which no longer has to both justify the system's existence and describe the actual build.
+- **Decisions and Constraints split into two deliberately complementary jobs, at Nicole's direction.** Decisions states what the actual workflow was: the real, named division of labor, and the real critique loop. Constraints proves that division held under real pressure, using three specific, substantive catches rather than a generic bug list: the component-drift catch (an AI claim of exact reuse that wasn't, caught twice), the conceptual misread catch (the "Optional" tag, where AI cited the right research and drew the wrong conclusion), and the How I Work scope pivot (AI technically satisfied its brief while being wrong about what the page needed to mean). Nicole was explicit these examples needed to be substantive enough to sell her own judgment to a recruiter, not just prove a bug got fixed.
+- **A standing drafting rule was established before any content is written**: every section must ground a reader in plain terms before going specific, rather than assuming context this conversation already has. Nicole flagged directly that this was a real, repeated pitfall in past work she does not want repeated here — the same lesson already learned once on Feminist UX's Production section, now applied proactively instead of corrected after the fact.
+
+**Status**
+🔒 **Spine agreed in principle, standing drafting rule in place.** `general-context.md` updated with both. Ready to begin drafting Context.
