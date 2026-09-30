@@ -2514,3 +2514,49 @@ A full pre-content-drafting audit was run at Nicole's request — every open fla
 
 **Status**
 🔒 **Spine agreed in principle, standing drafting rule in place.** `general-context.md` updated with both. Ready to begin drafting Context.
+
+---
+
+### Decision
+
+**Context and Discovery both locked** for Portfolio Build.
+
+**Why**
+- **Context went through several real revision rounds**: an early draft included the actual start date (July 29), which Nicole cut directly since a fixed calendar date makes a case study read as dated the further removed a reader gets from it — "six weeks" and "working solo" carry the real facts without anchoring to a day. The opening line was also flagged as abrasive (an announcement with no lead-in) and rewritten to open with the actual feeling behind the decision first. Final structure: two paragraphs, split exactly at the word "Rather," per Nicole's explicit instruction.
+- **Discovery named Google Deep Research directly**, after confirming this didn't require explaining the full documentation system first — it's just the tool that did this particular research, and the fuller system story stays in Decisions as planned. Three real findings kept, each doing a distinct job: the audience research (the actual reason the site is built in layers, not just a style choice), the AI market case (validates centering AI collaboration as a genuine, current, defensible choice, not a trend being chased), and the competitive benchmark (confirmed a direction already being considered, not what dictated it).
+- **Bold placement for Discovery was refined directly by Nicole**: excluded "to help" from the first paragraph's bolded span, and specifically wanted the closing paragraph to carry no bold at all.
+
+**Status**
+🔒 **Context and Discovery locked** in `01_Content/` and `FINAL-COPY.md`. Ready for Constraints — the section built around the three substantive AI-limitation examples already agreed (component drift, the conceptual misread, the How I Work scope pivot).
+
+---
+
+### Decision
+
+**Constraints locked, after the most extensive revision of any section drafted so far on Portfolio Build.** The original planned examples (component drift, the conceptual misread, the How I Work pivot) were dropped entirely, not just refined.
+
+**Why**
+- **The originally planned examples were rejected wholesale.** Nicole flagged them as reading like generic "AI makes mistakes, double-check your work" bug-catches, adding no real value since none required actual design judgment, just diligence.
+- **A first reframe used real site history instead**, which was closer but surfaced a real structural risk Nicole caught: Constraints sits before Decisions and Production in the locked spine, so referencing specific site history this early would jump the story out of order.
+- **A second, more fundamental reframe followed**: the section became general AI limitations, still rooted in Nicole's real experience, rather than specific anecdotes. This solved the ordering problem entirely.
+- **A real accountability moment**: Claude incorrectly told Nicole she'd said to cut a constraint entirely, when she'd only said it felt repetitive. She caught this and corrected it directly. Standing correction, logged for future reference: "repetitive" means tighten, not cut, unless explicitly told to cut.
+- **The opener was reframed twice**: first away from a blase "AI has no taste" framing toward lived experience and human connection, then broadened again after Nicole flagged that anchoring specifically on "tired, skimming" read as too narrow.
+- **The closing line took roughly a dozen real iterations**, the most of any single line in this project so far. Nicole was explicit throughout that she wanted the "design still needs a designer" sentiment kept, but rejected multiple attempts that either restated it redundantly, falsely claimed to "prove" something already established, or bolted a second sentence on without a real connective thread. The eventual fix: tying the close back to the opener's own human-connection idea, functioning as a genuine narrative bridge into Decisions' first real content, not a standalone summary line.
+- **Nicole's standing instruction to always show the full section, not isolated lines, was followed throughout** — every single iteration in this section was presented as the complete opener-to-closing whole, per her explicit request earlier in this session.
+
+**Status**
+🔒 **Constraints locked** in `01_Content/03-constraints.md` (full revision history) and `FINAL-COPY.md`. Ready for Decisions — opens with "system before pages" as the real first decision, then the named division of labor and the critique loop.
+
+---
+
+### Decision
+
+**Decisions locked** — a much smoother draft than Constraints, with one real scope question resolved up front rather than discovered mid-draft.
+
+**Why**
+- **Nicole raised a real scope question before any wording was written**: would this project actually show technical detail and visible UX craft, or just claim rigor abstractly? Resolved directly: that material belongs in Production (confirmed to exist in real depth from the earlier research phase: 9 Homepage rounds, 7 Case Study Template rounds, 3 Resume rounds, 7 How I Work rounds, each with real documented reasoning) and Deep/Technical (the granular technical setup). Decisions stays intentionally lean, stating the governing rules once rather than re-proving them with evidence that belongs later.
+- **The three decisions (system before pages, the named division of labor, the real critique loop) were approved close to as drafted**, a genuine contrast to Constraints' roughly dozen-round closing line. Only the closing line's second sentence needed real iteration, landing on "It's why the rest of this actually worked" after a short round of options, then trimmed once more.
+- **This confirms the earlier three-way scope split (Decisions/Production/Deep-Technical) is holding up in practice**, not just in planning — worth noting since that split was designed specifically to keep Decisions from becoming another long, iterative section like Constraints.
+
+**Status**
+🔒 **Decisions locked** in `01_Content/04-decisions.md` and `FINAL-COPY.md`. Nicole doing a safety push. Next: Production — expected to be the richest section, carrying the real wireframe history, the Figma-to-Framer pipeline, and actual mockups.
