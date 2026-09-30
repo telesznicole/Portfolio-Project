@@ -114,14 +114,28 @@ Want a peek behind the scenes? Here's the GitHub repo. :)
 ---
 
 ## Outcome
-**Status:** Not started
+**Status:** Complete
 
-*(Metric callout, if any:)*
+The real test wasn't whether the site looked better. It was whether any of this actually worked, as a way of working, not just a way of looking.
+
+The clearest proof isn't a number. It's what you're reading right now: a real, complete case study, built by the exact process it describes. That's not a claim about potential. It's the actual result of it.
+
+Attention picked up too. Traffic has stayed meaningfully higher since the relaunch than it was before. Not the point, but I'm not complaining.
+
+Both halves of the original question got answered. AI turned out to fit my process in a real, repeatable way, and the depth I set out to show is actually there for anyone who looks.
+
+*(Metric callout: none — traffic referenced honestly in prose, not pulled into a stat banner)*
 
 ---
 
 ## Retrospective
-**Status:** Not started
+**Status:** Complete
+
+Before this, I'd incessantly tinker with my portfolio without ever finishing it. Every pass chased a different look, never anything with real substance behind it. It took an enormous amount of time, and I still didn't feel proud of what I had.
+
+Having an actual system changed that. For the first time, I had a real way to build my work in depth and actually show off the things I'm genuinely proud of.
+
+The system itself was entirely new for me. I'd vibe-coded before, but never worked AI into something this deep. I wasn't sure it would hold up, and it did. It was approachable, malleable, and, when used well, it doesn't take over the work, it clears space for the parts I'm best at.
 
 ---
 

@@ -2593,3 +2593,33 @@ A full pre-content-drafting audit was run at Nicole's request — every open fla
 
 **Status**
 🔒 **Production's closing CTA locked** across `01_Content/05-production.md`, `FINAL-COPY.md`, and `TONE-AND-VOICE.md`. Nicole doing a push. Ready for Outcome.
+
+---
+
+### Decision
+
+**Outcome locked**, after a genuine rethink of what actually counts as proof for this project, not just a wording pass.
+
+**Why**
+- **A real, substantive objection from Nicole reordered the whole section**: an early draft led with traffic numbers, which framed success as attention, contradicting this project's actual throughline of depth and craft. The system-already-shipped-real-work finding was promoted to lead; traffic was demoted to a smaller supporting note.
+- **A real factual correction on the traffic claim**: an earlier version said traffic hadn't stayed elevated since launch, which wasn't accurate. Corrected to reflect a genuine, sustained increase, with an honest caveat about job-searching's likely contribution.
+- **The specific pre-rebuild number was cut entirely**, not softened, after Nicole said framing the old site as barely visited didn't sit well with her.
+- **A real logic problem was caught directly by Nicole, not just a style note**: an early version of the lead finding cited Feminist UX's case study as external proof the system works. Nicole pointed out this doesn't actually hold together as a self-contained argument, citing a separate project as evidence inside this one is a non-sequitur. Rebuilt around a cleaner, self-evident idea: the case study being read right now, built by the process it describes, is itself the proof, no external citation needed.
+- **A goofy, warm closing phrase was added to the traffic note** at Nicole's request ("Not the point, but I'm not complaining"), replacing a flatter earlier version.
+
+**Status**
+🔒 **Outcome locked** in `01_Content/06-outcome.md` (full revision history) and `FINAL-COPY.md`. Ready for Retrospective — per the standing lesson from Feminist UX's own Retrospective, the lens will be asked about directly rather than guessed at first.
+
+---
+
+### Decision
+
+**Retrospective locked, and the lesson from Feminist UX's own Retrospective was successfully applied this time**, not just noted. Nicole was asked directly what she wanted the section to say before any drafting started, rather than guessing first, and it worked, this section closed in a handful of rounds instead of seven-plus failed drafts.
+
+**Why**
+- **Nicole gave three real threads in one message**: relief at finally having a system after years of unsatisfied tinkering, pride in proving AI collaboration actually works, and AI freeing her to focus on human judgment and connection.
+- **The third thread was deliberately left out**, flagged directly as substantially overlapping with Constraints' own "design still needs a designer" argument, and Nicole agreed once she saw the draft built around only the first two.
+- **The real breakthrough was Nicole's own rewrite of the piece**, given here almost verbatim with only two typo fixes and one word-choice correction. Once written in her own rhythm, it read as complete without needing a separate closing line, confirmed by asking directly rather than assuming a closer was required.
+
+**Status**
+🔒 **Retrospective locked** in `01_Content/07-retrospective.md` (full revision history) and `FINAL-COPY.md`. Ready for Tools & Skills and Deep/Technical — the two remaining sections.
