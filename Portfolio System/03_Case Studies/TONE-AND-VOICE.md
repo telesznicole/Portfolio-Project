@@ -100,3 +100,14 @@ The shared callout itself ("Want to talk about this project? I'd love to hear fr
 Feminist UX's subtext: *"Whether it's the framework, the toolkit, or UX in general, always up for a conversation."*
 
 Given there was no asset to tease, this line's job is different from Meta's: not a payoff/reward for reaching out, just a warm, specific bridge into the actual contact link, naming real topics (the framework, the toolkit, UX broadly) rather than a generic "feel free to reach out."
+
+---
+
+## Applying This Guide to Portfolio Build (established 2026-09-30)
+
+### Production's closing CTA, retrofitted from Feminist UX
+Feminist UX's Production section ends with a tertiary-text CTA ("Take a look at the live site before you go! :)") linking to the live site. Portfolio Build reuses the same pattern and placement (end of Production) but adapts the destination and wording, since this project's real proof-of-work is a GitHub repo, not a separate live site to visit.
+
+Portfolio Build's version: *"Want a peek behind the scenes? Here's the GitHub repo. :)"* — links to the project's GitHub repo.
+
+This confirms the underlying pattern (a warm, playful, smiley-marked CTA linking to real proof, placed at the end of Production) is portfolio-wide and reusable, not unique to Feminist UX — future case studies should default to reusing and adapting it rather than inventing a new closing device each time.

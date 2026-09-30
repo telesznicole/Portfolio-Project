@@ -90,7 +90,26 @@ That structure held for the rest of the project. It's why the rest of this actua
 ---
 
 ## Production
-**Status:** Not started
+**Status:** Complete
+
+Before any of this could work, Claude needed real access to my actual project: my rules, my research, my structure, not just whatever I typed into a chat box.
+
+That access is where everything else here started: a real technical pipeline, then visible iteration across four pages, each rebuilt multiple times before anything was considered finished.
+
+The Technical Build:
+I connected Claude directly to my own project files through a filesystem connection, scoped narrowly to just this project, so it could reference my real rules, research, and documentation directly.
+
+Wireframes themselves started as real, working HTML and CSS, not static images, a low-fidelity stage built for testing structure and behavior, not visuals. That choice was deliberate: code can be tested for actual behavior, tracked cleanly in version control, and matches how AI drafts and edits best.
+
+Getting that into the live site meant a real pipeline: Claude Code and Figma's own remote MCP server brought the coded wireframes into Figma as editable frames for mid-fidelity refinement, then a second tool brought that refined work into Framer itself, where I made real, hands-on adjustments before anything went live. Both tools were chosen because they ran on infrastructure I already had.
+
+The Design Process:
+Every page went through many full rounds of real iteration, not quick touch-ups. The homepage alone went through 9. The case study template went through 7. Resume went through 3. How I Work went through 7, and one of those rounds wasn't a small revision, it was a real reset.
+
+Every round, on every page, came with its own written reasoning. Each one documented what it tested, what worked, and why, so real decisions could get made quickly instead of every choice becoming a matter of opinion.
+
+Closing CTA (tertiary text, ends Production):
+Want a peek behind the scenes? Here's the GitHub repo. :)
 
 ---
 

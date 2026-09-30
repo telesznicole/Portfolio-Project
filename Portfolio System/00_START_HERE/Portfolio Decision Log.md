@@ -2560,3 +2560,36 @@ A full pre-content-drafting audit was run at Nicole's request — every open fla
 
 **Status**
 🔒 **Decisions locked** in `01_Content/04-decisions.md` and `FINAL-COPY.md`. Nicole doing a safety push. Next: Production — expected to be the richest section, carrying the real wireframe history, the Figma-to-Framer pipeline, and actual mockups.
+
+---
+
+### Decision
+
+**Production locked** — the most heavily revised section after Constraints, involving a real omission caught and fixed, a technical claim Nicole questioned that turned out to be accurately sourced, and an apparent factual conflict that resolved into a naming confusion rather than an actual error.
+
+**Why**
+- **A real, significant omission was caught by Nicole**: the first draft entirely dropped the filesystem MCP connection (Claude's direct access to Nicole's rules, research, and structure), the thing that made everything else possible. Added as its own opening beat, ahead of the Figma/Framer pipeline.
+- **A specific technical claim was directly challenged**: Nicole said she had no memory of a failed Figma plugin install. Rather than back down or insist blindly, the claim was re-verified against the actual sourced Decision Log entry and confirmed accurate. It was still cut afterward, but for a narrative reason (Nicole felt it broke flow as a random aside), not because it was wrong — worth keeping that distinction clear in the record.
+- **A real, apparent factual conflict surfaced and was resolved carefully**: Nicole initially described the technical pipeline in reverse order from what was documented. Investigated directly rather than assuming either the log or Nicole's memory was right by default. Resolved as a terminology confusion: Framer's own tool is named "HTML to Framer," which reads as if it moves raw HTML directly into Framer, when it actually moves *Figma* work into Framer. The original documented order was correct the whole time.
+- **A real content gap was also caught and fixed**: an intermediate draft implied the site was built primarily in HTML/CSS with Figma/Framer as a pass-through, when real, hands-on refinement happened directly in Framer. Corrected in the pipeline paragraph's final clause.
+- **Low-fi/mid-fi terminology deliberately added** at Nicole's request — a real, confirmed case where UX jargon helps rather than creates a barrier, since it's already fluent vocabulary for this section's actual audience.
+- **A real anecdote (the homepage "three concepts, one idea" story) was cut deliberately, not just for length** — that specific kind of evidence (visible design judgment) already exists in Constraints, so repeating it here would be redundant rather than additive.
+- **Bold phrases were reworked once for a genuine skimmability failure**: an initial version bolded a detail too specific to mean anything standalone ("the homepage went through 9 full rounds") and left the closing paragraph's bold carrying no real weight. Both rewritten as complete, self-contained claims.
+- **Subsection title "Wireframing" replaced with "The Design Process"**, matching "The Technical Build"'s parallel noun-phrase structure.
+
+**Status**
+🔒 **Production locked** in `01_Content/05-production.md` (full revision history) and `FINAL-COPY.md`. Nicole doing another push. Next: Outcome.
+
+---
+
+### Decision
+
+**Production's closing CTA added**, retrofitted directly from Feminist UX's own Production-ending pattern rather than invented fresh.
+
+**Why**
+- **Nicole wanted to reuse a real, working component** from Feminist UX's Production section (a tertiary-text, smiley-marked CTA at the very end of Production) rather than design something new. Confirms the pattern is genuinely portfolio-wide and reusable, not Feminist-UX-specific.
+- **The destination changed from a live site to a GitHub repo**, since this project's real proof-of-work is the repo itself. Wording went through one real revision: Nicole wanted a combination of "repo" and "behind the scenes" rather than a literal reuse of Feminist UX's "live site" phrasing. Landed on "Want a peek behind the scenes? Here's the GitHub repo. :)"
+- **Documented in `TONE-AND-VOICE.md` as a new "Applying This Guide to Portfolio Build" section**, explicitly naming this as a reusable, portfolio-wide pattern for future case studies to default to reusing and adapting, not reinventing each time.
+
+**Status**
+🔒 **Production's closing CTA locked** across `01_Content/05-production.md`, `FINAL-COPY.md`, and `TONE-AND-VOICE.md`. Nicole doing a push. Ready for Outcome.
