@@ -34,6 +34,12 @@
 
 *(Placeholder-but-live, added 2026-08-24 as a "just in case" safeguard while Nicole rebuilds the page skeleton — written from general project facts already established (MFA thesis, framework/toolkit, practitioner validation), not from a fresh pass through the project's actual materials. Nicole flagged this should be revisited once the real content/asset-gathering phase for Feminist UX is further along, the same way Meta's description was grounded in confirmed, sourced language rather than general knowledge.)*
 
+## Behind the Portfolio (Portfolio Build case study)
+
+> "Behind the Portfolio — how this exact site was built, with a documented system and AI used as a real design collaborator, not just a shortcut."
+
+*(Locked 2026-09-30. Drafted and approved directly from Portfolio Build's actual locked content, not a placeholder — "not just a shortcut" echoes language already established in that case study's own Constraints and Retrospective sections.)*
+
 ---
 
 ## Still Needed
