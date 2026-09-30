@@ -2623,3 +2623,20 @@ A full pre-content-drafting audit was run at Nicole's request — every open fla
 
 **Status**
 🔒 **Retrospective locked** in `01_Content/07-retrospective.md` (full revision history) and `FINAL-COPY.md`. Ready for Tools & Skills and Deep/Technical — the two remaining sections.
+
+---
+
+### Decision
+
+**Tools & Skills and Deep/Technical both locked. All body text for Portfolio Build is now complete.**
+
+**Why**
+- **Tools & Skills locked with one real correction**: Claude told Nicole it had omitted UX Research from the tag list while it was actually present as the second tag, a genuine self-contradiction, not a style note, caught and corrected immediately.
+- **Deep/Technical required real, substantive rejection and rebuilding, not polish.** Two original cards ("Verification by Design," "A Real Exchange") and two replacement attempts (a hackathon-experience card, a Portfolio Manifesto citation card) were all rejected for the same underlying reason: they described something that exists without offering real insight specific to Portfolio Build itself. A "what's next" card was ruled out before drafting, correctly identified as something that would date the case study over time.
+- **The real fix was splitting an earlier combined card into two more descriptive ones**, plus adding a genuinely new card: the Decision Log itself as a real, checkable artifact, thousands of lines long, referenced throughout this entire project but never given its own card until now.
+- **Card 2 was broadened during drafting** from a narrow claim about wording iteration to a broader claim about iteration applying to everything, at Nicole's direct request.
+- **Card ordering (foundation → process → artifact → outside validation) was confirmed as already the strongest logic available**, not reshuffled.
+- **`general-context.md`'s top marker updated** to reflect all body text as complete, matching the pattern used at the equivalent milestone on Feminist UX.
+
+**Status**
+🔒 **All ten sections of Portfolio Build's body text are locked** across `01_Content/`, `FINAL-COPY.md`, and this log. Every section has full revision history. Remaining: visuals only, deliberately deferred by Nicole until the written content was complete.

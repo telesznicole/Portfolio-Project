@@ -140,9 +140,26 @@ The system itself was entirely new for me. I'd vibe-coded before, but never work
 ---
 
 ## Tools & Skills
-**Status:** Not started
+**Status:** Complete
+
+Product Design · UX Research · Systems Thinking · Figma · Framer · Front-End Development · Prompt Engineering · AI-Assisted Design
 
 ---
 
 ## Deep/Technical
-**Status:** Not started (optional, may stay empty)
+**Status:** Complete — 4 collapsible cards + intro blurb
+
+Intro:
+A closer look at the real system behind this project, for anyone who wants to see how it actually works.
+
+Card 1 (Research-First Architecture):
+Before any structure existed, I researched how this kind of system should actually work, not just built one by instinct. That's why the knowledge base is plain, portable files, Markdown, Git, structured folders, instead of something locked to one AI tool. GitHub and secure access were set up before Claude ever touched the project, and the filesystem connection itself was scoped narrowly to just this project, on purpose, not given broad access by default.
+
+Card 2 (The Actual Workflow):
+The real workflow was direction in, a draft out, a critique, a revision, repeated until something actually held up. That loop wasn't occasional. It ran on nearly every real decision across this entire project, including the ones you're reading right now, some needing one pass, others needing a dozen, before it finally matched what I thought was best.
+
+Card 3 (The Decision Log Itself):
+Every real call across this whole portfolio, every project, every section, lives in one running document: what was decided, what was rejected, and why. It's thousands of lines long at this point and still growing. That record is what actually made a system like this possible. Nothing depended on memory, mine or the AI's, for what had already been settled.
+
+Card 4 (A Named Framework):
+My actual workflow, direction, draft, critique, revision, turns out to map closely onto something already named in the industry: the Sandwich Method, human context first, AI acceleration in the middle, human curation at the end. I didn't build toward that framework on purpose. Finding out afterward that it already existed was real confirmation the process wasn't just idiosyncratic, it was sound.
