@@ -1,5 +1,0 @@
-├── 06_AI/
-│   ├── Claude Instructions.md
-│   ├── Prompt Library.md
-│   ├── AI Workflow.md
-│   └── Session Notes/

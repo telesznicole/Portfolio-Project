@@ -16,7 +16,7 @@ Tag: AI-Assisted Design
 ---
 
 ## Executive Summary
-**Status:** Complete (hero visual not yet decided)
+**Status:** Complete — hero visual locked (laptop + camera + Figma icon + glasses, unified "being placed" treatment; Claude deliberately not represented)
 
 Role: Product Designer & Developer
 Stack: Figma, Framer, Claude + MCP, TypeScript

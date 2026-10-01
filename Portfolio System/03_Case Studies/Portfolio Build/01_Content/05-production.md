@@ -53,4 +53,14 @@ This section went through substantial, real revision across several distinct iss
 - **A closing CTA was added (2026-09-30), retrofitted directly from Feminist UX's own Production-ending pattern.** Went through one real revision: Nicole wanted a combination of "repo" and "behind the scenes" rather than a literal copy of Feminist UX's "live site" wording, since this project's real proof-of-work is the repo itself. Landed on "Want a peek behind the scenes? Here's the GitHub repo. :)"
 
 ## Assets That Support This Section
-Not yet discussed — Nicole is deferring all media until the written content is complete.
+Locked 2026-10-01, Technical Build paragraph 1 and Design Process both have real images now.
+
+**Technical Build, paragraph 1 (filesystem connection):** `claude_system_graphic.png`, an original diagram Nicole built (based on a rough Claude concept mockup), showing scoped read/write access to just the Portfolio Project folder, with six real subfolders inside and everything else on the computer excluded. Caption: "Claude got a key to one room, not the whole house."
+
+**Technical Build, paragraph 2 (HTML/CSS claim): still open.** A VS Code screenshot was considered but redirected to Design Process instead (see below) since it proved code existed rather than proving the actual claim in this paragraph. Not yet resolved whether this paragraph gets its own image.
+
+**Technical Build, paragraph 3 (Figma/Framer pipeline): not yet discussed.**
+
+**Design Process:** a real `notes.md` screenshot from an actual promoted Case Study wireframe round, showing real written reasoning (what changed, why, human curation sign-off). Caption: "This is what 'written reasoning' actually looked like, every round." Plus a low-fi/mid-fi/high-fi Homepage progression trio (one shared caption): "Nine rounds got it here. These are three of them."
+
+Full record and open items in `02_Selected_Assets/CURATION-INDEX.md`.

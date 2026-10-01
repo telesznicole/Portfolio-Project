@@ -40,6 +40,8 @@ Nicole asked for a full, thorough read of the shared Portfolio Decision Log and 
 
 **Correction to an earlier note in this file**: the wireframes live in `05_Assets/Low-Fi Wireframes/` and `05_Assets/Mid-Fi Wireframes/`, not a single `05_Assets/Wireframes/` folder as the Decision Log's own shorthand paths imply. Confirmed by direct folder listing. **These are real, functional HTML/CSS prototypes, not static image mockups** — every version (`v1` through the final promoted round, for each of four pages) is a working coded page with its own `notes.md` explaining the reasoning. This matters for Production: "showing the mockups" could mean screenshots, or it could mean actually referencing real code, which is a stronger, more technical proof point than an image would be.
 
+**Folder cleanup (2026-10-01)**: this project's own `00_Raw_Extracted/` was removed entirely, and the empty `00_Raw/Other/`, `Presentations/`, `Process/`, and `AI-Collaboration/` subfolders were deleted by Nicole once confirmed empty. Every raw material this project actually ended up needing was a screenshot, small enough to never trigger the large-file extraction workaround. Only `00_Raw/Notes/` and `00_Raw/Photos/` remain, and that's the complete raw archive for this project. See `manifest.md` for the real file list.
+
 ### The real early philosophy (2026-07-29 to 2026-07-31), before any design work started
 - Portfolio treated as a **product**, not a website. System built **before** pages.
 - A real, named division of labor: Nicole (vision, taste, final decisions), ChatGPT (strategy/critique — not to be named in this case study), Claude (large-context synthesis, coding, drafting), Google Deep Research (market research).
@@ -106,7 +108,7 @@ This is the exact system currently being used to build Portfolio Build itself, a
 - **Recruiter-relevant framing** throughout, same as the other case studies.
 - **Zero em dashes in page copy**, confirmed 2026-09-28 (same rule as Feminist UX).
 - **Wants space specifically for**: her actual technical setup and flow (Claude/MCP configuration), and for showing the real back-and-forth nature of the collaboration (not just describing it abstractly).
-- **Wants low-fi and mid-fi mockups showcased** — real material exists for this now (`05_Assets/Wireframes/` — not yet browsed directly, but confirmed to exist and be extensive, per the Decision Log's own file-path references throughout).
+- **Wants low-fi and mid-fi mockups showcased** — real material exists and has now been used: the Homepage low-fi/mid-fi/high-fi progression trio is locked into Production's "Design Process" subsection. Full wireframe archive lives in `05_Assets/Low-Fi Wireframes/` and `Mid-Fi Wireframes/`.
 - **Constraints should NOT be generic project limits.** Reframed, per Nicole's direct instruction: constraints are about where AI could not do it all, and where her own finesse as a human designer had to step in — the real bugs and corrections documented above are the actual substance for this section, not invented placeholder limits like timeline or budget.
 
 ## Confirmed Facts
@@ -131,16 +133,22 @@ This is the exact system currently being used to build Portfolio Build itself, a
 - Proof: AI-assisted build, 73 views on launch day
 - Full reasoning and rejected alternatives live in `01_Content/00-executive-summary.md`.
 
-## Proposed Spine (revised 2026-09-28, after the full read — supersedes the earlier generic proposal)
-Not yet locked with Nicole. Reflects the real material now known to exist:
+## Spine — LOCKED AND FULLY IMPLEMENTED (superseded the proposal below, all 10 sections written)
+The spine actually used matches the proposal below closely, with the two refinements noted at the top of this file under "Spine, Preliminary (2026-09-29)": system-before-pages moved into Decisions, and Decisions/Constraints split into complementary jobs. All ten sections (Executive Summary through Deep/Technical) are written, locked, and documented in full in their own `01_Content/*.md` files, with `FINAL-COPY.md` holding the clean final text. The proposal below is kept for historical reference only, not as a live plan.
+
+<details>
+<summary>Original spine proposal (2026-09-28), kept for reference</summary>
+
 - **Context:** short. The two-fold starting point (depth/craft, curiosity about AI), and briefly the real July 29 philosophy decisions (product not website, system before pages) as the actual starting mindset.
-- **Discovery:** the evidence-first research phase — Discovery completed *before* any design work began, a real, specific, checkable claim (research themes: hiring expectations, portfolio storytelling, AI workflows, interaction design, designer-developer positioning).
-- **Constraints:** reframed per Nicole's instruction — where AI's shortcomings showed up and where human judgment had to compensate. Real candidates: the repeated component-drift bugs, the double plus/minus and focus-outline bugs, the How I Work scope misread, the "Optional" tag conceptual misread. Pick 3, per the established pattern from Feminist UX, not an exhaustive list.
-- **Decisions:** the core rigor story. Candidates: portfolio-as-product, system-before-pages, the named AI division of labor, the AI-agnostic knowledge base choice, discovery-before-design, the critique-loop workflow itself, the real Homepage round-2 correction (comparison rounds need genuinely different concepts, not one idea tested three ways), How I Work's real scope pivot.
-- **Production:** two subsections, matching Feminist UX's per-page split. One for the actual site build (wireframe rounds, the Figma/Framer pipeline, real bugs fixed), one for the documentation system itself (this very archive, its templates, its cross-project consistency). Real low/mid-fi mockups belong here.
-- **Outcome:** the live site, launch-day traffic with honest caveats, and the fact that this same system has already produced complete, real case studies (Feminist UX, at minimum).
-- **Retrospective:** Nicole's growth directing AI, echoing the Manifesto's own "AI Should Amplify Human Creativity" principle — but per the Feminist UX lesson, do not assume the lens; ask Nicole directly what she wants said before drafting.
-- **Deep/Technical:** the actual technical setup (MCP configuration, the plugin-install fallback story, the Figma/Framer pipeline's real limitations), and real examples of back-and-forth AI collaboration in action.
+- **Discovery:** the evidence-first research phase, Discovery completed *before* any design work began, a real, specific, checkable claim (research themes: hiring expectations, portfolio storytelling, AI workflows, interaction design, designer-developer positioning).
+- **Constraints:** reframed per Nicole's instruction, where AI's shortcomings showed up and where human judgment had to compensate.
+- **Decisions:** the core rigor story.
+- **Production:** two subsections, matching Feminist UX's per-page split.
+- **Outcome:** the live site, launch-day traffic with honest caveats.
+- **Retrospective:** Nicole's growth directing AI.
+- **Deep/Technical:** the actual technical setup and real examples of back-and-forth AI collaboration.
+
+</details>
 
 ## ✅ FULL FILESYSTEM INVENTORY — COMPLETE (2026-09-29)
 
@@ -166,14 +174,13 @@ Nicole directly challenged whether prior "thorough" claims in this project were 
 - `Mid-Fi Wireframes/`'s 4 PNGs — blocked by file size, not choice; needs Nicole to resize.
 - `Resume.pdf` — binary duplicate of `Resume.md`, already read as text.
 
-## Open Threads
-- Exact start date still unresolved (July 29 vs. Aug 3 — see Confirmed Facts).
-- Whether Portfolio Build's Retrospective/Decisions should reuse the same five Manifesto principles already curated for the live How I Work page, or pull independently from the fuller set.
-- **Wireframe folders located and confirmed** (`05_Assets/Low-Fi Wireframes/` and `Mid-Fi Wireframes/`) — real HTML/CSS files exist for every round of every page. One sample opened (`_Promoted/Homepage/notes.md`): confirms every single wireframe iteration, not just the final ones, has its own rigorous, consistently-formatted `notes.md` (What This Iteration Tests / Design Rationale / Strengths / Weaknesses / Research Informing This Direction / Who This Serves Best / Outcome). This documentation rigor is itself a real, showcase-worthy artifact for Production.
-- Five of seven research documents now read in real depth: Portfolio Strategy, Audience, Industry Trends/AI Impact, Interaction & Experience, and a partial read of Competitive Landscape. Marketing & Hiring only partially read. `Design Exploration/` is confirmed to be the inspiration-screenshot library described in the early Decision Log entries (organized by design problem: Homepage, Case Studies, Interactions, Layout, Motion, Navigation, Typography, Writing) — lower priority for a deep read, since its value is as a screenshot archive, not a report.
-- **A real, worth-noting tension found in Interaction & Experience's research, now clarified directly by Nicole**: the research warns against hiding information behind hover states. Nicole confirmed her actual use of hover (hero photos, Collaborations reveal) was deliberate and does not hide any pivotal information or interactions — the hover adds a secondary, optional layer (a photo, a personality blurb) rather than gating anything a reader needs. Worth keeping as a real research-vs-practice data point for Constraints/Decisions (a place her own judgment overrode or refined generic guidance), not as an unresolved concern.
-- **The Portfolio Manifesto is now fully read: exactly 13 principles**, confirmed to match the Decision Log's own reference ("curated from the Manifesto's thirteen"). Full list: Design Begins With People, Technology Should Expand People's Lives, Good UX Should Be Invisible, Originality Is Not Novelty, Systems Matter More Than Screens, Design and Engineering Are the Same Conversation, Research Exists to Challenge Me, Details Communicate Care, Feedback Is Something to Synthesize, AI Should Amplify Human Creativity, Accessibility Is Part of Good Design, Build Things Worth Caring About, The Standard I Hold Myself To. The last of these is confirmed as the exact source of How I Work's real closing quote ("I never want my work to feel like a first draft... every project deserves my best thinking").
-- **Mid-Fi Wireframes folder checked**: a much simpler structure than Low-Fi — just four flat PNG exports (one per page: Homepage, Resume, How I Work, Case Study Template), not a versioned archive. These are Figma-stage snapshots, per the pipeline. All four files are too large to view directly without resizing (consistent with the pattern already established on Meta's project) — Nicole would need to resize them the same way she did for Meta's oversized assets, if we want to view them directly for Production.
-- **The Marketing & Hiring and Competitive Landscape research documents are now both fully read to completion**, not partial. Real, concrete additions: a named, industry-standard "Sandwich Method" for AI-workflow disclosure (Human Context Definition → AI Acceleration → Human Curation) that Nicole's own actual workflow (inputs → AI proposes → critique → revise → done) maps onto directly, real cited statistics (72% of designers use generative AI tools daily, 78-80% of portfolios pass through AI screening before a human ever sees them), and confirmation that AI prompt disclosure is a genuine, acknowledged industry disagreement, not a settled practice — validating that foregrounding the AI story is a real, defensible choice. The "Editorial Monochrome" visual paradigm (extreme typographic hierarchy, no dividers, generous whitespace, popularized by Bethany Heck and Simon Pan) is a named category that closely matches the actual homepage's real visual direction.
-- Spine above is a real proposal grounded in actual material, but not yet reviewed or locked with Nicole.
-- Hero visual for the Executive Summary not yet discussed.
+## Current Open Items (updated 2026-10-01, replaces the earlier stale "Open Threads" list)
+
+Most of what this file previously tracked as open is resolved: the full filesystem inventory is complete, all 7 research documents and the full 13-principle Manifesto are read, the spine is locked and fully implemented, and all 10 body-text sections are written. What's genuinely still open, as of this update:
+
+- **`vs_code_screenshot.png`'s identity is unconfirmed** — unclear if this is the already-discussed `notes.md` screenshot (assigned to Design Process) or a new image for Technical Build's still-open second paragraph. See `02_Selected_Assets/CURATION-INDEX.md` for full detail.
+- **Production, "The Technical Build," paragraph 3 (the Figma/Framer pipeline) has no image assigned yet.**
+- **Deep/Technical Cards 1, 2, and 4 remain text-only** — only Card 3 (the Decision Log screenshot) has a confirmed image.
+- **Outcome and Retrospective remain deliberately text-only**, confirmed, not pending.
+- **The hero and Homepage project card are both built and locked.** The hero shows the live Homepage mid-construction (laptop, camera, Figma icon, and glasses all carrying a unified selection-handle-and-trail "being placed" treatment); Claude is deliberately not represented as its own element in the final version, a real choice Nicole made after reviewing three concept directions. Full detail in `02_Selected_Assets/CURATION-INDEX.md`.
+- **The Homepage card caption and the ordering of all three project cards (Meta, then Portfolio Build, then Feminist UX) are locked**, a portfolio-wide decision documented in the shared Decision Log, not scoped to this project alone.

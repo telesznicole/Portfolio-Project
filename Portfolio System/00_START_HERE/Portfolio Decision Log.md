@@ -2640,3 +2640,49 @@ A full pre-content-drafting audit was run at Nicole's request — every open fla
 
 **Status**
 🔒 **All ten sections of Portfolio Build's body text are locked** across `01_Content/`, `FINAL-COPY.md`, and this log. Every section has full revision history. Remaining: visuals only, deliberately deferred by Nicole until the written content was complete.
+
+---
+
+### Decision
+
+**The visual-asset pass for Portfolio Build began.** Decided the case study deliberately omits a top-of-page hero/gallery shot (the reader is already on the live site, so a "here's the finished product" reveal would be redundant, unlike Meta and Feminist UX). Five real assets locked: a deep-research screenshot (Discovery), an original filesystem-access diagram Nicole built herself (Production, Technical Build), a real wireframe `notes.md` screenshot (Production, Design Process), a Homepage low-fi/mid-fi/high-fi trio (Production, Design Process), and a real Decision Log screenshot (Deep/Technical Card 3).
+
+**Why**
+- **The filesystem diagram went through a real mockup-then-build cycle**: Claude built a rough concept via the Visualizer tool first (per the established pattern that Claude cannot create final production assets, only rough concepts to react to), Nicole built the real, final version herself, including catching and fixing a real gap Claude's mockup had (a single-direction arrow, when the actual connection is read/write, not read-only).
+- **A real redirect occurred during asset selection**: a VS Code screenshot of raw HTML was initially considered for Technical Build's "real, working HTML and CSS" claim, but Claude flagged that it proved code existed rather than proving design *thinking*, which is what a product-designer reviewer actually weighs. The stronger image (`notes.md`, showing real written reasoning) was redirected to Design Process instead, leaving Technical Build's second paragraph without a confirmed image for now, an open item, not an oversight.
+- **Homepage was chosen for the low-fi/mid-fi/high-fi trio specifically because the text already cites it by number** ("9 full rounds"), so the image directly backs up an existing claim rather than requiring new explanation.
+- **A real sourcing distinction was caught and corrected for the Decision Log caption**: initial options described the file abstractly; the final choice ("Line 2,642. Still going.") uses the real, visible line number from Nicole's own screenshot, keeping it concrete and checkable rather than a vague gesture at scale.
+- **The order of work (card before hero) was a deliberate, reasoned choice, not default sequencing**: the project card is a more contained design problem, and Nicole's own instinct was that solving it first would make the hero easier afterward, confirmed as sound reasoning rather than just agreed with reflexively.
+- **The card concept itself was developed through real back-and-forth**, landing on: default state showing the old portfolio with real tool logos (Figma, Framer, VS Code) in the background, hover state showing the old site's actual elements flying off while the new site's actual elements fly on. Nicole is building this herself; Claude's role was concept discussion, consistent with the established division between concept exploration and final asset production.
+
+**Status**
+🔒 **Five real assets locked and documented** across `01_Content/05-production.md`, `01_Content/09-deep-technical.md`, and `02_Selected_Assets/CURATION-INDEX.md`, with open items (Technical Build paragraph 2 and 3, Deep/Technical Cards 1/2/4, the project card, the hero) explicitly flagged rather than assumed resolved. Nicole now building the project card herself.
+
+---
+
+### Decision
+
+**The Homepage's project-card caption and ordering are locked** — a portfolio-wide decision, not scoped to Portfolio Build alone, since it determines how all three case studies present on the Homepage.
+
+**Why**
+- **The card caption was corrected after a direct comparison to the other two real captions**: an early draft didn't match their actual established pattern. Rebuilt to mirror it exactly: past-tense action verb, a concrete real number, closing on a deliverable, the same structure as Meta's ("...turning 5,000+ research data points into a concept presented at Meta HQ") and Feminist UX's ("...validated with 10 UX practitioners and built out as a full interactive site").
+- **Card order reasoned through deliberately, not just picked**: Meta leads with a recognizable, high-trust brand name; Portfolio Build sits second to surface the AI-collaboration differentiator while the reader is still engaged, rather than risk it being missed at the end; Feminist UX closes on the deepest, most personal work, which works better as a closing note than an opener.
+
+**Status**
+🔒 **Card caption and Homepage ordering locked**, documented in `02_Selected_Assets/CURATION-INDEX.md`. Nicole continuing to build the actual card asset herself.
+
+---
+
+### Decision
+
+**The project card is built, and the hero concept is locked.** Nicole also deleted empty raw-material folders, triggering a full documentation cleanup pass across Portfolio Build's files.
+
+**Why**
+- **The project card went through real iteration**, moving from a static laptop-plus-constellation composition toward one where the laptop itself carries the same "being placed" treatment (selection handles, blur trail) as the smaller floating icons, not just decoration around a finished screen. This changes the actual meaning of the image: not a finished product with ornaments, but active construction, a better match for "in progress" than the first version.
+- **Three concept directions for representing Claude in the hero were explored via quick Visualizer mockups** (a matching floating icon, a code-window icon, an active cursor). Claude's own recommendation was the matching icon, for visual consistency. **Nicole reviewed all three and decided to leave Claude out of the final hero entirely** — a real, deliberate choice, not an oversight, logged as such rather than assumed resolved in Claude's preferred direction.
+- **A real documentation debt was caught and fixed**: `general-context.md` had accumulated substantial stale content from the planning phase, a "Proposed Spine" section presented as not-yet-locked when all 10 sections were long since written, and an "Open Threads" list where most items were already resolved. Cleaned up directly: the spine proposal preserved for reference only inside a collapsed `<details>` block, the open-threads list replaced with only what's genuinely still open (an unconfirmed screenshot identity, two unassigned Production/Deep-Technical image slots).
+- **Nicole's own folder cleanup was verified directly, not assumed**: a fresh directory listing confirmed `00_Raw_Extracted/` and the empty `Other/`, `Presentations/`, `Process/`, and `AI-Collaboration/` subfolders are genuinely gone, not just planned for removal. `manifest.md` rewritten to match reality, including the real final filenames for all locked images.
+- **A real open question was surfaced rather than guessed at**: `vs_code_screenshot.png`'s real identity is unconfirmed, it could be the already-assigned `notes.md` screenshot or a new image for Technical Build's still-open second paragraph. Flagged directly in `manifest.md` and `CURATION-INDEX.md` rather than assumed to be one or the other.
+
+**Status**
+🔒 **`manifest.md`, `CURATION-INDEX.md`, and `general-context.md` all brought current with reality**, stale planning-stage content removed or clearly archived, real filenames in place, and every genuinely open item named explicitly. Hero and project card both locked. Remaining open items: confirming `vs_code_screenshot.png`'s identity, and three unassigned image slots (Technical Build paragraph 3, Deep/Technical Cards 1/2/4).

@@ -40,4 +40,4 @@ This section went through real, substantive rejection and rebuilding, not just p
 - **Card ordering was confirmed rather than reshuffled**: the sequence (foundation → process → artifact produced by that process → outside validation) was judged to already be the strongest available logic, so it was kept as originally proposed.
 
 ## Assets That Support This Section
-Not yet discussed.
+Locked 2026-10-01. Card 3 (The Decision Log Itself): a real screenshot of the actual Decision Log open in VS Code, showing a real line number (2,642) and real git terminal commands. Caption: "Line 2,642. Still going." Cards 1, 2, and 4 remain text-only for now, not yet discussed. Full record in `02_Selected_Assets/CURATION-INDEX.md`.
