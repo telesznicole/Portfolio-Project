@@ -62,7 +62,8 @@ Framer itself (the live, high-fidelity build) is entirely Nicole's — Claude ha
   Meta/                    ← same structure, populated for Meta. Also has its own
                                 STRUCTURE.md — see note below.
   Feminist UX/             ← same structure, populated for Feminist UX
-  Terra Dotta/             ← paused (card not yet live), just a placeholder README
+  Portfolio Build/         ← same structure, populated for Portfolio Build (public page
+                                title: "Behind the Portfolio")
 ```
 
 **A project's own `STRUCTURE.md`** (e.g. `Meta/STRUCTURE.md`) is not part of the base `_Template/` — it gets created per-project once real raw materials exist, documenting that specific project's actual `00_Raw/`/`00_Raw_Extracted/` structure (which will differ project to project — see that file's own scope note for exactly what it covers and doesn't).

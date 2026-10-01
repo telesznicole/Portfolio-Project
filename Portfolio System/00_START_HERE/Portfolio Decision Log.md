@@ -2686,3 +2686,19 @@ A full pre-content-drafting audit was run at Nicole's request — every open fla
 
 **Status**
 🔒 **`manifest.md`, `CURATION-INDEX.md`, and `general-context.md` all brought current with reality**, stale planning-stage content removed or clearly archived, real filenames in place, and every genuinely open item named explicitly. Hero and project card both locked. Remaining open items: confirming `vs_code_screenshot.png`'s identity, and three unassigned image slots (Technical Build paragraph 3, Deep/Technical Cards 1/2/4).
+
+---
+
+### Decision
+
+**A full git history scrub was performed to remove sensitive material from public reach, and the Terra Dotta folder was deleted.**
+
+**Why**
+- **A thorough review of Meta's `00_Raw/` folder, triggered by Nicole's plan to add a public GitHub link to Portfolio Build, found genuinely serious material that should never be public**: the actual Meta NDA document, raw internal presentations and reports (not the redacted public versions), Meta's own downloaded trademarked brand assets, Meta's real copyrighted product renders, and real photos of classmates who hadn't consented to public distribution. Feminist UX's `00_Raw/` separately contains real participant data (a P-number-to-name mapping, participant emails) already established as never-public.
+- **The fix required more than `.gitignore`**: since these files were already committed, hiding them going forward would leave them fully recoverable in git history. `git filter-repo` was used to strip `00_Raw/` and `00_Raw_Extracted/` for both Meta and Feminist UX from every commit in the repo's history, run inside a disposable clone, with a full manual backup taken first, never touching Nicole's real working folder until the scrub was independently verified (checked that the actual NDA file returned zero history, and that both folders were genuinely absent from the current listing, not just assumed from a clean exit code).
+- **The cleaned history was force-pushed to GitHub**, then Nicole's local working folder was reset to match, preserving her real commit history and messages throughout, the actual goal, not a fresh unrelated repo.
+- **A final verification pass checked `01_Content/` and `FINAL-COPY.md` for both projects** (the files that remain public even with raw folders hidden) for any real names, participant identifiers, or unredacted NDA details. Both confirmed clean, consistent with having been written with public-facing awareness from the start.
+- **Nicole separately deleted the empty `Terra Dotta/` case study folder.** References to it fixed across `general-context.md` (which had claimed the folder "exists" in its filesystem inventory section, now corrected to note the deletion) and `03_Case Studies/README.md` (whose folder-tree diagram still listed it, now replaced with Portfolio Build). The Decision Log's own earlier entries referencing Terra Dotta's prior existence were left unedited, since they were accurate at the time they were written; this new entry is the append-only record of the actual change.
+
+**Status**
+🔒 **Git history scrub complete and independently verified**, Terra Dotta's folder deletion reflected in documentation. The repo is clean, private, and ready for a public GitHub link once Nicole chooses to make it public.
