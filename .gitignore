@@ -8,7 +8,15 @@
 # Temporary files
 *.tmp
 *.log
-Portfolio System/03_Case Studies/Meta/00_Raw/
+
+# Raw materials — internal working files, never for public distribution
+**/00_Raw/
+**/00_Raw_Extracted/
+
+# Curated assets: keep the index, hide the actual image files
 Portfolio System/03_Case Studies/Meta/02_Selected_Assets/*
 !Portfolio System/03_Case Studies/Meta/02_Selected_Assets/CURATION-INDEX.md
-Portfolio System/03_Case Studies/Feminist UX/00_Raw/
+!Portfolio System/03_Case Studies/Meta/02_Selected_Assets/README.md
+Portfolio System/03_Case Studies/Feminist UX/02_Selected_Assets/*
+!Portfolio System/03_Case Studies/Feminist UX/02_Selected_Assets/CURATION-INDEX.md
+!Portfolio System/03_Case Studies/Feminist UX/02_Selected_Assets/README.md
