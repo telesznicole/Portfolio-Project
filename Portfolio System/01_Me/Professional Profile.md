@@ -345,7 +345,7 @@ Problem Solving
 
 Savannah College of Art and Design:
 Master of Fine Arts - MFA, Interactive Design and Game Development
-Aug 2023 – May 2026
+Sept 2023 – May 2026
 Grade: 3.94
 Activities and societies: SCADpro, SCADamp, Hack iX
 Focus on Interactive Design
