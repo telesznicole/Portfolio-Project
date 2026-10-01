@@ -39,4 +39,4 @@ Reason: "A first draft reflects what a prompt produced. A tenth revision reflect
 - **Closing line, second sentence, went through a short real round**: the original ("Everything that got built ran through it") felt insufficient to Nicole. Landed on "It's why the rest of this actually worked" after a few options, then trimmed once more at her request.
 
 ## Assets That Support This Section
-Not yet discussed. Given the confirmed Production/Decisions split above, this section likely stays text-only or very light on assets, with the visual proof concentrated in Production instead.
+Confirmed 2026-09-30: no images. Text-only, per the confirmed Production/Decisions split — all real visual/technical evidence lives in Production instead.

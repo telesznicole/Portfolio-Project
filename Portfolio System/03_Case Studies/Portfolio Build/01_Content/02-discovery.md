@@ -38,4 +38,4 @@ None of this was guesswork. Every choice that followed had something underneath 
 - **Bold phrases chosen to stand alone under a skim test**, matching the pattern from Feminist UX's Discovery. Nicole made two adjustments to the first draft: excluded "to help" from paragraph 1's bold, and specifically wanted the closing paragraph to carry no bold at all.
 
 ## Assets That Support This Section
-Not yet discussed.
+Locked 2026-09-30. One image: a real screenshot of the actual Google Deep Research session Nicole ran, showing its own research plan ("Product Design Portfolio Research") and the resulting report ("Architecting the Portfolio as a UX Product"). Caption: "Even the research had a research plan first." Full record in `02_Selected_Assets/CURATION-INDEX.md`.
