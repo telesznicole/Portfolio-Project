@@ -2720,3 +2720,20 @@ A full pre-content-drafting audit was run at Nicole's request — every open fla
 
 **Status**
 🟡 **In progress.** Full detail lives in the separate, untracked private folder.
+---
+
+### Decision
+
+**Work continued on the password-gated Meta content.** Real detail intentionally not logged here, per the standing two-tier arrangement.
+
+**Status**
+🟡 **In progress.**
+
+---
+
+### Decision
+
+**The password-gated Meta component is functionally and visually complete.** Real detail intentionally not logged here, per the standing two-tier arrangement.
+
+**Status**
+🟢 **Component complete.** Actual Meta deep-content for the gated page itself has not been written yet.
