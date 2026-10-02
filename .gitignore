@@ -12,6 +12,7 @@
 # Raw materials — internal working files, never for public distribution
 **/00_Raw/
 **/00_Raw_Extracted/
+Private/
 
 # Curated assets: keep the index, hide the actual image files
 Portfolio System/03_Case Studies/Meta/02_Selected_Assets/*
