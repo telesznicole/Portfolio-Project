@@ -2737,3 +2737,12 @@ A full pre-content-drafting audit was run at Nicole's request — every open fla
 
 **Status**
 🟢 **Component complete.** Actual Meta deep-content for the gated page itself has not been written yet.
+
+---
+
+### Decision
+
+**Closed a gap in the password-gated Meta content**: the gate now also protects the destination page itself, not just the moment of password entry. Real detail intentionally not logged here.
+
+**Status**
+🟢 **Fixed and verified.**
