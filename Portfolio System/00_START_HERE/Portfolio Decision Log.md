@@ -2702,3 +2702,21 @@ A full pre-content-drafting audit was run at Nicole's request — every open fla
 
 **Status**
 🔒 **Git history scrub complete and independently verified**, Terra Dotta's folder deletion reflected in documentation. The repo is clean, private, and ready for a public GitHub link once Nicole chooses to make it public.
+
+---
+
+### Decision
+
+**A password-gated, deeper version of Meta's case study is being planned.** Real detail intentionally not logged here.
+
+**Status**
+🟡 **Planning underway.** Full detail lives in a separate, untracked private folder, outside this repo entirely.
+
+---
+
+### Decision
+
+**Work continued on the password-gated Meta content.** Real detail intentionally not logged here, per the standing two-tier arrangement.
+
+**Status**
+🟡 **In progress.** Full detail lives in the separate, untracked private folder.
