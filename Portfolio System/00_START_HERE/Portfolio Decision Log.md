@@ -2746,3 +2746,9 @@ A full pre-content-drafting audit was run at Nicole's request — every open fla
 
 **Status**
 🟢 **Fixed and verified.**
+
+---
+
+## 2026-10-02 — Private Meta page: Context, Discovery, Constraints, Decisions, and Production content drafted
+
+Drafted and saved the written content for five sections of the password-gated Meta case-study page, going into significantly more depth than the public page in the Decisions and Production sections. Real detail intentionally not logged here. Still to come: Outcome, Retrospective, Tools & Skills, Deep/Technical, then media.
